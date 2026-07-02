@@ -1,57 +1,19 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { dexEntries } from "@/data/dex";
-
-const featuredSlugs = ["bubble", "blazpup", "leafbun", "pebble", "lavite", "astraknight"];
-
-export function FeaturedPets() {
-  const pets = featuredSlugs
-    .map((slug) => dexEntries.find((e) => e.name?.toLowerCase() === slug))
-    .filter(Boolean);
-
-  return (
-    <div className="flex flex-wrap items-end justify-center gap-2 sm:gap-4">
-      {pets.map((pet) => (
-        <Link
-          key={pet!.number}
-          href={`/dex/${pet!.name!.toLowerCase()}`}
-          className="group flex flex-col items-center"
-        >
-          <div className="relative transition group-hover:-translate-y-2 group-hover:scale-105">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={`/pets/${pet!.name!.toLowerCase()}.png`}
-              alt={pet!.name!}
-              width={120}
-              height={120}
-              className="h-24 w-24 object-contain drop-shadow-[0_8px_24px_rgba(16,185,129,0.35)] sm:h-32 sm:w-32"
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.opacity = "0.3";
-              }}
-            />
-          </div>
-          <span className="mt-2 text-xs font-medium text-zinc-500 group-hover:text-emerald-300">
-            {pet!.name}
-          </span>
-        </Link>
-      ))}
-    </div>
-  );
-}
+import { FeaturedPets } from "@/components/FeaturedPets";
 
 export function HeroBanner() {
   return (
     <section className="relative overflow-hidden border-b border-white/10">
       <div className="absolute inset-0">
-        <Image
+        {/* Native img: LCP paints without waiting for client hydration */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src="/images/hero.webp"
           alt=""
-          fill
-          priority
-          className="object-cover object-center opacity-40"
-          sizes="100vw"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#050c0a] via-[#050c0a]/85 to-[#050c0a]/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050c0a] via-transparent to-transparent" />
@@ -65,8 +27,8 @@ export function HeroBanner() {
               alt="Evomon"
               width={56}
               height={56}
-              className="rounded-2xl border border-emerald-500/30 shadow-lg shadow-emerald-500/20"
               priority
+              className="rounded-2xl border border-emerald-500/30 shadow-lg shadow-emerald-500/20"
             />
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-emerald-400">evomon.cc</p>

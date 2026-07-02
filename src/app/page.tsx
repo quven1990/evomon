@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { preload } from "react-dom";
 import {
   ArrowRight,
   BookOpen,
@@ -76,6 +77,8 @@ const featureCards = [
 ];
 
 export default function HomePage() {
+  preload("/images/hero.webp", { as: "image", fetchPriority: "high" });
+
   const schemas = [
     {
       "@context": "https://schema.org",
