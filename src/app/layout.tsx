@@ -99,6 +99,17 @@ export default function RootLayout({
           {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
 plausible.init()`}
         </Script>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-HWEF9CC7Z7"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-HWEF9CC7Z7');`}
+        </Script>
         <MobileNavProvider>
           <Header />
           <div className="flex-1 pb-[calc(4.5rem+env(safe-area-inset-bottom))] lg:pb-0">{children}</div>
