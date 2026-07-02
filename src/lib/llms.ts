@@ -50,7 +50,7 @@ export function generateLlmsTxt(): string {
     "## Trust & metadata",
     `- [About & data policy](${canonical("/about")}): Unofficial disclaimer, how we source data, freshness dates.`,
     `- [Play Evomon on Roblox](${GAME.robloxUrl}): Official game page.`,
-    `- [Sitemap](${canonical("/sitemap.xml")}): Indexable pages for search engines.`,
+    `- [Sitemap](${canonical("/main_sitemap.xml")}): Indexable pages for search engines.`,
     `- [Full LLM context](${canonical("/llms-full.txt")}): Expanded markdown with codes list, type chart, FAQs.`,
     "",
     "## Optional",

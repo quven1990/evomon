@@ -28,5 +28,11 @@
 	"routes": [
 		{ "pattern": "evomon.cc", "custom_domain": true },
 		{ "pattern": "www.evomon.cc", "custom_domain": true }
-	]
+	],
+	"observability": {
+		"logs": {
+			"enabled": false,
+			"invocation_logs": true
+		}
+	}
 }

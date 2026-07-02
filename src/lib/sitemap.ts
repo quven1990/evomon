@@ -2,7 +2,11 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/site";
 
 /** Indexable routes only — thin /dex/[slug] pages are noindex and omitted here. */
-const indexableRoutes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] }[] = [
+const indexableRoutes: {
+  path: string;
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"];
+}[] = [
   { path: "", priority: 1, changeFrequency: "weekly" },
   { path: "/codes", priority: 0.95, changeFrequency: "daily" },
   { path: "/dex", priority: 0.9, changeFrequency: "weekly" },
@@ -17,7 +21,7 @@ const indexableRoutes: { path: string; priority: number; changeFrequency: Metada
   { path: "/guides/farming", priority: 0.75, changeFrequency: "monthly" },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export function getSitemapEntries(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   return indexableRoutes.map(({ path, priority, changeFrequency }) => ({
@@ -26,4 +30,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency,
     priority,
   }));
+}
+
+export function getSitemapXml(): string {
+  const entries = getSitemapEntries();
+  const urls = entries
+    .map((entry) => {
+      const lastmod =
+        entry.lastModified instanceof Date
+          ? entry.lastModified.toISOString()
+          : entry.lastModified;
+
+      return `<url>
+<loc>${entry.url}</loc>
+<lastmod>${lastmod}</lastmod>
+<changefreq>${entry.changeFrequency}</changefreq>
+<priority>${entry.priority}</priority>
+</url>`;
+    })
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>`;
 }

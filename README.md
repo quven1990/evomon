@@ -64,7 +64,7 @@ Alternative: Cloudflare Pages, Netlify, or any Node host running `next start`.
 ## Next steps (week 1)
 
 1. **Deploy** — get `https://evomon.cc` live this week.
-2. **Google Search Console** — verify domain, submit sitemap `/sitemap.xml`.
+2. **Google Search Console** — verify domain, submit sitemap `/main_sitemap.xml`.
 3. **Codes pipeline** — update `src/data/codes.ts` daily (later: Discord scraper via `roblox-game-data-scraper` skill).
 4. **Analytics** — add Plausible or GA4.
 5. **Phase 2 pages** — pokedex, evolution guide, shiny pity calculator.
