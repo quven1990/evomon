@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050c0a;
+  --foreground: #ecfdf5;
+  --surface: #0b1512;
+  --muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #34d399;
+  --accent-2: #22d3ee;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(16, 185, 129, 0.14), transparent),
+    radial-gradient(ellipse 40% 30% at 100% 0%, rgba(34, 211, 238, 0.08), transparent),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.prose-wiki h2 {
+  @apply mt-10 text-2xl font-bold text-white;
+}
+
+.prose-wiki h3 {
+  @apply mt-6 text-lg font-semibold text-emerald-300;
+}
+
+.prose-wiki p {
+  @apply mt-3 text-sm leading-7 text-zinc-300;
+}
+
+.prose-wiki ul {
+  @apply mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-zinc-300;
+}
+
+.prose-wiki table {
+  @apply mt-4 w-full min-w-[300px] text-sm;
+}
+
+.prose-wiki th {
+  @apply bg-white/5 px-3 py-3 text-left font-semibold text-white sm:px-4;
+}
+
+.prose-wiki td {
+  @apply border-t border-white/5 px-3 py-3 text-zinc-300 sm:px-4;
+}
