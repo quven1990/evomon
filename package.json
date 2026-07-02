@@ -3,21 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prebuild": "tsx scripts/generate-static-files.ts",
+    "predev": "tsx scripts/generate-static-files.ts",
     "build": "next build",
     "dev": "next dev",
-    "start": "next start",
     "lint": "eslint",
     "images:sync": "node scripts/download-pet-images.mjs",
     "images:compress": "node scripts/compress-images.mjs",
     "images:prepare": "npm run images:sync && npm run images:compress",
     "favicons": "node scripts/generate-favicons.mjs",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "deploy": "npm run build && wrangler pages deploy out --project-name=evomon --commit-dirty=true",
+    "pages:dev": "wrangler pages dev out"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "^1.20.1",
     "lucide-react": "^1.23.0",
     "next": "16.2.9",
     "react": "19.2.4",
@@ -32,6 +30,7 @@
     "eslint-config-next": "16.2.9",
     "png-to-ico": "^3.0.1",
     "tailwindcss": "^4",
+    "tsx": "^4.20.3",
     "typescript": "^5",
     "wrangler": "^4.106.0"
   }

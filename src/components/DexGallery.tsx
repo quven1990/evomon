@@ -19,7 +19,7 @@ type Props = {
 export function DexGallery({ initialQuery = "" }: Props) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [query, setQuery] = useState(initialQuery);
+  const [query, setQuery] = useState(() => searchParams.get("q") ?? initialQuery);
   const [element, setElement] = useState<ElementType | "all">("all");
 
   useEffect(() => {

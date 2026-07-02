@@ -28,28 +28,30 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
 npm run build
-npm run start
 ```
 
-## Deploy to evomon.cc
+Static export outputs to `out/` (no Node server required).
 
-Recommended: **Vercel** (zero-config for Next.js).
+## Deploy to evomon.cc (Cloudflare Pages)
 
-1. Push this repo to GitHub.
-2. Import the project in [Vercel](https://vercel.com).
-3. Add custom domain `evomon.cc` and `www.evomon.cc`.
-4. Ensure `public/pets/` is committed before deploy.
+Static export — no Worker CPU limits, served from CDN.
+
+```bash
+npm run deploy
+```
+
+This runs `prebuild` (generates `robots.txt`, `main_sitemap.xml`, `llms*.txt`), `next build`, then `wrangler pages deploy out`.
+
+**Custom domain (one-time):** Cloudflare Dashboard → **Workers & Pages** → **evomon** → **Custom domains** → add `evomon.cc` and `www.evomon.cc`.
+
+Preview URL: `https://evomon-3l6.pages.dev`
 
 ## GEO / LLM discovery
 
 - [`/llms.txt`](https://evomon.cc/llms.txt) — curated page index for AI assistants ([llmstxt.org](https://llmstxt.org) format)
 - [`/llms-full.txt`](https://evomon.cc/llms-full.txt) — expanded context: codes, type chart, starters, FAQs
 
-Content is generated from `src/lib/llms.ts` and revalidates hourly on deploy.
-
-5. Point DNS at Vercel (A/CNAME per their dashboard).
-
-Alternative: Cloudflare Pages, Netlify, or any Node host running `next start`.
+Content is generated from `src/lib/llms.ts` at build time (`npm run prebuild`).
 
 ## Site map (MVP)
 
@@ -79,7 +81,8 @@ Edit `src/data/codes.ts`:
 
 ## Tech stack
 
-- Next.js 16 (App Router)
+- Next.js 16 (App Router, static export)
+- Cloudflare Pages
 - TypeScript + Tailwind CSS
 - SEO: metadata, FAQ schema, breadcrumbs, sitemap, robots
 

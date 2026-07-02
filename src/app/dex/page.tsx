@@ -1,13 +1,7 @@
 import { Suspense } from "react";
 import { DexGallery } from "@/components/DexGallery";
 
-type Props = {
-  searchParams: Promise<{ q?: string }>;
-};
-
-export default async function DexPage({ searchParams }: Props) {
-  const { q } = await searchParams;
-
+export default function DexPage() {
   return (
     <Suspense
       fallback={
@@ -16,7 +10,7 @@ export default async function DexPage({ searchParams }: Props) {
         </main>
       }
     >
-      <DexGallery initialQuery={q?.trim() ?? ""} />
+      <DexGallery />
     </Suspense>
   );
 }
