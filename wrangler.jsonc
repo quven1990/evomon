@@ -23,15 +23,10 @@
 		// Enable image optimization
 		// see https://opennext.js.org/cloudflare/howtos/image
 		"binding": "IMAGES"
-	},
-	"routes": [
-		{
-			"pattern": "evomon.cc",
-			"custom_domain": true
-		},
-		{
-			"pattern": "www.evomon.cc",
-			"custom_domain": true
-		}
-	]
+	}
+	// Custom domains — uncomment after evomon.cc is added to this Cloudflare account:
+	// "routes": [
+	// 	{ "pattern": "evomon.cc", "custom_domain": true },
+	// 	{ "pattern": "www.evomon.cc", "custom_domain": true }
+	// ]
 }
