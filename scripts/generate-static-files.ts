@@ -6,13 +6,15 @@ import { SITE } from "../src/lib/site";
 
 const publicDir = join(import.meta.dirname, "..", "public");
 
-writeFileSync(join(publicDir, "main_sitemap.xml"), getSitemapXml(), "utf8");
+const sitemapXml = getSitemapXml();
+writeFileSync(join(publicDir, "sitemap.xml"), sitemapXml, "utf8");
+writeFileSync(join(publicDir, "main_sitemap.xml"), sitemapXml, "utf8");
 writeFileSync(join(publicDir, "llms.txt"), generateLlmsTxt(), "utf8");
 writeFileSync(join(publicDir, "llms-full.txt"), generateLlmsFullTxt(), "utf8");
 writeFileSync(
   join(publicDir, "robots.txt"),
-  `User-Agent: *\nAllow: /\n\nSitemap: ${SITE.url}/main_sitemap.xml\n`,
+  `User-Agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`,
   "utf8",
 );
 
-console.log("Generated public/main_sitemap.xml, llms.txt, llms-full.txt, robots.txt");
+console.log("Generated public/sitemap.xml, main_sitemap.xml, llms.txt, llms-full.txt, robots.txt");

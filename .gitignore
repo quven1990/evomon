@@ -17,6 +17,7 @@
 /.next/
 /out/
 /public/main_sitemap.xml
+/public/sitemap.xml
 /public/llms.txt
 /public/llms-full.txt
 /public/robots.txt

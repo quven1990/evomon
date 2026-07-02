@@ -38,8 +38,8 @@ export function getSitemapXml(): string {
     .map((entry) => {
       const lastmod =
         entry.lastModified instanceof Date
-          ? entry.lastModified.toISOString()
-          : entry.lastModified;
+          ? entry.lastModified.toISOString().slice(0, 10)
+          : String(entry.lastModified).slice(0, 10);
 
       return `<url>
 <loc>${entry.url}</loc>
