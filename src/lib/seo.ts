@@ -127,20 +127,29 @@ export const PAGE_SEO = {
       keywords: ["evomon type chart", "evomon weaknesses", "evomon type matchup", "evomon elements"],
     }),
 
-  tierList: () =>
-    buildPageMetadata({
-      title: `Evomon Tier List (${monthLabel}) — Best Pets & Starters Ranked`,
-      description: `July 2026 community tier list: Lavite, Bluebird, Frostlet, Whispurr, Arcub & Tarro for endgame — plus early-route catches, starter debates, and farm order.`,
-      path: "/tier-list",
-      keywords: [
-        "evomon tier list",
-        "best evomon",
-        "evomon rankings",
-        "evomon best starter",
-        "lavite evomon",
-        "bluebird evomon",
-      ],
-    }),
+  tierList: () => {
+    // ≤60 chars total — absolute title skips the layout `| Evomon Wiki` suffix.
+    const title = `Best Evomon Tier List (${monthLabel}) — Lavite & S-Tier`;
+    const description = `Who's worth evolution stones after Lava Crag? Boss rankings, early catches, starter debates, and a 6-step farm list. Community meta, ${monthLabel}.`;
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/tier-list",
+        ogTitle: title,
+        keywords: [
+          "evomon tier list",
+          "best evomon",
+          "evomon rankings",
+          "lavite evomon",
+          "bluebird evomon",
+          "evomon endgame",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
 
   starters: () =>
     buildPageMetadata({
