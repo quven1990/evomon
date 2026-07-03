@@ -1,4 +1,18 @@
-name: Deploy evomon.cc
+# Push to main → build → Cloudflare Pages deploy → purge CDN cache.
+#
+# Required GitHub secret: CLOUDFLARE_API_TOKEN
+# Create at https://dash.cloudflare.com/profile/api-tokens → Create Custom Token
+#
+# Permissions (all required):
+#   Account  → Cloudflare Pages     → Edit
+#   Account  → Account Settings    → Read
+#   User     → User Details        → Read
+#   User     → Memberships         → Read
+#   Zone     → Cache Purge          → Purge
+#   Zone     → Zone                 → Read
+#
+# Account resources: Include → your account
+# Zone resources:    Include → evomon.cc
 
 on:
   push:
