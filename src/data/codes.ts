@@ -8,23 +8,39 @@ export interface CodeEntry {
   addedAt?: string;
 }
 
-export const CODES_LAST_UPDATED = "2026-07-01";
-export const CODES_DATA_CHECKED = "2026-07-01";
+export const CODES_LAST_UPDATED = "2026-07-03";
+export const CODES_DATA_CHECKED = "2026-07-03";
+
+/** Past codes listed on the Roblox game page description (official). */
+export const officialRobloxCodes = [
+  "2K-LIKES",
+  "THXFOR5K",
+  "12klikes",
+  "20000LIKES",
+  "30K-LIKES",
+  "EVO60SPARK",
+  "EVO120HYPE",
+] as const;
+
+export const NEXT_LIKE_MILESTONE = "240K likes";
+
+const robloxListingNote = "Listed in Roblox game description";
 
 export const activeCodes: CodeEntry[] = [
+  { code: "EVO120HYPE", reward: "3 Summon Tickets, 2 Trait Reroll Potions", source: "official", sourceNote: robloxListingNote },
+  { code: "EVO60SPARK", reward: "3 Summon Tickets, 2 Trait Reroll Potions", source: "official", sourceNote: robloxListingNote },
+  { code: "30K-LIKES", reward: "2 Trait Reroll Potions, 2 Talent Vector Potions, 2 Nature Reroll Potions", source: "official", sourceNote: robloxListingNote },
+  { code: "20000LIKES", reward: "2 Trait Reroll Potions, 5 Medium EXP Fruits", source: "official", sourceNote: robloxListingNote },
+  { code: "12klikes", reward: "5 Medium EXP Fruits", source: "official", sourceNote: robloxListingNote },
+  { code: "THXFOR5K", reward: "5 Medium EXP Fruits", source: "official", sourceNote: robloxListingNote },
+  { code: "2K-LIKES", reward: "5 Medium EXP Fruits", source: "official", sourceNote: robloxListingNote },
   { code: "D50CREW", reward: "10 Evolution Stones, 10 Omni-Stones", source: "community", sourceNote: "Milestone code" },
-  { code: "EVO60SPARK", reward: "3 Summon Tickets, 2 Trait Reroll Potions", source: "community" },
   { code: "SeasonComing", reward: "3 Summon Tickets, 10 Advanced Balls", source: "community" },
-  { code: "30K-LIKES", reward: "2 Trait Reroll Potions, 2 Talent Vector Potions, 2 Nature Reroll Potions", source: "community" },
-  { code: "20000LIKES", reward: "2 Trait Reroll Potions, 5 Medium EXP Fruits", source: "community" },
   { code: "20KMEMBERS", reward: "2 Trait Reroll Potions, 10 Advanced Balls", source: "community" },
   { code: "10KCCU_", reward: "4,000 Coins", source: "third-party", sourceNote: "Reported active — verify in fresh server" },
-  { code: "12klikeS", reward: "5 Medium EXP Fruits", source: "third-party", sourceNote: "Case-sensitive" },
   { code: "10kthx", reward: "10 Advanced Balls", source: "third-party" },
   { code: "5000DC", reward: "5 Advanced Balls", source: "community" },
   { code: "DCGIFT", reward: "10 Medium EXP Fruits, 5 Advanced Balls, 1,000 Coins", source: "community" },
-  { code: "THXFOR5K", reward: "5 Medium EXP Fruits", source: "official", sourceNote: "Listed in Roblox game description" },
-  { code: "2K-LIKES", reward: "5 Medium EXP Fruits", source: "official", sourceNote: "Listed in Roblox game description" },
   { code: "DC2K", reward: "5 Medium EXP Fruits", source: "community" },
   { code: "LIKE1GIFT", reward: "2 Medium EXP Fruits, 1,000 Coins", source: "community" },
   { code: "FORDC1200", reward: "1,000 Coins", source: "community" },
@@ -41,10 +57,10 @@ export const watchlistCodes: CodeEntry[] = [
 export const expiredCodes: CodeEntry[] = [];
 
 /** Official Roblox-listing codes — featured above the fold */
-export const featuredCodeIds = ["2K-LIKES", "THXFOR5K"] as const;
+export const featuredCodeIds = ["EVO120HYPE", "2K-LIKES", "THXFOR5K"] as const;
 
 /** Popular community codes — shown after official block */
-export const highlightCodeIds = ["D50CREW", "EVO60SPARK", "30K-LIKES", "DCGIFT"] as const;
+export const highlightCodeIds = ["EVO60SPARK", "30K-LIKES", "D50CREW", "DCGIFT"] as const;
 
 export function getFeaturedCodes(): CodeEntry[] {
   return featuredCodeIds
@@ -74,7 +90,7 @@ export const codeTroubleshooting = [
 export const codesFaq = [
   {
     q: "What are the active Evomon codes?",
-    a: "Start with official Roblox-description codes (2K-LIKES, THXFOR5K), then try community milestone codes like 30K-LIKES and DCGIFT in a fresh server.",
+    a: "Start with official Roblox-description codes (EVO120HYPE, 2K-LIKES, THXFOR5K, 30K-LIKES), then try community codes like D50CREW and DCGIFT in a fresh server.",
   },
   {
     q: "Why does an Evomon code fail?",
@@ -86,7 +102,7 @@ export const codesFaq = [
   },
   {
     q: "When should I check for new codes?",
-    a: "Before long sessions, after like/CCU milestones, and after Discord announcements. Next milestone target: 120K likes.",
+    a: `Before long sessions, after like/CCU milestones, and after Discord announcements. Next like milestone on the Roblox page: ${NEXT_LIKE_MILESTONE}.`,
   },
   {
     q: "Are release codes different from milestone codes?",
