@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { DexSourceBadge } from "@/components/Badges";
 import { PetAvatar } from "@/components/PetAvatar";
 import type { DexEntry } from "@/data/dex";
+import { AnalyticsEvent, track } from "@/lib/analytics";
 import { elementStyles } from "@/data/type-chart";
 
 export function DexCard({ entry }: { entry: DexEntry }) {
@@ -42,7 +45,11 @@ export function DexCard({ entry }: { entry: DexEntry }) {
 
   if (entry.name) {
     return (
-      <Link href={`/dex/${entry.name.toLowerCase()}`} className="block">
+      <Link
+        href={`/dex/${entry.name.toLowerCase()}`}
+        className="block"
+        onClick={() => track(AnalyticsEvent.DEX_PET_CLICK, { pet: entry.name! })}
+      >
         {inner}
       </Link>
     );

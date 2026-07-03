@@ -22,6 +22,7 @@ import {
   X,
 } from "lucide-react";
 import { mobileTabLinks, navSections } from "@/data/navigation";
+import { PlayLink } from "@/components/PlayLink";
 import { GAME } from "@/lib/game";
 import { SITE } from "@/lib/site";
 
@@ -129,14 +130,12 @@ function NavDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
         </nav>
 
         <div className="shrink-0 border-t border-white/10 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-          <a
-            href={GAME.robloxUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <PlayLink
+            placement="mobile-menu"
             className="flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 py-3 text-sm font-bold text-black"
           >
             Play Evomon on Roblox
-          </a>
+          </PlayLink>
         </div>
       </aside>
     </div>,

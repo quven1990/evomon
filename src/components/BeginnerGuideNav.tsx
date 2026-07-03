@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { trackGuideSection } from "@/lib/analytics";
 
 const sections = [
   { id: "start", label: "Start" },
@@ -46,7 +47,10 @@ export function BeginnerGuideNav() {
           <a
             key={section.id}
             href={`#${section.id}`}
-            onClick={() => setActive(section.id)}
+            onClick={() => {
+              setActive(section.id);
+              trackGuideSection("beginner", section.id);
+            }}
             className={`inline-flex min-h-[44px] shrink-0 items-center rounded-full px-4 py-2.5 text-sm font-semibold transition ${
               active === section.id
                 ? "bg-emerald-500/20 text-emerald-200 ring-1 ring-emerald-500/40"

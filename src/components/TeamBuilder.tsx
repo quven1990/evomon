@@ -9,6 +9,7 @@ import { PetAvatar } from "@/components/PetAvatar";
 import { FilterChips } from "@/components/FilterChips";
 import { dexEntries, type DexEntry } from "@/data/dex";
 import { analyzeTeam, TEAM_PRESETS } from "@/lib/team-analysis";
+import { AnalyticsEvent, track } from "@/lib/analytics";
 import { copyToClipboard } from "@/lib/copy";
 import { elementStyles } from "@/data/type-chart";
 
@@ -430,6 +431,10 @@ export function TeamBuilder() {
   }
 
   function applyPreset(slugs: string[]) {
+    const preset = TEAM_PRESETS.find((p) => p.slugs.join(",") === slugs.join(","));
+    if (preset) {
+      track(AnalyticsEvent.TEAM_PRESET, { preset: preset.id });
+    }
     const team = slugs.map((s) => findBySlug(s)).concat(Array(SLOT_COUNT).fill(null)).slice(0, SLOT_COUNT);
     setSlots(team);
     setPickerOpen(false);
@@ -441,6 +446,7 @@ export function TeamBuilder() {
     const url = `${window.location.origin}/team-builder${qs}`;
     const ok = await copyToClipboard(url);
     if (ok) {
+      track(AnalyticsEvent.TEAM_SHARE, { pets: String(slugs.length) });
       setCopied(true);
       window.setTimeout(() => setCopied(false), 2000);
     }

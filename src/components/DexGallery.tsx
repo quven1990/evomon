@@ -8,6 +8,7 @@ import { FilterChips } from "@/components/FilterChips";
 import { DataFreshness } from "@/components/DataFreshness";
 import { PageBack, pageLeadClass, pageMainClass, pageTitleClass } from "@/components/PageShell";
 import { DEX_LAST_CHECKED, dexEntries, dexStats, type ElementType } from "@/data/dex";
+import { AnalyticsEvent, track } from "@/lib/analytics";
 
 const stats = dexStats();
 const elements = [...new Set(dexEntries.map((e) => e.element).filter((e) => e !== "Unknown"))].sort();
@@ -43,6 +44,18 @@ export function DexGallery({ initialQuery = "" }: Props) {
       return matchesElement && matchesQuery;
     });
   }, [query, element]);
+
+  useEffect(() => {
+    const trimmed = query.trim();
+    if (trimmed.length < 2) return;
+    const timer = window.setTimeout(() => {
+      track(AnalyticsEvent.DEX_SEARCH, {
+        query: trimmed.slice(0, 40),
+        results: String(filtered.length),
+      });
+    }, 800);
+    return () => window.clearTimeout(timer);
+  }, [query, filtered.length]);
 
   function updateQuery(next: string) {
     setQuery(next);
@@ -81,7 +94,12 @@ export function DexGallery({ initialQuery = "" }: Props) {
         className="mt-4"
         chips={elementChips}
         activeId={element}
-        onSelect={(id) => setElement(id as ElementType | "all")}
+        onSelect={(id) => {
+          setElement(id as ElementType | "all");
+          if (id !== "all") {
+            track(AnalyticsEvent.DEX_FILTER, { element: id });
+          }
+        }}
       />
 
       <p className="mt-4 text-sm text-zinc-500">

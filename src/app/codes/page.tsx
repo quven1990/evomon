@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CopyButton } from "@/components/CopyButton";
 import { CodeCard } from "@/components/CodeCard";
 import { DataFreshness } from "@/components/DataFreshness";
+import { PlayLink } from "@/components/PlayLink";
 import { RedeemGuide } from "@/components/RedeemGuide";
 import { StructuredData } from "@/components/StructuredData";
 import {
@@ -16,7 +17,6 @@ import {
   sortCodesByTrust,
   watchlistCodes,
 } from "@/data/codes";
-import { GAME } from "@/lib/game";
 import { PAGE_SEO } from "@/lib/seo";
 import { ExternalLink, Gift, Sparkles } from "lucide-react";
 
@@ -76,15 +76,13 @@ export default function CodesPage() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href={GAME.robloxUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <PlayLink
+              placement="codes-hero"
               className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-5 py-3 text-sm font-bold text-black shadow-lg shadow-emerald-500/25 transition hover:brightness-110"
             >
               <ExternalLink className="h-4 w-4" />
               Play Evomon & redeem
-            </a>
+            </PlayLink>
             <a
               href="#all-codes"
               className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
@@ -107,7 +105,7 @@ export default function CodesPage() {
           </div>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             {featured.map((entry) => (
-              <CodeCard key={entry.code} entry={entry} featured />
+              <CodeCard key={entry.code} entry={entry} featured placement="featured" />
             ))}
           </div>
         </section>
@@ -119,7 +117,7 @@ export default function CodesPage() {
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {highlights.map((entry) => (
-              <CodeCard key={entry.code} entry={entry} />
+              <CodeCard key={entry.code} entry={entry} placement="highlight" />
             ))}
           </div>
         </section>
@@ -162,7 +160,7 @@ export default function CodesPage() {
                       <td className="px-4 py-3 text-zinc-300">{item.reward}</td>
                       <td className="px-4 py-3 text-xs capitalize text-zinc-500">{item.source}</td>
                       <td className="px-4 py-3 text-right">
-                        <CopyButton code={item.code} />
+                        <CopyButton code={item.code} source={item.source} placement="table" />
                       </td>
                     </tr>
                   ))}

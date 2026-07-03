@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Gamepad2 } from "lucide-react";
 import { MobileHeaderMenu } from "@/components/MobileNav";
+import { PlayLink } from "@/components/PlayLink";
 import { navSections } from "@/data/navigation";
-import { GAME } from "@/lib/game";
 import { SITE } from "@/lib/site";
 
 export function Header() {
@@ -79,14 +79,12 @@ export function Header() {
 
         <div className="flex shrink-0 items-center gap-2">
           <MobileHeaderMenu />
-          <a
-            href={GAME.robloxUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <PlayLink
+            placement="header"
             className="rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-3 py-2 text-sm font-bold text-black shadow-lg shadow-emerald-500/20 transition hover:brightness-110 sm:px-4"
           >
             Play
-          </a>
+          </PlayLink>
         </div>
       </div>
     </header>

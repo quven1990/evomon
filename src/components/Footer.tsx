@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { footerLinks } from "@/data/navigation";
+import { ContactMailLink } from "@/components/ContactMailLink";
+import { PlayLink } from "@/components/PlayLink";
 import { GAME } from "@/lib/game";
 import { SITE } from "@/lib/site";
 
@@ -32,35 +34,32 @@ export function Footer() {
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">Play</h3>
           <p className="mt-4 text-sm text-zinc-400">
-            <a
-              href={GAME.robloxUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-300 hover:underline"
-            >
+            <PlayLink placement="footer" className="text-emerald-300 hover:underline">
               Open Evomon on Roblox →
-            </a>
+            </PlayLink>
           </p>
           <h3 className="mt-8 text-sm font-semibold uppercase tracking-wide text-zinc-500">
             Contact
           </h3>
           <ul className="mt-4 space-y-2 text-sm text-zinc-400">
             <li>
-              <a
+              <ContactMailLink
+                channel="contact"
                 href={`mailto:${SITE.emails.contact}`}
                 className="text-emerald-300 hover:underline"
               >
                 {SITE.emails.contact}
-              </a>
+              </ContactMailLink>
               <span className="text-zinc-500"> — corrections</span>
             </li>
             <li>
-              <a
+              <ContactMailLink
+                channel="privacy"
                 href={`mailto:${SITE.emails.privacy}`}
                 className="text-emerald-300 hover:underline"
               >
                 {SITE.emails.privacy}
-              </a>
+              </ContactMailLink>
               <span className="text-zinc-500"> — privacy</span>
             </li>
             <li>

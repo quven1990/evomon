@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Suspense } from "react";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import { AnalyticsPageview } from "@/components/AnalyticsPageview";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MobileBottomNav, MobileNavProvider } from "@/components/MobileNav";
@@ -109,6 +111,9 @@ gtag('config', 'G-HWEF9CC7Z7');`}
     })(window, document, "clarity", "script", "xg9ddd1pvr");`}
         </Script>
         <MobileNavProvider>
+          <Suspense fallback={null}>
+            <AnalyticsPageview />
+          </Suspense>
           <Header />
           <div className="flex-1 pb-[calc(4.5rem+env(safe-area-inset-bottom))] lg:pb-0">{children}</div>
           <Footer />

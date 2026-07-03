@@ -12,6 +12,7 @@ import {
   getStrongAgainst,
   getWeakTo,
 } from "@/data/type-chart";
+import { AnalyticsEvent, track } from "@/lib/analytics";
 
 function isChartType(value: string): value is ElementType {
   return TYPE_CHART_TYPES.includes(value as ElementType);
@@ -120,6 +121,7 @@ export function TypeChartExplorer() {
 
   function selectType(type: ElementType) {
     setSelected(type);
+    track(AnalyticsEvent.TYPE_SELECT, { type });
     const params = new URLSearchParams(searchParams.toString());
     params.set("type", type);
     router.replace(`?${params.toString()}`, { scroll: false });

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Settings } from "lucide-react";
-import { GAME } from "@/lib/game";
+import { PlayLink } from "@/components/PlayLink";
 
 const steps = [
   {
@@ -9,14 +9,9 @@ const steps = [
     body: (
       <>
         Launch{" "}
-        <a
-          href={GAME.robloxUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-emerald-300 hover:underline"
-        >
+        <PlayLink placement="redeem-guide" className="text-emerald-300 hover:underline">
           Evomon on Roblox
-        </a>{" "}
+        </PlayLink>{" "}
         and finish the tutorial (pick a starter). Codes won&apos;t work until then.
       </>
     ),

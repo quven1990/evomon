@@ -5,9 +5,10 @@ import type { CodeEntry } from "@/data/codes";
 type Props = {
   entry: CodeEntry;
   featured?: boolean;
+  placement?: "featured" | "highlight" | "list" | "table";
 };
 
-export function CodeCard({ entry, featured = false }: Props) {
+export function CodeCard({ entry, featured = false, placement = "list" }: Props) {
   if (featured) {
     return (
       <article className="flex flex-col rounded-2xl border border-emerald-500/25 bg-gradient-to-b from-emerald-500/[0.08] to-[#0b1512] p-4 shadow-[0_0_24px_rgba(16,185,129,0.08)]">
@@ -18,7 +19,7 @@ export function CodeCard({ entry, featured = false }: Props) {
         <p className="mt-2 flex-1 text-sm leading-6 text-zinc-300">{entry.reward}</p>
         {entry.sourceNote && <p className="mt-1 text-xs text-zinc-500">{entry.sourceNote}</p>}
         <div className="mt-4">
-          <CopyButton code={entry.code} size="lg" />
+          <CopyButton code={entry.code} size="lg" source={entry.source} placement={placement} />
         </div>
       </article>
     );
@@ -35,7 +36,7 @@ export function CodeCard({ entry, featured = false }: Props) {
             {entry.sourceNote && <span className="text-xs text-zinc-600">{entry.sourceNote}</span>}
           </div>
         </div>
-        <CopyButton code={entry.code} />
+        <CopyButton code={entry.code} source={entry.source} placement={placement} />
       </div>
     </article>
   );

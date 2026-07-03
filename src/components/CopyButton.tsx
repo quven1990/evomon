@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Copy } from "lucide-react";
+import { trackCodeCopy } from "@/lib/analytics";
 import { copyToClipboard } from "@/lib/copy";
 
 type CopyState = "idle" | "copied" | "failed";
@@ -10,13 +11,18 @@ type Props = {
   code: string;
   size?: "sm" | "lg";
   className?: string;
+  source?: string;
+  placement?: "featured" | "highlight" | "list" | "table";
 };
 
-export function CopyButton({ code, size = "sm", className = "" }: Props) {
+export function CopyButton({ code, size = "sm", className = "", source, placement = "list" }: Props) {
   const [state, setState] = useState<CopyState>("idle");
 
   async function handleCopy() {
     const ok = await copyToClipboard(code);
+    if (ok) {
+      trackCodeCopy({ code, source, placement });
+    }
     setState(ok ? "copied" : "failed");
     window.setTimeout(() => setState("idle"), 2000);
   }
