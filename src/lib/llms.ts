@@ -31,7 +31,8 @@ export function generateLlmsTxt(): string {
     "",
     "Redeem codes in-game only: Settings (gear icon) → Code box at bottom → paste → confirm. Never enter passwords on fan sites.",
     "",
-    "Contact for corrections: contract@evomon.cc",
+    `Contact for corrections: ${SITE.emails.contact}`,
+    `Privacy questions: ${SITE.emails.privacy}`,
     "",
     "## Primary tools",
     `- [Evomon Codes](${canonical("/codes")}): Active redeem codes with rewards, source labels, copy buttons, redeem guide, and troubleshooting.`,
@@ -49,6 +50,7 @@ export function generateLlmsTxt(): string {
     "",
     "## Trust & metadata",
     `- [About & data policy](${canonical("/about")}): Unofficial disclaimer, how we source data, freshness dates.`,
+    `- [Privacy policy](${canonical("/privacy")}): Analytics, email contact, and what we do not collect.`,
     `- [Play Evomon on Roblox](${GAME.robloxUrl}): Official game page.`,
     `- [Sitemap](${canonical("/main_sitemap.xml")}): Indexable pages for search engines.`,
     `- [Full LLM context](${canonical("/llms-full.txt")}): Expanded markdown with codes list, type chart, FAQs.`,
@@ -161,6 +163,6 @@ export function generateLlmsFullTxt(): string {
     `- Index: ${canonical("/llms.txt")}`,
     "",
     "## Corrections",
-    "Email contract@evomon.cc with page URL and in-game observation. This site does not ask for Roblox passwords.",
+    `Email ${SITE.emails.contact} with page URL and in-game observation. Privacy: ${SITE.emails.privacy}. This site does not ask for Roblox passwords.`,
   );
 }

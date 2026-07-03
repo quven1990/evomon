@@ -5,6 +5,10 @@ export const SITE = {
   description:
     "Roblox Evomon wiki with working codes, pet sprites, team builder & type chart — practical tools updated regularly on evomon.cc.",
   locale: "en-US",
+  emails: {
+    contact: "contract@evomon.cc",
+    privacy: "privacy@evomon.cc",
+  },
 } as const;
 
 export function canonical(path: string) {

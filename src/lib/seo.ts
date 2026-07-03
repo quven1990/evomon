@@ -196,6 +196,16 @@ export const PAGE_SEO = {
       ogTitle: "About evomon.cc — Trust & Transparency",
       keywords: ["evomon wiki", "evomon fan site", "evomon disclaimer", "evomon data sources"],
     }),
+
+  privacy: () =>
+    buildPageMetadata({
+      title: "Privacy Policy — Evomon Wiki",
+      description:
+        "How evomon.cc handles analytics (Plausible, Google Analytics, Clarity), email contact, cookies, and what we do not collect. Independent fan wiki — no Roblox accounts.",
+      path: "/privacy",
+      ogTitle: "Privacy Policy — evomon.cc",
+      keywords: ["evomon wiki privacy", "evomon.cc privacy policy"],
+    }),
 } as const;
 
 export function dexPetMetadata(entry: {

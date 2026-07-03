@@ -41,6 +41,34 @@ export function Footer() {
               Open Evomon on Roblox →
             </a>
           </p>
+          <h3 className="mt-8 text-sm font-semibold uppercase tracking-wide text-zinc-500">
+            Contact
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm text-zinc-400">
+            <li>
+              <a
+                href={`mailto:${SITE.emails.contact}`}
+                className="text-emerald-300 hover:underline"
+              >
+                {SITE.emails.contact}
+              </a>
+              <span className="text-zinc-500"> — corrections</span>
+            </li>
+            <li>
+              <a
+                href={`mailto:${SITE.emails.privacy}`}
+                className="text-emerald-300 hover:underline"
+              >
+                {SITE.emails.privacy}
+              </a>
+              <span className="text-zinc-500"> — privacy</span>
+            </li>
+            <li>
+              <Link href="/privacy" className="text-zinc-400 transition hover:text-emerald-300">
+                Privacy Policy →
+              </Link>
+            </li>
+          </ul>
           <p className="mt-6 text-xs text-zinc-600">© {new Date().getFullYear()} {SITE.domain}</p>
         </div>
       </div>

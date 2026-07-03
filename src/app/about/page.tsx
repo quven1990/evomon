@@ -209,10 +209,27 @@ export default function AboutPage() {
           <ul>
             <li>
               Email{" "}
-              <a href="mailto:contract@evomon.cc" className="text-emerald-300 hover:underline">
-                contract@evomon.cc
+              <a
+                href={`mailto:${SITE.emails.contact}`}
+                className="text-emerald-300 hover:underline"
+              >
+                {SITE.emails.contact}
               </a>{" "}
               with the page URL and what you saw in-game.
+            </li>
+            <li>
+              Privacy questions:{" "}
+              <a
+                href={`mailto:${SITE.emails.privacy}`}
+                className="text-emerald-300 hover:underline"
+              >
+                {SITE.emails.privacy}
+              </a>{" "}
+              or read our{" "}
+              <Link href="/privacy" className="text-emerald-300 hover:underline">
+                Privacy Policy
+              </Link>
+              .
             </li>
             <li>
               For new codes, mention where you found them (Discord post, in-game banner, etc.) so we
