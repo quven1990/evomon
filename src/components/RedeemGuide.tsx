@@ -27,7 +27,7 @@ const steps = [
     body: (
       <>
         In-game, tap the <strong className="text-white">⚙️ gear icon</strong> in the top bar. This opens{" "}
-        <span className="text-zinc-200">设置 / Settings</span>.
+        <span className="text-zinc-200">Settings</span>.
       </>
     ),
   },
@@ -41,8 +41,8 @@ const steps = [
     title: "Paste & tap OK",
     body: (
       <>
-        Scroll to the bottom of Settings. Paste into the <strong className="text-white">代码</strong> field,
-        then tap <strong className="text-white">好的 (OK)</strong>. Your rewards show in a Congratulations
+        Scroll to the bottom of Settings. Paste into the <strong className="text-white">Code</strong> field,
+        then tap <strong className="text-white">OK</strong>. Your rewards show in a Congratulations
         popup.
       </>
     ),

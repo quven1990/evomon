@@ -12,6 +12,7 @@ const phases = [
   {
     title: "Early game (Level 0–30)",
     steps: [
+      "Claim the 7-day login panel on first join — free Evolution Stones and a Rainbow Summon Ticket on day 7.",
       "Pick Bubble for the easiest Verdant Valley and Lava Crag matchups.",
       "Clear Verdant Valley, Petal Pond, then add Fire or Electric coverage.",
       "Prioritize player level — AFK grinding gives creature EXP, not trainer EXP.",

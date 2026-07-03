@@ -82,7 +82,7 @@ export const codesFaq = [
   },
   {
     q: "Where do I redeem Roblox Evomon codes?",
-    a: "In-game: tap the gear icon (Settings) in the top bar → scroll to the 代码 / Code box at the bottom → paste the code → tap 好的 (OK). Not on evomon.cc or Roblox.com.",
+    a: "In-game: tap the gear icon (Settings) in the top bar → scroll to the Code box at the bottom → paste the code → tap OK. Not on evomon.cc or Roblox.com.",
   },
   {
     q: "When should I check for new codes?",

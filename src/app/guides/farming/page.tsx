@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DataFreshness } from "@/components/DataFreshness";
+import { LoginRewardsGrid } from "@/components/LoginRewardsGrid";
 import { PageBack, pageTitleClass } from "@/components/PageShell";
+import {
+  loginRewardHowTo,
+  LOGIN_REWARDS_LAST_CHECKED,
+  sevenDayLoginRewards,
+} from "@/data/login-rewards";
 import { PAGE_SEO } from "@/lib/seo";
 
 export const metadata: Metadata = PAGE_SEO.farmingGuide();
@@ -19,10 +26,26 @@ export default function FarmingGuidePage() {
 
         <h2>Daily checklist (~2,500+ player EXP)</h2>
         <ol className="list-decimal pl-5">
+          <li>7-day login rewards — Evolution Stones, Rainbow Egg, Crystals, Summon Ticket (see below)</li>
           <li>Daily quests — ~2,000 player EXP</li>
           <li>EXP Challenge tickets (Petal Pond) — 50 EXP each, 2 free/day</li>
           <li>Equipment Challenge (Silent Sands, Lv40+) — 200 EXP per ticket</li>
         </ol>
+
+        <h2 id="login-rewards" className="scroll-mt-24">
+          7-day login rewards
+        </h2>
+        <DataFreshness label="Checked in-game" date={LOGIN_REWARDS_LAST_CHECKED} />
+        <p className="mt-3">{loginRewardHowTo}</p>
+        <LoginRewardsGrid rewards={sevenDayLoginRewards} />
+        <p className="mt-3 text-sm text-zinc-400">
+          Day 7&apos;s Rainbow Summon Ticket is the best pull in the streak — log in daily so you
+          don&apos;t reset progress. Rewards are separate from redeem codes on{" "}
+          <Link href="/codes" className="text-emerald-300 hover:underline">
+            the codes page
+          </Link>
+          .
+        </p>
 
         <h2>Coin & material sources</h2>
         <ul>

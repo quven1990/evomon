@@ -1,26 +1,13 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MobileBottomNav, MobileNavProvider } from "@/components/MobileNav";
 import { GAME } from "@/lib/game";
 import { SITE, canonical } from "@/lib/site";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-  preload: false,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -91,9 +78,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className={`${GeistSans.className} flex min-h-full flex-col`}>
         <Script
           async
           src="https://plausible.shipsolo.io/js/pa-e7H4dQeqDLbGc8ELzaMzz.js"

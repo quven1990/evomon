@@ -175,9 +175,16 @@ export const PAGE_SEO = {
     buildPageMetadata({
       title: "Evomon Farming Guide — Daily EXP, Coins & Best Routes",
       description:
-        "2,500+ player EXP per day without guessing: daily quests, EXP Challenge tickets, Equipment Challenge loop — plus coin & material farms that actually scale.",
+        "2,500+ player EXP per day: 7-day login rewards, daily quests, EXP Challenge tickets, Equipment Challenge loop — plus coin & material farms that scale.",
       path: "/guides/farming",
-      keywords: ["evomon farming", "evomon exp farm", "evomon coins", "evomon grind"],
+      keywords: [
+        "evomon farming",
+        "evomon exp farm",
+        "evomon coins",
+        "evomon grind",
+        "evomon login rewards",
+        "evomon 7 day login",
+      ],
     }),
 
   about: () =>
