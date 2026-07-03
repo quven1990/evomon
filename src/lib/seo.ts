@@ -130,9 +130,16 @@ export const PAGE_SEO = {
   tierList: () =>
     buildPageMetadata({
       title: `Evomon Tier List (${monthLabel}) — Best Pets & Starters Ranked`,
-      description: `Who's S-tier in Evomon right now? Community overall rankings for starters, early-route catches & team roles — with notes on when to use each pick.`,
+      description: `July 2026 community tier list: Lavite, Bluebird, Frostlet, Whispurr, Arcub & Tarro for endgame — plus early-route catches, starter debates, and farm order.`,
       path: "/tier-list",
-      keywords: ["evomon tier list", "best evomon", "evomon rankings", "evomon best starter"],
+      keywords: [
+        "evomon tier list",
+        "best evomon",
+        "evomon rankings",
+        "evomon best starter",
+        "lavite evomon",
+        "bluebird evomon",
+      ],
     }),
 
   starters: () =>
