@@ -11,7 +11,8 @@
     "images:sync": "node scripts/download-pet-images.mjs",
     "images:compress": "node scripts/compress-images.mjs",
     "images:prepare": "npm run images:sync && npm run images:compress",
-    "deploy": "npm run build && wrangler pages deploy out --project-name=evomon --commit-dirty=true",
+    "deploy": "npm run build && wrangler pages deploy out --project-name=evomon --commit-dirty=true && npm run purge-cache",
+    "purge-cache": "node scripts/purge-cloudflare-cache.mjs",
     "pages:dev": "wrangler pages dev out"
   },
   "dependencies": {
