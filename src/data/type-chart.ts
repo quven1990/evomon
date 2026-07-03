@@ -40,3 +40,28 @@ export const typeChart: { attacker: ElementType; strong: ElementType[]; weak: El
   { attacker: "Light", strong: ["Dark"], weak: ["Dark"] },
   { attacker: "Dark", strong: ["Psychic", "Light"], weak: ["Fighting", "Bug", "Light"] },
 ];
+
+/** Types that deal super-effective damage to `defender` (attacker's strong list includes defender). */
+export function getTypesThatBeat(defender: ElementType): ElementType[] {
+  return typeChart.filter((row) => row.strong.includes(defender)).map((row) => row.attacker);
+}
+
+/** What `attacker` is super-effective against. */
+export function getStrongAgainst(attacker: ElementType): ElementType[] {
+  return typeChart.find((row) => row.attacker === attacker)?.strong ?? [];
+}
+
+/** Types that `attacker` takes super-effective damage from. */
+export function getWeakTo(attacker: ElementType): ElementType[] {
+  return typeChart.find((row) => row.attacker === attacker)?.weak ?? [];
+}
+
+export const TYPE_CHART_TYPES = typeChart.map((row) => row.attacker);
+
+export const TYPE_CHART_NOTES: Partial<Record<ElementType, string>> = {
+  Light:
+    "Light only super-effective vs Dark in this chart. Community data — dual-type pets may change practical matchups.",
+  Dark: "Dark hits Psychic and Light for super-effective damage. Also weak to Light — verify in duels when both apply.",
+  Normal:
+    "Normal appears on dex entries but has no offensive row here yet. Fighting is usually super-effective vs Normal in creature-collector games — confirm in-game.",
+};
