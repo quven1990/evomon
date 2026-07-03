@@ -178,14 +178,28 @@ export const PAGE_SEO = {
       keywords: ["evomon level 30", "evomon ultimate", "evomon ascension", "evomon endgame"],
     }),
 
-  mutationsGuide: () =>
-    buildPageMetadata({
-      title: "Evomon Shiny & Sparkle Guide — Pity, Odds & Hunt Routes",
-      description:
-        "Shiny vs Sparkle explained: pity counts (~600 / ~150), combat bonuses, and when to hunt rare forms vs when to focus on progression. Don't waste stones on flex picks.",
-      path: "/guides/mutations",
-      keywords: ["evomon shiny", "evomon sparkle", "evomon mutations", "evomon shiny hunt"],
-    }),
+  mutationsGuide: () => {
+    const title = `How to Get Shiny Evomon (${monthLabel}) — 149 Pity Trick`;
+    const description = `Prismatic looks cool but only shiny boosts stats — don't mix them up. Catch-only pity, shiny egg boss path, and the 149 combo for prismatic shinies. ${monthLabel}.`;
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/guides/mutations",
+        ogTitle: title,
+        keywords: [
+          "evomon shiny",
+          "evomon prismatic",
+          "evomon sparkle",
+          "evomon shiny egg",
+          "evomon shiny hunt",
+          "evomon pity",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
 
   farmingGuide: () =>
     buildPageMetadata({

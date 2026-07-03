@@ -44,7 +44,7 @@ export function generateLlmsTxt(): string {
     `- [Best Starter](${canonical("/starters")}): Bubble vs Blazpup vs Leafbun — early-game recommendation (Bubble for most players).`,
     `- [Beginner Guide](${canonical("/guides/beginner")}): Level 0–30 route, islands, daily loop.`,
     `- [Level 30 Guide](${canonical("/guides/level-30")}): Ultimate, Ascension, equipment dungeons at 40.`,
-    `- [Shiny & Sparkle](${canonical("/guides/mutations")}): Mutation pity and hunt planning.`,
+    `- [Shiny & Prismatic](${canonical("/guides/mutations")}): Shiny vs prismatic pity (600/150), shiny eggs, 149 pity trick, boss routes, Lavite/Bluebird farms.`,
     `- [Farming Guide](${canonical("/guides/farming")}): 7-day login rewards, daily EXP, coins, and material routes.`,
     `- [Tier List](${canonical("/tier-list")}): Community overall rankings for starters and early catches.`,
     "",
