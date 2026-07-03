@@ -160,14 +160,27 @@ export const PAGE_SEO = {
       keywords: ["evomon best starter", "bubble evomon", "blazpup", "leafbun", "evomon starters"],
     }),
 
-  beginnerGuide: () =>
-    buildPageMetadata({
-      title: "Evomon Beginner Guide — 0 to Level 30 Without Wasting Time",
-      description:
-        "New to Evomon? Redeem codes first, pick Bubble, hit level 30, unlock Ultimate — step-by-step route from tutorial to Ascension without common beginner traps.",
-      path: "/guides/beginner",
-      keywords: ["evomon guide", "evomon beginner guide", "how to play evomon", "evomon tips"],
-    }),
+  beginnerGuide: () => {
+    const title = `Stuck at Level 30? Evomon Beginner Guide (${monthLabel})`;
+    const description = `Burning King Balls on route pets? Island catch/skip chart, Lavite priority, daily EXP for Ascension, and evolution stones—not fruits—from summon tokens. ${monthLabel}.`;
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/guides/beginner",
+        ogTitle: title,
+        keywords: [
+          "evomon guide",
+          "evomon beginner guide",
+          "how to play evomon",
+          "evomon lavite",
+          "evomon player exp",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
 
   level30Guide: () =>
     buildPageMetadata({
