@@ -1,5 +1,6 @@
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { INDEXNOW_KEY } from "../src/lib/indexnow";
 import { generateLlmsFullTxt, generateLlmsTxt } from "../src/lib/llms";
 import { getSitemapXml } from "../src/lib/sitemap";
 import { SITE } from "../src/lib/site";
@@ -16,5 +17,8 @@ writeFileSync(
   `User-Agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`,
   "utf8",
 );
+writeFileSync(join(publicDir, `${INDEXNOW_KEY}.txt`), `${INDEXNOW_KEY}\n`, "utf8");
 
-console.log("Generated public/sitemap.xml, main_sitemap.xml, llms.txt, llms-full.txt, robots.txt");
+console.log(
+  "Generated public/sitemap.xml, main_sitemap.xml, llms.txt, llms-full.txt, robots.txt, IndexNow key file",
+);
