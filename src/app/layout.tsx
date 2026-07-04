@@ -89,8 +89,9 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
         <Script id="plausible-init" strategy="lazyOnload">
-          {`window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-plausible.init()`}
+          {`window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};
+window.plausible.init=window.plausible.init||function(i){window.plausible.o=i||{}};
+window.plausible.init();`}
         </Script>
         <Script
           async

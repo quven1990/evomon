@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Copy } from "lucide-react";
 import { trackCodeCopy } from "@/lib/analytics";
 import { copyToClipboard } from "@/lib/copy";
@@ -17,14 +17,26 @@ type Props = {
 
 export function CopyButton({ code, size = "sm", className = "", source, placement = "list" }: Props) {
   const [state, setState] = useState<CopyState>("idle");
+  const busyRef = useRef(false);
+  const resetTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   async function handleCopy() {
-    const ok = await copyToClipboard(code);
-    if (ok) {
-      trackCodeCopy({ code, source, placement });
+    if (busyRef.current) return;
+    busyRef.current = true;
+
+    try {
+      const ok = await copyToClipboard(code);
+      if (ok) {
+        trackCodeCopy({ code, source, placement });
+      }
+      setState(ok ? "copied" : "failed");
+    } catch {
+      setState("failed");
+    } finally {
+      busyRef.current = false;
+      if (resetTimer.current) clearTimeout(resetTimer.current);
+      resetTimer.current = setTimeout(() => setState("idle"), 2000);
     }
-    setState(ok ? "copied" : "failed");
-    window.setTimeout(() => setState("idle"), 2000);
   }
 
   const label =
@@ -32,8 +44,8 @@ export function CopyButton({ code, size = "sm", className = "", source, placemen
 
   const base =
     size === "lg"
-      ? "inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-bold transition"
-      : "rounded-lg border px-3 py-1.5 text-sm font-medium transition";
+      ? "inline-flex w-full touch-manipulation items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-bold transition"
+      : "touch-manipulation rounded-lg border px-3 py-1.5 text-sm font-medium transition";
 
   const tone =
     state === "copied"
@@ -54,6 +66,8 @@ export function CopyButton({ code, size = "sm", className = "", source, placemen
       onClick={handleCopy}
       className={`${base} ${tone} ${className}`}
       aria-label={`Copy code ${code}`}
+      aria-live="polite"
+      translate="no"
     >
       {size === "lg" && state === "idle" && <Copy className="h-4 w-4" />}
       {label}
