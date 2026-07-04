@@ -60,8 +60,8 @@ export function buildPageMetadata({
 
 /** Homepage — uses absolute title to avoid template suffix. */
 export function homeMetadata(): Metadata {
-  const title = `Evomon Wiki — ${codeCount} Free Codes, Dex & Team Builder (${monthLabel})`;
-  const description = `Roblox Evomon tools that save you time: ${codeCount} working codes (one-click copy), ${stats.named} dex entries with sprites, free team builder & type chart. Updated ${monthLabel}.`;
+  const title = `Evomon Wiki (${monthLabel}) — Dex, Codes, Guides & Type Chart`;
+  const description = `Evomon Wiki on evomon.cc — ${stats.named} dex entries with sprites, ${codeCount} working codes, type chart, tier list & beginner guides. Updated ${monthLabel}. Independent fan wiki for Roblox Evomon.`;
 
   return {
     ...buildPageMetadata({
@@ -74,6 +74,7 @@ export function homeMetadata(): Metadata {
         "evomon roblox",
         "evomon codes",
         "evomon wiki",
+        "wiki evomon",
         "evomon dex",
         "evomon team builder",
         "roblox evomon",

@@ -18,7 +18,7 @@ import { activeCodes } from "@/data/codes";
 import { dexStats } from "@/data/dex";
 import { navSections } from "@/data/navigation";
 import { GAME } from "@/lib/game";
-import { SITE, canonical } from "@/lib/site";
+import { SITE, canonical, monthYear } from "@/lib/site";
 
 const stats = dexStats();
 
@@ -179,17 +179,25 @@ export default function HomePage() {
         </section>
 
         <section className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="text-2xl font-bold text-white">What is Evomon?</h2>
+          <h2 className="text-2xl font-bold text-white">What is Evomon Wiki?</h2>
+          <div className="prose-wiki mt-4 max-w-3xl">
+            <p>
+              <strong>Evomon Wiki</strong> on {canonical("/")} is an independent fan wiki for Roblox
+              Evomon — {stats.named} dex entries with sprites, {activeCodes.length} working codes, an
+              interactive type chart, tier list, and beginner guides. Updated {monthYear()}.{" "}
+              <Link href="/about" className="text-emerald-300 hover:underline">
+                Not affiliated with the developers
+              </Link>
+              .
+            </p>
+          </div>
+
+          <h2 className="mt-10 text-2xl font-bold text-white">What is Evomon?</h2>
           <div className="prose-wiki mt-4 max-w-3xl">
             <p>
               {GAME.name} is a free Roblox creature-collection RPG by {GAME.developer}. Pick a starter,
               explore islands from Verdant Valley to Silent Sands, evolve your team, hunt Shiny and
-              Sparkle variants, and run dungeons with friends. {SITE.name} at {canonical("/")} is your
-              independent reference —{" "}
-              <Link href="/about" className="text-emerald-300 hover:underline">
-                not affiliated with the developers
-              </Link>
-              .
+              Sparkle variants, and run dungeons with friends.
             </p>
           </div>
         </section>

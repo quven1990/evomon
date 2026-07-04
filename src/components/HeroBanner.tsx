@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FeaturedPets } from "@/components/FeaturedPets";
+import { activeCodes } from "@/data/codes";
+import { dexStats } from "@/data/dex";
+import { monthYear } from "@/lib/site";
+
+const stats = dexStats();
+const monthLabel = monthYear();
 
 export function HeroBanner() {
   return (
@@ -38,13 +44,12 @@ export function HeroBanner() {
           <h1 className="mt-6 text-4xl font-black leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
             The{" "}
             <span className="bg-gradient-to-r from-emerald-300 via-cyan-300 to-emerald-400 bg-clip-text text-transparent">
-              Evomon
-            </span>{" "}
-            Dex & Wiki
+              Evomon Wiki
+            </span>
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-300">
-            76+ pet sprites, team builder, codes, type chart — a real wiki with pictures, not a text
-            stub.
+            {stats.named} dex entries with sprites, {activeCodes.length} working codes, guides & type
+            chart — updated {monthLabel}.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
