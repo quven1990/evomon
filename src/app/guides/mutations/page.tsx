@@ -217,7 +217,19 @@ export default function MutationsGuidePage() {
               >
                 <div>
                   <p className="font-medium text-white">{boss.name}</p>
-                  <p className="mt-1 text-xs text-emerald-400">{boss.where}</p>
+                  <p className="mt-1 text-xs text-emerald-400">
+                    {boss.name === "Volcras King / Bluebird line" ? (
+                      <>
+                        Raven Ridge boss + wild{" "}
+                        <Link href="/dex/bluebird" className="text-emerald-300 hover:underline">
+                          Bluebird
+                        </Link>{" "}
+                        route
+                      </>
+                    ) : (
+                      boss.where
+                    )}
+                  </p>
                 </div>
                 <p className="text-sm leading-6 text-zinc-400 sm:max-w-md sm:text-right">
                   {boss.note}
@@ -259,7 +271,18 @@ export default function MutationsGuidePage() {
                 className="rounded-xl border border-white/10 bg-[#0b1512] p-4 sm:p-5"
               >
                 <div className="flex flex-wrap items-center gap-2">
-                  <h3 className="font-semibold text-white">{route.target}</h3>
+                  <h3 className="font-semibold text-white">
+                    {route.target === "Sparkit line" ? (
+                      <>
+                        <Link href="/dex/sparkit" className="text-emerald-300 hover:underline">
+                          Sparkit
+                        </Link>{" "}
+                        line
+                      </>
+                    ) : (
+                      route.target
+                    )}
+                  </h3>
                   <span
                     className={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${difficultyColor[route.difficulty]}`}
                   >
