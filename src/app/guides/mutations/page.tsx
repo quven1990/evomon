@@ -152,28 +152,41 @@ export default function MutationsGuidePage() {
             ))}
           </ul>
 
-          <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10">
-            <table className="w-full min-w-[28rem] text-left text-sm">
+          <p className="mt-6 text-xs leading-5 text-zinc-500">
+            At-a-glance comparison — this table is read-only, not clickable. See{" "}
+            <Link href="#variants" className="text-emerald-400 hover:underline">
+              Types above
+            </Link>{" "}
+            for full notes on each variant.
+          </p>
+
+          <div className="mt-2 cursor-default overflow-x-auto rounded-lg border border-white/5 bg-white/[0.02]">
+            <table className="w-full min-w-[28rem] cursor-default text-left text-sm">
+              <caption className="sr-only">
+                Read-only comparison of prismatic and shiny odds, pity, and stat boosts
+              </caption>
               <thead>
-                <tr className="border-b border-white/10 bg-white/[0.03] text-xs uppercase tracking-wide text-zinc-500">
-                  <th className="px-4 py-3">Variant</th>
-                  <th className="px-4 py-3">Community odds</th>
-                  <th className="px-4 py-3">Pity</th>
-                  <th className="hidden px-4 py-3 sm:table-cell">Stats?</th>
+                <tr className="border-b border-white/5 text-xs uppercase tracking-wide text-zinc-500">
+                  <th className="px-4 py-2.5 font-normal">Variant</th>
+                  <th className="px-4 py-2.5 font-normal">Community odds</th>
+                  <th className="px-4 py-2.5 font-normal">Pity</th>
+                  <th className="hidden px-4 py-2.5 font-normal sm:table-cell">Stats?</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr className="border-b border-white/5 bg-[#0b1512]">
-                  <td className="px-4 py-3 font-medium text-white">Prismatic</td>
-                  <td className="px-4 py-3 text-zinc-400">~1/125–1/220</td>
-                  <td className="px-4 py-3 text-zinc-300">150 captures</td>
-                  <td className="hidden px-4 py-3 text-zinc-500 sm:table-cell">No</td>
+              <tbody className="text-zinc-400">
+                <tr className="border-b border-white/5">
+                  <td className="px-4 py-2.5 text-zinc-300">
+                    Prismatic <span className="text-zinc-500">(Sparkle)</span>
+                  </td>
+                  <td className="px-4 py-2.5">~1/125–1/220</td>
+                  <td className="px-4 py-2.5">150 captures</td>
+                  <td className="hidden px-4 py-2.5 sm:table-cell">No</td>
                 </tr>
-                <tr className="bg-[#0b1512]">
-                  <td className="px-4 py-3 font-medium text-white">Shiny</td>
-                  <td className="px-4 py-3 text-zinc-400">~1/500 (0.2%)</td>
-                  <td className="px-4 py-3 text-zinc-300">~600 KOs/catches</td>
-                  <td className="hidden px-4 py-3 text-emerald-300 sm:table-cell">Yes</td>
+                <tr>
+                  <td className="px-4 py-2.5 text-zinc-300">Shiny</td>
+                  <td className="px-4 py-2.5">~1/500 (0.2%)</td>
+                  <td className="px-4 py-2.5">~600 KOs/catches</td>
+                  <td className="hidden px-4 py-2.5 sm:table-cell">Yes</td>
                 </tr>
               </tbody>
             </table>
