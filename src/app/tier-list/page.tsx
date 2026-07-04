@@ -10,6 +10,7 @@ import {
   endgameTiers,
   metaDebates,
 } from "@/data/tier-list";
+import { PickNameLinked } from "@/lib/dex-link";
 import { PAGE_SEO } from "@/lib/seo";
 
 export const metadata: Metadata = PAGE_SEO.tierList();
@@ -230,13 +231,7 @@ export default function TierListPage() {
                     </span>
                     <div>
                       <p className="font-semibold text-white">
-                        {name === "Lavite" ? (
-                          <Link href="/dex/lavite" className="text-emerald-300 hover:underline">
-                            Lavite
-                          </Link>
-                        ) : (
-                          name
-                        )}
+                        <PickNameLinked name={name} />
                       </p>
                       <p className="text-xs text-emerald-400">{where}</p>
                     </div>
@@ -269,13 +264,7 @@ export default function TierListPage() {
                     <tr key={step} className="border-b border-white/5 bg-[#0b1512]">
                       <td className="px-4 py-3 font-bold text-emerald-300">{step}</td>
                       <td className="px-4 py-3 font-medium text-white">
-                        {name === "Lavite" ? (
-                          <Link href="/dex/lavite" className="text-emerald-300 hover:underline">
-                            Lavite
-                          </Link>
-                        ) : (
-                          name
-                        )}
+                        <PickNameLinked name={name} />
                       </td>
                       <td className="px-4 py-3 text-emerald-400/90">{where}</td>
                       <td className="px-4 py-3 text-zinc-400">{note}</td>

@@ -1,31 +1,10 @@
-import Link from "next/link";
 import type { TierPick } from "@/data/tier-list";
+import { PickNameLinked } from "@/lib/dex-link";
 
 type Props = {
   pick: TierPick;
   compact?: boolean;
 };
-
-function PickName({ name }: { name: string }) {
-  if (name === "Lavite → Lavarock") {
-    return (
-      <>
-        <Link href="/dex/lavite" className="text-emerald-300 hover:underline">
-          Lavite
-        </Link>
-        {" → Lavarock"}
-      </>
-    );
-  }
-  if (name === "Lavite") {
-    return (
-      <Link href="/dex/lavite" className="text-emerald-300 hover:underline">
-        Lavite
-      </Link>
-    );
-  }
-  return name;
-}
 
 export function TierPickCard({ pick, compact }: Props) {
   return (
@@ -37,7 +16,7 @@ export function TierPickCard({ pick, compact }: Props) {
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0 flex-1">
           <h3 className="text-base font-semibold leading-snug text-white sm:text-lg">
-            <PickName name={pick.name} />
+            <PickNameLinked name={pick.name} />
           </h3>
           <div className="mt-2 flex flex-wrap gap-2">
             <span className="rounded-md bg-white/5 px-2.5 py-1 text-xs text-zinc-300">{pick.types}</span>
