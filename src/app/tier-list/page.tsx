@@ -229,7 +229,15 @@ export default function TierListPage() {
                       {step}
                     </span>
                     <div>
-                      <p className="font-semibold text-white">{name}</p>
+                      <p className="font-semibold text-white">
+                        {name === "Lavite" ? (
+                          <Link href="/dex/lavite" className="text-emerald-300 hover:underline">
+                            Lavite
+                          </Link>
+                        ) : (
+                          name
+                        )}
+                      </p>
                       <p className="text-xs text-emerald-400">{where}</p>
                     </div>
                   </div>
@@ -260,7 +268,15 @@ export default function TierListPage() {
                   ].map(([step, name, where, note]) => (
                     <tr key={step} className="border-b border-white/5 bg-[#0b1512]">
                       <td className="px-4 py-3 font-bold text-emerald-300">{step}</td>
-                      <td className="px-4 py-3 font-medium text-white">{name}</td>
+                      <td className="px-4 py-3 font-medium text-white">
+                        {name === "Lavite" ? (
+                          <Link href="/dex/lavite" className="text-emerald-300 hover:underline">
+                            Lavite
+                          </Link>
+                        ) : (
+                          name
+                        )}
+                      </td>
                       <td className="px-4 py-3 text-emerald-400/90">{where}</td>
                       <td className="px-4 py-3 text-zinc-400">{note}</td>
                     </tr>
