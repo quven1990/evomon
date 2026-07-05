@@ -15,7 +15,7 @@ const root = path.join(__dirname, "..");
 
 const PET_MAX = 512;
 const ICON_MAX = 512;
-const HERO_QUALITY = 80;
+const HERO_QUALITY = 65;
 
 function formatBytes(n) {
   if (n < 1024) return `${n} B`;

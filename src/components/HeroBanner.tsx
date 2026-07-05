@@ -1,9 +1,18 @@
-import Image from "next/image";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { FeaturedPets } from "@/components/FeaturedPets";
+import { HeroBackground } from "@/components/HeroBackground";
 import { activeCodes } from "@/data/codes";
 import { dexStats } from "@/data/dex";
 import { monthYear } from "@/lib/site";
+
+const FeaturedPets = dynamic(
+  () => import("@/components/FeaturedPets").then((m) => ({ default: m.FeaturedPets })),
+  {
+    loading: () => (
+      <div className="flex min-h-[6rem] items-end justify-center gap-2 sm:min-h-[8rem] sm:gap-4 lg:min-h-[8rem]" aria-hidden />
+    ),
+  },
+);
 
 const stats = dexStats();
 const monthLabel = monthYear();
@@ -11,29 +20,20 @@ const monthLabel = monthYear();
 export function HeroBanner() {
   return (
     <section className="relative overflow-hidden border-b border-white/10">
-      <div className="absolute inset-0">
-        {/* Native img: LCP paints without waiting for client hydration */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/hero.webp"
-          alt=""
-          fetchPriority="high"
-          decoding="async"
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050c0a] via-[#050c0a]/85 to-[#050c0a]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050c0a] via-transparent to-transparent" />
-      </div>
+      <HeroBackground />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-20">
         <div>
           <div className="flex items-center gap-3">
-            <Image
+            {/* Plain img — avoid next/image priority preload competing with hero LCP */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/images/game-icon.png"
               alt="Evomon"
               width={56}
               height={56}
-              priority
+              loading="eager"
+              decoding="async"
               className="rounded-2xl border border-emerald-500/30 shadow-lg shadow-emerald-500/20"
             />
             <div>
@@ -48,8 +48,8 @@ export function HeroBanner() {
             </span>
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-300">
-            {stats.named} dex entries with sprites, {activeCodes.length} working codes, guides & type
-            chart — updated {monthLabel}.
+            {stats.named} dex entries with sprites, {activeCodes.length} working codes, Sparkle guide
+            & type chart — updated {monthLabel}.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link

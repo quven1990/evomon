@@ -1,4 +1,6 @@
 # https://developers.cloudflare.com/workers/static-assets/headers
+/
+  Link: </images/hero.webp>; rel=preload; as=image; fetchpriority=high
 /_next/static/*
   Cache-Control: public,max-age=31536000,immutable
 /images/*
