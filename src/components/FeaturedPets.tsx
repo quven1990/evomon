@@ -20,7 +20,7 @@ export function FeaturedPets() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`/pets/${pet!.name!.toLowerCase()}.png`}
-              alt={pet!.name!}
+              alt=""
               width={120}
               height={120}
               loading="eager"

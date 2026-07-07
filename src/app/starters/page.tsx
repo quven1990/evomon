@@ -131,7 +131,7 @@ export default function StartersPage() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={`/pets/${slug}.png`}
-                      alt={starter.name}
+                      alt=""
                       width={96}
                       height={96}
                       loading="eager"
