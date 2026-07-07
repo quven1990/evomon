@@ -85,20 +85,27 @@ export function homeMetadata(): Metadata {
 }
 
 export const PAGE_SEO = {
-  codes: () =>
-    buildPageMetadata({
-      title: `${codeCount} Free Evomon Codes (${monthLabel}) — Copy & Redeem`,
-      description: `${codeCount} working Evomon codes for ${monthLabel} — including EVO120HYPE & EVO60SPARK. Free Summon Tickets, EXP Fruits, Evolution Stones & Advanced Balls. One-click copy, source labels, and redeem troubleshooting.`,
-      path: "/codes",
-      ogTitle: `Free Evomon Codes (${monthLabel}) — ${codeCount} Active Codes`,
-      keywords: [
-        "evomon codes",
-        "roblox evomon codes",
-        "evomon codes 2026",
-        "free evomon codes",
-        "evomon promo codes",
-      ],
-    }),
+  codes: () => {
+    const title = `${codeCount} Free Evomon Codes (${monthLabel}) — Copy & Redeem`;
+    const description = `${codeCount} working Evomon codes for ${monthLabel} — including EVO120HYPE & EVO60SPARK. Free Summon Tickets, EXP Fruits, Evolution Stones & Advanced Balls. One-click copy, source labels, and redeem troubleshooting.`;
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/codes",
+        ogTitle: `Free Evomon Codes (${monthLabel}) — ${codeCount} Active Codes`,
+        keywords: [
+          "evomon codes",
+          "roblox evomon codes",
+          "evomon codes 2026",
+          "free evomon codes",
+          "evomon promo codes",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
 
   dex: () =>
     buildPageMetadata({
