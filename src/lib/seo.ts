@@ -88,7 +88,7 @@ export const PAGE_SEO = {
   codes: () =>
     buildPageMetadata({
       title: `${codeCount} Free Evomon Codes (${monthLabel}) — Copy & Redeem`,
-      description: `All working Evomon codes for ${monthLabel}: free EXP Fruits, Advanced Balls, Coins & Evolution Stones. One-click copy, source-labeled by trust level, plus fix guide if a code fails.`,
+      description: `${codeCount} working Evomon codes for ${monthLabel} — including EVO120HYPE & EVO60SPARK. Free Summon Tickets, EXP Fruits, Evolution Stones & Advanced Balls. One-click copy, source labels, and redeem troubleshooting.`,
       path: "/codes",
       ogTitle: `Free Evomon Codes (${monthLabel}) — ${codeCount} Active Codes`,
       keywords: [
@@ -154,16 +154,17 @@ export const PAGE_SEO = {
 
   starters: () =>
     buildPageMetadata({
-      title: "Best Evomon Starter? Bubble vs Blazpup vs Leafbun",
+      title: `Best Evomon Starter — Pick Bubble (${monthLabel})`,
       description:
-        "Pick wrong and you'll grind twice as long. Compare all 3 Evomon starters — matchups, evolution lines & who wins early game (most players choose Bubble).",
+        "Bubble is the best Evomon starter for most new players. Compare Bubble, Blazpup & Leafbun — element matchups, evolution lines, and who clears Verdant Valley and Lava Crag fastest.",
       path: "/starters",
+      ogTitle: `Best Evomon Starter — Bubble vs Blazpup vs Leafbun`,
       keywords: ["evomon best starter", "bubble evomon", "blazpup", "leafbun", "evomon starters"],
     }),
 
   beginnerGuide: () => {
-    const title = `Stuck at Level 30? Evomon Beginner Guide (${monthLabel})`;
-    const description = `Burning King Balls on route pets? Island catch/skip chart, Lavite priority, daily EXP for Ascension, and evolution stones—not fruits—from summon tokens. ${monthLabel}.`;
+    const title = `Evomon Beginner Guide — Islands, Lavite & Level 30 (${monthLabel})`;
+    const description = `New player route for Roblox Evomon: island catch/skip chart, Lavite on Lava Crag, daily EXP for level 30 & Ascension, and where to spend balls vs evolution stones. Updated ${monthLabel}.`;
 
     return {
       ...buildPageMetadata({
