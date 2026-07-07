@@ -148,20 +148,20 @@ export default function BeginnerGuidePage() {
 
         <section className="mt-6 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6">
           <h2 className="text-lg font-semibold text-white">Quick answers</h2>
-          <dl className="mt-4 space-y-4 text-sm">
+          <div className="mt-4 space-y-4 text-sm">
             <div>
-              <dt className="font-medium text-emerald-300">Where do I catch Lavite?</dt>
-              <dd className="mt-1 leading-6 text-zinc-400">
+              <p className="font-medium text-emerald-300">Where do I catch Lavite?</p>
+              <p className="mt-1 leading-6 text-zinc-400">
                 Lava Crag during the main route — see the{" "}
                 <Link href="#islands" className="text-emerald-300 hover:underline">
                   island chart
                 </Link>{" "}
                 below. Level Lavite before dumping stones on your starter.
-              </dd>
+              </p>
             </div>
             <div>
-              <dt className="font-medium text-emerald-300">Stuck before level 30?</dt>
-              <dd className="mt-1 leading-6 text-zinc-400">
+              <p className="font-medium text-emerald-300">Stuck before level 30?</p>
+              <p className="mt-1 leading-6 text-zinc-400">
                 Trainer level gates Ascension — run the{" "}
                 <Link href="/guides/farming#daily" className="text-emerald-300 hover:underline">
                   daily EXP checklist
@@ -171,28 +171,28 @@ export default function BeginnerGuidePage() {
                   daily quests
                 </Link>
                 .
-              </dd>
+              </p>
             </div>
             <div>
-              <dt className="font-medium text-emerald-300">Shiny or shiny eggs?</dt>
-              <dd className="mt-1 leading-6 text-zinc-400">
+              <p className="font-medium text-emerald-300">Shiny or shiny eggs?</p>
+              <p className="mt-1 leading-6 text-zinc-400">
                 Build your team first. For pity, eggs, and hunt routes see the{" "}
                 <Link href="/guides/mutations" className="text-emerald-300 hover:underline">
                   Shiny & Prismatic guide
                 </Link>
                 .
-              </dd>
+              </p>
             </div>
             <div>
-              <dt className="font-medium text-emerald-300">Best starter?</dt>
-              <dd className="mt-1 leading-6 text-zinc-400">
+              <p className="font-medium text-emerald-300">Best starter?</p>
+              <p className="mt-1 leading-6 text-zinc-400">
                 <Link href="/starters" className="text-emerald-300 hover:underline">
                   Bubble
                 </Link>{" "}
                 for most accounts — route catches outscale all starters later.
-              </dd>
+              </p>
             </div>
-          </dl>
+          </div>
         </section>
 
         <div className="mt-8">

@@ -14,13 +14,13 @@ export function Footer() {
           <p className="mt-3 text-sm leading-7 text-zinc-400">
             Community wiki for {GAME.fullName}. Codes, dex, type chart, tier list, and progression
             guides — independent and not affiliated with {GAME.developer} or Roblox.{" "}
-            <Link href="/about" className="text-emerald-400 hover:underline">
+            <Link href="/about" className="font-medium text-emerald-300 underline decoration-emerald-400/60 underline-offset-2 hover:text-emerald-200">
               How we source data →
             </Link>
           </p>
         </div>
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">Explore</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-400">Explore</h3>
           <ul className="mt-4 grid grid-cols-2 gap-2 text-sm">
             {footerLinks.map((link) => (
               <li key={link.href}>
@@ -32,13 +32,13 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">Play</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-400">Play</h3>
           <p className="mt-4 text-sm text-zinc-400">
             <PlayLink placement="footer" className="text-emerald-300 hover:underline">
               Open Evomon on Roblox →
             </PlayLink>
           </p>
-          <h3 className="mt-8 text-sm font-semibold uppercase tracking-wide text-zinc-500">
+          <h3 className="mt-8 text-sm font-semibold uppercase tracking-wide text-zinc-400">
             Contact
           </h3>
           <ul className="mt-4 space-y-2 text-sm text-zinc-400">
@@ -50,7 +50,7 @@ export function Footer() {
               >
                 {SITE.emails.contact}
               </ContactMailLink>
-              <span className="text-zinc-500"> — corrections</span>
+              <span className="text-zinc-400"> — corrections</span>
             </li>
             <li>
               <ContactMailLink
@@ -60,7 +60,7 @@ export function Footer() {
               >
                 {SITE.emails.privacy}
               </ContactMailLink>
-              <span className="text-zinc-500"> — privacy</span>
+              <span className="text-zinc-400"> — privacy</span>
             </li>
             <li>
               <Link href="/privacy" className="text-zinc-400 transition hover:text-emerald-300">
@@ -68,7 +68,7 @@ export function Footer() {
               </Link>
             </li>
           </ul>
-          <p className="mt-6 text-xs text-zinc-600">© {new Date().getFullYear()} {SITE.domain}</p>
+          <p className="mt-6 text-xs text-zinc-400">© {new Date().getFullYear()} {SITE.domain}</p>
         </div>
       </div>
     </footer>

@@ -121,20 +121,20 @@ export default function MutationsGuidePage() {
                     {row.uiLabel}
                   </span>
                 </div>
-                <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+                <div className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
                   <div>
-                    <dt className="text-xs uppercase tracking-wide text-zinc-500">Odds</dt>
-                    <dd className="mt-1 text-zinc-300">{row.odds}</dd>
+                    <p className="text-xs uppercase tracking-wide text-zinc-500">Odds</p>
+                    <p className="mt-1 text-zinc-300">{row.odds}</p>
                   </div>
                   <div>
-                    <dt className="text-xs uppercase tracking-wide text-zinc-500">Pity</dt>
-                    <dd className="mt-1 text-zinc-300">{row.pity}</dd>
+                    <p className="text-xs uppercase tracking-wide text-zinc-500">Pity</p>
+                    <p className="mt-1 text-zinc-300">{row.pity}</p>
                   </div>
                   <div className="sm:col-span-2">
-                    <dt className="text-xs uppercase tracking-wide text-zinc-500">Combat</dt>
-                    <dd className="mt-1 text-zinc-300">{row.combat}</dd>
+                    <p className="text-xs uppercase tracking-wide text-zinc-500">Combat</p>
+                    <p className="mt-1 text-zinc-300">{row.combat}</p>
                   </div>
-                </dl>
+                </div>
                 <p className="mt-3 text-sm leading-6 text-zinc-400">{row.notes}</p>
               </article>
             ))}

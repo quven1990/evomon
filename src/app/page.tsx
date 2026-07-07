@@ -111,7 +111,7 @@ export default function HomePage() {
         <HeroBanner />
 
         <section className="mx-auto max-w-7xl px-4 py-10">
-          <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {[
               { label: "Pet sprites", value: "76+" },
               { label: "Dex slots", value: String(stats.total), href: "/dex" as const },
@@ -120,8 +120,8 @@ export default function HomePage() {
             ].map((item) => {
               const inner = (
                 <>
-                  <dt className="text-xs uppercase tracking-wide text-zinc-500">{item.label}</dt>
-                  <dd className="mt-1 text-2xl font-bold text-white">{item.value}</dd>
+                  <p className="text-xs uppercase tracking-wide text-zinc-400">{item.label}</p>
+                  <p className="mt-1 text-2xl font-bold text-white">{item.value}</p>
                 </>
               );
               return (
@@ -139,7 +139,7 @@ export default function HomePage() {
                 </div>
               );
             })}
-          </dl>
+          </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-4 pb-16">
