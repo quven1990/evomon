@@ -295,15 +295,22 @@ function TypeCoverageBody({ analysis }: { analysis: ReturnType<typeof analyzeTea
         </div>
       )}
       {analysis.offenseGaps.length > 0 && analysis.uniqueElements.length > 0 && (
-        <div className="mt-3">
-          <p className="text-xs font-semibold uppercase tracking-wide text-amber-400">Offense gaps</p>
-          <div className="mt-2 flex flex-wrap gap-1.5">
-            {analysis.offenseGaps.slice(0, 8).map((g) => (
-              <span key={g} className="rounded bg-amber-500/10 px-2 py-0.5 text-xs text-amber-200">
-                vs {g}
+        <div className="mt-3 border-t border-white/5 pt-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Offense gaps</p>
+          <p className="mt-1 text-[11px] leading-relaxed text-zinc-500">
+            Types your team can&apos;t hit super-effectively.
+          </p>
+          <p className="mt-1.5 text-[11px] leading-relaxed text-zinc-500">
+            {analysis.offenseGaps.slice(0, 8).map((g, i) => (
+              <span key={g}>
+                {i > 0 && <span className="text-zinc-600"> · </span>}
+                {g}
               </span>
             ))}
-          </div>
+            {analysis.offenseGaps.length > 8 && (
+              <span className="text-zinc-600"> · +{analysis.offenseGaps.length - 8} more</span>
+            )}
+          </p>
         </div>
       )}
       {analysis.defensiveThreats.length > 0 && (
