@@ -106,8 +106,8 @@ export default async function DexDetailPage({ params }: Props) {
             </Link>
           </li>
           <li>
-            <Link href="/codes" className="text-emerald-300 hover:underline">
-              Active codes
+            <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
+              Evomon codes
             </Link>
           </li>
         </ul>

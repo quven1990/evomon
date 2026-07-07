@@ -340,13 +340,13 @@ export default function MutationsGuidePage() {
                 </Link>
               </li>
               <li>
-                <Link href="/guides/farming" className="text-emerald-300 hover:underline">
-                  Farming — balls & daily routes →
+                <Link href="/guides/farming#daily" className="text-emerald-300 hover:underline">
+                  Daily farming — EXP & reset →
                 </Link>
               </li>
               <li>
-                <Link href="/codes" className="text-emerald-300 hover:underline">
-                  Codes — stock balls first →
+                <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
+                  Evomon codes →
                 </Link>
               </li>
               <li>

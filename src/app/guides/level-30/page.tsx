@@ -22,7 +22,13 @@ export default function Level30GuidePage() {
           <li>Commit resources to one carry (usually Bubble line for early islands).</li>
           <li>Clear Verdant Valley → Petal Pond → Lava Crag with type coverage.</li>
           <li>Prioritize player level — daily quests give trainer EXP, AFK does not.</li>
-          <li>Redeem all active codes for EXP Fruits and Advanced Balls.</li>
+          <li>
+            Redeem all active{" "}
+            <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
+              Evomon codes
+            </Link>{" "}
+            for EXP Fruits and Advanced Balls.
+          </li>
         </ul>
 
         <h2>At level 30</h2>

@@ -4,12 +4,12 @@ export const quickStart = [
   {
     step: "Redeem codes",
     detail: "Free EXP Fruits, Advanced Balls, and coins before your first grind session.",
-    href: "/codes",
+    href: "/codes#codes-list",
   },
   {
     step: "Claim 7-day login",
     detail: "Evolution Stones and a Rainbow Summon Ticket on day 7 — do not skip days.",
-    href: "/guides/farming#login-rewards",
+    href: "/guides/farming#daily",
   },
   {
     step: "Follow main story quests",

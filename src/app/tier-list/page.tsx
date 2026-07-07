@@ -295,8 +295,8 @@ export default function TierListPage() {
               </Link>
             </li>
             <li>
-              <Link href="/codes" className="text-emerald-300 hover:underline">
-                Free codes →
+              <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
+                Evomon codes →
               </Link>
             </li>
           </ul>

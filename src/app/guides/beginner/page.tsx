@@ -92,6 +92,30 @@ export default function BeginnerGuidePage() {
                   text: "Ascension requires trainer level 30 and much of player EXP is daily-gated — complete daily quests, EXP Challenges, and world boss rewards each day.",
                 },
               },
+              {
+                "@type": "Question",
+                name: "Where do I catch Lavite in Evomon?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Catch Lavite on Lava Crag during the main story route — prioritize leveling it over spending Evolution Stones on your starter.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I get shiny eggs in Evomon?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Shiny eggs come from catching wild Evomon after battle — see the Shiny & Prismatic guide for pity, boss routes, and when to chase shinies vs building your core team first.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How much daily player EXP can I farm in Evomon?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "About 2,500+ player EXP per day from login rewards, daily quests, and free EXP Challenge tickets — see the farming guide daily checklist.",
+                },
+              },
             ],
           },
         ]}
@@ -111,14 +135,65 @@ export default function BeginnerGuidePage() {
           </p>
           <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">
             Follow <strong className="text-white">main quests</strong>, redeem{" "}
-            <Link href="/codes" className="text-emerald-300 hover:underline">
-              codes
+            <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
+              Evomon codes
             </Link>
             , grab <strong className="text-white">Lavite</strong> on Lava Crag, and never skip{" "}
-            <strong className="text-white">daily quests</strong>. Player level — not creature level —
-            unlocks the game.
+            <Link href="/guides/farming#daily" className="text-emerald-300 hover:underline">
+              daily quests
+            </Link>
+            . Player level — not creature level — unlocks the game.
           </p>
         </div>
+
+        <section className="mt-6 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6">
+          <h2 className="text-lg font-semibold text-white">Quick answers</h2>
+          <dl className="mt-4 space-y-4 text-sm">
+            <div>
+              <dt className="font-medium text-emerald-300">Where do I catch Lavite?</dt>
+              <dd className="mt-1 leading-6 text-zinc-400">
+                Lava Crag during the main route — see the{" "}
+                <Link href="#islands" className="text-emerald-300 hover:underline">
+                  island chart
+                </Link>{" "}
+                below. Level Lavite before dumping stones on your starter.
+              </dd>
+            </div>
+            <div>
+              <dt className="font-medium text-emerald-300">Stuck before level 30?</dt>
+              <dd className="mt-1 leading-6 text-zinc-400">
+                Trainer level gates Ascension — run the{" "}
+                <Link href="/guides/farming#daily" className="text-emerald-300 hover:underline">
+                  daily EXP checklist
+                </Link>{" "}
+                (~2,500+ EXP/day) and finish{" "}
+                <Link href="#xp" className="text-emerald-300 hover:underline">
+                  daily quests
+                </Link>
+                .
+              </dd>
+            </div>
+            <div>
+              <dt className="font-medium text-emerald-300">Shiny or shiny eggs?</dt>
+              <dd className="mt-1 leading-6 text-zinc-400">
+                Build your team first. For pity, eggs, and hunt routes see the{" "}
+                <Link href="/guides/mutations" className="text-emerald-300 hover:underline">
+                  Shiny & Prismatic guide
+                </Link>
+                .
+              </dd>
+            </div>
+            <div>
+              <dt className="font-medium text-emerald-300">Best starter?</dt>
+              <dd className="mt-1 leading-6 text-zinc-400">
+                <Link href="/starters" className="text-emerald-300 hover:underline">
+                  Bubble
+                </Link>{" "}
+                for most accounts — route catches outscale all starters later.
+              </dd>
+            </div>
+          </dl>
+        </section>
 
         <div className="mt-8">
           <BeginnerGuideNav />
@@ -294,8 +369,8 @@ export default function BeginnerGuidePage() {
 
           <p className="mt-4 text-sm text-zinc-500">
             Full daily numbers:{" "}
-            <Link href="/guides/farming" className="text-emerald-400 hover:underline">
-              farming guide →
+            <Link href="/guides/farming#daily" className="text-emerald-400 hover:underline">
+              daily farming checklist →
             </Link>
           </p>
         </section>
@@ -360,8 +435,13 @@ export default function BeginnerGuidePage() {
                 </Link>
               </li>
               <li>
-                <Link href="/guides/farming" className="text-emerald-300 hover:underline">
+                <Link href="/guides/farming#daily" className="text-emerald-300 hover:underline">
                   Daily farming loop →
+                </Link>
+              </li>
+              <li>
+                <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
+                  Evomon codes →
                 </Link>
               </li>
               <li>

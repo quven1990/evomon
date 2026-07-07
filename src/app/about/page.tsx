@@ -100,8 +100,8 @@ export default function AboutPage() {
           <h2>What we publish</h2>
           <ul>
             <li>
-              <Link href="/codes" className="text-emerald-300 hover:underline">
-                Active codes
+              <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
+                Evomon codes
               </Link>{" "}
               — rewards, source labels, redeem help, and troubleshooting when a code fails.
             </li>
@@ -195,7 +195,7 @@ export default function AboutPage() {
           <p>
             Codes can expire without notice. If something fails after a fresh server rejoin, it may
             already be retired — we archive expired codes on the{" "}
-            <Link href="/codes" className="text-emerald-300 hover:underline">
+            <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
               codes page
             </Link>{" "}
             when we confirm they no longer work.

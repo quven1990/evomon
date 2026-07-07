@@ -255,6 +255,32 @@ export default function TypeChartPage() {
             ))}
           </div>
         </section>
+
+        <section className="mt-12 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6">
+          <h2 className="text-lg font-semibold text-white">Related tools</h2>
+          <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+            <li>
+              <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
+                Evomon codes →
+              </Link>
+            </li>
+            <li>
+              <Link href="/guides/beginner" className="text-emerald-300 hover:underline">
+                Beginner guide →
+              </Link>
+            </li>
+            <li>
+              <Link href="/starters" className="text-emerald-300 hover:underline">
+                Best starter pick →
+              </Link>
+            </li>
+            <li>
+              <Link href="/dex" className="text-emerald-300 hover:underline">
+                Evomon dex →
+              </Link>
+            </li>
+          </ul>
+        </section>
       </main>
     </>
   );
