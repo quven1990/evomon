@@ -9,7 +9,7 @@ export function HeroBackground() {
         width={1280}
         height={720}
         fetchPriority="high"
-        decoding="sync"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover object-center opacity-40"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-[#050c0a] via-[#050c0a]/85 to-[#050c0a]/40" />

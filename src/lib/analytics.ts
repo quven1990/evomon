@@ -38,7 +38,13 @@ export type AnalyticsProps = Record<string, string | number | boolean | undefine
 
 declare global {
   interface Window {
-    plausible?: (event: string, options?: { props?: Record<string, string> }) => void;
+    plausible?: {
+      (event: string, options?: { props?: Record<string, string> }): void;
+      init?: (options?: Record<string, unknown>) => void;
+      q?: unknown[][];
+      o?: Record<string, unknown>;
+    };
+    gtag?: (...args: unknown[]) => void;
   }
 }
 

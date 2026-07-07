@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Suspense } from "react";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { AnalyticsPageview } from "@/components/AnalyticsPageview";
+import { DeferredAnalytics } from "@/components/DeferredAnalytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MobileBottomNav, MobileNavProvider } from "@/components/MobileNav";
@@ -83,34 +83,13 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
     >
       <body className={`${GeistSans.className} flex min-h-full flex-col`}>
-        <Script
-          async
-          src="https://plausible.shipsolo.io/js/pa-e7H4dQeqDLbGc8ELzaMzz.js"
-          strategy="lazyOnload"
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};window.plausible.init=window.plausible.init||function(i){window.plausible.o=i||{}};window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;",
+          }}
         />
-        <Script id="plausible-init" strategy="lazyOnload">
-          {`window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};
-window.plausible.init=window.plausible.init||function(i){window.plausible.o=i||{}};
-window.plausible.init();`}
-        </Script>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-HWEF9CC7Z7"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-HWEF9CC7Z7');`}
-        </Script>
-        <Script id="microsoft-clarity" strategy="lazyOnload">
-          {`(function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xg9ddd1pvr");`}
-        </Script>
+        <DeferredAnalytics />
         <MobileNavProvider>
           <Suspense fallback={null}>
             <AnalyticsPageview />

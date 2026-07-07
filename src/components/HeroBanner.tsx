@@ -1,18 +1,9 @@
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { HeroBackground } from "@/components/HeroBackground";
+import { FeaturedPets } from "@/components/FeaturedPets";
 import { activeCodes } from "@/data/codes";
 import { dexStats } from "@/data/dex";
 import { monthYear } from "@/lib/site";
-
-const FeaturedPets = dynamic(
-  () => import("@/components/FeaturedPets").then((m) => ({ default: m.FeaturedPets })),
-  {
-    loading: () => (
-      <div className="flex min-h-[6rem] items-end justify-center gap-2 sm:min-h-[8rem] sm:gap-4 lg:min-h-[8rem]" aria-hidden />
-    ),
-  },
-);
 
 const stats = dexStats();
 const monthLabel = monthYear();
