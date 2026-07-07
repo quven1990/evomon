@@ -181,7 +181,8 @@ export default function BeginnerGuidePage() {
             {islandRoute.map((row) => (
               <article
                 key={row.island}
-                className="rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6"
+                id={row.anchor}
+                className="scroll-mt-36 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:scroll-mt-20 sm:p-6"
               >
                 <h3 className="text-lg font-semibold text-emerald-300">{row.island}</h3>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -259,7 +260,7 @@ export default function BeginnerGuidePage() {
         </section>
 
         {/* Player XP */}
-        <section id="xp" className="scroll-mt-24 mt-14 sm:scroll-mt-8">
+        <section id="xp" className="scroll-mt-36 mt-14 sm:scroll-mt-8 sm:mt-14">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Player EXP & Ascension walls</h2>
           <p className="mt-2 text-sm text-zinc-400">
             Trainer level gates equipment, dungeons, and evolutions — creature EXP alone will not

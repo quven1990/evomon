@@ -1,32 +1,15 @@
 import Link from "next/link";
 import { ChevronDown, Gamepad2 } from "lucide-react";
+import { HeaderBrand } from "@/components/HeaderBrand";
 import { MobileHeaderMenu } from "@/components/MobileNav";
 import { PlayLink } from "@/components/PlayLink";
 import { navSections } from "@/data/navigation";
-import { SITE } from "@/lib/site";
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#06110f]/85 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4">
-        <Link href="/" className="flex min-w-0 items-center gap-2.5">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/game-icon.png"
-            alt="Evomon"
-            width={36}
-            height={36}
-            loading="eager"
-            decoding="async"
-            className="shrink-0 rounded-xl border border-emerald-500/30 shadow-[0_0_16px_rgba(16,185,129,0.2)]"
-          />
-          <div className="min-w-0">
-            <div className="truncate bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-lg font-bold tracking-tight text-transparent">
-              {SITE.name}
-            </div>
-            <div className="text-[10px] uppercase tracking-[0.18em] text-zinc-500">{SITE.domain}</div>
-          </div>
-        </Link>
+        <HeaderBrand />
 
         <nav className="hidden items-center gap-1 lg:flex">
           <div className="group relative">

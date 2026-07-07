@@ -46,6 +46,7 @@ export const resourceRules = [
 
 export type IslandGuide = {
   island: string;
+  anchor: string;
   catch: string[];
   skip: string[];
   notes: string;
@@ -54,18 +55,21 @@ export type IslandGuide = {
 export const islandRoute: IslandGuide[] = [
   {
     island: "Verdant Valley (tutorial)",
+    anchor: "verdant-valley",
     catch: ["Pebble — early tank; learns Counter when evolved", "Quest targets only — do not over-invest"],
     skip: ["Grinding every spawn — most early route pets get replaced"],
     notes: "Use infinite balls. Main quest unlocks the next island.",
   },
   {
     island: "Petal Pond",
+    anchor: "petal-pond",
     catch: ["Clampip — water coverage for the next fire-heavy island", "Unlock EXP Challenge dungeon — run daily"],
     skip: ["Mushroom / grass filler spawns", "Sparkit unless you need fire now"],
     notes: "First place players regret spending Evolution Stones on non-cores.",
   },
   {
     island: "Lava Crag",
+    anchor: "lava-crag",
     catch: [
       "Lavite / Lavarock — top priority; fire + rock + Counter",
       "Farm with your water type from Petal Pond",
@@ -75,36 +79,42 @@ export const islandRoute: IslandGuide[] = [
   },
   {
     island: "Amber Acres",
+    anchor: "amber-acres",
     catch: ["Summon runes — NPC duels for Evolution Stone tokens"],
     skip: ["Dattbug line for most players — outscaled by Wispuff + Terragon later"],
     notes: "Exchange tokens for Evolution Stones before EXP fruits.",
   },
   {
     island: "Autumn Hill",
+    anchor: "autumn-hill",
     catch: ["Tarro / Terragon — endgame grass/dragon tank (party or ice-types help)"],
     skip: ["Gym leader rush without prep — bring Lavarock and type counters"],
     notes: "Murkwood Tarro fights are easier with a high-level friend; ice deals 4× damage to grass.",
   },
   {
     island: "Shiver Snow",
+    anchor: "shiver-snow",
     catch: ["Nothing critical — push main quest"],
     skip: ["Most local spawns"],
     notes: "Get Frostlet later in Cascade-era content for your ice slot.",
   },
   {
     island: "Flying Territory",
+    anchor: "flying-territory",
     catch: ["King of Flying — hard boss; Tarro’s sustain helps despite type disadvantage"],
     skip: ["Expecting a solo win without levels or party"],
     notes: "Level ~75 area — group up for first clears.",
   },
   {
     island: "Raven Ridge",
+    anchor: "raven-ridge",
     catch: ["Bluebird → Volcrest — best bird line; wild route above boss area", "Boss clear for quests"],
     skip: ["Chirpy and other filler spawns"],
     notes: "See tier list for why Bluebird stays on teams through endgame.",
   },
   {
     island: "Silent Sands",
+    anchor: "silent-sands",
     catch: ["Tincog — only steel-type (optional)", "Equipment Dungeon unlocks at trainer level 40"],
     skip: ["Heavy investment in steel unless you love the slot"],
     notes: "Equipment runs give 200 player EXP per ticket (up to ~3/day).",

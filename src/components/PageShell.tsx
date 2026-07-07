@@ -5,10 +5,13 @@ type Props = {
   label?: string;
 };
 
-/** Consistent back link + page title sizing for mobile */
+/** Consistent back link on desktop; mobile uses the header back button. */
 export function PageBack({ href, label = "Home" }: Props) {
   return (
-    <Link href={href} className="inline-flex min-h-[44px] items-center text-sm text-zinc-500 hover:text-emerald-300">
+    <Link
+      href={href}
+      className="hidden min-h-[44px] items-center text-sm text-zinc-500 hover:text-emerald-300 sm:inline-flex"
+    >
       ← {label}
     </Link>
   );
@@ -24,4 +27,9 @@ export function pageLeadClass() {
 
 export function pageMainClass() {
   return "mx-auto max-w-7xl px-4 py-8 sm:py-10";
+}
+
+/** Touch-friendly inline links inside wiki prose (44px-friendly tap padding). */
+export function wikiLinkClass() {
+  return "wiki-link";
 }

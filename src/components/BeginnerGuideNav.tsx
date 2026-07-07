@@ -40,7 +40,7 @@ export function BeginnerGuideNav() {
   return (
     <nav
       aria-label="Beginner guide sections"
-      className="sticky top-0 z-20 -mx-4 border-b border-white/10 bg-[#040a09]/95 px-4 py-3 backdrop-blur-md sm:static sm:mx-0 sm:rounded-2xl sm:border sm:px-3 sm:py-2"
+      className="sticky top-16 z-20 -mx-4 border-b border-white/10 bg-[#040a09]/95 px-4 py-3 backdrop-blur-md sm:static sm:top-auto sm:mx-0 sm:rounded-2xl sm:border sm:px-3 sm:py-2"
     >
       <div className="flex gap-2 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {sections.map((section) => (

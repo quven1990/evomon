@@ -7,7 +7,7 @@ export const metadata: Metadata = PAGE_SEO.level30Guide();
 
 export default function Level30GuidePage() {
   return (
-    <main className="mx-auto max-w-3xl px-4 py-8 sm:py-10">
+    <main className="mx-auto max-w-3xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
       <PageBack href="/" />
       <h1 className={pageTitleClass()}>Level 30 & Endgame Guide</h1>
 
@@ -32,7 +32,7 @@ export default function Level30GuidePage() {
           <li>Visit Daisy NPC in Main City for additional skills post-30.</li>
         </ul>
 
-        <h2>Level 40+ — Equipment Dungeons</h2>
+        <h2 id="equipment-dungeons">Level 40+ — Equipment Dungeons</h2>
         <ul>
           <li>Silent Sands unlocks Equipment Dungeons — core gear faucet.</li>
           <li>Run Equipment Challenge tickets daily (200 player EXP each).</li>
