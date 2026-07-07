@@ -81,7 +81,12 @@ export default function MutationsGuidePage() {
             <strong className="text-white">Prismatic / Sparkle</strong> = looks only (~150 capture
             pity). Always <strong className="text-white">catch</strong> targets you farm — eggs and
             prismatic pity need captures. Boss shinies often come from{" "}
-            <strong className="text-white">shiny eggs</strong>, not field pity.
+            <strong className="text-white">shiny eggs</strong>, not field pity. Look up any species in
+            the{" "}
+            <Link href="/dex" className="font-medium text-emerald-300 hover:underline">
+              Evomon dex
+            </Link>
+            .
           </p>
         </div>
 
@@ -346,7 +351,7 @@ export default function MutationsGuidePage() {
               </li>
               <li>
                 <Link href="/dex" className="text-emerald-300 hover:underline">
-                  Dex gallery →
+                  Evomon dex →
                 </Link>
               </li>
             </ul>

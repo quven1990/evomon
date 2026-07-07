@@ -114,15 +114,31 @@ export default function HomePage() {
           <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {[
               { label: "Pet sprites", value: "76+" },
-              { label: "Dex slots", value: String(stats.total) },
+              { label: "Dex slots", value: String(stats.total), href: "/dex" as const },
               { label: "Active codes", value: String(activeCodes.length) },
-              { label: "Named", value: String(stats.named) },
-            ].map((item) => (
-              <div key={item.label} className="rounded-2xl border border-white/10 bg-[#0b1512]/60 p-4 text-center">
-                <dt className="text-xs uppercase tracking-wide text-zinc-500">{item.label}</dt>
-                <dd className="mt-1 text-2xl font-bold text-white">{item.value}</dd>
-              </div>
-            ))}
+              { label: "Named", value: String(stats.named), href: "/dex" as const },
+            ].map((item) => {
+              const inner = (
+                <>
+                  <dt className="text-xs uppercase tracking-wide text-zinc-500">{item.label}</dt>
+                  <dd className="mt-1 text-2xl font-bold text-white">{item.value}</dd>
+                </>
+              );
+              return (
+                <div
+                  key={item.label}
+                  className="rounded-2xl border border-white/10 bg-[#0b1512]/60 p-4 text-center"
+                >
+                  {item.href ? (
+                    <Link href={item.href} className="block transition hover:text-emerald-300">
+                      {inner}
+                    </Link>
+                  ) : (
+                    inner
+                  )}
+                </div>
+              );
+            })}
           </dl>
         </section>
 
@@ -183,7 +199,11 @@ export default function HomePage() {
           <div className="prose-wiki mt-4 max-w-3xl">
             <p>
               <strong>Evomon Wiki</strong> on {canonical("/")} is an independent fan wiki for Roblox
-              Evomon — {stats.named} dex entries with sprites, {activeCodes.length} working codes, an
+              Evomon — the{" "}
+              <Link href="/dex" className="text-emerald-300 hover:underline">
+                Evomon dex
+              </Link>{" "}
+              lists {stats.named} entries with sprites, plus {activeCodes.length} working codes, an
               interactive type chart, tier list, and beginner guides. Updated {monthYear()}.{" "}
               <Link href="/about" className="text-emerald-300 hover:underline">
                 Not affiliated with the developers

@@ -56,7 +56,7 @@ export function HeroBanner() {
               href="/dex"
               className="rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 px-5 py-3 text-sm font-bold text-black shadow-lg shadow-emerald-500/25"
             >
-              Browse Dex
+              Evomon Dex
             </Link>
             <Link
               href="/codes#codes-list"

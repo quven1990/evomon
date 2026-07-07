@@ -286,7 +286,7 @@ export default function TierListPage() {
             </li>
             <li>
               <Link href="/dex" className="text-emerald-300 hover:underline">
-                Dex gallery →
+                Evomon dex →
               </Link>
             </li>
             <li>
