@@ -33,7 +33,7 @@ const featureCards = [
     tag: "With images",
   },
   {
-    href: "/codes",
+    href: "/codes#codes-list",
     icon: Gift,
     title: "Active Codes",
     desc: "One-click copy, source labels, and redeem troubleshooting.",

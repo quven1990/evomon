@@ -45,7 +45,7 @@ export default function CodesPage() {
         }}
       />
 
-      <main className="mx-auto max-w-5xl px-4 py-8 sm:py-10">
+      <main className="mx-auto max-w-5xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         {/* Hero — value + action first */}
         <section className="relative overflow-hidden rounded-3xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 via-[#0b1512] to-cyan-500/5 p-6 sm:p-8">
           <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-emerald-500/10 blur-3xl" />
@@ -94,7 +94,7 @@ export default function CodesPage() {
         </section>
 
         {/* Featured — immediate copy */}
-        <section className="mt-8">
+        <section id="codes-list" className="scroll-mt-28 mt-8 sm:scroll-mt-24">
           <div className="flex items-end justify-between gap-4">
             <div>
               <h2 className="text-xl font-bold text-white sm:text-2xl">Official codes</h2>

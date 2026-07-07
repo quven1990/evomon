@@ -59,7 +59,7 @@ export function HeroBanner() {
               Browse Dex
             </Link>
             <Link
-              href="/codes"
+              href="/codes#codes-list"
               className="rounded-xl border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/15"
             >
               Free Codes
