@@ -9,7 +9,7 @@ import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = PAGE_SEO.privacy();
 
-const effectiveDate = "July 3, 2026";
+const effectiveDate = "July 8, 2026";
 
 export default function PrivacyPage() {
   const schema = {
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
     "@type": "WebPage",
     name: `Privacy Policy — ${SITE.name}`,
     url: canonical("/privacy"),
-    description: `How ${SITE.domain} handles analytics, email contact, and visitor data on this unofficial Evomon fan wiki.`,
+    description: `How ${SITE.domain} handles analytics, advertising, cookies, email contact, and visitor data on this unofficial Evomon fan wiki.`,
     isPartOf: {
       "@type": "WebSite",
       name: SITE.name,
@@ -43,20 +43,29 @@ export default function PrivacyPage() {
         <h1 className={`${pageTitleClass()} mt-4`}>Privacy Policy</h1>
         <p className={pageLeadClass()}>
           {SITE.domain} is an independent fan wiki for {GAME.fullName}. This page explains what we
-          collect, what we do not collect, and how to reach us about privacy questions.
+          collect, how advertising and analytics partners may process data, and how to contact us.
+          This is a site policy notice — not legal advice.
         </p>
-        <p className="mt-2 text-sm text-zinc-500">Effective: {effectiveDate}</p>
+        <p className="mt-2 text-sm text-zinc-500">Last updated: {effectiveDate}</p>
 
         <div className="prose-wiki mt-10">
           <h2>Summary</h2>
           <ul>
-            <li>We do not run user accounts, sell data, or ask for your Roblox password.</li>
+            <li>We do not run user accounts, sell your data as a product, or ask for Roblox passwords.</li>
             <li>
-              We use privacy-focused analytics (Plausible, Google Analytics, Microsoft Clarity) to
-              understand traffic — not to identify individual players.
+              We use analytics (Plausible, Google Analytics, Microsoft Clarity) to understand traffic
+              and fix UX issues.
             </li>
             <li>
-              If you email us, we receive your message and address so we can reply. See{" "}
+              We may show advertising (including Google AdSense or similar partners). Ad partners may
+              use cookies or similar technologies — see also our{" "}
+              <Link href="/cookies" className="text-emerald-300 hover:underline">
+                Cookies
+              </Link>{" "}
+              page.
+            </li>
+            <li>
+              Email contact:{" "}
               <a href={`mailto:${SITE.emails.privacy}`} className="text-emerald-300 hover:underline">
                 {SITE.emails.privacy}
               </a>
@@ -72,29 +81,59 @@ export default function PrivacyPage() {
             <Link href="/about" className="text-emerald-300 hover:underline">
               About page
             </Link>{" "}
-            for sourcing and disclaimer details.
+            for sourcing and disclaimer details. Acceptance of this policy and our{" "}
+            <Link href="/terms" className="text-emerald-300 hover:underline">
+              Terms of Use
+            </Link>{" "}
+            is a condition of using the site.
           </p>
 
           <h2>Information we collect</h2>
           <h3>Analytics</h3>
           <p>
             We use third-party analytics to measure page views and improve the wiki. These services
-            may set cookies or use similar technologies in your browser:
+            may set cookies, local storage, or similar technologies:
           </p>
           <ul>
             <li>
-              <strong>Plausible</strong> — privacy-oriented analytics hosted at shipsolo.io
+              <strong>Plausible</strong> — privacy-oriented analytics (script hosted at
+              plausible.shipsolo.io)
             </li>
             <li>
               <strong>Google Analytics</strong> (measurement ID G-HWEF9CC7Z7)
             </li>
             <li>
-              <strong>Microsoft Clarity</strong> — session replay and heatmaps to fix UX issues
+              <strong>Microsoft Clarity</strong> — session replay and heatmaps for UX diagnostics
             </li>
           </ul>
           <p>
-            Analytics data is aggregated. We do not use it to build profiles of individual Roblox
-            players or to link site visits to in-game accounts.
+            Analytics data is used in aggregate to improve content and performance. We do not use it
+            to link site visits to your Roblox account.
+          </p>
+
+          <h3>Advertising</h3>
+          <p>
+            We may display ads served by Google AdSense and/or other advertising networks. Depending
+            on your region, settings, and whether consent is required, these partners may:
+          </p>
+          <ul>
+            <li>Set or read cookies and similar identifiers</li>
+            <li>Collect device, browser, approximate location, and page-view context</li>
+            <li>Serve personalized or non-personalized ads</li>
+          </ul>
+          <p>
+            When AdSense (or another partner) is active, their own privacy policies also apply to the
+            data they process. After publisher approval you can also check our root{" "}
+            <code>ads.txt</code> file for authorized sellers.
+          </p>
+          <p>
+            Google provides tools related to ad personalization and transparency (for example Google
+            Ads Settings / Ad Settings). Browser controls and our{" "}
+            <Link href="/cookies" className="text-emerald-300 hover:underline">
+              Cookies
+            </Link>{" "}
+            page describe additional options. Visitors in the EU/EEA/UK may see a consent prompt where
+            required for non-essential cookies or personalized ads.
           </p>
 
           <h3>Team builder share links</h3>
@@ -103,8 +142,8 @@ export default function PrivacyPage() {
             <Link href="/team-builder" className="text-emerald-300 hover:underline">
               team builder
             </Link>{" "}
-            can encode your selected pets in the page URL so you can share a squad. That information
-            lives in the link you share — we do not store party compositions on our servers.
+            can encode selected pets in the page URL so you can share a squad. That information lives
+            in the link you share — we do not store party compositions on our servers.
           </p>
 
           <h3>Email</h3>
@@ -127,43 +166,67 @@ export default function PrivacyPage() {
             </li>
           </ul>
 
+          <h3>Hosting and infrastructure</h3>
+          <p>
+            The site is served via Cloudflare (including CDN/edge delivery). Cloudflare may process
+            connection metadata needed to deliver pages securely (standard hosting practice).
+          </p>
+
           <h2>Information we do not collect</h2>
           <ul>
             <li>Roblox usernames, passwords, or account credentials</li>
-            <li>Payment or billing information (this site is free)</li>
+            <li>Payment or billing information from you (this wiki does not sell accounts or paid memberships)</li>
             <li>In-game inventory or save data</li>
             <li>Newsletter sign-ups — we do not run a mailing list</li>
           </ul>
 
-          <h2>Cookies</h2>
+          <h2>Cookies and similar technologies</h2>
           <p>
-            Analytics providers may place cookies or use local storage in your browser. You can block
-            cookies in your browser settings; the wiki will still work, but we will see less
-            traffic insight. We do not show a cookie banner because we only use analytics — no
-            advertising or cross-site tracking for ads.
+            Analytics and advertising partners may place cookies, pixels, or use local storage. See{" "}
+            <Link href="/cookies" className="text-emerald-300 hover:underline">
+              Cookies
+            </Link>{" "}
+            for categories, examples, and how to control them. Site features (dex, guides, codes
+            list) generally work without advertising cookies; blocking analytics may reduce the
+            insight we have into traffic.
           </p>
 
-          <h2>Third-party links</h2>
+          <h2>Third-party links and content</h2>
           <p>
-            We link to Roblox, community wikis, and other external sites. Their privacy policies
+            We link to Roblox, community resources, and other external sites. Their privacy policies
             apply when you leave {SITE.domain}. Redeem codes only inside the official Roblox game.
+            Pet images and game assets referenced on this fan wiki remain subject to Roblox / game
+            developer rights — we claim no ownership.
           </p>
 
           <h2>Children</h2>
           <p>
             {GAME.name} is popular with younger players. This site does not knowingly collect
-            personal information from children. If you are a parent or guardian and believe a child
-            sent us personal data by email, contact{" "}
+            personal information from children for account-style profiles. If you are a parent or
+            guardian and believe a child sent us personal data by email, contact{" "}
             <a href={`mailto:${SITE.emails.privacy}`} className="text-emerald-300 hover:underline">
               {SITE.emails.privacy}
             </a>{" "}
-            and we will delete it.
+            and we will delete it. Advertising partners may apply their own child-directed policies.
+          </p>
+
+          <h2>International visitors</h2>
+          <p>
+            We primarily publish in English for a global Roblox audience. Depending on where you
+            access the site, local laws (including GDPR / UK GDPR / CCPA-style rules) may give you
+            rights to request access or deletion of personal data we hold from email contact, or to
+            object to certain processing. Contact{" "}
+            <a href={`mailto:${SITE.emails.privacy}`} className="text-emerald-300 hover:underline">
+              {SITE.emails.privacy}
+            </a>
+            . For ads/analytics controlled by Google or Microsoft, use those companies&apos; privacy
+            tools as well.
           </p>
 
           <h2>Changes</h2>
           <p>
-            We may update this policy when we add tools or analytics. The effective date at the top
-            will change when we do. Material changes will also be noted on the{" "}
+            We may update this policy when we add tools, advertising, or analytics. The date at the
+            top will change when we do. Material changes may also be noted on the{" "}
             <Link href="/about" className="text-emerald-300 hover:underline">
               About page
             </Link>

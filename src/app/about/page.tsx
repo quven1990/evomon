@@ -229,6 +229,14 @@ export default function AboutPage() {
               <Link href="/privacy" className="text-emerald-300 hover:underline">
                 Privacy Policy
               </Link>
+              ,{" "}
+              <Link href="/terms" className="text-emerald-300 hover:underline">
+                Terms
+              </Link>
+              , and{" "}
+              <Link href="/cookies" className="text-emerald-300 hover:underline">
+                Cookies
+              </Link>
               .
             </li>
             <li>

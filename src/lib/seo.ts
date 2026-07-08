@@ -253,10 +253,30 @@ export const PAGE_SEO = {
     buildPageMetadata({
       title: "Privacy Policy — Evomon Wiki",
       description:
-        "How evomon.cc handles analytics (Plausible, Google Analytics, Clarity), email contact, cookies, and what we do not collect. Independent fan wiki — no Roblox accounts.",
+        "How evomon.cc handles analytics, advertising (including Google AdSense), cookies, email contact, and what we do not collect. Independent fan wiki — no Roblox accounts.",
       path: "/privacy",
       ogTitle: "Privacy Policy — evomon.cc",
       keywords: ["evomon wiki privacy", "evomon.cc privacy policy"],
+    }),
+
+  terms: () =>
+    buildPageMetadata({
+      title: "Terms of Use — Evomon Wiki",
+      description:
+        "Terms for using evomon.cc: unofficial fan site disclaimer, code accuracy limits, advertising, and IP notice. Not affiliated with Roblox or Evomon developers.",
+      path: "/terms",
+      ogTitle: "Terms of Use — evomon.cc",
+      keywords: ["evomon wiki terms", "evomon.cc terms of use"],
+    }),
+
+  cookies: () =>
+    buildPageMetadata({
+      title: "Cookies — Evomon Wiki",
+      description:
+        "Cookie categories on evomon.cc: analytics (Plausible, Google Analytics, Clarity), advertising partners, and how to control them.",
+      path: "/cookies",
+      ogTitle: "Cookies — evomon.cc",
+      keywords: ["evomon wiki cookies", "evomon.cc cookie policy"],
     }),
 } as const;
 

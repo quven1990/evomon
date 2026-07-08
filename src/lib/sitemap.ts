@@ -16,6 +16,8 @@ const indexableRoutes: {
   { path: "/tier-list", priority: 0.8, changeFrequency: "weekly" },
   { path: "/about", priority: 0.6, changeFrequency: "monthly" },
   { path: "/privacy", priority: 0.5, changeFrequency: "yearly" },
+  { path: "/terms", priority: 0.5, changeFrequency: "yearly" },
+  { path: "/cookies", priority: 0.5, changeFrequency: "yearly" },
   { path: "/guides/beginner", priority: 0.8, changeFrequency: "monthly" },
   { path: "/guides/level-30", priority: 0.75, changeFrequency: "monthly" },
   { path: "/guides/mutations", priority: 0.75, changeFrequency: "monthly" },

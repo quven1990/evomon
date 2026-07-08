@@ -67,6 +67,16 @@ export function Footer() {
                 Privacy Policy →
               </Link>
             </li>
+            <li>
+              <Link href="/terms" className="text-zinc-400 transition hover:text-emerald-300">
+                Terms of Use →
+              </Link>
+            </li>
+            <li>
+              <Link href="/cookies" className="text-zinc-400 transition hover:text-emerald-300">
+                Cookies →
+              </Link>
+            </li>
           </ul>
           <p className="mt-6 text-xs text-zinc-400">© {new Date().getFullYear()} {SITE.domain}</p>
         </div>

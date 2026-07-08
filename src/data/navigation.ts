@@ -32,6 +32,8 @@ export const navSections = [
 export const footerLinks = [
   { href: "/about", label: "About & Trust" },
   { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Use" },
+  { href: "/cookies", label: "Cookies" },
   { href: "/codes", label: "Codes" },
   { href: "/dex", label: "Dex" },
   { href: "/type-chart", label: "Type Chart" },

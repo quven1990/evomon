@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { AnalyticsPageview } from "@/components/AnalyticsPageview";
+import { CookieNotice } from "@/components/CookieNotice";
 import { DeferredAnalytics } from "@/components/DeferredAnalytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -97,6 +98,7 @@ export default function RootLayout({
           <Header />
           <div className="flex-1 pb-[calc(4.5rem+env(safe-area-inset-bottom))] lg:pb-0">{children}</div>
           <Footer />
+          <CookieNotice />
           <MobileBottomNav />
         </MobileNavProvider>
       </body>
