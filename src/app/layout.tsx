@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { AnalyticsPageview } from "@/components/AnalyticsPageview";
 import { CookieNotice } from "@/components/CookieNotice";
+import { DeferredAdSense } from "@/components/DeferredAdSense";
 import { DeferredAnalytics } from "@/components/DeferredAnalytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -91,6 +92,7 @@ export default function RootLayout({
           }}
         />
         <DeferredAnalytics />
+        <DeferredAdSense />
         <MobileNavProvider>
           <Suspense fallback={null}>
             <AnalyticsPageview />

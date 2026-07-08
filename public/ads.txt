@@ -1,6 +1,1 @@
-# Authorized advertising systems for evomon.cc
-# Replace REPLACE_WITH_PUBLISHER_ID with your Google AdSense publisher ID (pub-xxxxxxxxxxxxxxxx)
-# after approval. Format: google.com, pub-XXXX, DIRECT, f08c47fec0942fa0
-#
-# https://support.google.com/adsense/answer/7532444
-google.com, REPLACE_WITH_PUBLISHER_ID, DIRECT, f08c47fec0942fa0
+google.com, pub-9101692675645964, DIRECT, f08c47fec0942fa0
