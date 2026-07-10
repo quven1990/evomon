@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DexSourceBadge } from "@/components/Badges";
-import { PageBack, pageTitleClass } from "@/components/PageShell";
+import { buildPetFaqs, DexPetDetailSections } from "@/components/DexPetDetailSections";
+import { pageTitleClass } from "@/components/PageShell";
 import { PetAvatar } from "@/components/PetAvatar";
+import { StructuredData } from "@/components/StructuredData";
 import { dexEntries } from "@/data/dex";
 import { elementStyles } from "@/data/type-chart";
+import { getEvolutionLine, getPetExtra } from "@/lib/dex-pet";
 import { dexPetMetadata } from "@/lib/seo";
+import { canonical } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -33,85 +37,85 @@ export default async function DexDetailPage({ params }: Props) {
   const entry = dexEntries.find((e) => e.name?.toLowerCase() === slug);
   if (!entry?.name) notFound();
 
-  const styles = elementStyles[entry.element];
-  const line = dexEntries.filter(
-    (e) =>
-      e.name &&
-      e.number >= entry.number - 2 &&
-      e.number <= entry.number + 2 &&
-      e.element === entry.element,
-  );
+  const pet = { ...entry, name: entry.name };
+
+  const styles = elementStyles[pet.element];
+  const extra = getPetExtra(slug);
+  const line = getEvolutionLine(pet);
+  const pageUrl = canonical(`/dex/${slug}`);
+  const faqs = buildPetFaqs(pet);
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: canonical("/") },
+      { "@type": "ListItem", position: 2, name: "Dex", item: canonical("/dex") },
+      { "@type": "ListItem", position: 3, name: pet.name, item: pageUrl },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-8 sm:py-10">
-      <PageBack href="/dex" label="Dex" />
+    <>
+      <StructuredData data={[breadcrumbSchema, faqSchema]} />
+      <main className="mx-auto max-w-5xl px-4 py-8 sm:py-10">
+        <nav aria-label="Breadcrumb" className="hidden text-sm text-zinc-500 sm:block">
+          <ol className="flex flex-wrap items-center gap-2">
+            <li>
+              <Link href="/" className="hover:text-emerald-300">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden>/</li>
+            <li>
+              <Link href="/dex" className="hover:text-emerald-300">
+                Dex
+              </Link>
+            </li>
+            <li aria-hidden>/</li>
+            <li className="text-zinc-300">{pet.name}</li>
+          </ol>
+        </nav>
 
-      <div className="mt-6 flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-left">
-        <PetAvatar entry={entry} size="2xl" priority />
-        <div className="min-w-0">
-          <p className="text-sm font-bold uppercase tracking-widest text-zinc-500">
-            #{String(entry.number).padStart(3, "0")}
-          </p>
-          <h1 className={pageTitleClass()}>{entry.name}</h1>
-          <div className="mt-3 flex flex-wrap justify-center gap-2 sm:justify-start">
-            <span className={`rounded-full px-3 py-1 text-sm ${styles.bg} ${styles.text}`}>{entry.element}</span>
-            {entry.tier && (
-              <span className="rounded-full bg-amber-500/15 px-3 py-1 text-sm font-bold text-amber-300">
-                {entry.tier} Tier
+        <div className="mt-6 flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-left">
+          <PetAvatar entry={pet} size="2xl" priority />
+          <div className="min-w-0">
+            <p className="text-sm font-bold uppercase tracking-widest text-zinc-500">
+              #{String(pet.number).padStart(3, "0")}
+              {line.length > 1 ? ` · ${pet.element} line` : ` · ${pet.element}`}
+            </p>
+            <h1 className={pageTitleClass()}>{pet.name}</h1>
+            <p className="mt-2 text-sm text-zinc-400">
+              {extra?.role
+                ? `${extra.role} — Roblox Evomon dex entry.`
+                : `Roblox Evomon dex entry #${pet.number}.`}
+            </p>
+            <div className="mt-3 flex flex-wrap justify-center gap-2 sm:justify-start">
+              <span className={`rounded-full px-3 py-1 text-sm ${styles.bg} ${styles.text}`}>
+                {pet.element}
               </span>
-            )}
-            <DexSourceBadge source={entry.source} />
+              {pet.tier && (
+                <span className="rounded-full bg-amber-500/15 px-3 py-1 text-sm font-bold text-amber-300">
+                  {pet.tier} Tier
+                </span>
+              )}
+              <DexSourceBadge source={pet.source} />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="prose-wiki mt-10">
-        <p>
-          {entry.name} is entry #{entry.number} in the Roblox Evomon dex. Element: {entry.element}.
-          {entry.tier ? ` Community tier signal: ${entry.tier}.` : " Tier ranking pending more in-game data."}
-        </p>
-        <h2>Same-element neighbors (unconfirmed)</h2>
-        <p className="text-sm text-zinc-500">
-          Nearby dex numbers with the same element — not a confirmed evolution chain. Check in-game
-          or community wikis before spending evolution stones.
-        </p>
-        <ul>
-          {line.map((e) => (
-            <li key={e.number}>
-              {e.name === entry.name ? (
-                <strong>{e.name} (#{e.number})</strong>
-              ) : (
-                <Link href={`/dex/${e.name!.toLowerCase()}`} className="text-emerald-300 hover:underline">
-                  {e.name} (#{e.number})
-                </Link>
-              )}
-            </li>
-          ))}
-        </ul>
-        <h2>Related pages</h2>
-        <ul>
-          <li>
-            <Link href={`/team-builder?t=${slug}`} className="text-emerald-300 hover:underline">
-              Add to team builder
-            </Link>
-          </li>
-          <li>
-            <Link href="/type-chart" className="text-emerald-300 hover:underline">
-              Type chart — {entry.element} matchups
-            </Link>
-          </li>
-          <li>
-            <Link href="/tier-list" className="text-emerald-300 hover:underline">
-              Tier list
-            </Link>
-          </li>
-          <li>
-            <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
-              Evomon codes
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </main>
+        <DexPetDetailSections entry={pet} slug={slug} />
+      </main>
+    </>
   );
 }

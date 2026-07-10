@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { isIndexableDexSlug, NOINDEX_FOLLOW } from "@/lib/indexing";
+import { getPetExtra } from "@/lib/dex-pet";
 import { activeCodes } from "@/data/codes";
 import { dexStats } from "@/data/dex";
 import { GAME } from "@/lib/game";
@@ -287,10 +288,12 @@ export function dexPetMetadata(entry: {
   tier: string | null;
 }): Metadata {
   const slug = entry.name.toLowerCase();
-  const num = String(entry.number).padStart(3, "0");
-  const tierBit = entry.tier ? ` · ${entry.tier}-Tier` : "";
-  const title = `${entry.name} Evomon — ${entry.element} Type #${num}${tierBit}`;
-  const description = `${entry.name} — #${entry.number} ${entry.element}-type Evomon on evomon.cc. Dex entry with sprite, element matchups, and links to tier list, team builder, and guides.`;
+  const extra = getPetExtra(slug);
+  const typing = extra?.typesDisplay ?? entry.element;
+
+  // Match evomon.org monster-wiki pattern: short title + high-intent keywords.
+  const title = `${entry.name} stats, evolution & location`;
+  const description = `${entry.name} Evomon wiki page with ${typing} typing, base stats, evolution notes, catch location, matchup notes, and sprite on evomon.cc.`;
   const indexable = isIndexableDexSlug(slug);
 
   return {
@@ -298,10 +301,12 @@ export function dexPetMetadata(entry: {
       title,
       description,
       path: `/dex/${slug}`,
-      ogTitle: `${entry.name} — Evomon #${num} Dex Entry`,
+      ogTitle: title,
       keywords: [
         `${slug} evomon`,
         `evomon ${slug}`,
+        `${slug} evolution`,
+        `evomon ${slug} location`,
         `${entry.element.toLowerCase()} evomon`,
       ],
     }),

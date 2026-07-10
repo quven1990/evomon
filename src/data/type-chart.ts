@@ -41,6 +41,11 @@ export const typeChart: { attacker: ElementType; strong: ElementType[]; weak: El
   { attacker: "Dark", strong: ["Psychic", "Light"], weak: ["Fighting", "Bug", "Light"] },
 ];
 
+/** Types that deal reduced damage to `defender` (defender is in the attacker's weak list). */
+export function getResistedFrom(defender: ElementType): ElementType[] {
+  return typeChart.filter((row) => row.weak.includes(defender)).map((row) => row.attacker);
+}
+
 /** Types that deal super-effective damage to `defender` (attacker's strong list includes defender). */
 export function getTypesThatBeat(defender: ElementType): ElementType[] {
   return typeChart.filter((row) => row.strong.includes(defender)).map((row) => row.attacker);
