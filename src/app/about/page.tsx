@@ -56,6 +56,11 @@ export default function AboutPage() {
       name: SITE.name,
       url: SITE.url,
     },
+    maintainer: {
+      "@type": "Person",
+      name: "Remy",
+      image: `${SITE.url}/images/remy-avatar.png`,
+    },
   };
 
   return (
@@ -93,6 +98,62 @@ export default function AboutPage() {
               Play Evomon on Roblox
               <ExternalLink className="h-3.5 w-3.5" />
             </a>
+          </p>
+        </div>
+
+        <div className="prose-wiki mt-10">
+          <h2>Who runs this site</h2>
+          <div className="not-prose mb-6 flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/remy-avatar.png"
+              alt="Remy — evomon.cc maintainer"
+              width={96}
+              height={96}
+              className="h-24 w-24 shrink-0 rounded-2xl border border-emerald-500/30 object-cover shadow-lg shadow-emerald-500/10"
+            />
+            <div className="text-center sm:text-left">
+              <p className="text-lg font-bold text-white">Remy</p>
+              <p className="mt-1 text-sm text-zinc-400">Independent maintainer · fan tools &amp; wiki</p>
+            </div>
+          </div>
+          <p>
+            {SITE.domain} is maintained by <strong>Remy</strong>, an independent Evomon player and
+            fan-site builder — not by {GAME.developer}, Roblox Corporation, or anyone on the
+            official game team. Remy updates the wiki in spare time when codes change, new pets show
+            up in community lists, or players report broken pages.
+          </p>
+          <p>
+            The site exists because mobile players kept hitting slow, text-heavy wikis when all they
+            wanted was to <strong>copy a code</strong>, check a <strong>type matchup</strong>, or
+            skim a <strong>dex sprite</strong>. {SITE.name} is meant to complement longer community
+            wikis with fast tools — not to pretend to be the only source of truth.
+          </p>
+          <h3>How Remy keeps pages fresh</h3>
+          <ul>
+            <li>
+              <strong>Codes</strong> — checked against the Roblox game listing and player reports;
+              each code carries an official / community / third-party label.
+            </li>
+            <li>
+              <strong>Dex</strong> — names and elements cross-checked with public fan wikis; empty
+              slots stay empty instead of inventing entries.
+            </li>
+            <li>
+              <strong>Guides &amp; tier notes</strong> — community meta snapshots with dates on-page;
+              patch days can move numbers — verify in-game when it matters.
+            </li>
+            <li>
+              <strong>Corrections</strong> — email{" "}
+              <a href={`mailto:${SITE.emails.contact}`} className="text-emerald-300 hover:underline">
+                {SITE.emails.contact}
+              </a>{" "}
+              with the page URL and what you saw in-game.
+            </li>
+          </ul>
+          <p>
+            This is a player-run fan project: no item sales, no Roblox password requests, no private
+            API scraping — only public sources and tools built for the community.
           </p>
         </div>
 
