@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { NOINDEX_FOLLOW } from "@/lib/indexing";
+import { isIndexableDexSlug, NOINDEX_FOLLOW } from "@/lib/indexing";
 import { activeCodes } from "@/data/codes";
 import { dexStats } from "@/data/dex";
 import { GAME } from "@/lib/game";
@@ -286,23 +286,25 @@ export function dexPetMetadata(entry: {
   element: string;
   tier: string | null;
 }): Metadata {
+  const slug = entry.name.toLowerCase();
   const num = String(entry.number).padStart(3, "0");
   const tierBit = entry.tier ? ` · ${entry.tier}-Tier` : "";
   const title = `${entry.name} Evomon — ${entry.element} Type #${num}${tierBit}`;
-  const description = `${entry.name} — #${entry.number} ${entry.element}-type Evomon on evomon.cc. Sprite and dex slot info; see the full gallery for filters and team tools.`;
+  const description = `${entry.name} — #${entry.number} ${entry.element}-type Evomon on evomon.cc. Dex entry with sprite, element matchups, and links to tier list, team builder, and guides.`;
+  const indexable = isIndexableDexSlug(slug);
 
   return {
     ...buildPageMetadata({
       title,
       description,
-      path: `/dex/${entry.name.toLowerCase()}`,
+      path: `/dex/${slug}`,
       ogTitle: `${entry.name} — Evomon #${num} Dex Entry`,
       keywords: [
-        `${entry.name.toLowerCase()} evomon`,
-        `evomon ${entry.name.toLowerCase()}`,
+        `${slug} evomon`,
+        `evomon ${slug}`,
         `${entry.element.toLowerCase()} evomon`,
       ],
     }),
-    robots: NOINDEX_FOLLOW,
+    ...(indexable ? {} : { robots: NOINDEX_FOLLOW }),
   };
 }

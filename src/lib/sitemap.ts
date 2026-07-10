@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
+import { INDEXABLE_DEX_SLUGS } from "@/lib/indexing";
 import { SITE } from "@/lib/site";
 
-/** Indexable routes only — thin /dex/[slug] pages are noindex and omitted here. */
+/** Indexable static routes. Popular /dex/[slug] pages are listed in INDEXABLE_DEX_SLUGS. */
 const indexableRoutes: {
   path: string;
   priority: number;
@@ -27,12 +28,21 @@ const indexableRoutes: {
 export function getSitemapEntries(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  return indexableRoutes.map(({ path, priority, changeFrequency }) => ({
+  const staticEntries = indexableRoutes.map(({ path, priority, changeFrequency }) => ({
     url: `${SITE.url}${path || "/"}`,
     lastModified,
     changeFrequency,
     priority,
   }));
+
+  const dexEntries: MetadataRoute.Sitemap = INDEXABLE_DEX_SLUGS.map((slug) => ({
+    url: `${SITE.url}/dex/${slug}`,
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 0.65,
+  }));
+
+  return [...staticEntries, ...dexEntries];
 }
 
 export function getSitemapXml(): string {
