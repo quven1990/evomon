@@ -252,3 +252,70 @@ export const metaDebates = [
 ];
 
 export const TIER_LIST_UPDATED = "July 2026";
+
+/** Evolution stone spend order — for /tier-list/evolution-priority. */
+export type EvolutionPriorityStep = {
+  step: number;
+  title: string;
+  detail: string;
+  examples: string[];
+  avoid: string;
+};
+
+export const evolutionPrioritySteps: EvolutionPriorityStep[] = [
+  {
+    step: 1,
+    title: "First stone → the pet already winning fights",
+    detail:
+      "Spend on the line that is clearing islands, bosses, or dungeons today — not the pet you like on paper. On most routes that is Lavite on Lava Crag, but the rule is simpler: fund performance first.",
+    examples: ["Lavite → Lavarock", "Bluebird → Volcrest (after quest unlock)"],
+    avoid: "Evolving Bubblade or Blazgrowl while Lavite is still unevolved.",
+  },
+  {
+    step: 2,
+    title: "Second stone → whatever wall you are stuck on",
+    detail:
+      "If Petal Pond grass is the problem, grass jumps up the queue. If boss DPS is the problem, fire or bleed lines move ahead. Pick by blocker, not abstract tier rank.",
+    examples: ["Pebble → Pebgolem if early bosses hurt", "Whispuff line when poison routes open"],
+    avoid: "Copying a YouTube endgame list before you can reach that island.",
+  },
+  {
+    step: 3,
+    title: "Skip duplicate typings until core trio is set",
+    detail:
+      "Two water lines or two fire lines before mid-game wastes stones. One strong water, one fire/rock, one flex DPS or tank is enough through Amber Acres.",
+    examples: ["Bubble line + Lavite is fine — stop at Bubboxer", "Sparkit OR Blazpup line, not both"],
+    avoid: "Stoning Clampip, Gobfish, and Bubble in the same week.",
+  },
+  {
+    step: 4,
+    title: "Boss specialists after your daily team works",
+    detail:
+      "Arcub, Frostlet, and Tarro are strong but harder to obtain. Once Lavarock + Bluebird (or equivalent) handle dailies, invest in the boss answer you actually run.",
+    examples: ["Arcub → Arcapex for AOE routes", "Frostlet → Frostseer for high-HP bosses"],
+    avoid: "Rushing Arcapex before you can farm Funder Cliff reliably.",
+  },
+  {
+    step: 5,
+    title: "Re-check at trainer level 30",
+    detail:
+      "Ultimates and Ascension change combat timing. Pets with better Ultimate windows often deserve the next stone even if they ranked lower pre-30.",
+    examples: ["Finish Lavarock before side projects", "See level 30 guide for Ascension order"],
+    avoid: "Keeping a pre-30 stone plan after Ultimates unlock.",
+  },
+];
+
+export const evolutionPriorityFaqs = [
+  {
+    q: "Should I evolve Bubble first?",
+    a: "Usually no after Lava Crag. Bubble helps early islands; Lavite outscales the starter line for stone ROI in July 2026 lists.",
+  },
+  {
+    q: "Lavite or Bluebird first?",
+    a: "Lavite first if you are on or near Lava Crag — easier to catch and immediately stabilizes fire/rock fights. Bluebird after Raven Ridge unlocks.",
+  },
+  {
+    q: "When is it okay to evolve a favorite?",
+    a: "After your first carry and second blocker pick are evolved and clearing the content you play daily.",
+  },
+];

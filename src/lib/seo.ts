@@ -225,6 +225,66 @@ export const PAGE_SEO = {
     };
   },
 
+  mutationsShinyVsSparkle: () =>
+    buildPageMetadata({
+      title: "Evomon Shiny vs Sparkle (Prismatic) — Stats & Differences",
+      description:
+        "Shiny gives a small stat boost; Sparkle (Prismatic) is cosmetic only. Compare odds, pity counters, icons, and when to chase each in Roblox Evomon.",
+      path: "/guides/mutations/shiny-vs-sparkle",
+      keywords: [
+        "evomon sparkle",
+        "evomon shiny vs prismatic",
+        "what is sparkle evomon",
+        "evomon shiny buff",
+        "evomon prismatic",
+      ],
+    }),
+
+  mutationsShinyEgg: () =>
+    buildPageMetadata({
+      title: "Evomon Shiny Egg Guide — Odds, Pity & Boss Path",
+      description:
+        "How shiny eggs drop after catches, egg hatch rules, boss lines without shiny pity, and Prismatic Ball tips for guaranteed shiny hatches.",
+      path: "/guides/mutations/shiny-egg",
+      keywords: [
+        "evomon shiny egg",
+        "how to get shiny egg evomon",
+        "evomon shiny egg chance",
+        "shiny egg evomon",
+        "evomon egg",
+      ],
+    }),
+
+  tierListEvolutionPriority: () =>
+    buildPageMetadata({
+      title: "Evomon Evolution Priority — Who Gets Stones First",
+      description:
+        "Evolution stone order for Roblox Evomon: fund your carry first, spend on the next wall, skip duplicate typings, then boss specialists. Community July 2026 routing.",
+      path: "/tier-list/evolution-priority",
+      keywords: [
+        "evomon evolution priority",
+        "evomon evolution stones",
+        "who to evolve evomon",
+        "lavite evolution",
+        "evomon stone guide",
+      ],
+    }),
+
+  tierListEarlyCarries: () =>
+    buildPageMetadata({
+      title: "Best Early Evomon Carries — Verdant Valley to Lava Crag",
+      description:
+        "Early route tier picks before level 30: Bubble starter, Pebble tank, Sparkit fire, Lavite carry, and Clampip backup. Where to catch each on evomon.cc.",
+      path: "/tier-list/early-carries",
+      keywords: [
+        "evomon early game",
+        "best early evomon",
+        "lavite early",
+        "pebble evomon",
+        "evomon route catches",
+      ],
+    }),
+
   farmingGuide: () =>
     buildPageMetadata({
       title: "Evomon Farming Guide — Daily EXP, Coins & Best Routes",

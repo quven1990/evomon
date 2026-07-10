@@ -22,7 +22,11 @@ const indexableRoutes: {
   { path: "/guides/beginner", priority: 0.8, changeFrequency: "monthly" },
   { path: "/guides/level-30", priority: 0.75, changeFrequency: "monthly" },
   { path: "/guides/mutations", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/guides/mutations/shiny-vs-sparkle", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/guides/mutations/shiny-egg", priority: 0.7, changeFrequency: "monthly" },
   { path: "/guides/farming", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/tier-list/evolution-priority", priority: 0.72, changeFrequency: "monthly" },
+  { path: "/tier-list/early-carries", priority: 0.72, changeFrequency: "monthly" },
 ];
 
 export function getSitemapEntries(): MetadataRoute.Sitemap {
