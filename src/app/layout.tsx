@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import { AnalyticsPageview } from "@/components/AnalyticsPageview";
 import { CookieNotice } from "@/components/CookieNotice";
@@ -82,7 +81,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
+      className={`${GeistSans.variable} h-full antialiased`}
     >
       <body className={`${GeistSans.className} flex min-h-full flex-col`}>
         <script
@@ -92,11 +91,11 @@ export default function RootLayout({
           }}
         />
         <DeferredAnalytics />
-        <DeferredAdSense />
+        <Suspense fallback={null}>
+          <DeferredAdSense />
+          <AnalyticsPageview />
+        </Suspense>
         <MobileNavProvider>
-          <Suspense fallback={null}>
-            <AnalyticsPageview />
-          </Suspense>
           <Header />
           <div className="flex-1 pb-[calc(4.5rem+env(safe-area-inset-bottom))] lg:pb-0">{children}</div>
           <Footer />

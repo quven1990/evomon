@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { ADSENSE_SCRIPT_SRC } from "@/lib/adsense";
 
 function loadAdSense(): void {
@@ -15,11 +16,16 @@ function loadAdSense(): void {
 }
 
 /**
- * Loads AdSense after idle or first interaction — same pattern as analytics.
- * Does not wait for CookieNotice; stats and ads load independently.
+ * Auto ads on content pages only, after the first real interaction.
+ * Skips the homepage (CWV) and never uses idle timeout — avoids loading
+ * AdSense/FundingChoices during LCP on lab tests and cold landings.
  */
 export function DeferredAdSense() {
+  const pathname = usePathname();
+
   useEffect(() => {
+    if (pathname === "/") return;
+
     let started = false;
 
     const start = () => {
@@ -32,24 +38,14 @@ export function DeferredAdSense() {
       }
     };
 
-    const onInteraction = () => start();
-
     const events = ["pointerdown", "keydown", "scroll", "touchstart"] as const;
     const opts: AddEventListenerOptions = { capture: true, passive: true, once: true };
-    events.forEach((event) => window.addEventListener(event, onInteraction, opts));
-
-    const scheduleIdle =
-      window.requestIdleCallback ??
-      ((cb: IdleRequestCallback) => window.setTimeout(() => cb({ didTimeout: true, timeRemaining: () => 0 }), 1));
-    const cancelIdle = window.cancelIdleCallback ?? window.clearTimeout;
-
-    const idleId = scheduleIdle(() => start(), { timeout: 4500 });
+    events.forEach((event) => window.addEventListener(event, start, opts));
 
     return () => {
-      events.forEach((event) => window.removeEventListener(event, onInteraction, opts));
-      cancelIdle(idleId);
+      events.forEach((event) => window.removeEventListener(event, start, opts));
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }

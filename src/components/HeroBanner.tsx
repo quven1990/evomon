@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { HeroBackground } from "@/components/HeroBackground";
 import { FeaturedPets } from "@/components/FeaturedPets";
+import { FeaturedPetsDesktop } from "@/components/FeaturedPetsDesktop";
 import { activeCodes } from "@/data/codes";
 import { dexStats } from "@/data/dex";
 import { monthYear } from "@/lib/site";
@@ -59,12 +60,12 @@ export function HeroBanner() {
         </div>
 
         <div className="hidden lg:block">
-          <FeaturedPets />
+          <FeaturedPetsDesktop />
         </div>
       </div>
 
       <div className="relative border-t border-white/5 bg-black/20 px-4 py-6 lg:hidden">
-        <FeaturedPets />
+        <FeaturedPets imageLoading="lazy" />
       </div>
     </section>
   );
