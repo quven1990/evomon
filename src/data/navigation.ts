@@ -1,53 +1,100 @@
+/** Desktop header — ordered by recent Plausible traffic (7d). */
+export const headerNavLinks = [
+  { href: "/guides/mutations", label: "Mutations" },
+  { href: "/dex", label: "Dex" },
+  { href: "/tier-list", label: "Tier List" },
+  { href: "/codes", label: "Codes" },
+] as const;
+
 export const navSections = [
   {
-    title: "Start Fast",
-    description: "New or returning after an update",
+    title: "Guides",
+    description: "Walkthroughs and hunt planning",
     links: [
-      { href: "/codes", label: "Evomon Codes", desc: "Active codes, rewards, redeem steps" },
-      { href: "/guides/beginner", label: "Beginner Guide", desc: "First 30 minutes and progression" },
+      {
+        href: "/guides/mutations",
+        label: "Shiny & Sparkle",
+        desc: "Mutations, pity odds, and shiny egg routes",
+      },
+      {
+        href: "/guides/beginner",
+        label: "Beginner Guide",
+        desc: "First 30 minutes and island routing",
+      },
+      {
+        href: "/guides/farming",
+        label: "Farming Guide",
+        desc: "EXP, coins, and daily loops",
+      },
+      {
+        href: "/guides/level-30",
+        label: "Level 30 Guide",
+        desc: "Ultimate, Ascension, endgame prep",
+      },
       { href: "/starters", label: "Best Starter", desc: "Bubble, Blazpup, or Leafbun" },
     ],
   },
   {
     title: "Wiki & Data",
-    description: "Dex, types, and reference",
+    description: "Dex, tiers, types, and codes",
     links: [
       { href: "/dex", label: "Evomon Dex", desc: "108-slot pokedex gallery" },
-      { href: "/type-chart", label: "Type Chart", desc: "Element strengths and weaknesses" },
       { href: "/tier-list", label: "Tier List", desc: "Best picks by role and element" },
-      { href: "/team-builder", label: "Team Builder", desc: "3-pet party planner with type coverage" },
+      { href: "/type-chart", label: "Type Chart", desc: "Element strengths and weaknesses" },
+      { href: "/codes", label: "Evomon Codes", desc: "Active codes and redeem steps" },
     ],
   },
   {
-    title: "Push Progression",
-    description: "Mid and late game systems",
+    title: "Tools",
+    description: "Party planning and coverage",
     links: [
-      { href: "/guides/level-30", label: "Level 30 Guide", desc: "Ultimate, Ascension, endgame prep" },
-      { href: "/guides/mutations", label: "Shiny & Sparkle", desc: "Mutations and hunt planning" },
-      { href: "/guides/farming", label: "Farming Guide", desc: "EXP, coins, and daily routes" },
+      {
+        href: "/team-builder",
+        label: "Team Builder",
+        desc: "3-pet party planner with type coverage",
+      },
     ],
   },
 ] as const;
+
+const headerHrefs = new Set<string>(headerNavLinks.map((link) => link.href));
+
+/** Header mega-menu — skips links already in the top bar. */
+export const headerDropdownSections = navSections
+  .map((section) => ({
+    ...section,
+    links: section.links.filter((link) => !headerHrefs.has(link.href)),
+  }))
+  .filter((section) => section.links.length > 0);
 
 export const footerLinks = [
   { href: "/about", label: "About & Trust" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Use" },
   { href: "/cookies", label: "Cookies" },
-  { href: "/codes", label: "Codes" },
+  { href: "/guides/mutations", label: "Mutations" },
   { href: "/dex", label: "Dex" },
-  { href: "/type-chart", label: "Type Chart" },
   { href: "/tier-list", label: "Tier List" },
+  { href: "/codes", label: "Codes" },
+  { href: "/type-chart", label: "Type Chart" },
+  { href: "/team-builder", label: "Team Builder" },
   { href: "/guides/beginner", label: "Beginner Guide" },
   { href: "/guides/level-30", label: "Level 30" },
-  { href: "/guides/mutations", label: "Mutations" },
-  { href: "/team-builder", label: "Team Builder" },
+  { href: "/guides/farming", label: "Farming" },
 ] as const;
 
-/** Primary mobile bottom bar — high-traffic routes */
+/** Primary mobile bottom bar — matches top traffic routes. */
 export const mobileTabLinks = [
   { href: "/", label: "Home", match: (path: string) => path === "/" },
-  { href: "/codes", label: "Codes", match: (path: string) => path === "/codes" },
+  {
+    href: "/guides/mutations",
+    label: "Shiny",
+    match: (path: string) => path.startsWith("/guides/mutations"),
+  },
   { href: "/dex", label: "Dex", match: (path: string) => path.startsWith("/dex") },
-  { href: "/team-builder", label: "Build", match: (path: string) => path === "/team-builder" },
+  {
+    href: "/tier-list",
+    label: "Tiers",
+    match: (path: string) => path === "/tier-list" || path.startsWith("/tier-list/"),
+  },
 ] as const;

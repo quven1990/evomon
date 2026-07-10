@@ -14,11 +14,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   BookOpen,
-  Gift,
   Grid3x3,
   Home,
   Menu,
-  Users,
+  Sparkles,
+  TrendingUp,
   X,
 } from "lucide-react";
 import { mobileTabLinks, navSections } from "@/data/navigation";
@@ -28,9 +28,9 @@ import { SITE } from "@/lib/site";
 
 const tabIcons = {
   "/": Home,
-  "/codes": Gift,
+  "/guides/mutations": Sparkles,
   "/dex": Grid3x3,
-  "/team-builder": Users,
+  "/tier-list": TrendingUp,
 } as const;
 
 type MobileMenuContextValue = {

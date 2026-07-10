@@ -3,7 +3,7 @@ import { ChevronDown, Gamepad2 } from "lucide-react";
 import { HeaderBrand } from "@/components/HeaderBrand";
 import { MobileHeaderMenu } from "@/components/MobileNav";
 import { PlayLink } from "@/components/PlayLink";
-import { navSections } from "@/data/navigation";
+import { headerDropdownSections, headerNavLinks } from "@/data/navigation";
 
 export function Header() {
   return (
@@ -12,19 +12,29 @@ export function Header() {
         <HeaderBrand />
 
         <nav className="hidden items-center gap-1 lg:flex">
+          {headerNavLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-white/5 hover:text-white"
+            >
+              {link.label}
+            </Link>
+          ))}
+
           <div className="group relative">
             <button
               type="button"
               className="inline-flex h-10 items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 text-sm font-semibold text-white transition hover:border-emerald-500/40 hover:bg-emerald-500/10"
             >
               <Gamepad2 className="h-4 w-4 text-emerald-400" />
-              Guides
+              More
               <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
             </button>
-            <div className="invisible absolute left-0 top-11 w-[720px] opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <div className="invisible absolute right-0 top-11 w-[520px] opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
               <div className="rounded-2xl border border-white/10 bg-[#0a1412]/95 p-4 shadow-2xl backdrop-blur-xl">
-                <div className="grid grid-cols-3 gap-4">
-                  {navSections.map((section) => (
+                <div className="grid grid-cols-2 gap-4">
+                  {headerDropdownSections.map((section) => (
                     <div key={section.title} className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
                       <h3 className="text-sm font-bold text-white">{section.title}</h3>
                       <p className="mt-1 text-xs text-zinc-500">{section.description}</p>
@@ -47,19 +57,6 @@ export function Header() {
               </div>
             </div>
           </div>
-
-          <Link href="/dex" className="rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-white/5 hover:text-white">
-            Dex
-          </Link>
-          <Link href="/codes" className="rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-white/5 hover:text-white">
-            Codes
-          </Link>
-          <Link href="/team-builder" className="rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-white/5 hover:text-white">
-            Team Builder
-          </Link>
-          <Link href="/tier-list" className="rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-white/5 hover:text-white">
-            Tier List
-          </Link>
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
