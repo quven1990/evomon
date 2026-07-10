@@ -1,6 +1,8 @@
 /** Fallback when browser history cannot return within the site. */
 export function getBackFallbackPath(pathname: string): string {
   if (pathname.startsWith("/dex/") && pathname.length > "/dex/".length) return "/dex";
+  if (pathname.startsWith("/guides/mutations/")) return "/guides/mutations";
+  if (pathname.startsWith("/tier-list/")) return "/tier-list";
   return "/";
 }
 

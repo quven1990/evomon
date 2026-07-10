@@ -1,3 +1,5 @@
+import { headerClusters } from "@/data/guide-clusters";
+
 /** Desktop header — ordered by recent Plausible traffic (7d). */
 export const headerNavLinks = [
   { href: "/guides/mutations", label: "Mutations" },
@@ -5,6 +7,8 @@ export const headerNavLinks = [
   { href: "/tier-list", label: "Tier List" },
   { href: "/codes", label: "Codes" },
 ] as const;
+
+export { headerClusters };
 
 export const navSections = [
   {
@@ -15,6 +19,16 @@ export const navSections = [
         href: "/guides/mutations",
         label: "Shiny & Sparkle",
         desc: "Mutations, pity odds, and shiny egg routes",
+      },
+      {
+        href: "/guides/mutations/shiny-vs-sparkle",
+        label: "Shiny vs Sparkle",
+        desc: "Stat boost vs cosmetic prismatic",
+      },
+      {
+        href: "/guides/mutations/shiny-egg",
+        label: "Shiny Egg Guide",
+        desc: "Boss routes, pity, and Prismatic Ball hatches",
       },
       {
         href: "/guides/beginner",
@@ -40,6 +54,16 @@ export const navSections = [
     links: [
       { href: "/dex", label: "Evomon Dex", desc: "108-slot pokedex gallery" },
       { href: "/tier-list", label: "Tier List", desc: "Best picks by role and element" },
+      {
+        href: "/tier-list/early-carries",
+        label: "Early Route Carries",
+        desc: "Best picks before level 30",
+      },
+      {
+        href: "/tier-list/evolution-priority",
+        label: "Evolution Priority",
+        desc: "Who gets Evolution Stones first",
+      },
       { href: "/type-chart", label: "Type Chart", desc: "Element strengths and weaknesses" },
       { href: "/codes", label: "Evomon Codes", desc: "Active codes and redeem steps" },
     ],
@@ -98,3 +122,15 @@ export const mobileTabLinks = [
     match: (path: string) => path === "/tier-list" || path.startsWith("/tier-list/"),
   },
 ] as const;
+
+/** Top-bar items with optional cluster dropdowns (Mutations, Tier List). */
+export const headerNavItems = [
+  { kind: "cluster" as const, clusterId: "mutations" as const },
+  { kind: "link" as const, href: "/dex", label: "Dex" },
+  { kind: "cluster" as const, clusterId: "tier-list" as const },
+  { kind: "link" as const, href: "/codes", label: "Codes" },
+] as const;
+
+export function getHeaderCluster(clusterId: "mutations" | "tier-list") {
+  return headerClusters.find((cluster) => cluster.id === clusterId);
+}

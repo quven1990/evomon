@@ -217,6 +217,9 @@ export default function CodesPage() {
           <Link href="/dex" className="text-emerald-300 hover:underline">
             Evomon Dex →
           </Link>
+          <Link href="/guides/mutations" className="text-emerald-300 hover:underline">
+            Mutations Guide →
+          </Link>
           <Link href="/tier-list" className="text-emerald-300 hover:underline">
             Tier List →
           </Link>

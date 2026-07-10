@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
+import { GuideClusterRoutes } from "@/components/GuideClusterRoutes";
 import { MutationsNav } from "@/components/MutationsNav";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import {
@@ -12,6 +13,8 @@ import {
   pityRules,
   pityTrick149,
 } from "@/data/mutations";
+import { mutationsCluster } from "@/data/guide-clusters";
+import { guideClusterItemListSchema } from "@/lib/guide-cluster-schema";
 import { PAGE_SEO } from "@/lib/seo";
 
 export const metadata: Metadata = PAGE_SEO.mutationsGuide();
@@ -27,36 +30,39 @@ export default function MutationsGuidePage() {
   return (
     <>
       <StructuredData
-        data={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "What is the difference between Shiny and Prismatic in Evomon?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Shiny gives a alternate color palette and a small stat boost. Prismatic (Sparkle in UI) is cosmetic only — random glow color and pattern on a body part. Prismatic pity is 150 captures; shiny pity is about 600 per species.",
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is the difference between Shiny and Prismatic in Evomon?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Shiny gives a alternate color palette and a small stat boost. Prismatic (Sparkle in UI) is cosmetic only — random glow color and pattern on a body part. Prismatic pity is 150 captures; shiny pity is about 600 per species.",
+                },
               },
-            },
-            {
-              "@type": "Question",
-              name: "How do shiny eggs work in Evomon?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Catch Evomon after defeating them to roll eggs. Shiny eggs hatch a guaranteed shiny; using a Prismatic Ball on hatch can add prismatic appearance. Boss species often require shiny eggs because they lack normal shiny pity.",
+              {
+                "@type": "Question",
+                name: "How do shiny eggs work in Evomon?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Catch Evomon after defeating them to roll eggs. Shiny eggs hatch a guaranteed shiny; using a Prismatic Ball on hatch can add prismatic appearance. Boss species often require shiny eggs because they lack normal shiny pity.",
+                },
               },
-            },
-            {
-              "@type": "Question",
-              name: "What is the 149 prismatic pity trick?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Raise prismatic pity to 149/150 on one species, stop catching until a natural shiny appears, then catch it with a King Ball or Prismatic Ball to target Shiny Prismatic with strong talent.",
+              {
+                "@type": "Question",
+                name: "What is the 149 prismatic pity trick?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Raise prismatic pity to 149/150 on one species, stop catching until a natural shiny appears, then catch it with a King Ball or Prismatic Ball to target Shiny Prismatic with strong talent.",
+                },
               },
-            },
-          ],
-        }}
+            ],
+          },
+          guideClusterItemListSchema(mutationsCluster),
+        ]}
       />
 
       <main className="mx-auto max-w-4xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
@@ -89,6 +95,8 @@ export default function MutationsGuidePage() {
             .
           </p>
         </div>
+
+        <GuideClusterRoutes cluster={mutationsCluster} />
 
         <p className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs leading-6 text-zinc-500">
           Community-sourced mechanics — odds UI can patch. Not official.{" "}
@@ -334,6 +342,16 @@ export default function MutationsGuidePage() {
           <div className="mt-8 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6">
             <h3 className="text-lg font-semibold text-white">Related guides</h3>
             <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+              <li>
+                <Link href="/guides/mutations/shiny-vs-sparkle" className="text-emerald-300 hover:underline">
+                  Shiny vs Sparkle — stats & differences →
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides/mutations/shiny-egg" className="text-emerald-300 hover:underline">
+                  Shiny egg & boss routes →
+                </Link>
+              </li>
               <li>
                 <Link href="/tier-list" className="text-emerald-300 hover:underline">
                   Tier list — what to hunt →

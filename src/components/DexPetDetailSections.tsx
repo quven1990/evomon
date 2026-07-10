@@ -9,6 +9,7 @@ import {
   getPetExtra,
   getSimilarPets,
 } from "@/lib/dex-pet";
+import { getDexContextLinks } from "@/lib/dex-context-links";
 
 function ElementChip({ type }: { type: string }) {
   const styles = elementStyles[type as keyof typeof elementStyles] ?? elementStyles.Unknown;
@@ -64,6 +65,7 @@ export function DexPetDetailSections({
   const similar = getSimilarPets(entry);
   const matchups = getElementMatchups(entry.element);
   const faqs = buildPetFaqs(entry);
+  const contextLinks = getDexContextLinks(slug);
   const styles = elementStyles[entry.element];
 
   return (
@@ -221,6 +223,11 @@ export function DexPetDetailSections({
             <Link href="/tier-list" className="block text-emerald-300 hover:underline">
               Tier list →
             </Link>
+            {contextLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="block text-emerald-300 hover:underline">
+                {link.label}
+              </Link>
+            ))}
             {slug === "bubble" || slug === "blazpup" || slug === "leafbun" ? (
               <Link href="/starters" className="block text-emerald-300 hover:underline">
                 Best starters guide →

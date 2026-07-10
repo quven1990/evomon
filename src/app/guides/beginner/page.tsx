@@ -156,7 +156,11 @@ export default function BeginnerGuidePage() {
                 <Link href="#islands" className="text-emerald-300 hover:underline">
                   island chart
                 </Link>{" "}
-                below. Level Lavite before dumping stones on your starter.
+                below. Level Lavite before dumping stones on your starter — see{" "}
+                <Link href="/tier-list/evolution-priority" className="text-emerald-300 hover:underline">
+                  evolution stone priority
+                </Link>
+                .
               </p>
             </div>
             <div>
@@ -177,8 +181,12 @@ export default function BeginnerGuidePage() {
               <p className="font-medium text-emerald-300">Shiny or shiny eggs?</p>
               <p className="mt-1 leading-6 text-zinc-400">
                 Build your team first. For pity, eggs, and hunt routes see the{" "}
+                <Link href="/guides/mutations/shiny-vs-sparkle" className="text-emerald-300 hover:underline">
+                  Shiny vs Sparkle guide
+                </Link>{" "}
+                or the full{" "}
                 <Link href="/guides/mutations" className="text-emerald-300 hover:underline">
-                  Shiny & Prismatic guide
+                  mutations hub
                 </Link>
                 .
               </p>
@@ -294,7 +302,11 @@ export default function BeginnerGuidePage() {
         <section id="team" className="scroll-mt-24 mt-14 sm:scroll-mt-8">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Core team to work toward</h2>
           <p className="mt-2 text-sm text-zinc-400">
-            You do not need these on day one — see the{" "}
+            You do not need these on day one — see{" "}
+            <Link href="/tier-list/early-carries" className="text-emerald-300 hover:underline">
+              early route carries
+            </Link>{" "}
+            or the full{" "}
             <Link href="/tier-list" className="text-emerald-300 hover:underline">
               tier list
             </Link>{" "}
@@ -378,6 +390,13 @@ export default function BeginnerGuidePage() {
         {/* Resources */}
         <section id="resources" className="scroll-mt-24 mt-14 sm:scroll-mt-8">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Resources & leveling tricks</h2>
+          <p className="mt-2 text-sm text-zinc-400">
+            Evolution Stones stay scarce through mid game — see{" "}
+            <Link href="/tier-list/evolution-priority" className="text-emerald-300 hover:underline">
+              evolution stone priority
+            </Link>{" "}
+            before spending on starters or duplicates.
+          </p>
           <ul className="mt-5 space-y-2">
             {resourceRules.map((rule) => (
               <li

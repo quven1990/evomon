@@ -43,12 +43,20 @@ export default function Level30GuidePage() {
           <li>Silent Sands unlocks Equipment Dungeons — core gear faucet.</li>
           <li>Run Equipment Challenge tickets daily (200 player EXP each).</li>
           <li>Enhance only keeper gear; use Refine Stones on Legendary bonus rolls.</li>
+          <li>
+            Catch Master suit (+10% capture) helps on boss{" "}
+            <Link href="/guides/mutations/shiny-egg" className="text-emerald-300 hover:underline">
+              shiny egg
+            </Link>{" "}
+            routes once you start mutation hunting.
+          </li>
         </ul>
 
         <h2>Related</h2>
         <ul>
           <li><Link href="/guides/farming" className="text-emerald-300 hover:underline">Farming guide</Link></li>
           <li><Link href="/guides/mutations" className="text-emerald-300 hover:underline">Shiny & Sparkle hunting</Link></li>
+          <li><Link href="/guides/mutations/shiny-egg" className="text-emerald-300 hover:underline">Shiny egg & boss routes</Link></li>
           <li><Link href="/tier-list" className="text-emerald-300 hover:underline">Tier list</Link></li>
         </ul>
       </div>

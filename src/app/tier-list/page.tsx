@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
+import { GuideClusterRoutes } from "@/components/GuideClusterRoutes";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import { TierListNav } from "@/components/TierListNav";
 import { TierPickCard } from "@/components/TierPickCard";
@@ -10,6 +11,8 @@ import {
   endgameTiers,
   metaDebates,
 } from "@/data/tier-list";
+import { tierListCluster } from "@/data/guide-clusters";
+import { guideClusterItemListSchema } from "@/lib/guide-cluster-schema";
 import { PickNameLinked } from "@/lib/dex-link";
 import { PAGE_SEO } from "@/lib/seo";
 
@@ -21,36 +24,39 @@ export default function TierListPage() {
   return (
     <>
       <StructuredData
-        data={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "What are the best Evomons in 2026?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Community endgame lists converge on Lavite/Lavarock, Bluebird/Volcrest, Frostlet, Whispurr, Arcub, and Tarro for bossing and late-game teams.",
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What are the best Evomons in 2026?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Community endgame lists converge on Lavite/Lavarock, Bluebird/Volcrest, Frostlet, Whispurr, Arcub, and Tarro for bossing and late-game teams.",
+                },
               },
-            },
-            {
-              "@type": "Question",
-              name: "What is the best Evomon starter?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Bubble is still the safest starter for early islands, but many players replace the line once route catches like Lavite and Bluebird come online.",
+              {
+                "@type": "Question",
+                name: "What is the best Evomon starter?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bubble is still the safest starter for early islands, but many players replace the line once route catches like Lavite and Bluebird come online.",
+                },
               },
-            },
-            {
-              "@type": "Question",
-              name: "Is Lavite worth training?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Yes. Lavite is available on Lava Crag early and remains an S-tier fire/rock carry in most July 2026 community tier lists.",
+              {
+                "@type": "Question",
+                name: "Is Lavite worth training?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Lavite is available on Lava Crag early and remains an S-tier fire/rock carry in most July 2026 community tier lists.",
+                },
               },
-            },
-          ],
-        }}
+            ],
+          },
+          guideClusterItemListSchema(tierListCluster),
+        ]}
       />
 
       <main className="mx-auto max-w-5xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
@@ -82,6 +88,8 @@ export default function TierListPage() {
             sustain tank; Whispurr is the poison core.
           </p>
         </div>
+
+        <GuideClusterRoutes cluster={tierListCluster} />
 
         <p className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs leading-6 text-zinc-500">
           Community meta snapshot ({TIER_LIST_UPDATED}) — synthesized from multiple creator tier
@@ -279,6 +287,16 @@ export default function TierListPage() {
         <section className="mt-12 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6">
           <h2 className="text-lg font-semibold text-white">Related tools</h2>
           <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
+            <li>
+              <Link href="/tier-list/early-carries" className="text-emerald-300 hover:underline">
+                Early route carries (0–30) →
+              </Link>
+            </li>
+            <li>
+              <Link href="/tier-list/evolution-priority" className="text-emerald-300 hover:underline">
+                Evolution stone priority →
+              </Link>
+            </li>
             <li>
               <Link href="/starters" className="text-emerald-300 hover:underline">
                 Best starter comparison →
