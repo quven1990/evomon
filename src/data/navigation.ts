@@ -88,7 +88,7 @@ export const mobileTabLinks = [
   { href: "/", label: "Home", match: (path: string) => path === "/" },
   {
     href: "/guides/mutations",
-    label: "Shiny",
+    label: "Mutations",
     match: (path: string) => path.startsWith("/guides/mutations"),
   },
   { href: "/dex", label: "Dex", match: (path: string) => path.startsWith("/dex") },
