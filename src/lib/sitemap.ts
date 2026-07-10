@@ -16,6 +16,7 @@ const indexableRoutes: {
   { path: "/team-builder", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tier-list", priority: 0.8, changeFrequency: "weekly" },
   { path: "/about", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/update-log", priority: 0.55, changeFrequency: "weekly" },
   { path: "/privacy", priority: 0.5, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.5, changeFrequency: "yearly" },
   { path: "/cookies", priority: 0.5, changeFrequency: "yearly" },

@@ -243,7 +243,13 @@ export default function AboutPage() {
           </p>
 
           <h2>Freshness</h2>
-          <p>We show last-checked dates on key pages. Current snapshots:</p>
+          <p>
+            We show last-checked dates on key pages and publish a public{" "}
+            <Link href="/update-log" className="text-emerald-300 hover:underline">
+              update log
+            </Link>{" "}
+            when guides, dex entries, or site quality change. Current snapshots:
+          </p>
           <ul>
             <li>
               Codes last updated: <strong>{CODES_LAST_UPDATED}</strong> (data checked{" "}

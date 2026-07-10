@@ -14,7 +14,7 @@ writeFileSync(join(publicDir, "llms.txt"), generateLlmsTxt(), "utf8");
 writeFileSync(join(publicDir, "llms-full.txt"), generateLlmsFullTxt(), "utf8");
 writeFileSync(
   join(publicDir, "robots.txt"),
-  `User-Agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`,
+  `User-Agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n\n# LLM / AI discovery\n# ${SITE.url}/llms.txt\n# ${SITE.url}/llms-full.txt\n`,
   "utf8",
 );
 writeFileSync(join(publicDir, `${INDEXNOW_KEY}.txt`), `${INDEXNOW_KEY}\n`, "utf8");

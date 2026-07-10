@@ -340,6 +340,16 @@ export const PAGE_SEO = {
       ogTitle: "Cookies — evomon.cc",
       keywords: ["evomon wiki cookies", "evomon.cc cookie policy"],
     }),
+
+  updateLog: () =>
+    buildPageMetadata({
+      title: "Update Log — Evomon Wiki Changelog",
+      description:
+        "Chronological changelog for evomon.cc: new guides, dex updates, SEO improvements, and quality fixes. Maintained by Remy since July 2026.",
+      path: "/update-log",
+      ogTitle: "Evomon Wiki Update Log",
+      keywords: ["evomon wiki updates", "evomon.cc changelog", "evomon wiki changelog"],
+    }),
 } as const;
 
 export function dexPetMetadata(entry: {

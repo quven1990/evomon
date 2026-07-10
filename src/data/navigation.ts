@@ -93,6 +93,7 @@ export const headerDropdownSections = navSections
 
 export const footerLinks = [
   { href: "/about", label: "About & Trust" },
+  { href: "/update-log", label: "Update Log" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Use" },
   { href: "/cookies", label: "Cookies" },
