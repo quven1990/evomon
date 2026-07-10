@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import type { ElementType } from "@/data/dex";
 import { isIndexableDexSlug, NOINDEX_FOLLOW } from "@/lib/indexing";
-import { getPetExtra } from "@/lib/dex-pet";
+import { buildDexPetSeo } from "@/lib/dex-pet";
 import { activeCodes } from "@/data/codes";
 import { dexStats } from "@/data/dex";
 import { GAME } from "@/lib/game";
@@ -288,12 +289,11 @@ export function dexPetMetadata(entry: {
   tier: string | null;
 }): Metadata {
   const slug = entry.name.toLowerCase();
-  const extra = getPetExtra(slug);
-  const typing = extra?.typesDisplay ?? entry.element;
-
-  // Match evomon.org monster-wiki pattern: short title + high-intent keywords.
-  const title = `${entry.name} stats, evolution & location`;
-  const description = `${entry.name} Evomon wiki page with ${typing} typing, base stats, evolution notes, catch location, matchup notes, and sprite on evomon.cc.`;
+  const { title, description, keywords } = buildDexPetSeo({
+    number: entry.number,
+    name: entry.name,
+    element: entry.element as ElementType,
+  });
   const indexable = isIndexableDexSlug(slug);
 
   return {
@@ -302,13 +302,7 @@ export function dexPetMetadata(entry: {
       description,
       path: `/dex/${slug}`,
       ogTitle: title,
-      keywords: [
-        `${slug} evomon`,
-        `evomon ${slug}`,
-        `${slug} evolution`,
-        `evomon ${slug} location`,
-        `${entry.element.toLowerCase()} evomon`,
-      ],
+      keywords,
     }),
     ...(indexable ? {} : { robots: NOINDEX_FOLLOW }),
   };

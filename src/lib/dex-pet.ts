@@ -46,6 +46,55 @@ export function getPetExtra(slug: string) {
   return petDetailExtras[slug.toLowerCase()];
 }
 
+export function getPetTypingLabel(slug: string, element: ElementType): string {
+  return getPetExtra(slug)?.typesDisplay ?? element;
+}
+
+export type DexPetSeoCopy = { title: string; description: string; keywords: string[] };
+
+/** SERP copy — indexable pets use curated meta; others use a short honest default. */
+export function buildDexPetSeo(entry: {
+  name: string;
+  number: number;
+  element: ElementType;
+}): DexPetSeoCopy {
+  const slug = entry.name.toLowerCase();
+  const num = String(entry.number).padStart(3, "0");
+  const typing = getPetTypingLabel(slug, entry.element);
+  const extra = getPetExtra(slug);
+
+  if (extra) {
+    return {
+      title: extra.metaTitle,
+      description: extra.metaDescription,
+      keywords: [
+        `${slug} evomon`,
+        `evomon ${slug}`,
+        `${slug} evolution`,
+        `evomon ${slug} location`,
+        `${entry.element.toLowerCase()} evomon`,
+      ],
+    };
+  }
+
+  const named = namedEntries().find((e) => e.name.toLowerCase() === slug);
+  const line = named ? getEvolutionLine(named) : [];
+  const evoHint =
+    line.length > 1
+      ? ` Part of a ${entry.element} evolution line on the dex.`
+      : "";
+
+  return {
+    title: `${entry.name} Evomon — #${num} ${entry.element} Dex`,
+    description: `${entry.name} (dex #${entry.number}, ${typing}) — evolution neighbors, type matchups, sprite, and FAQ on evomon.cc.${evoHint}`,
+    keywords: [
+      `${slug} evomon`,
+      `evomon ${slug}`,
+      `${entry.element.toLowerCase()} evomon`,
+    ],
+  };
+}
+
 export function getElementMatchups(element: ElementType) {
   if (element === "Unknown" || element === "Normal") {
     return { strongAgainst: [] as ElementType[], weakTo: [] as ElementType[], resists: [] as ElementType[] };
