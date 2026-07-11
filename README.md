@@ -1,6 +1,70 @@
-# Evomon Wiki (evomon.cc)
+# Evomon Wiki
 
-Unofficial fan wiki for **Evomon** on Roblox — codes, tier list, starter picks, and progression guides.
+**Live site:** [https://evomon.cc/](https://evomon.cc/)
+
+Unofficial fan wiki for **Evomon** on Roblox — codes, dex, type chart, tier list, team builder, and progression guides.
+
+## Core pages
+
+Direct links to the main hub pages on [evomon.cc](https://evomon.cc/):
+
+| Page | URL |
+|------|-----|
+| Homepage | [https://evomon.cc/](https://evomon.cc/) |
+| Evomon Codes | [https://evomon.cc/codes](https://evomon.cc/codes) |
+| Shiny & Mutations Guide | [https://evomon.cc/guides/mutations](https://evomon.cc/guides/mutations) |
+| Evomon Dex | [https://evomon.cc/dex](https://evomon.cc/dex) |
+| Tier List | [https://evomon.cc/tier-list](https://evomon.cc/tier-list) |
+| Type Chart | [https://evomon.cc/type-chart](https://evomon.cc/type-chart) |
+| Team Builder | [https://evomon.cc/team-builder](https://evomon.cc/team-builder) |
+| Beginner Guide | [https://evomon.cc/guides/beginner](https://evomon.cc/guides/beginner) |
+| Farming Guide | [https://evomon.cc/guides/farming](https://evomon.cc/guides/farming) |
+| Equipment Dungeons (Lv40+) | [https://evomon.cc/guides/level-30](https://evomon.cc/guides/level-30) |
+| Best Starter Pick | [https://evomon.cc/starters](https://evomon.cc/starters) |
+| About & Trust | [https://evomon.cc/about](https://evomon.cc/about) |
+| Update Log | [https://evomon.cc/update-log](https://evomon.cc/update-log) |
+
+## Guide subpages
+
+| Page | URL |
+|------|-----|
+| Shiny vs Sparkle (Prismatic) | [https://evomon.cc/guides/mutations/shiny-vs-sparkle](https://evomon.cc/guides/mutations/shiny-vs-sparkle) |
+| Shiny Egg Guide | [https://evomon.cc/guides/mutations/shiny-egg](https://evomon.cc/guides/mutations/shiny-egg) |
+
+## Tier list subpages
+
+| Page | URL |
+|------|-----|
+| Early Route Carries (0–30) | [https://evomon.cc/tier-list/early-carries](https://evomon.cc/tier-list/early-carries) |
+| Evolution Stone Priority | [https://evomon.cc/tier-list/evolution-priority](https://evomon.cc/tier-list/evolution-priority) |
+
+## Popular dex entries
+
+| Pet | URL |
+|-----|-----|
+| Bubble (starter) | [https://evomon.cc/dex/bubble](https://evomon.cc/dex/bubble) |
+| Bubboxer | [https://evomon.cc/dex/bubboxer](https://evomon.cc/dex/bubboxer) |
+| Blazpup (starter) | [https://evomon.cc/dex/blazpup](https://evomon.cc/dex/blazpup) |
+| Blazgrowl | [https://evomon.cc/dex/blazgrowl](https://evomon.cc/dex/blazgrowl) |
+| Leafbun (starter) | [https://evomon.cc/dex/leafbun](https://evomon.cc/dex/leafbun) |
+| Pebble | [https://evomon.cc/dex/pebble](https://evomon.cc/dex/pebble) |
+| Sparkit | [https://evomon.cc/dex/sparkit](https://evomon.cc/dex/sparkit) |
+| Lavite | [https://evomon.cc/dex/lavite](https://evomon.cc/dex/lavite) |
+| Lavarock | [https://evomon.cc/dex/lavarock](https://evomon.cc/dex/lavarock) |
+| Bluebird | [https://evomon.cc/dex/bluebird](https://evomon.cc/dex/bluebird) |
+| Arcub | [https://evomon.cc/dex/arcub](https://evomon.cc/dex/arcub) |
+| Arcapex | [https://evomon.cc/dex/arcapex](https://evomon.cc/dex/arcapex) |
+| Wispuff | [https://evomon.cc/dex/wispuff](https://evomon.cc/dex/wispuff) |
+| Wisphex | [https://evomon.cc/dex/wisphex](https://evomon.cc/dex/wisphex) |
+| Astraknight | [https://evomon.cc/dex/astraknight](https://evomon.cc/dex/astraknight) |
+
+## Legal & policies
+
+| Page | URL |
+|------|-----|
+| Privacy Policy | [https://evomon.cc/privacy](https://evomon.cc/privacy) |
+| Terms of Use | [https://evomon.cc/terms](https://evomon.cc/terms) |
+| Cookies | [https://evomon.cc/cookies](https://evomon.cc/cookies) |
 
 ## Pet images
 
@@ -44,7 +108,7 @@ This runs `prebuild` (generates `robots.txt`, `main_sitemap.xml`, `llms*.txt`), 
 
 **Custom domain (one-time):** Cloudflare Dashboard → **Workers & Pages** → **evomon** → **Custom domains** → add `evomon.cc` and `www.evomon.cc`.
 
-Preview URL: `https://evomon-3l6.pages.dev`
+Preview URL: [https://evomon-3l6.pages.dev](https://evomon-3l6.pages.dev)
 
 ## GEO / LLM discovery
 
@@ -52,24 +116,6 @@ Preview URL: `https://evomon-3l6.pages.dev`
 - [`/llms-full.txt`](https://evomon.cc/llms-full.txt) — expanded context: codes, type chart, starters, FAQs
 
 Content is generated from `src/lib/llms.ts` at build time (`npm run prebuild`).
-
-## Site map (MVP)
-
-| Path | Purpose |
-|------|---------|
-| `/` | Homepage + hub links |
-| `/codes` | Active codes (highest traffic) |
-| `/tier-list` | Team building |
-| `/starters` | Best starter pick |
-| `/guides/beginner` | Progression walkthrough |
-
-## Next steps (week 1)
-
-1. **Deploy** — get `https://evomon.cc` live this week.
-2. **Google Search Console** — verify domain, submit sitemap `/main_sitemap.xml`.
-3. **Codes pipeline** — update `src/data/codes.ts` daily (later: Discord scraper via `roblox-game-data-scraper` skill).
-4. **Analytics** — add Plausible or GA4.
-5. **Phase 2 pages** — pokedex, evolution guide, shiny pity calculator.
 
 ## Update codes
 
