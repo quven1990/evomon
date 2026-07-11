@@ -49,7 +49,7 @@ export default async function DexDetailPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: canonical("/") },
+      { "@type": "ListItem", position: 1, name: "Evomon Wiki", item: canonical("/") },
       { "@type": "ListItem", position: 2, name: "Dex", item: canonical("/dex") },
       { "@type": "ListItem", position: 3, name: pet.name, item: pageUrl },
     ],
@@ -73,7 +73,7 @@ export default async function DexDetailPage({ params }: Props) {
           <ol className="flex flex-wrap items-center gap-2">
             <li>
               <Link href="/" className="hover:text-emerald-300">
-                Home
+                Evomon Wiki
               </Link>
             </li>
             <li aria-hidden>/</li>

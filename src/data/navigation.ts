@@ -17,8 +17,8 @@ export const navSections = [
     links: [
       {
         href: "/guides/mutations",
-        label: "Shiny & Sparkle",
-        desc: "Mutations, pity odds, and shiny egg routes",
+        label: "Mutations",
+        desc: "Shiny, prismatic & pity odds",
       },
       {
         href: "/guides/mutations/shiny-vs-sparkle",
@@ -108,15 +108,15 @@ export const footerLinks = [
   { href: "/guides/farming", label: "Farming" },
 ] as const;
 
-/** Primary mobile bottom bar — matches top traffic routes. */
+/** Primary mobile bottom bar — matches top traffic routes (home via header logo). */
 export const mobileTabLinks = [
-  { href: "/", label: "Home", match: (path: string) => path === "/" },
   {
     href: "/guides/mutations",
     label: "Mutations",
     match: (path: string) => path.startsWith("/guides/mutations"),
   },
   { href: "/dex", label: "Dex", match: (path: string) => path.startsWith("/dex") },
+  { href: "/codes", label: "Codes", match: (path: string) => path.startsWith("/codes") },
   {
     href: "/tier-list",
     label: "Tiers",

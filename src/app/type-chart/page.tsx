@@ -17,7 +17,7 @@ export default function TypeChartPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: canonical("/") },
+      { "@type": "ListItem", position: 1, name: "Evomon Wiki", item: canonical("/") },
       { "@type": "ListItem", position: 2, name: "Type Chart", item: canonical("/type-chart") },
     ],
   };

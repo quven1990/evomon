@@ -14,8 +14,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   BookOpen,
+  Gift,
   Grid3x3,
-  Home,
   Menu,
   Sparkles,
   TrendingUp,
@@ -27,9 +27,9 @@ import { GAME } from "@/lib/game";
 import { SITE } from "@/lib/site";
 
 const tabIcons = {
-  "/": Home,
   "/guides/mutations": Sparkles,
   "/dex": Grid3x3,
+  "/codes": Gift,
   "/tier-list": TrendingUp,
 } as const;
 

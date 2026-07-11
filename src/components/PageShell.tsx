@@ -6,7 +6,7 @@ type Props = {
 };
 
 /** Consistent back link on desktop; mobile uses the header back button. */
-export function PageBack({ href, label = "Home" }: Props) {
+export function PageBack({ href, label = "Evomon Wiki" }: Props) {
   return (
     <Link
       href={href}

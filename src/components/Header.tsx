@@ -28,18 +28,27 @@ export function Header() {
             const cluster = getHeaderCluster(item.clusterId);
             if (!cluster) return null;
 
+            const navLabel = cluster.id === "mutations" ? "Mutations" : "Tier List";
+
             return (
               <div key={cluster.id} className="group relative">
-                <button
-                  type="button"
+                <Link
+                  href={cluster.hubHref}
                   className="inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm text-zinc-300 transition hover:bg-white/5 hover:text-white"
                 >
-                  {cluster.id === "mutations" ? "Mutations" : "Tier List"}
+                  {navLabel}
                   <ChevronDown className="h-3.5 w-3.5 opacity-70 transition group-hover:rotate-180" />
-                </button>
+                </Link>
                 <div className="invisible absolute left-0 top-full z-50 pt-1 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                   <div className="w-64 rounded-xl border border-white/10 bg-[#0a1412]/95 p-2 shadow-2xl backdrop-blur-xl">
-                    <ul className="space-y-0.5">
+                    <Link
+                      href={cluster.hubHref}
+                      className="block rounded-lg px-3 py-2 transition hover:bg-white/5"
+                    >
+                      <div className="text-sm font-semibold text-white">{cluster.hubLabel}</div>
+                      <div className="text-xs text-zinc-500">Full reference guide</div>
+                    </Link>
+                    <ul className="mt-1 space-y-0.5 border-t border-white/10 pt-1">
                       {cluster.routes.map((route) => (
                         <li key={route.href}>
                           <Link
@@ -52,14 +61,6 @@ export function Header() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-1 border-t border-white/10 pt-1">
-                      <Link
-                        href={cluster.hubHref}
-                        className="block rounded-lg px-3 py-2 text-sm font-medium text-zinc-300 transition hover:bg-white/5 hover:text-white"
-                      >
-                        {cluster.hubLabel} →
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </div>
