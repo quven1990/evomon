@@ -21,8 +21,14 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-11",
+        title: "Blog pipeline — GSC long-tail keyword scorer",
+        body: "Added blog-keyword-pick.mjs to score Search Console queries (word count, impressions, position, CTR) before suggesting YouTube hunt targets. Pairs with blog-topic-check.mjs overlap gate.",
+        tags: ["Blog", "Tooling", "SEO"],
+      },
+      {
+        date: "2026-07-11",
         title: "Blog launch — How to Get Eggs answer post",
-        body: "Added /blog index and first community-sourced answer post targeting how-to-get-eggs and prismatic-egg GSC queries. Links to Shiny Egg and Mutations hubs; includes FAQ schema and YouTube source attribution.",
+        body: "Added /blog index and first community-sourced answer post targeting how-to-get-eggs and prismatic-egg GSC queries. Sitemap and llms.txt now list /blog and each post URL. Links to Shiny Egg and Mutations hubs; includes FAQ schema and YouTube source attribution.",
         tags: ["Blog", "SEO", "Content"],
         pages: ["/blog", "/blog/how-to-get-eggs-evomon"],
       },

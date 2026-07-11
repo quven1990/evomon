@@ -7,6 +7,7 @@ import {
   sortCodesByTrust,
   watchlistCodes,
 } from "@/data/codes";
+import { getAllBlogPosts } from "@/data/blog-posts";
 import { DEX_LAST_CHECKED, dexStats } from "@/data/dex";
 import { UPDATE_LOG_LAST_PUBLISHED } from "@/data/update-log";
 import { typeChart } from "@/data/type-chart";
@@ -15,6 +16,20 @@ import { GAME } from "@/lib/game";
 import { SITE, canonical } from "@/lib/site";
 
 const stats = dexStats();
+
+function blogLinksBlock(): string {
+  const posts = getAllBlogPosts();
+  if (posts.length === 0) {
+    return `- [Blog](${canonical("/blog")}): Short GSC answer posts — community-sourced, links to full guides.`;
+  }
+  return [
+    `- [Blog index](${canonical("/blog")}): Short GSC answer posts — community-sourced, links to full guides.`,
+    ...posts.map(
+      (post) =>
+        `- [${post.title}](${canonical(`/blog/${post.slug}`)}): ${post.description}`,
+    ),
+  ].join("\n");
+}
 
 function lines(...parts: string[]) {
   return parts.filter(Boolean).join("\n");
@@ -53,7 +68,9 @@ export function generateLlmsTxt(): string {
     `- [Tier List hub](${canonical("/tier-list")}): Community endgame and early-route rankings (July 2026 synthesis).`,
     `- [Early Route Carries](${canonical("/tier-list/early-carries")}): Best picks Verdant Valley–Lava Crag; Bubble starter vs Lavite stone ROI.`,
     `- [Evolution Priority](${canonical("/tier-list/evolution-priority")}): Evolution Stone spend order — Lavite-first on most routes.`,
-    `- [Blog](${canonical("/blog")}): Short GSC answer posts — community-sourced, links to full guides.`,
+    "",
+    "## Blog",
+    blogLinksBlock(),
     "",
     "## Trust & metadata",
     `- [About & data policy](${canonical("/about")}): Unofficial disclaimer, how we source data, freshness dates.`,
@@ -167,6 +184,9 @@ export function generateLlmsFullTxt(): string {
     `- Early carries (0–30): ${canonical("/tier-list/early-carries")}`,
     `- Evolution stone priority: ${canonical("/tier-list/evolution-priority")}`,
     "",
+    "## Blog (GSC answer posts)",
+    blogLinksBlock(),
+    "",
     "## Type chart",
     typeChartBlock,
     "",
@@ -193,6 +213,8 @@ export function generateLlmsFullTxt(): string {
     `- Team builder: ${canonical("/team-builder")}`,
     `- About: ${canonical("/about")}`,
     `- Update log: ${canonical("/update-log")}`,
+    `- Blog index: ${canonical("/blog")}`,
+    `- Sitemap: ${canonical("/main_sitemap.xml")}`,
     `- Index: ${canonical("/llms.txt")}`,
     "",
     "## Corrections",

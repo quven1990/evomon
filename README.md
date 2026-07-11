@@ -24,6 +24,13 @@ Direct links to the main hub pages on [evomon.cc](https://evomon.cc/):
 | About & Trust | [https://evomon.cc/about](https://evomon.cc/about) |
 | Update Log | [https://evomon.cc/update-log](https://evomon.cc/update-log) |
 
+## Blog
+
+| Page | URL |
+|------|-----|
+| Blog index | [https://evomon.cc/blog](https://evomon.cc/blog) |
+| How to Get Eggs in Evomon | [https://evomon.cc/blog/how-to-get-eggs-evomon](https://evomon.cc/blog/how-to-get-eggs-evomon) |
+
 ## Guide subpages
 
 | Page | URL |
