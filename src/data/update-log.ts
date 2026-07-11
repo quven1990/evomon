@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-11",
+        title: "Blog launch — How to Get Eggs answer post",
+        body: "Added /blog index and first community-sourced answer post targeting how-to-get-eggs and prismatic-egg GSC queries. Links to Shiny Egg and Mutations hubs; includes FAQ schema and YouTube source attribution.",
+        tags: ["Blog", "SEO", "Content"],
+        pages: ["/blog", "/blog/how-to-get-eggs-evomon"],
+      },
+      {
+        date: "2026-07-11",
         title: "Topic cluster guides & internal linking",
         body: "Added focused subpages for Shiny vs Sparkle, Shiny Egg, Early Carries, and Evolution Priority — each with trust footers and Article schema. Wired hub route cards, header dropdowns, and context links from beginner, codes, level-30, and indexable dex pages.",
         tags: ["Guides", "SEO", "Navigation"],

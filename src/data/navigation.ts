@@ -69,6 +69,14 @@ export const navSections = [
     ],
   },
   {
+    title: "Blog & Updates",
+    description: "Short answers and changelog",
+    links: [
+      { href: "/blog", label: "Blog", desc: "GSC answer posts from community video sources" },
+      { href: "/update-log", label: "Update Log", desc: "Site changelog and guide refreshes" },
+    ],
+  },
+  {
     title: "Tools",
     description: "Party planning and coverage",
     links: [
@@ -93,6 +101,7 @@ export const headerDropdownSections = navSections
 
 export const footerLinks = [
   { href: "/about", label: "About & Trust" },
+  { href: "/blog", label: "Blog" },
   { href: "/update-log", label: "Update Log" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Use" },

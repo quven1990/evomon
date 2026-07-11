@@ -53,6 +53,7 @@ export function generateLlmsTxt(): string {
     `- [Tier List hub](${canonical("/tier-list")}): Community endgame and early-route rankings (July 2026 synthesis).`,
     `- [Early Route Carries](${canonical("/tier-list/early-carries")}): Best picks Verdant Valley–Lava Crag; Bubble starter vs Lavite stone ROI.`,
     `- [Evolution Priority](${canonical("/tier-list/evolution-priority")}): Evolution Stone spend order — Lavite-first on most routes.`,
+    `- [Blog](${canonical("/blog")}): Short GSC answer posts — community-sourced, links to full guides.`,
     "",
     "## Trust & metadata",
     `- [About & data policy](${canonical("/about")}): Unofficial disclaimer, how we source data, freshness dates.`,

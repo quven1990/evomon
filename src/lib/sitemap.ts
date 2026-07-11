@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getAllBlogPosts } from "@/data/blog-posts";
 import { INDEXABLE_DEX_SLUGS } from "@/lib/indexing";
 import { SITE } from "@/lib/site";
 
@@ -17,6 +18,7 @@ const indexableRoutes: {
   { path: "/tier-list", priority: 0.8, changeFrequency: "weekly" },
   { path: "/about", priority: 0.6, changeFrequency: "monthly" },
   { path: "/update-log", priority: 0.55, changeFrequency: "weekly" },
+  { path: "/blog", priority: 0.65, changeFrequency: "weekly" },
   { path: "/privacy", priority: 0.5, changeFrequency: "yearly" },
   { path: "/terms", priority: 0.5, changeFrequency: "yearly" },
   { path: "/cookies", priority: 0.5, changeFrequency: "yearly" },
@@ -47,7 +49,14 @@ export function getSitemapEntries(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  return [...staticEntries, ...dexEntries];
+  const blogEntries: MetadataRoute.Sitemap = getAllBlogPosts().map((post) => ({
+    url: `${SITE.url}/blog/${post.slug}`,
+    lastModified: new Date(post.published),
+    changeFrequency: "monthly" as const,
+    priority: 0.62,
+  }));
+
+  return [...staticEntries, ...blogEntries, ...dexEntries];
 }
 
 export function getSitemapXml(): string {

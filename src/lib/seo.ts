@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ElementType } from "@/data/dex";
+import type { BlogPost } from "@/data/blog-posts";
 import { isIndexableDexSlug, NOINDEX_FOLLOW } from "@/lib/indexing";
 import { buildDexPetSeo } from "@/lib/dex-pet";
 import { activeCodes } from "@/data/codes";
@@ -371,7 +372,30 @@ export const PAGE_SEO = {
       ogTitle: "Evomon Wiki Update Log",
       keywords: ["evomon wiki updates", "evomon.cc changelog", "evomon wiki changelog"],
     }),
+
+  blogIndex: () =>
+    buildPageMetadata({
+      title: "Evomon Blog — Short Answers & Hunt Tips",
+      description:
+        "Community-sourced Evomon blog posts for high-intent searches: eggs, shiny hunts, and boss routes. Cross-checked against our full guides.",
+      path: "/blog",
+      keywords: [
+        "evomon blog",
+        "how to get eggs in evomon",
+        "evomon shiny egg",
+        "prismatic egg evomon",
+      ],
+    }),
 } as const;
+
+export function blogPostMetadata(post: BlogPost): Metadata {
+  return buildPageMetadata({
+    title: post.title,
+    description: post.description,
+    path: `/blog/${post.slug}`,
+    keywords: post.gscTargets,
+  });
+}
 
 export function dexPetMetadata(entry: {
   name: string;
