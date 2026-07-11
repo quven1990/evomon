@@ -42,8 +42,8 @@ export const navSections = [
       },
       {
         href: "/guides/level-30",
-        label: "Level 30 Guide",
-        desc: "Ultimate, Ascension, endgame prep",
+        label: "Equipment (Lv40+)",
+        desc: "Gear dungeons on Silent Sands after Ascension",
       },
       { href: "/starters", label: "Best Starter", desc: "Bubble, Blazpup, or Leafbun" },
     ],
@@ -104,7 +104,7 @@ export const footerLinks = [
   { href: "/type-chart", label: "Type Chart" },
   { href: "/team-builder", label: "Team Builder" },
   { href: "/guides/beginner", label: "Beginner Guide" },
-  { href: "/guides/level-30", label: "Level 30" },
+  { href: "/guides/level-30", label: "Equipment (Lv40+)" },
   { href: "/guides/farming", label: "Farming" },
 ] as const;
 

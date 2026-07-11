@@ -166,7 +166,7 @@ export default function FarmingGuidePage() {
           </li>
           <li>
             <Link href="/guides/level-30" className={wikiLinkClass()}>
-              Level 30 guide
+              Equipment dungeons (Lv40+)
             </Link>
           </li>
         </ul>

@@ -450,7 +450,7 @@ export default function BeginnerGuidePage() {
             <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
               <li>
                 <Link href="/guides/level-30" className="text-emerald-300 hover:underline">
-                  Level 30 & Ascension →
+                  Equipment dungeons (Lv40+) →
                 </Link>
               </li>
               <li>

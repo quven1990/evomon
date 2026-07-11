@@ -309,7 +309,7 @@ export default function TierListPage() {
             </li>
             <li>
               <Link href="/guides/level-30" className="text-emerald-300 hover:underline">
-                Level 30 guide →
+                Equipment dungeons (Lv40+) →
               </Link>
             </li>
             <li>

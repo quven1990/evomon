@@ -45,7 +45,7 @@ export function generateLlmsTxt(): string {
     "## Guides",
     `- [Best Starter](${canonical("/starters")}): Bubble vs Blazpup vs Leafbun — early-game recommendation (Bubble for most players).`,
     `- [Beginner Guide](${canonical("/guides/beginner")}): Island catch/skip route, Lavite priority, player EXP dailies, ball & stone economy.`,
-    `- [Level 30 Guide](${canonical("/guides/level-30")}): Ultimate, Ascension, equipment dungeons at 40.`,
+    `- [Equipment Dungeons (Lv40+)](${canonical("/guides/level-30")}): Silent Sands gear runs — level 30 recap links to beginner guide.`,
     `- [Shiny & Prismatic hub](${canonical("/guides/mutations")}): Full mutations reference — pity (600/150), shiny eggs, 149 trick, boss farm routes.`,
     `- [Shiny vs Sparkle](${canonical("/guides/mutations/shiny-vs-sparkle")}): Stat boost vs cosmetic prismatic; Mutation vs Talent vs Nature; community odds.`,
     `- [Shiny Egg Guide](${canonical("/guides/mutations/shiny-egg")}): Boss lines without field pity, Catch Master, Prismatic Ball hatches.`,

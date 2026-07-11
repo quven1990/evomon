@@ -151,7 +151,7 @@ export default function ShinyEggPage() {
             <span className="text-amber-200/90">community reported</span>). Critical on bosses where
             you must land the catch to roll eggs. Unlocks via equipment progression — see{" "}
             <Link href="/guides/level-30" className="text-emerald-300 hover:underline">
-              level 30 guide
+              equipment dungeons (Lv40+)
             </Link>{" "}
             for dungeons at trainer level 40.
           </p>

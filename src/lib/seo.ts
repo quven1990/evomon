@@ -209,11 +209,18 @@ export const PAGE_SEO = {
 
   level30Guide: () =>
     buildPageMetadata({
-      title: "Evomon Level 30 Guide — Ultimate, Ascension & What to Do Next",
+      title: "Evomon Equipment Dungeons (Lv40+) — Gear Runs & Refine Guide",
       description:
-        "Just hit level 30? Unlock your Ultimate, start Ascension, unlock Equipment Dungeons at 40 — the exact order to spend resources so you don't hit a wall.",
+        "Silent Sands gear dungeons at trainer level 40: daily Equipment Challenge tickets, enhance keeper gear, Refine Stones on Legendary rolls. Level 30 Ultimate recap links to the beginner guide.",
       path: "/guides/level-30",
-      keywords: ["evomon level 30", "evomon ultimate", "evomon ascension", "evomon endgame"],
+      keywords: [
+        "evomon equipment dungeon",
+        "evomon silent sands",
+        "evomon level 40",
+        "evomon gear",
+        "evomon refine stones",
+        "evomon level 30",
+      ],
     }),
 
   mutationsGuide: () => {
