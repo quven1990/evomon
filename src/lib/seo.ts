@@ -128,14 +128,28 @@ export const PAGE_SEO = {
       keywords: ["evomon team builder", "evomon best team", "evomon team comp", "evomon party"],
     }),
 
-  typeChart: () =>
-    buildPageMetadata({
-      title: "Evomon Type Chart — Every Weakness & Strength",
-      description:
-        "Stop losing type matchups. Full Evomon element chart — what beats Fire, Water, Grass & every type. Build smarter teams and clear islands faster.",
-      path: "/type-chart",
-      keywords: ["evomon type chart", "evomon weaknesses", "evomon type matchup", "evomon elements"],
-    }),
+  typeChart: () => {
+    const title = "Evomon Type Chart — All Weaknesses, Strengths & Resistances";
+    const description =
+      "Water beats Fire; Electric beats Flying; Ice beats Grass. Full Evomon type chart for all 15 elements — weaknesses, strengths & resistances. Interactive lookup and island tips.";
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/type-chart",
+        ogTitle: title,
+        keywords: [
+          "evomon type chart",
+          "evomon weaknesses",
+          "evomon weakness chart",
+          "evomon type matchup",
+          "evomon elements",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
 
   tierList: () => {
     // ≤60 chars total — absolute title skips the layout `| Evomon Wiki` suffix.

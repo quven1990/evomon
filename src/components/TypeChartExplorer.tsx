@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { ArrowRight, Shield, Swords } from "lucide-react";
 import type { ElementType } from "@/data/dex";
 import {
@@ -92,7 +92,6 @@ function MatchupList({
 }
 
 export function TypeChartExplorer() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const mobileScrollRef = useRef<HTMLDivElement>(null);
   const initial = searchParams.get("type");
@@ -122,9 +121,11 @@ export function TypeChartExplorer() {
   function selectType(type: ElementType) {
     setSelected(type);
     track(AnalyticsEvent.TYPE_SELECT, { type });
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(window.location.search);
     params.set("type", type);
-    router.replace(`?${params.toString()}`, { scroll: false });
+    const qs = params.toString();
+    const nextUrl = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
+    window.history.replaceState(null, "", nextUrl);
   }
 
   return (

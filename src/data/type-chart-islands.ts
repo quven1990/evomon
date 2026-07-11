@@ -66,4 +66,12 @@ export const typeChartFaqs = [
     q: "How do I use the type chart for team building?",
     a: "Pick three Evomons whose types cover different weaknesses. Check island tips for what you will face next, then open the team builder to see offensive gaps.",
   },
+  {
+    q: "How many types are in Evomon?",
+    a: "This chart covers 15 offensive types: Water, Fire, Grass, Electric, Rock, Ground, Flying, Bug, Poison, Ice, Fighting, Psychic, Steel, Light, and Dark. Normal appears on some dex entries but is not in the offensive chart yet.",
+  },
+  {
+    q: "Where is the Evomon weakness chart?",
+    a: "Every type's weaknesses and strengths are listed in the quick-answer table on this page. Use Type lookup below to filter one element and share a direct link (for example ?type=Water).",
+  },
 ];

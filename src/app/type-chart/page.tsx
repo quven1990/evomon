@@ -43,13 +43,86 @@ export default function TypeChartPage() {
         <PageBack href="/" />
         <h1 className={pageTitleClass()}>Evomon Type Chart</h1>
         <p className={pageLeadClass()}>
-          Select a type for matchups and island tips.{" "}
+          Every elemental weakness and strength for Roblox Evomon — Water beats Fire, Electric beats Flying,
+          Ice beats Grass, and all 15 types below. Use the interactive lookup for one type, or open the{" "}
           <Link href="/team-builder" className="text-emerald-300 hover:underline">
-            Team builder →
-          </Link>
+            team builder
+          </Link>{" "}
+          to check squad coverage.
         </p>
 
-        <div className="mt-5">
+        <section id="quick-answer" className="scroll-mt-32 mt-6 sm:scroll-mt-8">
+          <h2 className="text-xl font-bold text-white sm:text-2xl">Quick answer</h2>
+          <p className="mt-3 text-sm leading-7 text-zinc-300">
+            Evomon uses standard creature-collector type matchups.{" "}
+            <strong className="text-white">Water</strong> is super-effective vs Fire, Rock, and Ground.{" "}
+            <strong className="text-white">Fire</strong> hits Grass, Bug, and Ice for double damage.{" "}
+            <strong className="text-white">Electric</strong> beats Water and Flying.{" "}
+            <strong className="text-white">Ground</strong> is the hard counter to Electric. Endgame pets
+            often have two types — treat this table as the baseline, then verify in duels.
+          </p>
+
+          <div className="mt-5 space-y-3 lg:hidden">
+            {typeChart.map((row) => {
+              const styles = elementStyles[row.attacker];
+              return (
+                <article
+                  key={row.attacker}
+                  className={`rounded-xl border ${styles.border} bg-[#0d1714] p-4`}
+                >
+                  <Link
+                    href={`/type-chart?type=${row.attacker}`}
+                    className={`text-base font-bold ${styles.text}`}
+                  >
+                    {row.attacker}
+                  </Link>
+                  <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase text-emerald-400">Strong vs</p>
+                      <p className="mt-1 text-sm text-zinc-300">{row.strong.join(", ")}</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] font-bold uppercase text-rose-400">Weak to</p>
+                      <p className="mt-1 text-sm text-zinc-300">{row.weak.join(", ")}</p>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="mt-5 hidden overflow-hidden rounded-2xl border border-white/10 lg:block">
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[40rem] text-left text-sm">
+                <thead>
+                  <tr className="border-b border-white/10 bg-white/[0.03] text-xs uppercase tracking-wide text-zinc-500">
+                    <th className="px-4 py-3">Type</th>
+                    <th className="px-4 py-3">Super effective vs</th>
+                    <th className="px-4 py-3">Weak to</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {typeChart.map((row) => (
+                    <tr key={row.attacker} className="border-b border-white/5 bg-[#0b1512]">
+                      <td className="px-4 py-3">
+                        <Link
+                          href={`/type-chart?type=${row.attacker}`}
+                          className={`font-semibold hover:underline ${elementStyles[row.attacker].text}`}
+                        >
+                          {row.attacker}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-3 text-zinc-300">{row.strong.join(", ")}</td>
+                      <td className="px-4 py-3 text-zinc-400">{row.weak.join(", ")}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <div className="mt-8">
           <TypeChartNav />
         </div>
 
@@ -140,73 +213,12 @@ export default function TypeChartPage() {
         <section id="reference" className="scroll-mt-32 mt-12 sm:scroll-mt-8 sm:mt-14">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Full type reference</h2>
           <p className="mt-2 text-sm text-zinc-400">
-            All 15 types at a glance. On mobile, expand only if you need the full list — lookup above is
-            faster.
+            The{" "}
+            <Link href="#quick-answer" className="text-emerald-300 hover:underline">
+              quick-answer table
+            </Link>{" "}
+            above lists all 15 types. Use Type lookup for shareable single-type links.
           </p>
-
-          <details className="group mt-5 rounded-2xl border border-white/10 bg-[#0b1512] open:border-emerald-500/20 lg:hidden">
-            <summary className="cursor-pointer list-none px-4 py-4 text-sm font-semibold text-white marker:content-none sm:px-5 sm:text-base">
-              Show all 15 types
-              <span className="mt-0.5 block text-xs font-normal text-zinc-500 group-open:hidden">
-                Collapsed to save scrolling — use lookup for one type at a time
-              </span>
-            </summary>
-            <div className="space-y-3 border-t border-white/5 px-4 pb-4 pt-3 sm:px-5">
-              {typeChart.map((row) => {
-                const styles = elementStyles[row.attacker];
-                return (
-                  <article
-                    key={row.attacker}
-                    className={`rounded-xl border ${styles.border} bg-[#0d1714] p-4`}
-                  >
-                    <Link href={`/type-chart?type=${row.attacker}`} className={`text-lg font-bold ${styles.text}`}>
-                      {row.attacker} →
-                    </Link>
-                    <div className="mt-3 grid gap-3">
-                      <div>
-                        <p className="text-[10px] font-bold uppercase text-emerald-400">Strong vs</p>
-                        <p className="mt-1 text-sm text-zinc-300">{row.strong.join(", ")}</p>
-                      </div>
-                      <div>
-                        <p className="text-[10px] font-bold uppercase text-rose-400">Weak to</p>
-                        <p className="mt-1 text-sm text-zinc-300">{row.weak.join(", ")}</p>
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </details>
-
-          <div className="mt-5 hidden overflow-hidden rounded-2xl border border-white/10 lg:block">
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[40rem] text-left text-sm">
-                <thead>
-                  <tr className="border-b border-white/10 bg-white/[0.03] text-xs uppercase tracking-wide text-zinc-500">
-                    <th className="px-4 py-3">Type</th>
-                    <th className="px-4 py-3">Super effective vs</th>
-                    <th className="px-4 py-3">Weak to</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {typeChart.map((row) => (
-                    <tr key={row.attacker} className="border-b border-white/5 bg-[#0b1512]">
-                      <td className="px-4 py-3">
-                        <Link
-                          href={`/type-chart?type=${row.attacker}`}
-                          className={`font-semibold hover:underline ${elementStyles[row.attacker].text}`}
-                        >
-                          {row.attacker}
-                        </Link>
-                      </td>
-                      <td className="px-4 py-3 text-zinc-300">{row.strong.join(", ")}</td>
-                      <td className="px-4 py-3 text-zinc-400">{row.weak.join(", ")}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
 
           <p className="mt-4 text-sm text-zinc-500">
             <strong className="text-zinc-400">Normal</strong> appears on dex entries but is not in this offensive
