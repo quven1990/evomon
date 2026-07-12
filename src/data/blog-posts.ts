@@ -32,6 +32,108 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "what-does-shiny-do-evomon",
+    title: "What Does Shiny Do in Evomon? — Stat Boost Explained",
+    description:
+      "Shiny Evomon are not cosmetic only — they add real stats. See Lavite vs Lavarock flare comparisons (~2.5% base, ~4% evolved) and how that differs from Prismatic (Sparkle).",
+    published: "2026-07-12",
+    gscTargets: [
+      "what does shiny do in evomon",
+      "evomon shiny stat boost",
+      "do shinies give stats in evomon",
+      "shiny vs normal evomon stats",
+      "evomon shiny buff",
+    ],
+    relatedGuides: [
+      "/guides/mutations/shiny-vs-sparkle",
+      "/guides/mutations",
+      "/dex/lavite",
+    ],
+    quickAnswer:
+      "Shiny Evomon give a **small but real stat boost** — not just a recolor. Community in-game comparisons show roughly **~2.5% higher total stats (Flare) on the base form** and **~4% after evolution** (e.g. Lavite +9 Flare; Lavarock +20). **Prismatic (Sparkle)** is cosmetic only and does **not** add combat stats. Hunt shinies on species you will actually use in battle.",
+    sections: [
+      {
+        heading: "Shiny vs Prismatic — only one buffs stats",
+        paragraphs: [
+          "Evomon has two rare overlays that look similar in thumbnails but behave very differently in combat.",
+        ],
+        bullets: [
+          "**Shiny** (four-point star icon) — alternate color palette **plus** a stat boost. Revealed after you KO the wild Evomon.",
+          "**Prismatic / Sparkle** (five-point star icon) — random glow color and body pattern. **Cosmetic only** — zero combat buff.",
+          "**Shiny + Prismatic** — shiny stats with prismatic looks. The endgame flex; see our [Shiny vs Sparkle guide](/guides/mutations/shiny-vs-sparkle) for odds and pity.",
+        ],
+        callout: {
+          title: "Do not mix them up",
+          body: "A prismatic Lavite looks cool but fights like a normal Lavite. A shiny Lavite hits harder — that is the whole point of shiny hunting for PvE and PvP.",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "How much stat boost? (community Flare numbers)",
+        paragraphs: [
+          "The in-game **Flare** stat is the total stat bundle shown on each Evomon card. Creator [Jabroskii](https://www.youtube.com/watch?v=_H3ozu8Af4o) compared the same species side-by-side in July 2026 — numbers vary by level, talent, and nature, but the **percentage gap** is what players care about.",
+        ],
+        bullets: [
+          "**Lavite (unevolved)** — non-shiny Flare **365** vs shiny **374** → **+9 total stats (~2.5%)**.",
+          "**Lavarock (evolved)** — non-shiny **502** vs shiny **522** → **+20 total stats (~4%)**.",
+          "**Shiny Boom Mash vs non-shiny Astronite** — Flare **534** vs **510** → **+24 (~4.7%)** in one roster trade-off example from the same video.",
+        ],
+      },
+      {
+        heading: "Why evolution makes shiny stronger",
+        paragraphs: [
+          "The boost is a **percentage on the final stat sheet**, not a flat +9 forever. Base forms show a modest bump (~2%); fully evolved carries often land near **~4%** — enough to matter in long boss fights and speed-sensitive metas.",
+          "Our [mutations data](/guides/mutations) notes that **speed** is often the most felt gain, but Flare rises across the board in these community samples.",
+        ],
+      },
+      {
+        heading: "When a shiny is worth the grind",
+        bullets: [
+          "**Yes** — your main carry or PvP anchor (e.g. [Lavite](/dex/lavite) → Lavarock line you already run).",
+          "**Yes** — species you will evolve and keep — the ~4% evolved gap beats flexing a non-shiny meta pick.",
+          "**Lower priority** — prismatic-only hunting for trade flex with no shiny stat layer.",
+          "**Skip early game** — build a strong normal team first ([Beginner Guide](/guides/beginner)), then shiny sessions go faster.",
+        ],
+      },
+      {
+        heading: "How this differs from shiny eggs",
+        paragraphs: [
+          "Field shinies and **shiny eggs** both hatch or capture a guaranteed shiny — same stat rules apply once it is on your team. Eggs are the boss-line path where field shiny pity does not exist; see [How to Get Eggs](/blog/how-to-get-eggs-evomon) and the [Shiny Egg Guide](/guides/mutations/shiny-egg) for drop rates and catch loops — not repeated here.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Does shiny only change color in Evomon?",
+        a: "No. Shiny adds a real stat boost (community tests show ~2.5% on base forms, ~4% on evolved forms). Prismatic/Sparkle is the cosmetic-only variant.",
+      },
+      {
+        q: "How much stronger is a shiny Lavite?",
+        a: "One July 2026 community comparison: non-shiny Lavite Flare 365 vs shiny 374 (+9, ~2.5%). Evolved Lavarock showed +20 Flare (~4%). Your numbers may differ slightly by level and talent.",
+      },
+      {
+        q: "Is prismatic the same as shiny?",
+        a: "No. Prismatic (Sparkle) is cosmetic. Shiny gives stats. You can stack both on one Evomon for looks + power.",
+      },
+      {
+        q: "Should I hunt shiny before beating the story?",
+        a: "Most guides recommend a solid normal team first. Shiny hunting is easier once you one-shot farm routes and have balls to spare.",
+      },
+    ],
+    sources: [
+      {
+        label: "Jabroskii — Shiny stat difference (Lavite / Lavarock)",
+        url: "https://www.youtube.com/watch?v=_H3ozu8Af4o",
+        channel: "Jabroskii",
+      },
+      {
+        label: "Purp — Shiny vs Prismatic overview",
+        url: "https://www.youtube.com/watch?v=t3Ar4Bslgzg",
+        channel: "Purp",
+      },
+    ],
+  },
+  {
     slug: "how-to-get-eggs-evomon",
     title: "How to Get Eggs in Evomon — Normal, Shiny & Prismatic Hatch",
     description:

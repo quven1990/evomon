@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-12",
+        title: "Blog — What Does Shiny Do? stat boost answer",
+        body: "New /blog/what-does-shiny-do-evomon targets what-does-shiny-do GSC queries. Community-sourced Flare comparisons (Lavite ~2.5%, Lavarock ~4%), links to Shiny vs Sparkle and Mutations hubs, FAQ schema, Jabroskii + Purp attribution.",
+        tags: ["Blog", "SEO", "Content"],
+        pages: ["/blog", "/blog/what-does-shiny-do-evomon"],
+      },
+      {
+        date: "2026-07-12",
         title: "Type chart — clickable matchups & dead-click fix",
         body: "Quick-answer table and island tags now link each type to ?type=#lookup. Lookup matchup pills use 44px touch targets, clearer hints, and non-clickable section labels after Clarity dead-click reports.",
         tags: ["UX", "Type Chart"],
