@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-11";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-12";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-12",
+        title: "Type chart — clickable matchups & dead-click fix",
+        body: "Quick-answer table and island tags now link each type to ?type=#lookup. Lookup matchup pills use 44px touch targets, clearer hints, and non-clickable section labels after Clarity dead-click reports.",
+        tags: ["UX", "Type Chart"],
+        pages: ["/type-chart"],
+      },
       {
         date: "2026-07-11",
         title: "Blog pipeline — GSC long-tail keyword scorer",

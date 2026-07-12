@@ -5,6 +5,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import { TypeChartExplorer } from "@/components/TypeChartExplorer";
 import { TypeChartNav } from "@/components/TypeChartNav";
+import { TypeChartTypeLink, TypeChartTypeLinkList } from "@/components/TypeChartTypeLink";
 import { islandTypeTips, typeChartFaqs } from "@/data/type-chart-islands";
 import { elementStyles, typeChart } from "@/data/type-chart";
 import { PAGE_SEO } from "@/lib/seo";
@@ -71,19 +72,23 @@ export default function TypeChartPage() {
                   className={`rounded-xl border ${styles.border} bg-[#0d1714] p-4`}
                 >
                   <Link
-                    href={`/type-chart?type=${row.attacker}`}
-                    className={`text-base font-bold ${styles.text}`}
+                    href={`/type-chart?type=${row.attacker}#lookup`}
+                    className={`text-base font-bold hover:underline ${styles.text}`}
                   >
                     {row.attacker}
                   </Link>
                   <div className="mt-3 grid gap-3 sm:grid-cols-2">
                     <div>
                       <p className="text-[10px] font-bold uppercase text-emerald-400">Strong vs</p>
-                      <p className="mt-1 text-sm text-zinc-300">{row.strong.join(", ")}</p>
+                      <div className="mt-2">
+                        <TypeChartTypeLinkList types={row.strong} />
+                      </div>
                     </div>
                     <div>
                       <p className="text-[10px] font-bold uppercase text-rose-400">Weak to</p>
-                      <p className="mt-1 text-sm text-zinc-300">{row.weak.join(", ")}</p>
+                      <div className="mt-2">
+                        <TypeChartTypeLinkList types={row.weak} />
+                      </div>
                     </div>
                   </div>
                 </article>
@@ -106,14 +111,18 @@ export default function TypeChartPage() {
                     <tr key={row.attacker} className="border-b border-white/5 bg-[#0b1512]">
                       <td className="px-4 py-3">
                         <Link
-                          href={`/type-chart?type=${row.attacker}`}
+                          href={`/type-chart?type=${row.attacker}#lookup`}
                           className={`font-semibold hover:underline ${elementStyles[row.attacker].text}`}
                         >
                           {row.attacker}
                         </Link>
                       </td>
-                      <td className="px-4 py-3 text-zinc-300">{row.strong.join(", ")}</td>
-                      <td className="px-4 py-3 text-zinc-400">{row.weak.join(", ")}</td>
+                      <td className="px-4 py-3">
+                        <TypeChartTypeLinkList types={row.strong} />
+                      </td>
+                      <td className="px-4 py-3">
+                        <TypeChartTypeLinkList types={row.weak} />
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -135,9 +144,7 @@ export default function TypeChartPage() {
             </span>
             <span className="mt-1 block sm:mt-0 sm:inline sm:before:content-['_|_']">
               Share:{" "}
-              <Link href="/type-chart?type=Water" className="text-emerald-300 hover:underline">
-                ?type=Water
-              </Link>
+              <TypeChartTypeLink type="Water" size="sm" />
             </span>
           </p>
           <div className="mt-3 hidden rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-4 py-3 text-sm leading-6 text-zinc-300 sm:block">
@@ -178,13 +185,7 @@ export default function TypeChartPage() {
                     <p className="text-xs font-bold uppercase tracking-wide text-zinc-500">Common types</p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {row.dominantTypes.map((type) => (
-                        <Link
-                          key={type}
-                          href={`/type-chart?type=${type}`}
-                          className={`rounded-full px-2.5 py-1 text-xs font-medium ${elementStyles[type].bg} ${elementStyles[type].text} hover:brightness-110`}
-                        >
-                          {type}
-                        </Link>
+                        <TypeChartTypeLink key={type} type={type} size="sm" />
                       ))}
                     </div>
                   </div>
@@ -192,13 +193,12 @@ export default function TypeChartPage() {
                     <p className="text-xs font-bold uppercase tracking-wide text-emerald-400">Bring</p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {row.bringTypes.map((type) => (
-                        <Link
+                        <TypeChartTypeLink
                           key={type}
-                          href={`/type-chart?type=${type}`}
-                          className={`rounded-full px-2.5 py-1 text-xs font-semibold ring-1 ring-emerald-500/30 ${elementStyles[type].bg} ${elementStyles[type].text} hover:brightness-110`}
-                        >
-                          {type}
-                        </Link>
+                          type={type}
+                          size="sm"
+                          className="ring-emerald-500/30"
+                        />
                       ))}
                     </div>
                   </div>

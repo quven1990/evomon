@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { trackGuideSection } from "@/lib/analytics";
 
 const sections = [
-  { id: "lookup", label: "Lookup" },
+  { id: "lookup", label: "Type lookup" },
   { id: "islands", label: "Islands" },
   { id: "reference", label: "All types" },
   { id: "teams", label: "Teams" },
