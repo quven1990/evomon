@@ -45,7 +45,7 @@ export default function TypeChartPage() {
         <h1 className={pageTitleClass()}>Evomon Type Chart</h1>
         <p className={pageLeadClass()}>
           Every elemental weakness and strength for Roblox Evomon — Water beats Fire, Electric beats Flying,
-          Ice beats Grass, and all 15 types below. Use the interactive lookup for one type, or open the{" "}
+          Ice beats Grass, and all 15 types below. Click any type name below to open the matchup lookup, or use the interactive lookup for one type, or open the{" "}
           <Link href="/team-builder" className="text-emerald-300 hover:underline">
             team builder
           </Link>{" "}

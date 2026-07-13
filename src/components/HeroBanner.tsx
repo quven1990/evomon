@@ -2,11 +2,8 @@ import Link from "next/link";
 import { HeroBackground } from "@/components/HeroBackground";
 import { FeaturedPets } from "@/components/FeaturedPets";
 import { FeaturedPetsDesktop } from "@/components/FeaturedPetsDesktop";
-import { activeCodes } from "@/data/codes";
-import { dexStats } from "@/data/dex";
 import { monthYear } from "@/lib/site";
 
-const stats = dexStats();
 const monthLabel = monthYear();
 
 export function HeroBanner() {
@@ -40,8 +37,7 @@ export function HeroBanner() {
             </span>
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-8 text-zinc-300">
-            {stats.named} dex entries with sprites, {activeCodes.length} working codes, Sparkle guide
-            & type chart — updated {monthLabel}.
+            Unofficial Roblox Evomon wiki — codes, dex, shiny guides & type chart. Updated {monthLabel}.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link

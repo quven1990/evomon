@@ -63,21 +63,23 @@ export function buildPageMetadata({
 
 /** Homepage — uses absolute title to avoid template suffix. */
 export function homeMetadata(): Metadata {
-  const title = `Evomon Wiki (${monthLabel}) — Dex, Codes, Guides & Type Chart`;
-  const description = `Evomon Wiki on evomon.cc — ${stats.named} dex entries with sprites, ${codeCount} working codes, type chart, tier list & beginner guides. Updated ${monthLabel}. Independent fan wiki for Roblox Evomon.`;
+  const title = `Evomon Wiki — Roblox Codes, Dex & Shiny Guide (${monthLabel})`;
+  const description = `Unofficial Evomon Wiki for Roblox — codes, pokedex with sprites, shiny guides, type chart & team builder. Updated ${monthLabel}. Browse the dex or copy codes now.`;
 
   return {
     ...buildPageMetadata({
       title,
       description,
       path: "/",
-      ogTitle: title,
+      ogTitle: "Evomon Wiki — Unofficial Roblox Fan Site",
       keywords: [
         "evomon",
         "evomon roblox",
         "evomon codes",
         "evomon wiki",
         "wiki evomon",
+        "roblox evomon wiki",
+        "wiki evomon roblox",
         "evomon dex",
         "evomon team builder",
         "roblox evomon",
@@ -130,9 +132,9 @@ export const PAGE_SEO = {
     }),
 
   typeChart: () => {
-    const title = "Evomon Type Chart — All Weaknesses, Strengths & Resistances";
+    const title = "Evomon Type Chart — Weaknesses & Clickable Lookup";
     const description =
-      "Water beats Fire; Electric beats Flying; Ice beats Grass. Full Evomon type chart for all 15 elements — weaknesses, strengths & resistances. Interactive lookup and island tips.";
+      "See what beats Fire, Water, Electric & all 15 types. Click any type name for instant weakness lookup. Open the chart →";
 
     return {
       ...buildPageMetadata({

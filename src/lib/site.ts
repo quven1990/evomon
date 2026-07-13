@@ -3,7 +3,7 @@ export const SITE = {
   domain: "evomon.cc",
   url: "https://evomon.cc",
   description:
-    "Roblox Evomon wiki with working codes, pet sprites, team builder & type chart — practical tools updated regularly on evomon.cc.",
+    "Unofficial Evomon Wiki for Roblox — working codes, pokedex with sprites, shiny guides, type chart & team builder. Updated regularly on evomon.cc.",
   locale: "en-US",
   emails: {
     contact: "contract@evomon.cc",
