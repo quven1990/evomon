@@ -29,6 +29,7 @@ Direct links to the main hub pages on [evomon.cc](https://evomon.cc/):
 | Page | URL |
 |------|-----|
 | Blog index | [https://evomon.cc/blog](https://evomon.cc/blog) |
+| Evomon Shiny Egg Chance & Odds | [https://evomon.cc/blog/evomon-shiny-egg-chance](https://evomon.cc/blog/evomon-shiny-egg-chance) |
 | What Does Shiny Do in Evomon | [https://evomon.cc/blog/what-does-shiny-do-evomon](https://evomon.cc/blog/what-does-shiny-do-evomon) |
 | How to Get Eggs in Evomon | [https://evomon.cc/blog/how-to-get-eggs-evomon](https://evomon.cc/blog/how-to-get-eggs-evomon) |
 

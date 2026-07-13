@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-12";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-13";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-13",
+        title: "Blog — Shiny egg chance & odds answer",
+        body: "New /blog/evomon-shiny-egg-chance targets shiny-egg-chance and shiny-odds GSC queries. Separates field 0.2% / 600 pity from post-catch shiny-egg rolls; boss no-pity note; links to Shiny Egg hub and eggs blog. Source: ImSoaren hunt guide.",
+        tags: ["Blog", "SEO", "Content"],
+        pages: ["/blog", "/blog/evomon-shiny-egg-chance"],
+      },
       {
         date: "2026-07-12",
         title: "Blog — What Does Shiny Do? stat boost answer",

@@ -32,6 +32,104 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "evomon-shiny-egg-chance",
+    title: "Evomon Shiny Egg Chance & Odds — Field Rates vs Egg Drops",
+    description:
+      "Shiny field odds are ~0.2% (1-in-500) with 600 pity; prismatic is separate. Shiny eggs are a post-catch roll with no published % — boss lines need them because field shiny pity does not apply.",
+    published: "2026-07-13",
+    gscTargets: [
+      "evomon shiny egg chance",
+      "evomon shiny egg odds",
+      "evomon shiny odds",
+      "shiny egg evomon chance",
+      "evomon egg drop rate",
+    ],
+    relatedGuides: [
+      "/guides/mutations/shiny-egg",
+      "/guides/mutations",
+      "/blog/how-to-get-eggs-evomon",
+    ],
+    quickAnswer:
+      "**Field shiny chance** in Evomon is about **0.2% (1 in 500)** per encounter, with **600 KO/capture pity** per species. **Shiny eggs** are a **separate roll after you catch** a defeated Evomon — the game UI does not show a fixed shiny-egg percentage, but community guides treat it as much rarer than a normal egg. Boss lines (flying/thunder kings) **lack field shiny pity**, so shiny eggs are the realistic path.",
+    sections: [
+      {
+        heading: "Two different “chance” numbers — don’t mix them up",
+        paragraphs: [
+          "Searchers asking **evomon shiny egg chance** usually mean one of two things: (1) the **field shiny rate** after you KO a wild Evomon, or (2) the **odds a catch drops a shiny egg**. They use different counters and different UI labels.",
+        ],
+        bullets: [
+          "**Field shiny** — bottom-left after battle: ~**0.2%** (~**1 in 500**) + **600 pity** per species.",
+          "**Prismatic (Sparkle)** — separate line, often ~**0.8%** (~**1 in 125**) in UI + **150 capture pity** (creator [ImSoaren](https://www.youtube.com/watch?v=kA5s2l7tE7M) reading July 2026 UI; rates can vary by encounter).",
+          "**Shiny egg drop** — only rolls **after a successful catch** post-KO. Not the same as field shiny odds.",
+        ],
+        callout: {
+          title: "Eggs require catches",
+          body: "KO-and-run never rolls eggs or raises prismatic pity. See [How to Get Eggs](/blog/how-to-get-eggs-evomon) for the catch loop.",
+          variant: "note",
+        },
+      },
+      {
+        heading: "What the in-game UI shows (field rates)",
+        paragraphs: [
+          "After you defeat a wild Evomon, the smoke reveal shows whether it was shiny. The pity/odds panel bottom-left lists prismatic and shiny separately — ImSoaren’s hunt guide walks through a live read:",
+        ],
+        bullets: [
+          "**Shiny:** **0.2%** — described in-video as **1 in 500**.",
+          "**Prismatic:** **0.8%** — **1 in 125** on the same screen.",
+          "**Pity:** **150** prismatic captures / **600** shiny defeats or captures per species.",
+        ],
+      },
+      {
+        heading: "Shiny egg chance — what we know",
+        paragraphs: [
+          "When a catch succeeds, the game can drop a normal egg, a **shiny egg** (labeled e.g. “Shiny Frostlet Egg”), or nothing. ImSoaren notes shiny eggs are **not guaranteed** — there is “a chance” on top of the catch, separate from field shiny pity.",
+          "Our [mutations data](/guides/mutations) and [Shiny Egg Guide](/guides/mutations/shiny-egg) align: **no community-verified fixed %** for shiny-egg drops is published in UI. Treat farming as volume + Catch Master (+10% capture, +1 attempt) on boss cycles.",
+          "**Normal eggs** — community reports **guaranteed S-tier talent** on hatch (triple SSS from eggs alone is unconfirmed).",
+          "**Shiny eggs** — hatch a **guaranteed shiny**; optional **Prismatic Ball** at hatch for shiny + prismatic look.",
+        ],
+      },
+      {
+        heading: "Boss lines: no field shiny pity → eggs matter more",
+        paragraphs: [
+          "Several mount/boss Evomon — including **King of Flying** (Flying Territory) and the **Thunder Cliffs** boss line — **do not build field shiny pity**. ImSoaren’s rule: the **only realistic shiny path is repeated catches for shiny eggs**.",
+          "That makes **shiny egg chance** the bottleneck for Arcapex/Thunder Crane-style hunts, not the 1-in-500 field roll. Pair with our [egg farming post](/blog/how-to-get-eggs-evomon) and boss notes in [Shiny Egg Guide](/guides/mutations/shiny-egg).",
+        ],
+      },
+      {
+        heading: "How this ties to pity tricks",
+        paragraphs: [
+          "Field **149/150 prismatic pity** + waiting for a natural shiny → catch with **King Ball** is about **Shiny Prismatic combos**, not egg odds. Different goal, different loop — full write-up on [Mutations Guide](/guides/mutations).",
+          "For **stat value** of shinies once hatched, see [What Does Shiny Do?](/blog/what-does-shiny-do-evomon).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the shiny egg chance in Evomon?",
+        a: "The game does not display a fixed shiny-egg drop %. Field shiny is ~0.2% (1-in-500) with 600 pity. Shiny eggs are a separate post-catch roll — farm bosses with Catch Master and expect volume grinding.",
+      },
+      {
+        q: "Is shiny egg chance the same as shiny odds?",
+        a: "No. Shiny odds (0.2%) apply to the wild reveal after KO. Shiny eggs only roll if you successfully catch afterward — different step, different math.",
+      },
+      {
+        q: "Do boss Evomon have shiny pity?",
+        a: "Many boss/mount lines do not. Community guides rely on shiny eggs from catches, not field 600 pity.",
+      },
+      {
+        q: "What are prismatic odds vs shiny?",
+        a: "On one July 2026 UI read: prismatic ~0.8% (1/125) with 150 capture pity; shiny ~0.2% (1/500) with 600 pity. Prismatic is cosmetic only; shiny adds stats.",
+      },
+    ],
+    sources: [
+      {
+        label: "ImSoaren — Best Shiny Hunting Guide (odds, pity, eggs)",
+        url: "https://www.youtube.com/watch?v=kA5s2l7tE7M",
+        channel: "ImSoaren",
+      },
+    ],
+  },
+  {
     slug: "what-does-shiny-do-evomon",
     title: "What Does Shiny Do in Evomon? — Stat Boost Explained",
     description:
