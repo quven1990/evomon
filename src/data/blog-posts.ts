@@ -32,6 +32,113 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "best-nature-lavite-evomon",
+    title: "Best Nature for Lavite in Evomon — HP Counter Build Guide",
+    description:
+      "For Lavite/Lavarock Counter teams: reroll for +10% HP nature first (avoid -HP like Anxious). Skip speed and special attack. Ember + Stone Edge + Counter per community builds.",
+    published: "2026-07-13",
+    gscTargets: [
+      "best nature for lavite evomon",
+      "best nature for lavite in evomon",
+      "lavite best nature evomon",
+      "evomon best nature for lavite",
+      "best trait for lavite evomon",
+      "evomon lavite build",
+    ],
+    relatedGuides: [
+      "/dex/lavite",
+      "/tier-list/early-carries",
+      "/tier-list/evolution-priority",
+      "/guides/beginner",
+    ],
+    quickAnswer:
+      "For the standard **Counter** Lavite/Lavarock build, community guides prioritize a nature that **raises HP (+10%)** — Purp ranks **HP first**, then defenses, then attack. **Avoid any nature that lowers HP** (e.g. **Anxious** in his reroll demo). Do **not** chase speed or special attack on Counter sets; those stats do not help Counter damage. Reroll with **nature potions** until you hit +HP.",
+    sections: [
+      {
+        heading: "How nature works in Evomon",
+        paragraphs: [
+          "Every Evomon gets a **random nature on catch**. Per [Roblox Guides](https://www.youtube.com/watch?v=UiopSjbc9rY), each nature **permanently +10% one stat and −10% another** among HP, Attack, Special Attack, Defense, Special Defense, and Speed.",
+          "Unhappy with the roll? Use a **nature reroll potion** (NPC trainers, battle pass, codes, and other rewards). Tap the **?** icon on the nature box to read the exact +/-.",
+          "[AccelToWin](https://www.youtube.com/watch?v=6F0TlzcAgX0) notes **nature is separate from talent and trait** — SSS talent and trait rerolls are a different grind. Nature only adjusts the percentage spread.",
+        ],
+      },
+      {
+        heading: "Best nature priority for Lavite / Lavarock (Counter build)",
+        paragraphs: [
+          "Most meta Lavarock guides — including [Purp’s OP Lavarock breakdown](https://www.youtube.com/watch?v=ywEaVgqMm7k) — assume you spam **Counter** on bosses. Counter returns **double the damage taken**; Lavarock’s high HP pool makes that hit hard.",
+        ],
+        bullets: [
+          "**#1 — +HP nature** — More max HP = more Counter damage and survivability.",
+          "**#2 — +Defense or +Special Defense** — Helps you survive hits before Counter fires (Purp’s second choice).",
+          "**#3 — +Attack** — Only matters for **Stone Edge** and physical fire moves; Counter ignores Attack scaling in his testing.",
+          "**Avoid −HP** — Purp calls lowering HP “the worst thing”; **Anxious** in his reroll clip penalizes HP.",
+          "**Avoid +Speed / +Special Attack** — Lavarock is naturally slow; speed is wasted. Special Attack does not buff Counter or his recommended **Ember** physical slot.",
+        ],
+        callout: {
+          title: "Purp’s reroll example",
+          body: "He rerolled away from **Anxious** (−HP) into a **+HP / −Attack** nature and kept it — less Stone Edge damage, but more HP for Counter. That trade is intentional on boss teams.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "If you are NOT running Counter",
+        paragraphs: [
+          "Purp’s alternate spread when Counter is not the matchup: invest in **Attack + both defenses**, still **skip Speed and Special Attack**. Without Counter, Lavarock acts more like a bulky attacker — Adamant-style +Attack natures from the general guide fit better here ([Roblox Guides](https://www.youtube.com/watch?v=UiopSjbc9rY) cites **Adamant** for physical dealers, **Modest** for special attackers).",
+          "Lavite/Lavarock’s recommended boss kit in the same video: **Counter**, **Stone Edge**, and a **physical** fire move — **Ember over Cinder** (lower listed power but correct damage type).",
+        ],
+      },
+      {
+        heading: "Nature vs talent — roll both",
+        paragraphs: [
+          "Purp farms **triple SSS talent** Lavites in Lava Crag (world 3) and evolves the main shiny SSS copy to Lavarock. Talent vector potions control which stats get the big boosts — he wants **HP weighted high** in talent rolls to match the Counter plan.",
+          "Catch volume on [Lava Crag](/dex/lavite) until you have SSS talent **and** a usable +HP nature, or reroll nature on your keeper. See [Early Carries](/tier-list/early-carries) and [Evolution Priority](/tier-list/evolution-priority) for when to spend stones.",
+        ],
+      },
+      {
+        heading: "What about “best trait for Lavite”?",
+        paragraphs: [
+          "GSC also shows **best trait for lavite** queries. Traits are rerolled separately (legendary traits are much rarer — AccelToWin cites ~1.5–2.7% examples). Purp did not recommend a specific Lavite trait in July 2026; prioritize **SSS talent + HP nature** first, trait second.",
+          "Shiny adds a small stat layer on top — see [What Does Shiny Do?](/blog/what-does-shiny-do-evomon) if you are choosing between nature rerolls and shiny hunting.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is the best nature for Lavite in Evomon?",
+        a: "For Counter boss builds: any nature with +10% HP. Second choice: +Defense or +Special Defense. Third: +Attack. Avoid −HP natures and avoid boosting Speed or Special Attack.",
+      },
+      {
+        q: "Is Adamant good on Lavite?",
+        a: "Adamant (+Attack, −Special Attack) fits physical attacker sets when you are not Counter-focused. Counter-heavy Lavarock teams prefer +HP per Purp’s priority list.",
+      },
+      {
+        q: "How do I reroll Lavite’s nature?",
+        a: "Use nature reroll potions from trainers, battle pass, codes, and other rewards. Each use randomizes nature; check the ? tooltip for +/- stats.",
+      },
+      {
+        q: "Does nature matter more than talent?",
+        a: "Both matter. Talent tier (aim SSS) sets your stat ceiling; nature is a permanent ±10% modifier. Community farmers reroll both on their main Lavarock.",
+      },
+    ],
+    sources: [
+      {
+        label: "Purp — Lavarock OP build (nature, Counter, moves)",
+        url: "https://www.youtube.com/watch?v=ywEaVgqMm7k",
+        channel: "Purp",
+      },
+      {
+        label: "Roblox Guides — Nature system & reroll",
+        url: "https://www.youtube.com/watch?v=UiopSjbc9rY",
+        channel: "Roblox Guides",
+      },
+      {
+        label: "AccelToWin — Talent vs nature vs trait",
+        url: "https://www.youtube.com/watch?v=6F0TlzcAgX0",
+        channel: "AccelToWin",
+      },
+    ],
+  },
+  {
     slug: "evomon-shiny-egg-chance",
     title: "Evomon Shiny Egg Chance & Odds — Field Rates vs Egg Drops",
     description:

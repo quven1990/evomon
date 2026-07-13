@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-13",
+        title: "Blog — Best nature for Lavite (Counter build)",
+        body: "New /blog/best-nature-lavite-evomon targets lavite-nature GSC queries. HP-first nature priority from Purp Counter build; nature mechanics from Roblox Guides; talent vs trait from AccelToWin. Links to /dex/lavite and tier-list subpages.",
+        tags: ["Blog", "SEO", "Content"],
+        pages: ["/blog", "/blog/best-nature-lavite-evomon"],
+      },
+      {
+        date: "2026-07-13",
         title: "Blog — Shiny egg chance & odds answer",
         body: "New /blog/evomon-shiny-egg-chance targets shiny-egg-chance and shiny-odds GSC queries. Separates field 0.2% / 600 pity from post-catch shiny-egg rolls; boss no-pity note; links to Shiny Egg hub and eggs blog. Source: ImSoaren hunt guide.",
         tags: ["Blog", "SEO", "Content"],
