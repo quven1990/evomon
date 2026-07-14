@@ -16,8 +16,6 @@
 # next.js
 /.next/
 /out/
-/public/main_sitemap.xml
-/public/my_sitemap.xml
 /public/sitemap.xml
 /public/llms.txt
 /public/llms-full.txt

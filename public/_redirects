@@ -1,5 +1,2 @@
 # Cloudflare Pages — trailing slashes on static XML files return 404 without redirects
-/sitemap.xml /my_sitemap.xml 301
-/sitemap.xml/ /my_sitemap.xml 301
-/my_sitemap.xml/ /my_sitemap.xml 301
-/main_sitemap.xml/ /main_sitemap.xml 301
+/sitemap.xml/ /sitemap.xml 301
