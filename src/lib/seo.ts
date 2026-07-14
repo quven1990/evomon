@@ -180,9 +180,9 @@ export const PAGE_SEO = {
 
   starters: () =>
     buildPageMetadata({
-      title: `Best Evomon Starter — Pick Bubble (${monthLabel})`,
+      title: "Best Evomon Starter — Bubble vs Blazpup vs Leafbun",
       description:
-        "Bubble is the best Evomon starter for most new players. Compare Bubble, Blazpup & Leafbun — element matchups, evolution lines, and who clears Verdant Valley and Lava Crag fastest.",
+        "Bubble is the safest Evomon starter for most players. Compare Bubble, Blazpup and Leafbun by early islands, evolution line, matchups and when to replace them.",
       path: "/starters",
       ogTitle: `Best Evomon Starter — Bubble vs Blazpup vs Leafbun`,
       keywords: ["evomon best starter", "bubble evomon", "blazpup", "leafbun", "evomon starters"],

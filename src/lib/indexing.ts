@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 export const INDEXABLE_DEX_SLUGS = [
   "bubble",
   "bubboxer",
+  "bubblade",
   "blazpup",
   "blazgrowl",
   "leafbun",

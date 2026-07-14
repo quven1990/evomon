@@ -174,7 +174,10 @@ export default function StartersPage() {
               <Link href="/dex/bubble" className="text-emerald-300 hover:underline">
                 Bubble
               </Link>{" "}
-              → Bubboxer → Bubblade
+              → Bubboxer →{" "}
+              <Link href="/dex/bubblade" className="text-emerald-300 hover:underline">
+                Bubblade
+              </Link>
             </li>
             <li>
               <Link href="/dex/blazpup" className="text-emerald-300 hover:underline">

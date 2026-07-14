@@ -32,6 +32,16 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     role: "Mid water striker",
     blurb: "Second stage of the water starter line. Strong through early islands before route catches outscale it.",
   },
+  bubblade: {
+    metaTitle: "Bubblade Evomon — Bubble Final Evolution Guide",
+    metaDescription:
+      "Bubblade (#003) — final Water evolution from Bubble. Evolution line, starter context, type matchups, and when to replace the line on evomon.cc.",
+    location: "Evolve from Bubboxer",
+    weather: "Any",
+    role: "Final water starter evolution",
+    blurb:
+      "Final Bubble-line evolution. Good early water coverage, but many teams pivot to stronger route catches once Lavite or Bluebird comes online.",
+  },
   blazpup: {
     metaTitle: "Blazpup Evomon — Fire Starter Guide & Evolution",
     metaDescription:
