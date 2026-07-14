@@ -340,13 +340,15 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "how-to-get-eggs-evomon",
-    title: "How to Get Eggs in Evomon — Normal, Shiny & Prismatic Hatch",
+    title: "How to Get Eggs in Evomon — Shiny & Prismatic Egg Guide",
     description:
-      "Eggs drop only after you catch a defeated Evomon. Learn normal vs shiny eggs, boss routes, Catch Master suit, and Prismatic Ball hatching.",
+      "How to get eggs in Evomon: catch defeated targets to roll normal or shiny eggs, farm boss routes with Catch Master, and use Prismatic Ball hatching correctly.",
     published: "2026-07-11",
     gscTargets: [
       "how to get eggs in evomon",
       "how to get egg in evomon",
+      "evomon egg",
+      "evomon egg drop rate",
       "prismatic egg evomon",
       "evomon prismatic egg",
       "how to get shiny egg evomon",
@@ -356,19 +358,33 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations/shiny-egg",
       "/guides/mutations",
       "/guides/beginner",
+      "/codes",
+      "/dex",
     ],
     quickAnswer:
-      "In Evomon, eggs never drop if you only knock out and run. You must defeat the wild Evomon, then successfully catch it. That catch roll can give you a normal egg, a shiny egg, or nothing — depending on the species and your grind volume.",
+      "To get eggs in Evomon, **defeat the target and then catch it** — KO-and-run never rolls eggs. A successful catch can drop a **normal egg**, a rarer **shiny egg**, or nothing. Searches for **Prismatic Egg** usually mean hatching a shiny egg with a **Prismatic Ball**; there is no separate prismatic egg item confirmed in-game.",
     sections: [
       {
         heading: "The three egg outcomes",
         paragraphs: [
-          "After a successful catch, the game can roll one of three egg-related outcomes. Normal eggs are the volume farm; shiny eggs are the boss-line chase; Prismatic Ball hatching is the endgame flex combo.",
+          "After a successful catch, the game can roll one of three egg-related outcomes. Normal eggs are the volume farm; shiny eggs are the boss-line chase; Prismatic Ball hatching is the endgame flex combo. If you are asking **how to get eggs in Evomon**, the important rule is simple: the egg roll happens after the catch, not after the knockout.",
         ],
         bullets: [
           "**Normal egg** — hatches with guaranteed **S-tier Talent** (community reports). Best for early route farming.",
           "**Shiny egg** — hatches a guaranteed **Shiny** of that species. Main path for boss/mount lines without field shiny pity.",
           "**Shiny egg + Prismatic Ball** — hatch with a Prismatic Ball to force **Shiny + Prismatic look** in one step.",
+        ],
+      },
+      {
+        heading: "Egg sources: what to farm first",
+        paragraphs: [
+          "There is no public in-game table for every egg drop rate, so treat this as a practical farming map rather than a guaranteed percentage chart.",
+        ],
+        bullets: [
+          "**Regular route targets** — best for learning the loop and collecting normal eggs; catch every target after the KO.",
+          "**Boss and mount lines** — best for shiny egg hunting because several boss lines do not use normal field shiny pity.",
+          "**Event or patched routes** — check the in-game UI first; odds and available targets can change faster than community videos.",
+          "**Codes and ball supply** — claim [Evomon codes](/codes) before long egg sessions so failed catches do not end the farm early.",
         ],
       },
       {
@@ -420,6 +436,14 @@ export const blogPosts: BlogPost[] = [
       {
         q: "Which bosses need shiny eggs?",
         a: "Many mount/boss lines (Arcapex, Thunder Crane, Volcras King) lack field shiny pity. Repeated catches for shiny eggs are the main path.",
+      },
+      {
+        q: "Can eggs hatch shiny Evomon?",
+        a: "Yes. A shiny egg hatches a guaranteed shiny Evomon. Normal eggs are different; they are used for talent farming and are not guaranteed shiny.",
+      },
+      {
+        q: "What is the best way to farm eggs in Evomon?",
+        a: "Pick a target you can defeat quickly, catch after every KO, use enough balls before the session, and use Catch Master on boss routes where failed catches waste the egg roll.",
       },
     ],
     sources: [

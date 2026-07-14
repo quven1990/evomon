@@ -96,6 +96,21 @@ export default function MutationsGuidePage() {
           </p>
         </div>
 
+        <div className="mt-5 rounded-2xl border border-cyan-500/25 bg-cyan-500/10 p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase tracking-wide text-cyan-200">
+            Looking for eggs?
+          </p>
+          <h2 className="mt-2 text-lg font-bold text-white">How to get eggs in Evomon</h2>
+          <p className="mt-2 text-sm leading-7 text-zinc-300">
+            Eggs only roll after you <strong className="text-white">catch</strong> a defeated target.
+            For normal eggs, shiny eggs, Prismatic Ball hatching, and boss routes, use the dedicated{" "}
+            <Link href="/blog/how-to-get-eggs-evomon" className="text-cyan-200 hover:underline">
+              Evomon egg guide
+            </Link>
+            .
+          </p>
+        </div>
+
         <GuideClusterRoutes cluster={mutationsCluster} />
 
         <p className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs leading-6 text-zinc-500">
@@ -220,6 +235,13 @@ export default function MutationsGuidePage() {
         <section id="eggs" className="scroll-mt-24 mt-14 sm:scroll-mt-8">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Shiny eggs & boss hunting</h2>
           <p className="mt-2 text-sm leading-6 text-zinc-400">{eggHunting.intro}</p>
+          <p className="mt-3 text-sm leading-6 text-zinc-400">
+            Need the full catch loop first? Start with{" "}
+            <Link href="/blog/how-to-get-eggs-evomon" className="text-emerald-300 hover:underline">
+              how to get eggs in Evomon
+            </Link>
+            , then come back here for shiny odds, pity, and boss-specific notes.
+          </p>
 
           <div className="mt-5 grid gap-3 sm:grid-cols-1">
             {eggHunting.rows.map((row) => (
