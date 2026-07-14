@@ -114,7 +114,7 @@ Static export — no Worker CPU limits, served from CDN.
 npm run deploy
 ```
 
-This runs `prebuild` (generates `robots.txt`, `main_sitemap.xml`, `llms*.txt`), `next build`, then `wrangler pages deploy out`.
+This runs `prebuild` (generates `robots.txt`, `my_sitemap.xml`, `main_sitemap.xml`, `llms*.txt`), `next build`, then `wrangler pages deploy out`.
 
 **Custom domain (one-time):** Cloudflare Dashboard → **Workers & Pages** → **evomon** → **Custom domains** → add `evomon.cc` and `www.evomon.cc`.
 
