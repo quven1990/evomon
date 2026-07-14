@@ -64,13 +64,36 @@ export const pityRules = [
 export const pityTrick149 = {
   title: "149 prismatic pity trick (advanced)",
   steps: [
-    "Farm one species until prismatic pity hits 149/150.",
-    "Stop catching that species — only battle until a natural shiny appears in the reveal.",
-    "Catch the shiny with a King Ball for a high chance at Shiny + Prismatic + strong talent.",
+    "Catch the same species until prismatic pity reaches exactly 149/150.",
+    "Stop catching that species — battle, KO, and check the smoke reveal until a natural shiny appears.",
+    "If there is no shiny smoke, leave or move on without catching so the prismatic pity stays parked at 149.",
+    "Catch the shiny with a King Ball or Prismatic Ball; the next successful catch should consume the 150th pity and target Shiny + Prismatic.",
     "Alternatively, use a Prismatic Ball on a shiny encounter or shiny egg hatch for guaranteed prismatic appearance.",
   ],
   warning:
-    "You may accidentally catch a prismatic before 149 and reset your plan — keep grinding if that happens.",
+    "Creator guides agree this is an advanced pity-stack method, not an official guarantee table. If you accidentally catch a prismatic before 149, the prismatic counter can reset and you need to rebuild it.",
+  evidence: [
+    {
+      label: "DoffyRobloxnoob Shorts — 149/150 pity stacking",
+      title: "How to get both Shiny Prismatic Evomon guaranteed",
+      url: "https://www.youtube.com/shorts/PeEeTIKeDZY",
+      embedUrl: "https://www.youtube.com/embed/PeEeTIKeDZY?rel=0",
+      thumbnailUrl: "https://i.ytimg.com/vi/PeEeTIKeDZY/hqdefault.jpg",
+      uploadDate: "2026-06-29T06:30:11-07:00",
+      duration: "PT30S",
+      note: "224K-view short: catch 149 of one species, stop catching, wait for shiny, then catch with King Ball.",
+    },
+    {
+      label: "Macrolo — Shiny hunting and prismatic guide",
+      title: "How To Get SHINY Evomon FAST (Complete Shiny Hunting And Prismastic Guide) Roblox",
+      url: "https://www.youtube.com/watch?v=xnc9cEJF1V8",
+      embedUrl: "https://www.youtube.com/embed/xnc9cEJF1V8?rel=0",
+      thumbnailUrl: "https://i.ytimg.com/vi/xnc9cEJF1V8/hqdefault.jpg",
+      uploadDate: "2026-07-08T17:37:52-07:00",
+      duration: "PT2M9S",
+      note: "Explains catch-based prismatic pity, shiny smoke reveal, shiny eggs, and Prismatic Ball hatching.",
+    },
+  ],
 };
 
 export const eggHunting = {

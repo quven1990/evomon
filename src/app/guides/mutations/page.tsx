@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
 import { GuideClusterRoutes } from "@/components/GuideClusterRoutes";
+import { MutationVideoEvidence } from "@/components/MutationVideoEvidence";
 import { MutationsNav } from "@/components/MutationsNav";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import {
@@ -59,9 +60,28 @@ export default function MutationsGuidePage() {
                   text: "Raise prismatic pity to 149/150 on one species, stop catching until a natural shiny appears, then catch it with a King Ball or Prismatic Ball to target Shiny Prismatic with strong talent.",
                 },
               },
+              {
+                "@type": "Question",
+                name: "Can you get Shiny Prismatic Evomon without a Prismatic Ball?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Community guides describe a 149 prismatic pity trick: park prismatic pity at 149/150, stop catching, wait for a natural shiny reveal, then catch it so the next capture consumes prismatic pity. This is advanced and can reset if you catch a prismatic too early.",
+                },
+              },
             ],
           },
           guideClusterItemListSchema(mutationsCluster),
+          ...pityTrick149.evidence.map((source) => ({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            name: source.title,
+            description: source.note,
+            thumbnailUrl: [source.thumbnailUrl],
+            uploadDate: source.uploadDate,
+            duration: source.duration,
+            embedUrl: source.embedUrl,
+            contentUrl: source.url,
+          })),
         ]}
       />
 
@@ -228,6 +248,12 @@ export default function MutationsGuidePage() {
               ))}
             </ol>
             <p className="mt-4 text-sm text-amber-200/90">{pityTrick149.warning}</p>
+            <div className="mt-4 border-t border-violet-300/20 pt-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-violet-200">
+                Community video evidence
+              </p>
+              <MutationVideoEvidence videos={pityTrick149.evidence} />
+            </div>
           </div>
         </section>
 
