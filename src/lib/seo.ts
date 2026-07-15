@@ -92,7 +92,7 @@ export function homeMetadata(): Metadata {
 export const PAGE_SEO = {
   codes: () => {
     const title = `${codeCount} Free Evomon Codes (${monthLabel}) — Copy & Redeem`;
-    const description = `${codeCount} working Evomon codes for ${monthLabel} — including EVO120HYPE & EVO60SPARK. Free Summon Tickets, EXP Fruits, Evolution Stones & Advanced Balls. One-click copy, source labels, and redeem troubleshooting.`;
+    const description = `${codeCount} working Evomon codes for ${monthLabel} — including 100DCUNITY, EVO120HYPE & EVO60SPARK. Free Summon Tickets, EXP Fruits, Evolution Stones & Advanced Balls. One-click copy, source labels, and redeem troubleshooting.`;
 
     return {
       ...buildPageMetadata({

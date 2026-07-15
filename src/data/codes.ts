@@ -8,8 +8,8 @@ export interface CodeEntry {
   addedAt?: string;
 }
 
-export const CODES_LAST_UPDATED = "2026-07-03";
-export const CODES_DATA_CHECKED = "2026-07-03";
+export const CODES_LAST_UPDATED = "2026-07-15";
+export const CODES_DATA_CHECKED = "2026-07-15";
 
 /** Past codes listed on the Roblox game page description (official). */
 export const officialRobloxCodes = [
@@ -27,6 +27,13 @@ export const NEXT_LIKE_MILESTONE = "240K likes";
 const robloxListingNote = "Listed in Roblox game description";
 
 export const activeCodes: CodeEntry[] = [
+  {
+    code: "100DCUNITY",
+    reward: "Discord 100K members milestone gift",
+    source: "community",
+    sourceNote: "Official Discord announcement",
+    addedAt: "2026-07-15",
+  },
   { code: "EVO120HYPE", reward: "3 Summon Tickets, 2 Trait Reroll Potions", source: "official", sourceNote: robloxListingNote },
   { code: "EVO60SPARK", reward: "3 Summon Tickets, 2 Trait Reroll Potions", source: "official", sourceNote: robloxListingNote },
   { code: "30K-LIKES", reward: "2 Trait Reroll Potions, 2 Talent Vector Potions, 2 Nature Reroll Potions", source: "official", sourceNote: robloxListingNote },
@@ -60,7 +67,7 @@ export const expiredCodes: CodeEntry[] = [];
 export const featuredCodeIds = ["EVO120HYPE", "2K-LIKES", "THXFOR5K"] as const;
 
 /** Popular community codes — shown after official block */
-export const highlightCodeIds = ["EVO60SPARK", "30K-LIKES", "D50CREW", "DCGIFT"] as const;
+export const highlightCodeIds = ["100DCUNITY", "EVO60SPARK", "30K-LIKES", "D50CREW", "DCGIFT"] as const;
 
 export function getFeaturedCodes(): CodeEntry[] {
   return featuredCodeIds
@@ -90,7 +97,7 @@ export const codeTroubleshooting = [
 export const codesFaq = [
   {
     q: "What are the active Evomon codes?",
-    a: "Start with official Roblox-description codes (EVO120HYPE, 2K-LIKES, THXFOR5K, 30K-LIKES), then try community codes like D50CREW and DCGIFT in a fresh server.",
+    a: "Start with official Roblox-description codes (EVO120HYPE, 2K-LIKES, THXFOR5K, 30K-LIKES), then try Discord milestone codes like 100DCUNITY, D50CREW, and DCGIFT in a fresh server.",
   },
   {
     q: "Why does an Evomon code fail?",
