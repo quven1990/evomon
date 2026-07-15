@@ -13,12 +13,47 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-13";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-15";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-15",
+        title: "Codes — Discord 100K milestone gift",
+        body: "Added 100DCUNITY from the official Discord 100K members announcement. Updated code freshness dates, promoted the new Discord milestone code in popular community codes, and refreshed the /codes SEO snippet.",
+        tags: ["Codes", "Data", "SEO"],
+        pages: ["/codes"],
+      },
+      {
+        date: "2026-07-15",
+        title: "Sitemap — standard Google submission path",
+        body: "Restored the single standard sitemap endpoint at /sitemap.xml and removed extra sitemap variants from generation, headers, redirects, and machine-readable references.",
+        tags: ["SEO", "Infrastructure"],
+        pages: ["/sitemap.xml"],
+      },
+      {
+        date: "2026-07-15",
+        title: "Mutations — community video evidence",
+        body: "Added embedded community video evidence to the 149 prismatic pity section, including VideoObject schema and mobile-checked lazy YouTube iframes. Clarified the advanced Shiny Prismatic pity-stack steps.",
+        tags: ["Guides", "Video", "SEO"],
+        pages: ["/guides/mutations"],
+      },
+      {
+        date: "2026-07-15",
+        title: "Starter intent routing — Bubblade",
+        body: "Opened the Bubblade dex detail page for indexing, added curated Bubble final-evolution metadata, and linked Bubblade from the starter evolution line to better route specific starter-evolution searches.",
+        tags: ["Dex", "Starters", "SEO"],
+        pages: ["/starters", "/dex/bubblade"],
+      },
+      {
+        date: "2026-07-15",
+        title: "Egg guide — shiny and prismatic intent refresh",
+        body: "Strengthened the eggs blog around normal eggs, shiny eggs, boss routes, and Prismatic Ball hatching. Added clearer quick answers, FAQ coverage, and internal links into codes, dex, and mutations hubs.",
+        tags: ["Blog", "Guides", "SEO"],
+        pages: ["/blog/how-to-get-eggs-evomon", "/guides/mutations"],
+      },
       {
         date: "2026-07-13",
         title: "Blog — Best nature for Lavite (Counter build)",
