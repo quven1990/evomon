@@ -158,6 +158,20 @@ export function buildPetFaqs(entry: DexEntry & { name: string }): PetFaq[] {
     });
   }
 
+  if (extra?.evolutionNote) {
+    faqs.push({
+      q: `What should I know about ${entry.name}'s evolution in Evomon?`,
+      a: extra.evolutionNote,
+    });
+  }
+
+  if (extra?.shinyHuntNote) {
+    faqs.push({
+      q: `How do you shiny hunt ${entry.name} in Evomon?`,
+      a: extra.shinyHuntNote,
+    });
+  }
+
   const { weakTo, strongAgainst } = getElementMatchups(entry.element);
   if (weakTo.length > 0) {
     faqs.push({

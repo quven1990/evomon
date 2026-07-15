@@ -251,30 +251,34 @@ export const PAGE_SEO = {
 
   mutationsShinyVsSparkle: () =>
     buildPageMetadata({
-      title: "Evomon Shiny vs Sparkle (Prismatic) — Stats & Differences",
+      title: "Evomon Sparkle vs Shiny — Stats, Buff & Prismatic",
       description:
-        "Shiny gives a small stat boost; Sparkle (Prismatic) is cosmetic only. Compare odds, pity counters, icons, and when to chase each in Roblox Evomon.",
+        "Sparkle in Evomon means Prismatic cosmetics only; Shiny gives the stat buff. Compare shiny stats, sparkle looks, pity counters, and icons.",
       path: "/guides/mutations/shiny-vs-sparkle",
       keywords: [
         "evomon sparkle",
+        "sparkle evomon",
         "evomon shiny vs prismatic",
         "what is sparkle evomon",
         "evomon shiny buff",
+        "evomon shiny stats",
         "evomon prismatic",
       ],
     }),
 
   mutationsShinyEgg: () =>
     buildPageMetadata({
-      title: "Evomon Shiny Egg Guide — Odds, Pity & Boss Path",
+      title: "Evomon Shiny Egg Guide — Prismatic Ball & Catch Master",
       description:
-        "How shiny eggs drop after catches, egg hatch rules, boss lines without shiny pity, and Prismatic Ball tips for guaranteed shiny hatches.",
+        "How shiny eggs drop after catches, when to use Prismatic Ball, why Catch Master helps boss routes, and how shiny egg odds differ from field pity.",
       path: "/guides/mutations/shiny-egg",
       keywords: [
         "evomon shiny egg",
         "how to get shiny egg evomon",
         "evomon shiny egg chance",
         "shiny egg evomon",
+        "evomon prismatic ball",
+        "evomon catch master",
         "evomon egg",
       ],
     }),

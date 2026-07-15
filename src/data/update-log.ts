@@ -21,6 +21,20 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-15",
+        title: "Long-tail SEO — Sparkle, shiny egg, and Dex route notes",
+        body: "Strengthened existing guide and dex pages instead of creating duplicate blogs. /guides/mutations/shiny-vs-sparkle now targets Sparkle vs Shiny, shiny buff, and shiny stats queries. /guides/mutations/shiny-egg now separates Prismatic Ball from Catch Master. Dex detail pages for Bluebird, Sparkit, Lavite, and Pebble gained evolution and shiny-route notes for emerging long-tail queries.",
+        tags: ["SEO", "Guides", "Dex"],
+        pages: [
+          "/guides/mutations/shiny-vs-sparkle",
+          "/guides/mutations/shiny-egg",
+          "/dex/bluebird",
+          "/dex/sparkit",
+          "/dex/lavite",
+          "/dex/pebble",
+        ],
+      },
+      {
+        date: "2026-07-15",
         title: "Codes — Discord 100K milestone gift",
         body: "Added 100DCUNITY from the official Discord 100K members announcement. Updated code freshness dates, promoted the new Discord milestone code in popular community codes, and refreshed the /codes SEO snippet.",
         tags: ["Codes", "Data", "SEO"],

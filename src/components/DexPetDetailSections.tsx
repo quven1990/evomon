@@ -137,6 +137,38 @@ export function DexPetDetailSections({
             </section>
           )}
 
+          {(extra?.evolutionNote || extra?.shinyHuntNote) && (
+            <section>
+              <h2 className="text-xl font-bold text-white">{entry.name} route notes</h2>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {extra?.evolutionNote && (
+                  <div className="rounded-xl border border-white/10 bg-[#0b1512] p-4 sm:p-5">
+                    <h3 className="font-semibold text-white">Evolution search answer</h3>
+                    <p className="mt-2 text-sm leading-7 text-zinc-400">{extra.evolutionNote}</p>
+                    <Link
+                      href="/tier-list/evolution-priority"
+                      className="mt-3 inline-flex text-sm text-emerald-300 hover:underline"
+                    >
+                      Evolution stone priority →
+                    </Link>
+                  </div>
+                )}
+                {extra?.shinyHuntNote && (
+                  <div className="rounded-xl border border-violet-300/20 bg-violet-500/10 p-4 sm:p-5">
+                    <h3 className="font-semibold text-violet-100">Shiny hunting note</h3>
+                    <p className="mt-2 text-sm leading-7 text-zinc-300">{extra.shinyHuntNote}</p>
+                    <Link
+                      href="/guides/mutations"
+                      className="mt-3 inline-flex text-sm text-emerald-300 hover:underline"
+                    >
+                      Shiny & prismatic guide →
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
           {similar.length > 0 && (
             <section>
               <h2 className="text-xl font-bold text-white">Similar {entry.element} Evomon</h2>

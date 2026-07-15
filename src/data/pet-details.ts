@@ -10,6 +10,8 @@ export type PetDetailExtra = {
   weather?: string;
   role?: string;
   blurb?: string;
+  evolutionNote?: string;
+  shinyHuntNote?: string;
 };
 
 export const petDetailExtras: Record<string, PetDetailExtra> = {
@@ -77,35 +79,50 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     weather: "Any",
     role: "Early rock tank",
     blurb: "One of the best early-route catches. Reliable wall through mid game — replace before deep endgame.",
+    evolutionNote:
+      "Pebble is the early Rock line players search for after Verdant Valley. Use the evolution line above to compare Pebble with Pebgolem before spending stones.",
   },
   sparkit: {
-    metaTitle: "Sparkit Evomon — Early Fire Catch & Evolution",
+    metaTitle: "Sparkit Evomon — Location, Evolution & Fire Role",
     metaDescription:
-      "Sparkit (#021) — Popular fire pick on early routes and Lava Crag instead of Blazpup. Evolution line, matchups, and tier notes on evomon.cc.",
+      "Sparkit (#021) — early Fire catch and Blazpup alternative. Location notes, evolution line, matchups, and shiny hunt context on evomon.cc.",
     location: "Early routes / Lava Crag area",
     weather: "Any",
     role: "Early fire DPS",
     blurb: "Common reason to skip the fire starter. Strong through mid game; stones often go to Lavite instead.",
+    evolutionNote:
+      "Sparkit evolution searches usually mean whether to invest stones here or save for Lavite. Keep Sparkit as a fast early Fire option unless your Lava Crag route already has a stronger Fire/Rock carry.",
+    shinyHuntNote:
+      "Sparkit is a practical shiny target because encounters are fast on early routes. Shiny speed bumps can matter, but prioritize a useful Talent roll before long pity sessions.",
   },
   bluebird: {
     typesDisplay: "Flying / Electric",
-    metaTitle: "Bluebird Evomon — Raven Ridge Catch & Evolution",
+    metaTitle: "Bluebird Evomon — Evolution, Location & Shiny Route",
     metaDescription:
-      "Bluebird (#026) — Flying/Electric catch from Raven Ridge; evolves to Volcrest. Bleed DPS role, matchups, and team tips on evomon.cc.",
+      "Bluebird (#026) — Raven Ridge Flying/Electric catch that evolves to Volcrest. Location, evolution, shiny route, matchups, and team tips.",
     location: "Raven Ridge quest line",
     weather: "Any",
     role: "Bleed DPS (Flying)",
-    blurb: "Bleed stacks ramp damage on high-HP targets. A top pick once evolved into Volcrest for boss farming.",
+    blurb:
+      "Bleed stacks ramp damage on high-HP targets. A top pick once evolved into Volcrest for boss farming.",
+    evolutionNote:
+      "Bluebird evolves into Volcrest in the community dex line. If you are searching Bluebird evolution, compare the Raven Ridge wild route with boss-route farming before investing stones.",
+    shinyHuntNote:
+      "For shiny Bluebird, farm the Raven Ridge wild route when possible instead of relying only on boss cycles. Wild encounters are faster; boss and mount variants may still need shiny egg planning.",
   },
   lavite: {
     typesDisplay: "Fire / Rock",
-    metaTitle: "Lavite Evomon — Lava Crag Catch & Evolution",
+    metaTitle: "Lavite Evomon — Evolution, Location & Shiny Route",
     metaDescription:
-      "Lavite (#052) — Top Lava Crag Fire/Rock catch that stays relevant late. Evolves to Lavarock; matchups, tier list, and team builder on evomon.cc.",
+      "Lavite (#052) — Lava Crag Fire/Rock catch that evolves to Lavarock. Location, evolution, shiny route, Counter build links, and matchups.",
     location: "Lava Crag (3rd island)",
     weather: "Any",
     role: "Fire carry + wall",
     blurb: "Easy early grab that stays relevant late. One of the most invested-in fire lines in July 2026 tier lists.",
+    evolutionNote:
+      "Lavite evolves into Lavarock and is one of the clearest Evolution Stone priorities for mid-game teams. Check nature and Talent before committing your best copy.",
+    shinyHuntNote:
+      "Shiny Lavite is worth hunting because Lavarock stays useful in boss routes. Lava Crag is a beginner-friendly route once you can clear Fire/Rock spawns quickly with Water coverage.",
   },
   lavarock: {
     typesDisplay: "Fire / Rock",

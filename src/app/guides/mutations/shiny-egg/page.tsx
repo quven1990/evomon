@@ -20,7 +20,15 @@ const eggFaqs = [
   },
   {
     q: "Should I use a Prismatic Ball on a shiny egg?",
-    a: "Community hunters often do — it can force prismatic appearance on the guaranteed shiny hatch.",
+    a: "Use a Prismatic Ball when you want the shiny egg hatch to also have prismatic / sparkle appearance. It is a hatch or shiny-encounter tool, not a catch-rate suit.",
+  },
+  {
+    q: "What does Catch Master do in Evomon?",
+    a: "Catch Master is an adventure suit community hunters use for +10% capture success and an extra capture attempt. It helps boss shiny egg farms because failed catches skip the egg roll.",
+  },
+  {
+    q: "Do you need Catch Master for shiny eggs?",
+    a: "No, but it is strongly recommended for hard boss and mount lines. Regular route egg farming can work without it if you have enough balls and fast clears.",
   },
   {
     q: "Does KO-and-run work for egg farming?",
@@ -31,9 +39,9 @@ const eggFaqs = [
 export default function ShinyEggPage() {
   const article = guideArticleSchema({
     path: "/guides/mutations/shiny-egg",
-    headline: "Evomon Shiny Egg Guide — Odds, Pity & Boss Path",
+    headline: "Evomon Shiny Egg Guide — Prismatic Ball & Catch Master",
     description:
-      "How shiny eggs drop after catches, boss lines without field shiny pity, and Prismatic Ball tips for guaranteed shiny hatches.",
+      "How shiny eggs drop after catches, when to use Prismatic Ball, why Catch Master helps boss routes, and how egg farming differs from field shiny pity.",
   });
 
   return (
@@ -59,7 +67,10 @@ export default function ShinyEggPage() {
         <p className={pageLeadClass()}>
           Eggs drop from <strong className="text-white">catches</strong> after you defeat a target — not
           from KO-and-run. Boss shinies often depend on shiny eggs because field shiny pity does not
-          apply on several mount lines. Reviewed {MUTATIONS_UPDATED}; compare types on{" "}
+          apply on several mount lines. This page also separates{" "}
+          <strong className="text-white">Prismatic Ball</strong> hatching from{" "}
+          <strong className="text-white">Catch Master</strong> farming. Reviewed {MUTATIONS_UPDATED};
+          compare types on{" "}
           <Link href="/guides/mutations/shiny-vs-sparkle" className="text-emerald-300 hover:underline">
             shiny vs sparkle
           </Link>
@@ -71,9 +82,10 @@ export default function ShinyEggPage() {
             In-game confirmed
           </p>
           <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">
-            Shiny eggs hatch a guaranteed shiny. Normal eggs can roll strong Talent. Boss egg routes
-            are <strong className="text-white">community mapped</strong> — pity % on bosses is not
-            shown in UI.
+            Shiny eggs hatch a guaranteed shiny. Use a{" "}
+            <strong className="text-white">Prismatic Ball</strong> when you want the hatch to also be
+            Sparkle / Prismatic. Use <strong className="text-white">Catch Master</strong> before boss
+            routes where every failed catch wastes an egg roll.
           </p>
         </div>
 
@@ -110,6 +122,38 @@ export default function ShinyEggPage() {
                 </li>
               ))}
           </ul>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-xl font-bold text-white sm:text-2xl">
+            Prismatic Ball vs Catch Master
+          </h2>
+          <p className="mt-2 text-sm leading-6 text-zinc-400">
+            These two tools solve different parts of shiny egg hunting. Mixing them up is a common
+            reason players waste rare balls or boss cycles.
+          </p>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-violet-300/20 bg-violet-500/10 p-4 sm:p-5">
+              <h3 className="font-semibold text-violet-100">Prismatic Ball</h3>
+              <p className="mt-2 text-sm leading-7 text-zinc-300">
+                Use it on a shiny encounter or shiny egg hatch when you want the guaranteed shiny to
+                also have prismatic / Sparkle appearance. It does not make boss catches easier.
+              </p>
+              <Link href="/blog/how-to-get-eggs-evomon" className="mt-3 inline-flex text-sm text-emerald-300 hover:underline">
+                Full egg catch loop →
+              </Link>
+            </div>
+            <div className="rounded-xl border border-amber-500/25 bg-amber-500/10 p-4 sm:p-5">
+              <h3 className="font-semibold text-amber-100">Catch Master</h3>
+              <p className="mt-2 text-sm leading-7 text-zinc-300">
+                Use it before hard boss farms. The extra catch chance and attempt matter because egg
+                drops only roll after a successful catch, not after the knockout.
+              </p>
+              <Link href="/guides/level-30" className="mt-3 inline-flex text-sm text-emerald-300 hover:underline">
+                Equipment dungeon unlocks →
+              </Link>
+            </div>
+          </div>
         </section>
 
         <section className="mt-12">

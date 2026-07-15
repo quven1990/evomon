@@ -12,12 +12,20 @@ export const metadata: Metadata = PAGE_SEO.mutationsShinyVsSparkle();
 
 const faqs = [
   {
+    q: "What is Sparkle in Evomon?",
+    a: "Sparkle is the in-game UI label for Prismatic. It changes the pet's look with a random color and pattern, but it does not add combat stats.",
+  },
+  {
     q: "What is the difference between Shiny and Sparkle in Evomon?",
     a: "Shiny (four-point star) gives an alternate palette and a small stat boost. Sparkle / Prismatic (five-point star) is cosmetic only. Pity counters are separate per species.",
   },
   {
     q: "Does Sparkle give stats in Evomon?",
     a: "No. Prismatic (Sparkle in the UI) is cosmetic — random glow color and pattern. Only Shiny adds combat stats in community testing.",
+  },
+  {
+    q: "Does Shiny give a buff in Evomon?",
+    a: "Yes. Community comparisons show Shiny Evomon get a small stat boost. The exact value can vary by species and evolution, so treat shiny as a useful stat layer, not a replacement for good Talent and Nature.",
   },
   {
     q: "Is mutation the same as Talent or Nature?",
@@ -52,11 +60,12 @@ export default function ShinyVsSparklePage() {
 
       <main className="mx-auto max-w-4xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         <PageBack href="/guides/mutations" label="Mutations guide" />
-        <h1 className={pageTitleClass()}>Shiny vs Sparkle (Prismatic)</h1>
+        <h1 className={pageTitleClass()}>Sparkle vs Shiny in Evomon</h1>
         <p className={pageLeadClass()}>
           In-game UI labels prismatic mutations as <strong className="text-white">Sparkle</strong>.
-          This page compares mutation types only — not Talent grades or Nature rolls. Community notes
-          from {MUTATIONS_UPDATED}; full hunt routes stay on the{" "}
+          This page answers the common search question: Sparkle is cosmetic, while Shiny gives the
+          stat buff. It compares mutation types only — not Talent grades or Nature rolls. Community
+          notes from {MUTATIONS_UPDATED}; full hunt routes stay on the{" "}
           <Link href="/guides/mutations" className="text-emerald-300 hover:underline">
             mutations hub
           </Link>
@@ -66,11 +75,37 @@ export default function ShinyVsSparklePage() {
         <div className="mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 sm:p-6">
           <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300">Quick answer</p>
           <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">
-            <strong className="text-white">Shiny</strong> = stats + fixed palette.{" "}
-            <strong className="text-white">Sparkle / Prismatic</strong> = looks only. A shiny pet can
-            still have bad Talent — check all three systems separately.
+            <strong className="text-white">Sparkle / Prismatic</strong> = looks only.{" "}
+            <strong className="text-white">Shiny</strong> = fixed shiny palette plus a small stat buff.
+            A shiny pet can still have bad Talent or Nature, so check all three systems separately.
           </p>
         </div>
+
+        <section className="mt-10 rounded-2xl border border-violet-300/20 bg-violet-500/10 p-5 sm:p-6">
+          <h2 className="text-lg font-semibold text-violet-100">
+            Does Sparkle give stats? Does Shiny give a buff?
+          </h2>
+          <div className="mt-4 grid gap-4 text-sm leading-7 text-zinc-300 sm:grid-cols-2">
+            <div>
+              <p className="font-semibold text-white">Sparkle / Prismatic</p>
+              <p className="mt-1">
+                Cosmetic only: random color and pattern on the Evomon. Sparkle is valuable for
+                collecting and future trading, but it does not increase damage, HP, or speed.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-white">Shiny</p>
+              <p className="mt-1">
+                Combat layer: small stat boost plus a fixed shiny palette. For exact stat examples,
+                see{" "}
+                <Link href="/blog/what-does-shiny-do-evomon" className="text-emerald-300 hover:underline">
+                  what shiny does in Evomon
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </section>
 
         <section className="mt-10">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Mutation vs Talent vs Nature</h2>
