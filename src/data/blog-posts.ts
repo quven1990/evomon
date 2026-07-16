@@ -32,6 +32,138 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "evomon-shiny-bluebird-guide",
+    title: "Evomon Shiny Bluebird Guide - Route, Pity & Worth It",
+    description:
+      "Shiny Bluebird is worth hunting because wild Bluebirds spawn on the Raven Ridge upper tree route. Use the wild route over boss-only cycles, check smoke after KOs, and save premium balls for confirmed shiny or shiny-egg moments.",
+    published: "2026-07-16",
+    gscTargets: [
+      "evomon shiny bluebird",
+      "shiny bluebird evomon",
+      "bluebird shiny evomon",
+      "evomon bluebird shiny",
+      "evomon bluebird route",
+      "evomon bluebird location",
+    ],
+    relatedGuides: [
+      "/dex/bluebird",
+      "/guides/mutations",
+      "/guides/mutations/shiny-vs-sparkle",
+      "/guides/mutations/shiny-egg",
+      "/tier-list",
+    ],
+    quickAnswer:
+      "**Shiny Bluebird is one of the cleaner shiny hunts in Evomon** because Bluebird has a wild route at **Raven Ridge**. Purp's July 2026 shiny/prismatic guide shows that you can climb the small tree trunk near the Volcras King area and farm wild Bluebirds above the boss route. Hunt wild Bluebirds for faster KOs, check the smoke reveal after each knockout, and only spend King Balls or Prismatic Balls when you have a confirmed shiny or shiny egg plan.",
+    sections: [
+      {
+        heading: "Where to find Bluebird for a shiny hunt",
+        paragraphs: [
+          "For **Evomon shiny Bluebird** searches, the important route detail is that Bluebird is not only a boss-side target. Community creator [Purp](https://www.youtube.com/watch?v=t3Ar4Bslgzg) points out that many players think Bluebird only comes from the lower Volcras King area, but wild Bluebirds also spawn on the upper Raven Ridge path.",
+          "His route note: climb the small tree trunk near the area, walk along the upper path, and farm the Bluebirds that spawn there. That matters because wild encounters are faster than repeating boss cycles when your goal is to check many shiny reveals.",
+        ],
+        callout: {
+          title: "Fast answer",
+          body: "Farm wild Bluebirds on the Raven Ridge upper tree route when possible. Use boss or shiny-egg planning only when you are targeting boss-line variants or cannot clear the wild route efficiently.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "Why wild Bluebird beats boss-only farming",
+        paragraphs: [
+          "A shiny hunt is mostly a volume problem: more quick KOs means more smoke reveals and more pity progress. Purp says Bluebirds on the upper route are relatively simple to defeat even around midgame, while harder targets like Tarro and Arcub can turn shiny hunting into slow boss or party content.",
+          "That is why Bluebird is a better blog target than a generic shiny-egg post. The route itself changes the recommendation: do not spend the whole session on Volcras King if your actual target is a regular **Shiny Bluebird**.",
+        ],
+        bullets: [
+          "**Use the wild route for speed** - shorter fights and more reveal checks.",
+          "**Use boss cycles for egg goals** - shiny eggs and special boss-line plans are a different loop.",
+          "**Do not catch every normal Bluebird if you are parking prismatic pity** - see the 149 method on the Mutations Guide.",
+        ],
+      },
+      {
+        heading: "Is Shiny Bluebird worth it?",
+        paragraphs: [
+          "Yes, if Bluebird or its evolution **Volcrest** is part of your main team. Bluebird is already mentioned across the site as a strong Raven Ridge pickup and a late-game team option, especially after it evolves. A shiny version adds a stat layer, while normal prismatic/sparkle is mostly cosmetic.",
+          "The practical rule: shiny hunt Bluebird after your team can clear the Raven Ridge route quickly. If the fights are still slow, finish progression first, then come back with higher levels and better ball supply.",
+        ],
+        bullets: [
+          "**Good target** - Bluebird has a farmable wild route.",
+          "**Good team fit** - Bluebird -> Volcrest is a common endgame line in community tier lists.",
+          "**Not required on day one** - a higher-level normal Bluebird usually beats a low-level shiny you cannot train yet.",
+        ],
+      },
+      {
+        heading: "Shiny vs Prismatic Bluebird",
+        paragraphs: [
+          "Do not mix up the two goals. **Shiny Bluebird** changes the color palette and provides a small stat boost. **Prismatic Bluebird** adds pattern/color cosmetics and trading appeal, but Purp is clear that prismatic by itself does not increase battle stats.",
+          "If you care about battles, prioritize shiny first. If you care about future trading or flex value, a Shiny + Prismatic Bluebird is better, but it takes more setup through Prismatic Ball hatching or the 149 prismatic pity trick.",
+        ],
+        bullets: [
+          "**Shiny** - stat value, better for battle teams.",
+          "**Prismatic / Sparkle** - cosmetic value, better for collection and future trading.",
+          "**Shiny + Prismatic** - best flex combo, but do not waste premium balls on normal catches.",
+        ],
+      },
+      {
+        heading: "Step-by-step shiny Bluebird route",
+        bullets: [
+          "Unlock Raven Ridge and confirm your team can defeat Bluebirds quickly.",
+          "Climb to the upper tree path near the Volcras King / Bluebird area.",
+          "KO wild Bluebirds repeatedly and watch the smoke reveal after the battle.",
+          "If you only want shiny, keep farming reveals until the shiny version appears.",
+          "If you are stacking Shiny + Prismatic, stop normal catches when prismatic pity is one below the guarantee, then only catch once the shiny appears.",
+          "Use a King Ball on the confirmed shiny if you need SSS talent; use Prismatic Ball when your goal is the Shiny + Prismatic combo.",
+        ],
+      },
+      {
+        heading: "When to use shiny eggs instead",
+        paragraphs: [
+          "Shiny eggs are still useful, but they are not the first plan for a regular Shiny Bluebird hunt. Eggs matter more when a target is boss-gated, slow to defeat, or lacks a normal field shiny route. Bluebird's wild route means you can usually hunt the shiny directly.",
+          "If you do receive a **Shiny Bluebird Egg**, hatch planning changes: using a Prismatic Ball at hatch can force prismatic appearance on top of the guaranteed shiny. See the full [Shiny Egg Guide](/guides/mutations/shiny-egg) for the egg path.",
+        ],
+        callout: {
+          title: "Do not overclaim the odds",
+          body: "The game UI shows shiny/prismatic counters by target, but public community sources do not publish a fixed shiny-egg drop percentage for every species. Treat this as a route guide, not an exact odds table.",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "Related pages",
+        paragraphs: [
+          "For Bluebird stats, location notes, evolution copy, and team links, start with the [Bluebird Dex page](/dex/bluebird). For the full shiny/prismatic system, use the [Mutations Guide](/guides/mutations). For battle value, compare [Shiny vs Sparkle](/guides/mutations/shiny-vs-sparkle) before spending rare balls.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do I get Shiny Bluebird in Evomon?",
+        a: "Farm wild Bluebirds on the Raven Ridge upper tree route, defeat them quickly, and check the smoke reveal after each knockout. A shiny appears through the shiny roll or pity for that target.",
+      },
+      {
+        q: "Where does Bluebird spawn in Evomon?",
+        a: "Community route notes place wild Bluebirds on an upper Raven Ridge path near the Volcras King area. Purp shows climbing a small tree trunk to reach the wild Bluebird route.",
+      },
+      {
+        q: "Is Shiny Bluebird worth hunting?",
+        a: "Yes if Bluebird or Volcrest is part of your team. Bluebird has a faster wild route than many boss targets, and shiny adds a stat layer that prismatic alone does not provide.",
+      },
+      {
+        q: "Should I farm Volcras King for Shiny Bluebird?",
+        a: "Not as your first plan for regular Shiny Bluebird. Use the wild Bluebird route for faster KOs. Boss cycles and shiny eggs are better for boss-line or egg-specific goals.",
+      },
+      {
+        q: "Is Prismatic Bluebird stronger than Shiny Bluebird?",
+        a: "No. Prismatic/Sparkle is mainly cosmetic. Shiny is the variant with a stat boost, so battle-focused players should prioritize shiny before cosmetic prismatic rolls.",
+      },
+    ],
+    sources: [
+      {
+        label: "Purp - Full Shiny/Prismatic Guide with Bluebird route",
+        url: "https://www.youtube.com/watch?v=t3Ar4Bslgzg",
+        channel: "Purp",
+      },
+    ],
+  },
+  {
     slug: "best-nature-lavite-evomon",
     title: "Best Nature for Lavite in Evomon — HP Counter Build Guide",
     description:

@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-15";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-16";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-16",
+        title: "Blog — Shiny Bluebird route guide",
+        body: "Added /blog/evomon-shiny-bluebird-guide for emerging pet-level shiny intent. The post targets shiny Bluebird route searches, separates Raven Ridge wild-route farming from boss-only cycles, and links Bluebird dex, Mutations, Shiny vs Sparkle, Shiny Egg, and tier-list context for SEO and GEO discovery.",
+        tags: ["Blog", "SEO", "GEO"],
+        pages: ["/blog", "/blog/evomon-shiny-bluebird-guide", "/dex/bluebird"],
+      },
       {
         date: "2026-07-15",
         title: "Long-tail SEO — Sparkle, shiny egg, and Dex route notes",
