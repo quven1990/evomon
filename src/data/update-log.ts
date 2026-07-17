@@ -13,12 +13,25 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-16";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-17";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-17",
+        title: "Blog — Shiny Lavite and Pebble investment guides",
+        body: "Added two video-sourced pet-level answers. /blog/shiny-lavite-evomon-guide covers the Lava Crag Water-route hunt, Shiny/SSS/nature trade-offs, and when to evolve Lavarock. /blog/pebble-evomon-guide covers Verdant Valley location, Pebble → Pebroll → Pebgolem, early tank value, Counter access, and why Lavite usually becomes the better long-term stone target. Unsupported exact moves and nature claims were intentionally excluded.",
+        tags: ["Blog", "SEO", "GEO", "Sources"],
+        pages: [
+          "/blog",
+          "/blog/shiny-lavite-evomon-guide",
+          "/blog/pebble-evomon-guide",
+          "/dex/lavite",
+          "/dex/pebble",
+        ],
+      },
       {
         date: "2026-07-16",
         title: "Blog — Shiny Bluebird route guide",

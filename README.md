@@ -29,6 +29,8 @@ Direct links to the main hub pages on [evomon.cc](https://evomon.cc/):
 | Page | URL |
 |------|-----|
 | Blog index | [https://evomon.cc/blog](https://evomon.cc/blog) |
+| Shiny Lavite Evomon Guide | [https://evomon.cc/blog/shiny-lavite-evomon-guide](https://evomon.cc/blog/shiny-lavite-evomon-guide) |
+| Pebble Evomon Guide | [https://evomon.cc/blog/pebble-evomon-guide](https://evomon.cc/blog/pebble-evomon-guide) |
 | Evomon Shiny Bluebird Guide | [https://evomon.cc/blog/evomon-shiny-bluebird-guide](https://evomon.cc/blog/evomon-shiny-bluebird-guide) |
 | Best Nature for Lavite | [https://evomon.cc/blog/best-nature-lavite-evomon](https://evomon.cc/blog/best-nature-lavite-evomon) |
 | Evomon Shiny Egg Chance & Odds | [https://evomon.cc/blog/evomon-shiny-egg-chance](https://evomon.cc/blog/evomon-shiny-egg-chance) |

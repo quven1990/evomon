@@ -32,6 +32,264 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "shiny-lavite-evomon-guide",
+    title: "Shiny Lavite Evomon Guide — Lava Crag Hunt & Worth It",
+    description:
+      "Farm Shiny Lavite at Lava Crag with Water coverage, then keep the best copy for Lavarock. Community videos recommend the hunt because the line stays useful late, but SSS Talent and a usable nature still matter.",
+    published: "2026-07-17",
+    gscTargets: [
+      "shiny lavite evomon",
+      "evomon shiny lavite",
+      "lavite shiny evomon",
+      "how to get shiny lavite in evomon",
+      "evomon lavite location",
+      "lavite evomon",
+    ],
+    relatedGuides: [
+      "/dex/lavite",
+      "/dex/lavarock",
+      "/blog/best-nature-lavite-evomon",
+      "/guides/mutations",
+      "/tier-list/evolution-priority",
+      "/guides/beginner",
+    ],
+    quickAnswer:
+      "To hunt **Shiny Lavite in Evomon**, farm wild Lavite on **Lava Crag (third island)** with a Water-type team that can clear the Fire/Rock line quickly. Purp recommends grinding Lavite until you get a **Shiny + SSS Talent** keeper because Lavarock remains useful into late-game boss routes. Shiny is valuable, but do not discard a strong normal SSS copy while waiting — Talent, nature, levels, and the eventual Lavarock build still matter.",
+    sections: [
+      {
+        heading: "Where to find Shiny Lavite",
+        paragraphs: [
+          "Lavite appears on **Lava Crag**, the third-island route. In Purp's comprehensive beginner guide, he recommends bringing the Water type obtained on the previous route and repeatedly farming Lavite because the line is one of his highest-priority early catches.",
+          "The practical loop is simple: use Water coverage, defeat wild Lavites quickly, check the post-KO reveal, and catch the copy you want to keep. The general shiny UI and pity behavior are covered in the [Mutations Guide](/guides/mutations); this page focuses on why Lavite is a worthwhile target.",
+        ],
+        callout: {
+          title: "Route answer",
+          body: "Lava Crag + fast Water-type clears. If each fight is still slow, progress your Water team first instead of forcing a long shiny session.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "Why Lavite is a good shiny target",
+        paragraphs: [
+          "Multiple community videos agree on the reason: Lavite is available unusually early for a line that remains useful late. ItzVexo ranks Lavite as an S-tier fire pick, citing easy third-island access, combo value, Counter, and endgame relevance.",
+          "Purp goes further and recommends farming a Shiny SSS Lavite because Lavarock is a main evolution priority and can be used against later bosses. Rexon's beginner guide reaches a similar conclusion: a shiny is worth pursuing for a long-term Lavarock, but the shiny bonus is not so large that a good normal SSS copy becomes useless.",
+        ],
+        bullets: [
+          "**Accessible route** — wild Lavite is farmable on Lava Crag.",
+          "**Long-term evolution** — Lavite evolves into Lavarock, a common carry/wall pick.",
+          "**Real shiny benefit** — shiny adds stats; Prismatic/Sparkle alone is cosmetic.",
+          "**Efficient weakness coverage** — community guides use Water to speed up the route.",
+        ],
+      },
+      {
+        heading: "Shiny, SSS Talent, or nature — what comes first?",
+        paragraphs: [
+          "The ideal keeper combines all three, but community creators do not treat shiny as the only quality check. Purp recommends grinding for Shiny + SSS, while Rexon says a normal SSS Lavarock is still a reasonable shortcut if you do not want to wait for the perfect shiny.",
+          "For the standard Counter build, nature is a separate roll. Our [Best Nature for Lavite](/blog/best-nature-lavite-evomon) source review prioritizes +HP, then defenses, and warns against lowering HP. Do not assume that any shiny automatically has the right Talent distribution or nature.",
+        ],
+        bullets: [
+          "**Best-case keeper** — Shiny, SSS Talent, useful HP/defense nature.",
+          "**Progression keeper** — normal SSS with a good nature; evolve it if waiting blocks progress.",
+          "**Do not confuse Prismatic with power** — Prismatic changes appearance, not combat stats.",
+        ],
+      },
+      {
+        heading: "Step-by-step Shiny Lavite farming plan",
+        bullets: [
+          "Unlock Lava Crag and build a Water-type lead that can defeat Lavite consistently.",
+          "Use fast wild encounters rather than spending premium balls on ordinary copies.",
+          "Check every post-KO reveal for the shiny color change and watch the in-game counters.",
+          "Keep strong SSS normal copies while hunting; compare Talent and nature before releasing anything valuable.",
+          "When a shiny appears, use a King Ball if your goal is guaranteed SSS Talent, or follow the Prismatic Ball / pity plan only if you want Shiny + Prismatic.",
+          "Evolve the keeper into Lavarock when it is your best stone investment, not merely because it is shiny.",
+        ],
+      },
+      {
+        heading: "Is Shiny Lavite worth the time?",
+        paragraphs: [
+          "Usually yes once Lava Crag fights are fast, because this is not a cosmetic-only side project: shiny adds a stat layer to a line you can keep using. The return is better than shiny-hunting a creature you plan to replace immediately.",
+          "However, levels and build quality can outweigh the shiny bonus. If the hunt stalls your account, use the strongest normal SSS Lavite you already own, progress into faster farming, and return later. See [Evolution Priority](/tier-list/evolution-priority) before spending scarce stones.",
+        ],
+        callout: {
+          title: "Community-sourced recommendation",
+          body: "The value judgment comes from July 2026 creator guides, not an official balance statement. Re-check the in-game UI after balance updates.",
+          variant: "note",
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: "Where do I get Shiny Lavite in Evomon?",
+        a: "Hunt wild Lavite on Lava Crag, the third island. Community guides recommend Water coverage to clear the Fire/Rock route quickly.",
+      },
+      {
+        q: "Is Shiny Lavite worth hunting?",
+        a: "Yes for players planning to use Lavarock long term. Lavite is available early, the evolved line remains useful, and shiny provides a real stat increase.",
+      },
+      {
+        q: "Should I wait for Shiny SSS Lavite before evolving?",
+        a: "It is the ideal target, but not mandatory. A normal SSS Lavite with a useful nature can carry progression while you return for a shiny later.",
+      },
+      {
+        q: "What is the best nature for Shiny Lavite?",
+        a: "For Counter-focused Lavarock builds, community testing prioritizes +HP, then defenses. Shiny and nature are separate rolls, so check both.",
+      },
+      {
+        q: "Is Prismatic Lavite stronger than Shiny Lavite?",
+        a: "No. Prismatic/Sparkle is cosmetic, while Shiny adds stats. A Shiny + Prismatic copy combines the combat bonus with the cosmetic effect.",
+      },
+    ],
+    sources: [
+      {
+        label: "Purp — Comprehensive beginner guide (Lavite route and SSS shiny target)",
+        url: "https://www.youtube.com/watch?v=KRWoAlccQeU",
+        channel: "Purp",
+      },
+      {
+        label: "Rexon — Beginner guide (Lavarock investment and shiny trade-off)",
+        url: "https://www.youtube.com/watch?v=NOB08m6Pjuw",
+        channel: "Rexon",
+      },
+      {
+        label: "ItzVexo — Evomon tier list (Lavite access, Counter, endgame value)",
+        url: "https://www.youtube.com/watch?v=QT1vdzAAjn0",
+        channel: "ItzVexo",
+      },
+    ],
+  },
+  {
+    slug: "pebble-evomon-guide",
+    title: "Pebble Evomon Guide — Location, Evolution & Is It Worth It?",
+    description:
+      "Pebble is a Verdant Valley early tank that evolves through Pebroll into Pebgolem. Catch one for early walls and Counter access, but do not over-invest after Lava Crag when Lavite becomes the stronger long-term stone target.",
+    published: "2026-07-17",
+    gscTargets: [
+      "pebble evomon",
+      "evomon pebble",
+      "pebble evomon build",
+      "pebble evomon evolution",
+      "evomon pebble location",
+      "is pebble good in evomon",
+      "pebgolem evomon",
+    ],
+    relatedGuides: [
+      "/dex/pebble",
+      "/tier-list/early-carries",
+      "/tier-list/evolution-priority",
+      "/guides/beginner",
+      "/dex/lavite",
+    ],
+    quickAnswer:
+      "**Pebble is worth catching early in Evomon**, especially if you need a safe Rock tank for Verdant Valley bosses. It evolves through **Pebroll into Pebgolem** and gains access to Counter later in the line. Community guides consistently rate it as a strong early-to-midgame wall, but they also agree it falls off or should be replaced once stronger long-term options such as Lavite/Lavarock become available.",
+    sections: [
+      {
+        heading: "Where to find Pebble in Evomon",
+        paragraphs: [
+          "Pebble is an early **Verdant Valley** catch. It is one of the first creatures community guides tell new players to consider rather than blindly investing in every quest target.",
+          "Purp recommends keeping one or two good Pebbles because the line unlocks Counter later. Rexon is more conservative: Pebble is useful when evolved or when early fights are difficult, but the game soon offers many alternatives. Those two views point to the same decision — catch a good one, then invest only if it solves an actual progression wall.",
+        ],
+      },
+      {
+        heading: "Pebble evolution line",
+        paragraphs: [
+          "The site's cross-source Dex records the line as **Pebble → Pebroll → Pebgolem**. The value of evolving is durability: ItzVexo calls Pebble an amazing early-game Evomon and a good midgame tank, while warning that it falls off in deep endgame.",
+          "Do not confuse Pebble with Tarro/Terragon — they are different lines. Pebble is the early Rock wall; Tarro/Terragon is the later Grass/Dragon tank.",
+        ],
+        bullets: [
+          "**Pebble** — early Verdant Valley catch.",
+          "**Pebroll** — middle evolution in the Rock line.",
+          "**Pebgolem** — final form and the point of the early tank investment.",
+        ],
+      },
+      {
+        heading: "What is the safest Pebble build?",
+        paragraphs: [
+          "No reliable July 2026 creator source we found gives a Pebble-only best-moves or exact-nature table, so this guide does not invent one. What the videos do support is a tank role, later Counter access, and the game's general nature rule for tanks.",
+          "Purp's system explanation says tank characters generally want **HP or defenses up** and can afford to lower Speed. Treat that as a general starting rule, not a verified Pebble-exclusive best nature. Check the current in-game move and nature tooltips before spending reroll items.",
+        ],
+        bullets: [
+          "**Role** — early Rock tank / wall.",
+          "**Stat direction** — HP and defenses are the safe generic tank priority.",
+          "**Key mechanic** — Counter later in the evolution line, according to Purp's beginner guide.",
+          "**Avoid overclaiming** — no sourced exact Pebble move set or named best nature yet.",
+        ],
+        callout: {
+          title: "Why this is not a fake build list",
+          body: "The available videos support Pebble's role and investment window, but not a definitive three-move meta build. This page separates verified guidance from assumptions.",
+          variant: "note",
+        },
+      },
+      {
+        heading: "When should you evolve Pebble?",
+        paragraphs: [
+          "Evolve Pebble when its bulk or Counter access helps you clear the bosses in front of you. Our evolution-priority model places it behind the line already winning your current route — most often Lavite after Lava Crag.",
+          "Rexon specifically warns against wasting scarce evolution stones on early creatures you will stop using. Purp's recap similarly recommends Pebble early, then replacing it with Lavite and making Lavarock the main evolution priority.",
+        ],
+        bullets: [
+          "**Evolve now** — Pebble is your main wall and early bosses are blocking progression.",
+          "**Wait** — you have reached Lava Crag and still need stones for Lavite/Lavarock.",
+          "**Replace later** — your team has stronger typed tanks or endgame carries and Pebgolem no longer solves a matchup.",
+        ],
+      },
+      {
+        heading: "Is Pebble good in the endgame?",
+        paragraphs: [
+          "Community consensus is **good early, useful midgame, replaceable late**. ItzVexo places Pebble in A tier for its early and midgame value but explicitly says it falls off in endgame. Purp recommends replacing the early Pebble slot with Lavite/Lavarock as progression opens.",
+          "That does not make Pebble a bad catch. It means the correct ROI is to use it as a cheap early wall, not automatically pour every evolution stone, premium ball, and reroll potion into it.",
+        ],
+      },
+      {
+        heading: "Pebble checklist for new players",
+        bullets: [
+          "Catch Pebble in Verdant Valley with the free basic ball unless a rare shiny or exceptional copy appears.",
+          "Compare Talent rolls and keep the best practical copy; do not spend a premium SSS ball by default.",
+          "Use it as an early Rock wall and evolve only when it helps current progression.",
+          "Prioritize HP/defense direction for a tank, but verify the live nature tooltip.",
+          "Reassess at Lava Crag: Lavite/Lavarock usually has better long-term evolution-stone ROI.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Where is Pebble in Evomon?",
+        a: "Pebble is an early catch in Verdant Valley. It is one of the first useful tank options available to new players.",
+      },
+      {
+        q: "What does Pebble evolve into?",
+        a: "Pebble evolves into Pebroll and then Pebgolem, forming the early Rock tank line.",
+      },
+      {
+        q: "Is Pebble good in Evomon?",
+        a: "Yes in early and midgame. Community tier lists call it a strong early tank, but it generally falls off or gets replaced in deep endgame.",
+      },
+      {
+        q: "Should I use an Evolution Stone on Pebble?",
+        a: "Only if Pebble is actively helping you clear an early wall. Once Lava Crag opens, saving stones for Lavite/Lavarock is usually the stronger long-term choice.",
+      },
+      {
+        q: "What is the best nature for Pebble?",
+        a: "No reliable source currently confirms one named Pebble-only best nature. For tanks generally, community guidance favors HP or defenses and treats Speed as expendable.",
+      },
+    ],
+    sources: [
+      {
+        label: "Purp — Comprehensive beginner guide (Pebble, Counter, replacement timing)",
+        url: "https://www.youtube.com/watch?v=KRWoAlccQeU",
+        channel: "Purp",
+      },
+      {
+        label: "Rexon — Beginner guide (early investment and evolution-stone warning)",
+        url: "https://www.youtube.com/watch?v=NOB08m6Pjuw",
+        channel: "Rexon",
+      },
+      {
+        label: "ItzVexo — Evomon tier list (early tank, midgame value, endgame falloff)",
+        url: "https://www.youtube.com/watch?v=QT1vdzAAjn0",
+        channel: "ItzVexo",
+      },
+    ],
+  },
+  {
     slug: "evomon-shiny-bluebird-guide",
     title: "Evomon Shiny Bluebird Guide - Route, Pity & Worth It",
     description:
