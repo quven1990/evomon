@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-17",
+        title: "Dex SERP polish — Bubble, Leafbun, Blazpup, Lavarock",
+        body: "Retitled and deepened four indexable dex pages with wasted impressions or weak rankings. Bubble / Leafbun / Blazpup titles now answer starter-choice intent (water route, tank heal, vs Sparkit). Lavarock is no longer a Lavite stub — Counter/boss tank copy, evolution keeper rules, and shiny-to-evolve notes were added.",
+        tags: ["SEO", "Dex"],
+        pages: ["/dex/bubble", "/dex/leafbun", "/dex/blazpup", "/dex/lavarock"],
+      },
+      {
+        date: "2026-07-17",
         title: "Privacy & ads compliance polish",
         body: "Clarified Privacy/Cookies advertising disclosures with clickable Google Ads Settings and partner-sites links. Cookie notice remains informational (does not gate analytics). Auto ads skip legal/trust pages and thin noindex dex stubs. Contact email corrected to contact@evomon.cc.",
         tags: ["Compliance", "Privacy", "AdSense"],

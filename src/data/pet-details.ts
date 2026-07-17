@@ -16,14 +16,16 @@ export type PetDetailExtra = {
 
 export const petDetailExtras: Record<string, PetDetailExtra> = {
   bubble: {
-    metaTitle: "Bubble Evomon — Best Starter, Evolution & Location",
+    metaTitle: "Bubble Evomon — Best Water Starter Route",
     metaDescription:
-      "Bubble (#001) — Smoothest water starter for Verdant Valley and Lava Crag. Evolution line, type matchups, catch info, and starter guide on evomon.cc.",
+      "Bubble (#001) is the best Water starter for Verdant Valley and early Lava Crag. See evolution to Bubblade, when to bench for Lavite, and type matchups.",
     location: "Starter choice (tutorial)",
     weather: "Any",
     role: "Beginner water carry",
     blurb:
-      "Best starter for most new players — smooth Verdant Valley and early Lava Crag matchups. Plan to bench the line once Lavite or Bluebird come online.",
+      "Best starter for most new accounts: Water coverage clears Verdant Valley and early Lava Crag with the fewest dead ends. Evolve through Bubboxer into Bubblade for temporary water damage, then expect to reinvest stones into Lavite or Bluebird once those routes open — Bubble wins the lab pick, not the endgame stone race.",
+    evolutionNote:
+      "Bubble → Bubboxer → Bubblade is the water starter line. Spend early stones if you need water coverage now, but do not empty your Evolution Stone stock here if Lava Crag Lavite is already unlocked.",
   },
   bubboxer: {
     metaTitle: "Bubboxer Evomon — Bubble Evolution & Water Matchups",
@@ -45,13 +47,16 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
       "Final Bubble-line evolution. Good early water coverage, but many teams pivot to stronger route catches once Lavite or Bluebird comes online.",
   },
   blazpup: {
-    metaTitle: "Blazpup Evomon — Fire Starter Guide & Evolution",
+    metaTitle: "Blazpup Evomon — Fire Starter vs Sparkit",
     metaDescription:
-      "Blazpup (#004) — Fire starter with high damage but a slower early route. Evolution path, matchups, and how it compares to Sparkit on evomon.cc.",
+      "Blazpup (#004) hits hard as a Fire starter but clears early islands slower than Bubble. Compare vs Sparkit on Lava Crag before locking fire stones.",
     location: "Starter choice (tutorial)",
     weather: "Any",
     role: "Fire starter",
-    blurb: "High fire damage but a slower early route than Bubble. Many players skip in favor of Sparkit on Lava Crag.",
+    blurb:
+      "Pick Blazpup only if you want a Fire-first starter and accept a slower Verdant Valley. Many accounts instead take Bubble, then catch Sparkit (or Lavite) on the fire route — Sparkit often replaces Blazpup as the practical early Fire slot, and Lavite usually wins the long-term stone priority.",
+    evolutionNote:
+      "Blazpup → Blazgrowl → Blazmane. Evolve the line if you committed at the lab; otherwise save stones for Sparkit or Lavite once those catches are online.",
   },
   blazgrowl: {
     metaTitle: "Blazgrowl Evomon — Fire Evolution & Team Role",
@@ -63,13 +68,16 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     blurb: "Blazpup's mid evolution. Commit only if you are building a dedicated fire squad.",
   },
   leafbun: {
-    metaTitle: "Leafbun Evomon — Grass Starter, Evolution & Location",
+    metaTitle: "Leafbun Evomon — Tanky Grass Starter Heal",
     metaDescription:
-      "Leafbun (#007) — Tanky grass starter with sustain skills. Evolution line, element matchups, and beginner route notes on evomon.cc.",
+      "Leafbun (#007) is the tanky Grass starter with sustain skills. Slower than Bubble early, stronger for players who want healing and mid-route bulk.",
     location: "Starter choice (tutorial)",
     weather: "Any",
     role: "Grass starter / sustain",
-    blurb: "Tankier grass opener with healing skills. Slower early progression than Bubble but solid mid-game coverage.",
+    blurb:
+      "Choose Leafbun when you prefer a tankier opener with healing skills over Bubble’s fastest clear speed. Expect a slower Verdant Valley and Petal Pond start; the trade-off is sustain in longer fights. If your goal is the smoothest first islands, Bubble still wins — Leafbun is the comfort pick, not the speed pick.",
+    evolutionNote:
+      "Leafbun → Leafroge → Leafblade. Commit stones if you are building around Grass sustain; otherwise keep stones for stronger route tanks like Pebble once Verdant Valley opens.",
   },
   pebble: {
     metaTitle: "Pebble Evomon — Verdant Valley Catch & Evolution",
@@ -126,13 +134,18 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
   },
   lavarock: {
     typesDisplay: "Fire / Rock",
-    metaTitle: "Lavarock Evomon — Lavite Evolution & Matchups",
+    metaTitle: "Lavarock Evomon — Counter Build & Boss Tank",
     metaDescription:
-      "Lavarock (#053) — Lavite's evolution and a late-game fire wall. Fire/Rock matchups, stone priority, and endgame tier notes on evomon.cc.",
-    location: "Evolve from Lavite",
+      "Lavarock (#053) is Lavite’s Fire/Rock final form — a late-game wall with Counter value. Evolution priority, boss use, and when the stone is worth it.",
+    location: "Evolve from Lavite (Lava Crag catch)",
     weather: "Any",
-    role: "Late-game fire tank",
-    blurb: "Lavite's evolution. Fire coverage plus bulk for boss routes and Lava Crag progression.",
+    role: "Late-game fire tank / Counter wall",
+    blurb:
+      "Lavarock is the reason Lavite stays on investment lists: Fire/Rock coverage plus bulk that holds up on boss routes after Lava Crag. Treat it as its own carry decision — evolve your best Lavite (Talent and nature first) when you need a durable fire wall, not merely because the shiny hunt finished.",
+    evolutionNote:
+      "Evolve Lavite → Lavarock when this line is your main mid/late fire slot. Prefer a keeper with strong Talent (community guides often chase SSS) and a nature that keeps HP/defenses intact before spending the stone.",
+    shinyHuntNote:
+      "Most players shiny-hunt Lavite on Lava Crag, then evolve the keeper into Lavarock. A strong normal SSS Lavite is still worth evolving if waiting for shiny blocks progression — shiny helps, but levels and build quality matter more on bosses.",
   },
   arcub: {
     metaTitle: "Arcub Evomon — Electric Line & Funder Cliff Route",
