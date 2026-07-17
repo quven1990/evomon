@@ -88,7 +88,19 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     role: "Early rock tank",
     blurb: "One of the best early-route catches. Reliable wall through mid game — replace before deep endgame.",
     evolutionNote:
-      "Pebble is the early Rock line players search for after Verdant Valley. Use the evolution line above to compare Pebble with Pebgolem before spending stones.",
+      "Pebble → Pebroll → Pebgolem. Catch and evolve when early bosses hurt; see the Pebgolem page for final-form tank value and when to stop investing stones after Lava Crag.",
+  },
+  pebgolem: {
+    metaTitle: "Pebgolem Evomon — Early Rock Tank Final Form",
+    metaDescription:
+      "Pebgolem (#020) is Pebble’s Rock final evolution — early-to-mid tank with Counter access. When to evolve, when to bench for Lavite, and type matchups.",
+    location: "Evolve from Pebroll (Verdant Valley Pebble line)",
+    weather: "Any",
+    role: "Early–mid Rock tank / Counter wall",
+    blurb:
+      "Pebgolem is the payoff for the Verdant Valley Pebble catch: a durable Rock wall that community guides rate highly for early and midgame, with Counter access later in the line. It is not a forever endgame pick — ItzVexo-style tier notes call the line strong early/mid then replaceable, and Purp-style routes usually swap the slot toward Lavite/Lavarock after Lava Crag.",
+    evolutionNote:
+      "Evolve Pebble → Pebroll → Pebgolem when bulk or Counter is what clears the bosses in front of you. Save leftover Evolution Stones once Lavarock is online — Pebgolem solves early walls, not the whole late-game stone budget.",
   },
   sparkit: {
     metaTitle: "Sparkit Evomon — Location, Evolution & Fire Role",
@@ -114,9 +126,24 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     blurb:
       "Bleed stacks ramp damage on high-HP targets. A top pick once evolved into Volcrest for boss farming.",
     evolutionNote:
-      "Bluebird evolves into Volcrest in the community dex line. If you are searching Bluebird evolution, compare the Raven Ridge wild route with boss-route farming before investing stones.",
+      "Bluebird evolves into Volcrest. Farm the Raven Ridge wild route (or quest unlock) before spending stones; see the Volcrest page for final-form Bleed/boss value.",
     shinyHuntNote:
       "For shiny Bluebird, farm the Raven Ridge wild route when possible instead of relying only on boss cycles. Wild encounters are faster; boss and mount variants may still need shiny egg planning.",
+  },
+  volcrest: {
+    typesDisplay: "Flying / Electric",
+    metaTitle: "Volcrest Evomon — Bluebird Final Form Boss DPS",
+    metaDescription:
+      "Volcrest (#027) is Bluebird’s Flying/Electric final evolution — Bleed DPS for boss routes. Evolution timing, Raven Ridge context, and stone priority.",
+    location: "Evolve from Bluebird (Raven Ridge line)",
+    weather: "Any",
+    role: "Bleed DPS / boss farmer",
+    blurb:
+      "Volcrest is why Bluebird stays on late-game team lists: the Flying/Electric line’s Bleed pressure ramps on high-HP bosses once the evolution is online. Treat Volcrest as the investment target, not endless Bluebird leveling without the stone. Community tier lists commonly pair Lavite/Lavarock with Bluebird → Volcrest as a core mid-to-late answer.",
+    evolutionNote:
+      "Evolve Bluebird → Volcrest after Raven Ridge is unlocked and the line is a real team slot. Prefer a keeper with usable Talent before spending the stone; a strong normal Bluebird that can clear the route is still worth evolving if shiny hunting stalls progression.",
+    shinyHuntNote:
+      "Most shiny work happens on Bluebird’s Raven Ridge wild route, then evolve the keeper into Volcrest. Shiny eggs matter more for slow boss-gated variants — see the Shiny Bluebird guide and Shiny Egg pages for those paths.",
   },
   lavite: {
     typesDisplay: "Fire / Rock",

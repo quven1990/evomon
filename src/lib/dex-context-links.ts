@@ -12,12 +12,21 @@ const earlyCarrySlugs = new Set([
   "blazgrowl",
   "leafbun",
   "pebble",
+  "pebgolem",
   "sparkit",
   "lavite",
   "lavarock",
 ]);
 
-const shinyEggSlugs = new Set(["bluebird", "sparkit", "arcub", "arcapex", "wispuff", "wisphex"]);
+const shinyEggSlugs = new Set([
+  "bluebird",
+  "volcrest",
+  "sparkit",
+  "arcub",
+  "arcapex",
+  "wispuff",
+  "wisphex",
+]);
 
 const evolutionPrioritySlugs = new Set([
   "bubble",
@@ -25,9 +34,11 @@ const evolutionPrioritySlugs = new Set([
   "blazpup",
   "blazgrowl",
   "pebble",
+  "pebgolem",
   "lavite",
   "lavarock",
   "bluebird",
+  "volcrest",
   "arcub",
   "arcapex",
   "wispuff",

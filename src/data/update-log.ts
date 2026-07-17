@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-17";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-18";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-18",
+        title: "Dex index — Volcrest and Pebgolem final forms",
+        body: "Opened /dex/volcrest and /dex/pebgolem for search after adding independent final-form copy. Volcrest covers Bluebird’s Bleed/boss payoff and stone timing; Pebgolem covers the early Rock tank window and when to stop investing after Lavite. Bluebird/Pebble evolution notes now point at the final-form pages.",
+        tags: ["SEO", "Dex"],
+        pages: ["/dex/volcrest", "/dex/pebgolem", "/dex/bluebird", "/dex/pebble"],
+      },
       {
         date: "2026-07-17",
         title: "Dex SERP polish — Bubble, Leafbun, Blazpup, Lavarock",
