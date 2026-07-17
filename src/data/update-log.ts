@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-17",
+        title: "Privacy & ads compliance polish",
+        body: "Clarified Privacy/Cookies advertising disclosures with clickable Google Ads Settings and partner-sites links. Cookie notice remains informational (does not gate analytics). Auto ads skip legal/trust pages and thin noindex dex stubs. Contact email corrected to contact@evomon.cc.",
+        tags: ["Compliance", "Privacy", "AdSense"],
+        pages: ["/privacy", "/cookies", "/about"],
+      },
+      {
+        date: "2026-07-17",
         title: "Blog — Shiny Lavite and Pebble investment guides",
         body: "Added two video-sourced pet-level answers. /blog/shiny-lavite-evomon-guide covers the Lava Crag Water-route hunt, Shiny/SSS/nature trade-offs, and when to evolve Lavarock. /blog/pebble-evomon-guide covers Verdant Valley location, Pebble → Pebroll → Pebgolem, early tank value, Counter access, and why Lavite usually becomes the better long-term stone target. Unsupported exact moves and nature claims were intentionally excluded.",
         tags: ["Blog", "SEO", "GEO", "Sources"],

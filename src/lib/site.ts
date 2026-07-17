@@ -6,7 +6,7 @@ export const SITE = {
     "Unofficial Evomon Wiki for Roblox — working codes, pokedex with sprites, shiny guides, type chart & team builder. Updated regularly on evomon.cc.",
   locale: "en-US",
   emails: {
-    contact: "contract@evomon.cc",
+    contact: "contact@evomon.cc",
     privacy: "privacy@evomon.cc",
   },
 } as const;

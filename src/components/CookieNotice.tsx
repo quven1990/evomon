@@ -6,9 +6,9 @@ import Link from "next/link";
 const STORAGE_KEY = "evomon-cookie-notice-v1";
 
 /**
- * Lightweight privacy notice for analytics + upcoming advertising.
- * Not a full CMP — EU personalized-ads consent still needs AdSense/CMP setup
- * when ads go live for EEA/UK traffic.
+ * Informational privacy notice for analytics + advertising.
+ * Dismissing does not gate analytics scripts (see DeferredAnalytics).
+ * Personalized-ad consent for EEA/UK/CH is handled by Google/AdSense CMP when required.
  */
 export function CookieNotice() {
   const [visible, setVisible] = useState(false);
@@ -41,7 +41,8 @@ export function CookieNotice() {
     >
       <div className="mx-auto flex max-w-3xl flex-col gap-3 rounded-2xl border border-white/10 bg-[#0a1412]/95 p-4 text-sm text-zinc-300 shadow-lg backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between">
         <p className="leading-6">
-          We use analytics and may show ads (including Google). See{" "}
+          We use analytics (including Google Analytics and Microsoft Clarity) and may show ads from
+          Google and other partners, which can use cookies or similar tech. See{" "}
           <Link href="/privacy" className="text-emerald-300 underline underline-offset-2">
             Privacy
           </Link>
@@ -53,6 +54,15 @@ export function CookieNotice() {
           <Link href="/terms" className="text-emerald-300 underline underline-offset-2">
             Terms
           </Link>
+          . You can manage Google ad personalization in{" "}
+          <a
+            href="https://adssettings.google.com"
+            className="text-emerald-300 underline underline-offset-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ads Settings
+          </a>
           .
         </p>
         <button

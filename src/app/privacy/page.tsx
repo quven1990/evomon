@@ -9,7 +9,7 @@ import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = PAGE_SEO.privacy();
 
-const effectiveDate = "July 8, 2026";
+const effectiveDate = "July 17, 2026";
 
 export default function PrivacyPage() {
   const schema = {
@@ -113,27 +113,49 @@ export default function PrivacyPage() {
 
           <h3>Advertising</h3>
           <p>
-            We may display ads served by Google AdSense and/or other advertising networks. Depending
-            on your region, settings, and whether consent is required, these partners may:
+            We may display ads served by Google AdSense and/or other advertising networks. Third-party
+            vendors, including Google, use cookies to serve ads based on a user&apos;s prior visits to
+            this site or other sites on the Internet. Google&apos;s use of advertising cookies enables
+            it and its partners to serve ads to you based on your visit to this site and/or other sites
+            on the Internet.
           </p>
+          <p>Depending on your region and settings, these partners may:</p>
           <ul>
             <li>Set or read cookies and similar identifiers</li>
             <li>Collect device, browser, approximate location, and page-view context</li>
             <li>Serve personalized or non-personalized ads</li>
           </ul>
           <p>
-            When AdSense (or another partner) is active, their own privacy policies also apply to the
-            data they process. After publisher approval you can also check our root{" "}
-            <code>ads.txt</code> file for authorized sellers.
-          </p>
-          <p>
-            Google provides tools related to ad personalization and transparency (for example Google
-            Ads Settings / Ad Settings). Browser controls and our{" "}
+            You can opt out of personalized advertising by visiting{" "}
+            <a
+              href="https://adssettings.google.com"
+              className="text-emerald-300 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Ads Settings
+            </a>
+            . You can also learn how Google uses information from sites or apps that use its services
+            at{" "}
+            <a
+              href="https://policies.google.com/technologies/partner-sites"
+              className="text-emerald-300 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              How Google uses information from sites or apps that use our services
+            </a>
+            . Browser controls and our{" "}
             <Link href="/cookies" className="text-emerald-300 hover:underline">
               Cookies
             </Link>{" "}
-            page describe additional options. Visitors in the EU/EEA/UK may see a consent prompt where
-            required for non-essential cookies or personalized ads.
+            page describe additional options.
+          </p>
+          <p>
+            When AdSense (or another partner) is active, their own privacy policies also apply to the
+            data they process. Authorized sellers are listed in our root <code>ads.txt</code> file.
+            In the EU/EEA/UK/Switzerland, Google may show a certified consent message for personalized
+            ads where required; that flow is separate from this site&apos;s informational cookie notice.
           </p>
 
           <h3>Team builder share links</h3>
@@ -182,7 +204,10 @@ export default function PrivacyPage() {
 
           <h2>Cookies and similar technologies</h2>
           <p>
-            Analytics and advertising partners may place cookies, pixels, or use local storage. See{" "}
+            Analytics and advertising partners may place cookies, pixels, or use local storage when
+            their scripts load. Analytics scripts (Plausible, Google Analytics, Microsoft Clarity) are
+            loaded for site measurement and UX diagnostics; dismissing the on-site cookie notice does
+            not turn them off. See{" "}
             <Link href="/cookies" className="text-emerald-300 hover:underline">
               Cookies
             </Link>{" "}
@@ -219,8 +244,17 @@ export default function PrivacyPage() {
             <a href={`mailto:${SITE.emails.privacy}`} className="text-emerald-300 hover:underline">
               {SITE.emails.privacy}
             </a>
-            . For ads/analytics controlled by Google or Microsoft, use those companies&apos; privacy
-            tools as well.
+            . For ads controlled by Google, use{" "}
+            <a
+              href="https://adssettings.google.com"
+              className="text-emerald-300 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Ads Settings
+            </a>
+            . For analytics controlled by Google or Microsoft, use those companies&apos; privacy
+            tools or your browser&apos;s cookie/script controls as well.
           </p>
 
           <h2>Changes</h2>

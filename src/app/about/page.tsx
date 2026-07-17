@@ -118,10 +118,11 @@ export default function AboutPage() {
             </div>
           </div>
           <p>
-            {SITE.domain} is maintained by <strong>Remy</strong>, an independent Evomon player and
-            fan-site builder — not by {GAME.developer}, Roblox Corporation, or anyone on the
-            official game team. Remy updates the wiki in spare time when codes change, new pets show
-            up in community lists, or players report broken pages.
+            {SITE.domain} is maintained by <strong>Remy</strong>, an independent fan-site editor and
+            builder — not by {GAME.developer}, Roblox Corporation, or anyone on the official game
+            team. The site turns public game listings, creator video transcripts, community guides,
+            and cross-source checks into concise player references. Pages are updated when codes
+            change, new pets appear in community sources, or readers report broken information.
           </p>
           <p>
             The site exists because mobile players kept hitting slow, text-heavy wikis when all they
@@ -152,8 +153,9 @@ export default function AboutPage() {
             </li>
           </ul>
           <p>
-            This is a player-run fan project: no item sales, no Roblox password requests, no private
-            API scraping — only public sources and tools built for the community.
+            This is an independently edited fan project: no item sales, no Roblox password requests,
+            no private API scraping — only public sources, clearly attributed community evidence,
+            and tools built for players.
           </p>
         </div>
 

@@ -8,7 +8,7 @@ import { SITE, canonical } from "@/lib/site";
 
 export const metadata: Metadata = PAGE_SEO.cookies();
 
-const effectiveDate = "July 8, 2026";
+const effectiveDate = "July 17, 2026";
 
 export default function CookiesPage() {
   const schema = {
@@ -70,21 +70,52 @@ export default function CookiesPage() {
 
           <h3>Advertising</h3>
           <p>
-            When Google AdSense or other ad partners are enabled, they may set cookies to serve,
-            measure, and (where allowed) personalize ads. Until ads are live, advertising cookies
-            may not yet be present; this policy still applies once they are activated.
+            When Google AdSense or other ad partners are enabled, third-party vendors (including
+            Google) may use cookies to serve, measure, and (where allowed) personalize ads based on
+            your prior visits to this site or other sites. Learn more:{" "}
+            <a
+              href="https://policies.google.com/technologies/partner-sites"
+              className="text-emerald-300 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              How Google uses information from sites or apps that use our services
+            </a>
+            .
+          </p>
+
+          <h2>On-site notice</h2>
+          <p>
+            The bottom &quot;Got it&quot; bar is an informational disclosure so you know analytics and
+            ads may use cookies. It is not a full consent-management platform, and dismissing it does
+            not disable analytics scripts. Personalized advertising in the EU/EEA/UK/Switzerland may
+            use Google&apos;s certified consent message when AdSense requires it.
           </p>
 
           <h2>How to control cookies</h2>
           <ul>
             <li>Browser settings: block or delete cookies (site still works for reading guides)</li>
             <li>
-              Google Ad Settings / Ads Settings — control personalized ads from Google where
-              available
+              <a
+                href="https://adssettings.google.com"
+                className="text-emerald-300 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Ads Settings
+              </a>{" "}
+              — opt out of personalized ads from Google where available
             </li>
             <li>
-              EU/EEA/UK visitors: where required, we may show a consent prompt before non-essential
-              advertising cookies
+              <a
+                href="https://policies.google.com/technologies/partner-sites"
+                className="text-emerald-300 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google partner-sites policy
+              </a>{" "}
+              — how Google uses data on partner sites
             </li>
             <li>
               Contact{" "}

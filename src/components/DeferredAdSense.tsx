@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { ADSENSE_SCRIPT_SRC } from "@/lib/adsense";
+import { ADSENSE_SCRIPT_SRC, shouldLoadAdSense } from "@/lib/adsense";
 
 function loadAdSense(): void {
   if (document.querySelector(`script[src^="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]`)) {
@@ -16,15 +16,15 @@ function loadAdSense(): void {
 }
 
 /**
- * Auto ads on content pages only, after the first real interaction.
- * Skips the homepage (CWV) and never uses idle timeout — avoids loading
- * AdSense/FundingChoices during LCP on lab tests and cold landings.
+ * Auto ads on substantive content pages only, after the first real interaction.
+ * Never uses idle timeout — avoids loading AdSense/FundingChoices during LCP.
+ * Analytics (GA/Clarity/Plausible) stay on DeferredAnalytics and are not gated here.
  */
 export function DeferredAdSense() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname === "/") return;
+    if (!shouldLoadAdSense(pathname)) return;
 
     let started = false;
 
