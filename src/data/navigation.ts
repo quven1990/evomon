@@ -65,6 +65,11 @@ export const navSections = [
         desc: "Who gets Evolution Stones first",
       },
       { href: "/type-chart", label: "Type Chart", desc: "Element strengths and weaknesses" },
+      {
+        href: "/map-zones",
+        label: "Map Zones",
+        desc: "Islands, level ranges, and spawns",
+      },
       { href: "/codes", label: "Evomon Codes", desc: "Active codes and redeem steps" },
     ],
   },
@@ -83,7 +88,7 @@ export const navSections = [
       {
         href: "/team-builder",
         label: "Team Builder",
-        desc: "3-pet party planner with type coverage",
+        desc: "5-pet party planner with type coverage",
       },
     ],
   },
@@ -111,6 +116,7 @@ export const footerLinks = [
   { href: "/tier-list", label: "Tier List" },
   { href: "/codes", label: "Codes" },
   { href: "/type-chart", label: "Type Chart" },
+  { href: "/map-zones", label: "Map Zones" },
   { href: "/team-builder", label: "Team Builder" },
   { href: "/guides/beginner", label: "Beginner Guide" },
   { href: "/guides/level-30", label: "Equipment (Lv40+)" },

@@ -51,14 +51,17 @@ export function analyzeTeam(members: (DexEntry | null)[]): TeamAnalysis {
 
   const notes: string[] = [];
   if (filled.length === 0) notes.push("Add Evomons to see type coverage.");
-  if (filled.length < 3) notes.push(`Team has ${filled.length}/3 slots — add coverage picks.`);
+  if (filled.length < 5) notes.push(`Team has ${filled.length}/5 slots — add coverage picks.`);
   if (uniqueElements.length < filled.length) notes.push("Duplicate elements — consider broader coverage.");
   if (offenseGaps.length <= 3) notes.push("Strong offensive spread across most types.");
   else if (offenseGaps.length >= 8) notes.push("Narrow offense — add a second element line.");
 
   const diversityScore = Math.min(
     100,
-    Math.round((uniqueElements.length / 3) * 40 + ((OFFENSE_TYPES.length - offenseGaps.length) / OFFENSE_TYPES.length) * 60),
+    Math.round(
+      (uniqueElements.length / 5) * 40 +
+        ((OFFENSE_TYPES.length - offenseGaps.length) / OFFENSE_TYPES.length) * 60,
+    ),
   );
 
   return {
@@ -76,19 +79,19 @@ export const TEAM_PRESETS: { id: string; label: string; slugs: string[]; desc: s
   {
     id: "early",
     label: "Early Game",
-    slugs: ["bubble", "pebble", "sparkit"],
-    desc: "Water carry + Rock tank + Fire coverage for Verdant Valley",
+    slugs: ["bubble", "pebble", "sparkit", "mopebun", "budling"],
+    desc: "5-slot Verdant → Petal opener with Water, Rock, and Fire",
   },
   {
     id: "starter",
-    label: "Starter Trio",
-    slugs: ["bubble", "blazgrowl", "leafbun"],
-    desc: "All three starter lines for type spread",
+    label: "Starter Core",
+    slugs: ["bubble", "blazgrowl", "leafbun", "pebble", "sparkit"],
+    desc: "Starter lines plus early Rock/Fire coverage",
   },
   {
-    id: "water",
-    label: "Water Core",
-    slugs: ["bubboxer", "clampip", "pebble"],
-    desc: "Water-heavy route through Petal Pond",
+    id: "mid",
+    label: "Mid Route",
+    slugs: ["lavite", "bluebird", "clamspire", "pebgolem", "frostseer"],
+    desc: "Lava Crag → Raven Ridge → Crystal Cascade picks",
   },
 ];

@@ -236,7 +236,7 @@ export default function TypeChartPage() {
             >
               <p className="font-semibold text-emerald-200">Team builder →</p>
               <p className="mt-2 text-sm leading-6 text-zinc-400">
-                Pick 3 Evomons and see offensive gaps, duplicate types, and defensive threats.
+                Pick 5 Evomons and see offensive gaps, duplicate types, and defensive threats.
               </p>
             </Link>
             <Link

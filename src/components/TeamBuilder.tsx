@@ -13,7 +13,7 @@ import { AnalyticsEvent, track } from "@/lib/analytics";
 import { copyToClipboard } from "@/lib/copy";
 import { elementStyles } from "@/data/type-chart";
 
-const SLOT_COUNT = 3;
+const SLOT_COUNT = 5;
 const namedPets = dexEntries.filter((e) => e.name);
 
 function findBySlug(slug: string): DexEntry | null {
@@ -50,7 +50,7 @@ function TeamSlotStrip({
   const pad = size === "sm" ? "p-1.5" : "p-2";
 
   return (
-    <div className="grid grid-cols-3 gap-2">
+    <div className="grid grid-cols-5 gap-1.5 sm:gap-2">
       {slots.map((pet, index) => {
         const isActive = activeSlot === index;
         const isFilled = Boolean(pet);
@@ -69,8 +69,8 @@ function TeamSlotStrip({
             }`}
           >
             {isActive && (
-              <span className="absolute -top-2 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-emerald-500 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-black">
-                Editing
+              <span className="absolute -top-1.5 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-emerald-500 px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-wide text-black">
+                Edit
               </span>
             )}
             {pet ? (

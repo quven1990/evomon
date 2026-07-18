@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PetAvatar } from "@/components/PetAvatar";
 import type { DexEntry } from "@/data/dex";
+import { getPetCombat, type PetBaseStats } from "@/data/pet-combat";
 import { elementStyles } from "@/data/type-chart";
 import {
   buildPetFaqs,
@@ -53,6 +54,43 @@ function MatchupGroup({
   );
 }
 
+const STAT_ROWS: { key: keyof PetBaseStats; label: string }[] = [
+  { key: "hp", label: "HP" },
+  { key: "attack", label: "Attack" },
+  { key: "defense", label: "Defense" },
+  { key: "spAtk", label: "Sp. Atk" },
+  { key: "spDef", label: "Sp. Def" },
+  { key: "speed", label: "Speed" },
+];
+
+function BaseStatsPanel({ name, stats }: { name: string; stats: PetBaseStats }) {
+  const max = Math.max(...STAT_ROWS.map((r) => stats[r.key]), 1);
+  return (
+    <section>
+      <h2 className="text-xl font-bold text-white">{name} base stats</h2>
+      <p className="mt-2 text-sm text-zinc-500">
+        Species base spread before Talent and Nature. Community-sourced — verify in-game before
+        investing.
+      </p>
+      <ul className="mt-4 space-y-2.5">
+        {STAT_ROWS.map(({ key, label }) => {
+          const value = stats[key];
+          const width = Math.round((value / max) * 100);
+          return (
+            <li key={key} className="grid grid-cols-[4.5rem_2.5rem_1fr] items-center gap-3 text-sm">
+              <span className="text-zinc-400">{label}</span>
+              <span className="text-right font-semibold tabular-nums text-white">{value}</span>
+              <div className="h-2 overflow-hidden rounded-full bg-white/10">
+                <div className="h-full rounded-full bg-emerald-500/70" style={{ width: `${width}%` }} />
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
 export function DexPetDetailSections({
   entry,
   slug,
@@ -61,6 +99,8 @@ export function DexPetDetailSections({
   slug: string;
 }) {
   const extra = getPetExtra(slug);
+  const combat = getPetCombat(slug);
+  const location = extra?.location ?? combat?.location;
   const line = getEvolutionLine(entry);
   const similar = getSimilarPets(entry);
   const matchups = getElementMatchups(entry.element);
@@ -76,6 +116,27 @@ export function DexPetDetailSections({
 
       <div className="grid gap-6 lg:grid-cols-[1fr_240px]">
         <div className="space-y-8">
+          {combat?.stats && <BaseStatsPanel name={entry.name} stats={combat.stats} />}
+
+          {combat?.traits && combat.traits.length > 0 && (
+            <section>
+              <h2 className="text-xl font-bold text-white">Possible traits</h2>
+              <p className="mt-2 text-sm text-zinc-500">
+                Trait pool this species can roll. Exact rates are not published — treat as a checklist.
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {combat.traits.map((trait) => (
+                  <li
+                    key={trait}
+                    className="rounded-lg border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs font-medium text-zinc-200"
+                  >
+                    {trait}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           <section>
             <h2 className="text-xl font-bold text-white">Element matchups</h2>
             <p className="mt-2 text-sm text-zinc-500">
@@ -226,10 +287,10 @@ export function DexPetDetailSections({
                 <dd className="font-medium text-amber-300">{entry.tier}</dd>
               </div>
             )}
-            {extra?.location && (
+            {location && (
               <div>
                 <dt className="text-zinc-500">Location</dt>
-                <dd className="mt-1 text-zinc-200">{extra.location}</dd>
+                <dd className="mt-1 text-zinc-200">{location}</dd>
               </div>
             )}
             {extra?.weather && (
@@ -244,10 +305,26 @@ export function DexPetDetailSections({
                 <dd className="mt-1 text-zinc-200">{extra.role}</dd>
               </div>
             )}
+            {combat?.stats && (
+              <div>
+                <dt className="text-zinc-500">BST</dt>
+                <dd className="mt-1 font-medium tabular-nums text-white">
+                  {combat.stats.hp +
+                    combat.stats.attack +
+                    combat.stats.defense +
+                    combat.stats.spAtk +
+                    combat.stats.spDef +
+                    combat.stats.speed}
+                </dd>
+              </div>
+            )}
           </dl>
           <div className="mt-5 space-y-2 border-t border-white/10 pt-5 text-sm">
             <Link href={`/team-builder?t=${slug}`} className="block text-emerald-300 hover:underline">
               Add to team builder →
+            </Link>
+            <Link href="/map-zones" className="block text-emerald-300 hover:underline">
+              Map zones →
             </Link>
             <Link href="/type-chart" className="block text-emerald-300 hover:underline">
               {entry.element} type chart →
@@ -275,6 +352,11 @@ export function DexPetDetailSections({
           <li>
             <Link href="/dex" className="text-emerald-300 hover:underline">
               Full Evomon dex gallery
+            </Link>
+          </li>
+          <li>
+            <Link href="/map-zones" className="text-emerald-300 hover:underline">
+              Map zones & spawn levels
             </Link>
           </li>
           <li>

@@ -1,4 +1,5 @@
 import { petDetailExtras } from "@/data/pet-details";
+import { getPetCombat } from "@/data/pet-combat";
 import { dexEntries, type DexEntry, type ElementType } from "@/data/dex";
 import {
   getResistedFrom,
@@ -122,10 +123,27 @@ export function buildPetFaqs(entry: DexEntry & { name: string }): PetFaq[] {
     },
   ];
 
-  if (extra?.location) {
+  const combat = getPetCombat(entry.name);
+  const location = extra?.location ?? combat?.location;
+  if (location) {
     faqs.push({
       q: `Where do you get ${entry.name} in Evomon?`,
-      a: `${entry.name} is found at ${extra.location}.${extra.weather ? ` Weather: ${extra.weather}.` : ""}`,
+      a: `${entry.name} is found at ${location}.${extra?.weather ? ` Weather: ${extra.weather}.` : ""}`,
+    });
+  }
+
+  if (combat?.stats) {
+    const s = combat.stats;
+    faqs.push({
+      q: `What are ${entry.name}'s base stats?`,
+      a: `${entry.name}'s base stats are HP ${s.hp}, Attack ${s.attack}, Defense ${s.defense}, Sp. Atk ${s.spAtk}, Sp. Def ${s.spDef}, Speed ${s.speed}.`,
+    });
+  }
+
+  if (combat?.traits?.length) {
+    faqs.push({
+      q: `What traits can ${entry.name} have?`,
+      a: `${entry.name} can roll these traits: ${combat.traits.join(", ")}.`,
     });
   }
 

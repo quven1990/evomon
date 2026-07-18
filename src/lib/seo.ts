@@ -123,12 +123,28 @@ export const PAGE_SEO = {
 
   teamBuilder: () =>
     buildPageMetadata({
-      title: "Evomon Team Builder — Build Your Best 3-Pet Squad",
+      title: "Evomon Team Builder — Build Your Best 5-Pet Squad",
       description:
-        "Pick 3 Evomons, see type coverage gaps instantly, and share your squad link. Free team builder with presets for early game, starters & dungeons — no login needed.",
+        "Pick 5 Evomons (in-game party size), see type coverage gaps instantly, and share your squad link. Free team builder with presets for early, mid, and starter cores — no login needed.",
       path: "/team-builder",
       ogTitle: "Free Evomon Team Builder — Plan & Share Your Squad",
       keywords: ["evomon team builder", "evomon best team", "evomon team comp", "evomon party"],
+    }),
+
+  mapZones: () =>
+    buildPageMetadata({
+      title: "Evomon Map Zones — Islands, Levels & Spawns",
+      description:
+        "Every Evomon hunting zone with level ranges and spawn lists — Verdant Valley through Thunder Cliffs, plus Summon Ruins. Plan catches before you hop islands.",
+      path: "/map-zones",
+      ogTitle: "Evomon Map Zones — Where to Catch Each Pet",
+      keywords: [
+        "evomon map",
+        "evomon zones",
+        "evomon islands",
+        "evomon spawn locations",
+        "evomon verdant valley",
+      ],
     }),
 
   typeChart: () => {

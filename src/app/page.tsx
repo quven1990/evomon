@@ -6,6 +6,7 @@ import {
   Gift,
   Grid3x3,
   Layers,
+  Map,
   Sparkles,
   Swords,
   TrendingUp,
@@ -47,10 +48,17 @@ const featureCards = [
     tag: "Interactive",
   },
   {
+    href: "/map-zones",
+    icon: Map,
+    title: "Map Zones",
+    desc: "Island level ranges and spawn lists from Verdant Valley to Thunder Cliffs.",
+    tag: "Catch routes",
+  },
+  {
     href: "/team-builder",
     icon: Users,
     title: "Team Builder",
-    desc: "Plan 3-pet parties, check type coverage, share via link.",
+    desc: "Plan 5-pet parties, check type coverage, share via link.",
     tag: "Interactive",
   },
   {

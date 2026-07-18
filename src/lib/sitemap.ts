@@ -14,6 +14,7 @@ const indexableRoutes: {
   { path: "/dex", priority: 0.9, changeFrequency: "weekly" },
   { path: "/starters", priority: 0.85, changeFrequency: "weekly" },
   { path: "/type-chart", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/map-zones", priority: 0.85, changeFrequency: "weekly" },
   { path: "/team-builder", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tier-list", priority: 0.8, changeFrequency: "weekly" },
   { path: "/about", priority: 0.6, changeFrequency: "monthly" },

@@ -13,7 +13,8 @@ export default function TeamBuilderPage() {
       <PageBack href="/" />
       <h1 className={pageTitleClass()}>Team Builder</h1>
       <p className={`${pageLeadClass()} hidden sm:block`}>
-        Build a 3-pet party, analyze element coverage, and share your comp with a link. Pair with the{" "}
+        Build a 5-pet party (matches in-game slots), analyze element coverage, and share your comp with a
+        link. Pair with the{" "}
         <Link href="/type-chart" className="text-emerald-300 hover:underline">
           type chart
         </Link>{" "}

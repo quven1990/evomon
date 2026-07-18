@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-19",
+        title: "Dex combat data, Map Zones, 5-slot Team Builder",
+        body: "Added community-sourced base stats and trait pools on dex detail pages, a new /map-zones island spawn guide, and expanded Team Builder to match the in-game party of five.",
+        tags: ["Dex", "Tools", "Data"],
+        pages: ["/map-zones", "/team-builder", "/dex"],
+      },
+      {
+        date: "2026-07-19",
         title: "Type chart SERP — back to weakness intent",
         body: "Retitled /type-chart after high impressions and ~1% CTR. Dropped “Clickable Lookup” CTA wording and restored concrete matchup examples (Water beats Fire, Electric beats Flying) aimed at type chart / weakness chart queries.",
         tags: ["SEO", "Type Chart"],
