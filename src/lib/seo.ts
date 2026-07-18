@@ -131,21 +131,32 @@ export const PAGE_SEO = {
       keywords: ["evomon team builder", "evomon best team", "evomon team comp", "evomon party"],
     }),
 
-  mapZones: () =>
-    buildPageMetadata({
-      title: "Evomon Map Zones — Islands, Levels & Spawns",
-      description:
-        "Every Evomon hunting zone with level ranges and spawn lists — Verdant Valley through Thunder Cliffs, plus Summon Ruins. Plan catches before you hop islands.",
-      path: "/map-zones",
-      ogTitle: "Evomon Map Zones — Where to Catch Each Pet",
-      keywords: [
-        "evomon map",
-        "evomon zones",
-        "evomon islands",
-        "evomon spawn locations",
-        "evomon verdant valley",
-      ],
-    }),
+  mapZones: () => {
+    // Absolute title: keep ≤60 chars. Prefer catch/location intent over product jargon.
+    const title = "Evomon Map — Where to Catch Pets by Island & Level";
+    const description =
+      "Where to catch Evomon by island: Verdant Valley, Lava Crag, Raven Ridge, Silent Sands — wild spawns, mini-bosses and bosses with level ranges.";
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/map-zones",
+        ogTitle: title,
+        keywords: [
+          "evomon map",
+          "evomon locations",
+          "evomon where to catch",
+          "evomon islands",
+          "evomon spawn locations",
+          "evomon map zones",
+          "evomon verdant valley",
+          "evomon lava crag",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
 
   typeChart: () => {
     // Absolute title: keep ≤60 chars. Avoid "Clickable" — GSC showed it hurt CTR vs weakness intent.
