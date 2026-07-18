@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-18";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-19";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-19",
+        title: "Type chart SERP — back to weakness intent",
+        body: "Retitled /type-chart after high impressions and ~1% CTR. Dropped “Clickable Lookup” CTA wording and restored concrete matchup examples (Water beats Fire, Electric beats Flying) aimed at type chart / weakness chart queries.",
+        tags: ["SEO", "Type Chart"],
+        pages: ["/type-chart"],
+      },
       {
         date: "2026-07-18",
         title: "Dex index — Volcrest and Pebgolem final forms",

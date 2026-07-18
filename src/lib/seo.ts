@@ -132,9 +132,10 @@ export const PAGE_SEO = {
     }),
 
   typeChart: () => {
-    const title = "Evomon Type Chart — Weaknesses & Clickable Lookup";
+    // Absolute title: keep ≤60 chars. Avoid "Clickable" — GSC showed it hurt CTR vs weakness intent.
+    const title = "Evomon Type Chart — Weaknesses & What Beats Each Type";
     const description =
-      "See what beats Fire, Water, Electric & all 15 types. Click any type name for instant weakness lookup. Open the chart →";
+      "Water beats Fire; Electric beats Flying; Ice beats Grass. Full Evomon weakness chart for all 15 types — strengths, resists, and matchup lookup.";
 
     return {
       ...buildPageMetadata({
@@ -148,6 +149,7 @@ export const PAGE_SEO = {
           "evomon weakness chart",
           "evomon type matchup",
           "evomon elements",
+          "type chart evomon",
         ],
       }),
       title: { absolute: title },
