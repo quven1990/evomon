@@ -51,7 +51,7 @@ export default async function BlogPostPage({ params }: Props) {
             mainEntity: post.faqs.map((item) => ({
               "@type": "Question",
               name: item.q,
-              acceptedAnswer: { "@type": "Answer", text: item.a },
+              acceptedAnswer: { "@type": "Answer", text: stripBlogMarkdown(item.a) },
             })),
           },
         ]}
@@ -76,7 +76,9 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300">
             Quick answer
           </p>
-          <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">{post.quickAnswer}</p>
+          <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">
+            {renderBlogParagraph(post.quickAnswer)}
+          </p>
         </div>
 
         {post.relatedGuides.length > 0 && (
@@ -146,7 +148,9 @@ export default async function BlogPostPage({ params }: Props) {
             {post.faqs.map((item) => (
               <div key={item.q} className="rounded-xl border border-white/10 bg-[#0b1512] p-4">
                 <dt className="font-semibold text-white">{item.q}</dt>
-                <dd className="mt-2 text-sm leading-6 text-zinc-400">{item.a}</dd>
+                <dd className="mt-2 text-sm leading-6 text-zinc-400">
+                  {renderBlogParagraph(item.a)}
+                </dd>
               </div>
             ))}
           </dl>
