@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-19",
+        title: "Blog — Shiny Sparkit Lava Crag guide",
+        body: "Added a community-sourced Shiny Sparkit answer post: Lava Crag farm loop, Sparkit vs Lavite stone priority, Emfox/Empixy evolution notes, and links to map-zones plus the Sparkit dex page.",
+        tags: ["Blog", "SEO", "Dex"],
+        pages: ["/blog/shiny-sparkit-evomon-guide", "/blog", "/dex/sparkit", "/map-zones"],
+      },
+      {
+        date: "2026-07-19",
         title: "Dex combat data, Map Zones, 5-slot Team Builder",
         body: "Added community-sourced base stats and trait pools on dex detail pages, a new /map-zones island spawn guide, and expanded Team Builder to match the in-game party of five.",
         tags: ["Dex", "Tools", "Data"],

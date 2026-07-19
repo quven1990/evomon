@@ -32,6 +32,135 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "shiny-sparkit-evomon-guide",
+    title: "Shiny Sparkit Evomon Guide — Lava Crag Hunt & Worth It",
+    description:
+      "Hunt Shiny Sparkit on Lava Crag as a fast early Fire farm. Compare Sparkit → Emfox → Empixy vs Lavite for stone priority, and keep Talent in mind before long shiny sessions.",
+    published: "2026-07-19",
+    gscTargets: [
+      "shiny sparkit evomon",
+      "evomon shiny sparkit",
+      "sparkit shiny evomon",
+      "how to get shiny sparkit in evomon",
+      "sparkit evomon location",
+      "sparkit evomon",
+    ],
+    relatedGuides: [
+      "/dex/sparkit",
+      "/dex/lavite",
+      "/map-zones#lava-crag",
+      "/guides/mutations",
+      "/tier-list/evolution-priority",
+      "/blog/shiny-lavite-evomon-guide",
+      "/tier-list/early-carries",
+    ],
+    quickAnswer:
+      "To hunt **Shiny Sparkit in Evomon**, farm wild Sparkit on **Lava Crag** (third island, roughly Lv 30–43). Bring Water coverage so Fire fights stay short, check each post-KO reveal, and keep a copy with usable Talent — not only the shiny color. Sparkit is a strong **early Fire** shiny target; long-term Evolution Stones still usually prefer **Lavite → Lavarock** on the same island.",
+    sections: [
+      {
+        heading: "Where to find Shiny Sparkit",
+        paragraphs: [
+          "Sparkit is a **Lava Crag** wild spawn. On our [Map Zones](/map-zones#lava-crag) list it sits in the island’s mid band (about Lv 30–43), alongside Lavite, with Empixy as the zone boss later. Candyblox’s July 2026 hunt video shows a full Shiny Sparkit catch session on this route — use it as community footage, then confirm spawn levels in your own client.",
+          "Practical loop: clear wild Sparkit quickly, watch the reveal for the shiny color change, and catch the keeper you want. General shiny UI, pity, and Prismatic vs Shiny rules live in the [Mutations Guide](/guides/mutations); this post focuses on **why Sparkit** and **how it compares to Lavite**.",
+        ],
+        callout: {
+          title: "Route answer",
+          body: "Lava Crag + Water-type clears. If each Sparkit fight is slow, upgrade coverage first — a slow loop makes shiny hunting feel worse than the odds.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "Why Sparkit is a practical shiny target",
+        paragraphs: [
+          "Community tier notes treat Sparkit → Emfox as an **early Fire** line: easy Lava Crag access, fast encounters, and a common reason to skip or bench the Blazpup starter once the island opens. Base speed and Sp. Atk on Sparkit are already tilted toward a glassier DPS profile (community wiki spreads list Speed 55 / Sp. Atk 50 at base), so a shiny stat layer can feel noticeable in early clears.",
+          "That does **not** mean Sparkit should eat every Evolution Stone. July 2026 lists repeatedly pivot long-term fire investment to **Lavite / Lavarock** on the same island. Hunt Shiny Sparkit for a strong early Fire slot; do not assume it replaces Lavite as your forever fire carry.",
+        ],
+        bullets: [
+          "**Accessible farm** — wild Sparkit on Lava Crag, not a late locked island.",
+          "**Fast loops** — shorter fights mean more shiny checks per hour than boss-gated hunts.",
+          "**Real shiny benefit** — Shiny adds stats; Prismatic/Sparkle alone is cosmetic.",
+          "**Starter substitute** — often fills the early Fire role better than forcing Blazpup stones.",
+        ],
+      },
+      {
+        heading: "Sparkit vs Lavite — which shiny should you farm?",
+        paragraphs: [
+          "Both sit on Lava Crag. If you only have time for one deep shiny project, community guides usually favor **Shiny Lavite** for the Lavarock payoff. Sparkit still makes sense when you need Fire coverage **now**, want a quicker wild loop, or already planned to keep Emfox/Empixy as a secondary fire slot.",
+          "See [Shiny Lavite Guide](/blog/shiny-lavite-evomon-guide) and [Evolution Priority](/tier-list/evolution-priority) before dumping every stone into the Sparkit line.",
+        ],
+        bullets: [
+          "**Farm Sparkit shiny** — early Fire DPS, fast encounters, Blazpup alternative.",
+          "**Prioritize Lavite stones** — longer-term Fire/Rock carry on the same island.",
+          "**Avoid dual fire waste** — do not fully fund Blazpup + Sparkit + Lavite at once.",
+        ],
+        callout: {
+          title: "Stone budget",
+          body: "A Shiny Sparkit can be a keeper for the mid game. Scarce Evolution Stones should still follow your best late carry — often Lavite — unless Sparkit is genuinely your main damage slot.",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "Evolution line: Sparkit → Emfox → Empixy",
+        paragraphs: [
+          "Dex order on the Fire line is **Sparkit (#021) → Emfox (#022) → Empixy (#023)**. Map data also lists Empixy as the Lava Crag boss at the top of the island level band — treat boss Empixy and your evolved Empixy as related names, not identical farming advice.",
+          "Evolve when the line is clearing content for you. If Lavite is already online and Sparkit is only a temporary Fire patch, delay stones and keep the shiny for later or for collection.",
+        ],
+      },
+      {
+        heading: "Step-by-step Shiny Sparkit plan",
+        bullets: [
+          "Unlock Lava Crag and bring Water coverage that defeats Sparkit consistently.",
+          "Farm wild Sparkit encounters; skip burning premium balls on junk Talent copies.",
+          "Check every post-KO reveal for shiny — and read Talent before you celebrate.",
+          "Keep strong normal SSS (or high Talent) copies while hunting; shiny without Talent is not automatically better.",
+          "When a shiny appears, use your usual ball plan (King Ball for Talent goals, or Prismatic Ball only if you also want Prismatic cosmetics).",
+          "Decide stones with Empixy vs Lavite in mind — shiny alone does not set evolution priority.",
+        ],
+      },
+      {
+        heading: "Is Shiny Sparkit worth the time?",
+        paragraphs: [
+          "Yes if Lava Crag fights are already fast and you still need a Fire attacker. Sparkit is one of the earliest comfortable shiny farms that also fills a real team role.",
+          "If the hunt stalls Ascension or island progress, park a strong normal Sparkit, push Lavite/route goals, and return later. Shiny is a stat layer, not a substitute for levels and coverage.",
+        ],
+        callout: {
+          title: "Community-sourced note",
+          body: "Candyblox’s catch video confirms players do hunt Shiny Sparkit on this route. Exact session length and pity outcomes are not published as official rates — trust the in-game counters after patches.",
+          variant: "note",
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: "Where do I get Shiny Sparkit in Evomon?",
+        a: "Farm wild Sparkit on Lava Crag (third island). Community map data places Sparkit around Lv 30–43 on that zone.",
+      },
+      {
+        q: "Is Shiny Sparkit worth hunting?",
+        a: "Yes as an early Fire shiny when encounters are fast. For long-term Evolution Stones, Lavite → Lavarock is still the more common priority on the same island.",
+      },
+      {
+        q: "What does Sparkit evolve into?",
+        a: "Sparkit evolves into Emfox, then Empixy. Confirm stone and level requirements in-game before spending materials.",
+      },
+      {
+        q: "Should I shiny hunt Sparkit or Lavite first?",
+        a: "Hunt Sparkit if you need Fire coverage now. Prefer Lavite if you only want one deep shiny project aimed at a late Fire/Rock carry.",
+      },
+      {
+        q: "Is Prismatic Sparkit stronger than Shiny Sparkit?",
+        a: "No. Prismatic/Sparkle is cosmetic. Shiny adds combat stats. Shiny + Prismatic combines both.",
+      },
+    ],
+    sources: [
+      {
+        label: "Candyblox — I Caught Shiny Sparkit in EVOMON Roblox",
+        url: "https://www.youtube.com/watch?v=p7lPXM3i_6A",
+        channel: "Candyblox",
+      },
+    ],
+  },
+  {
     slug: "shiny-lavite-evomon-guide",
     title: "Shiny Lavite Evomon Guide — Lava Crag Hunt & Worth It",
     description:
