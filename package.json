@@ -13,6 +13,7 @@
     "images:prepare": "npm run images:sync && npm run images:compress",
     "deploy": "npm run build && wrangler pages deploy out --project-name=evomon --commit-dirty=true && npm run purge-cache && npm run indexnow",
     "indexnow": "tsx scripts/submit-indexnow.ts",
+    "indexnow:all": "tsx scripts/submit-indexnow.ts --all",
     "purge-cache": "node scripts/purge-cloudflare-cache.mjs",
     "pages:dev": "wrangler pages dev out"
   },
