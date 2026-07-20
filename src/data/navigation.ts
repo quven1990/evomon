@@ -66,6 +66,16 @@ export const navSections = [
       },
       { href: "/type-chart", label: "Type Chart", desc: "Element strengths and weaknesses" },
       {
+        href: "/natures",
+        label: "Natures",
+        desc: "+10% / −10% stat natures and rerolls",
+      },
+      {
+        href: "/traits",
+        label: "Traits",
+        desc: "Trait effects and which pets can roll them",
+      },
+      {
         href: "/map-zones",
         label: "Map Zones",
         desc: "Islands, level ranges, and spawns",
@@ -116,6 +126,8 @@ export const footerLinks = [
   { href: "/tier-list", label: "Tier List" },
   { href: "/codes", label: "Codes" },
   { href: "/type-chart", label: "Type Chart" },
+  { href: "/natures", label: "Natures" },
+  { href: "/traits", label: "Traits" },
   { href: "/map-zones", label: "Map Zones" },
   { href: "/team-builder", label: "Team Builder" },
   { href: "/guides/beginner", label: "Beginner Guide" },

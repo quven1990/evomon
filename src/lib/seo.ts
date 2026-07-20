@@ -158,6 +158,53 @@ export const PAGE_SEO = {
     };
   },
 
+  natures: () => {
+    const title = "Evomon Natures — Stat Boosts (+10% / −10%) & Rerolls";
+    const description =
+      "Full Evomon nature list: each nature raises one stat +10% and lowers another −10%. HP tanks, Attack carries, Sp. Atk casters, and Nature Reroll Potion tips.";
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/natures",
+        ogTitle: title,
+        keywords: [
+          "evomon natures",
+          "evomon nature",
+          "best nature evomon",
+          "evomon nature reroll",
+          "evomon adamant",
+          "evomon modest",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
+
+  traits: () => {
+    const title = "Evomon Traits — List, Effects & Which Pets Have Them";
+    const description =
+      "Every Evomon trait with community effect notes and rarity. See which pets can roll Blind, Regen, Flamefiend, Adapt, and more — separate from Nature and Talent.";
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/traits",
+        ogTitle: title,
+        keywords: [
+          "evomon traits",
+          "evomon trait",
+          "best trait evomon",
+          "evomon trait list",
+          "evomon trait reroll",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
+
   typeChart: () => {
     // Absolute title: keep ≤60 chars. Avoid "Clickable" — GSC showed it hurt CTR vs weakness intent.
     const title = "Evomon Type Chart — Weaknesses & What Beats Each Type";

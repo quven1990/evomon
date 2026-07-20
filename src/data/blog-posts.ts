@@ -565,6 +565,7 @@ export const blogPosts: BlogPost[] = [
       "evomon lavite build",
     ],
     relatedGuides: [
+      "/natures",
       "/dex/lavite",
       "/tier-list/early-carries",
       "/tier-list/evolution-priority",

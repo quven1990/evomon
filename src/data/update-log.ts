@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-19";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-20";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-20",
+        title: "Natures, Traits, and thicker Map Zones",
+        body: "Added /natures (full ±10% table + reroll tips) and /traits (effects, rarity, pet pools). Map Zones now include per-island hunt tips and related guide links so catch planning stays on-site.",
+        tags: ["Data", "SEO", "Map"],
+        pages: ["/natures", "/traits", "/map-zones"],
+      },
       {
         date: "2026-07-19",
         title: "Blog — Shiny Sparkit Lava Crag guide",

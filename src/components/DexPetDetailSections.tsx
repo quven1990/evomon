@@ -122,15 +122,22 @@ export function DexPetDetailSections({
             <section>
               <h2 className="text-xl font-bold text-white">Possible traits</h2>
               <p className="mt-2 text-sm text-zinc-500">
-                Trait pool this species can roll. Exact rates are not published — treat as a checklist.
+                Trait pool this species can roll. Exact rates are not published — treat as a
+                checklist. Full glossary:{" "}
+                <Link href="/traits" className="text-emerald-300 hover:underline">
+                  Evomon traits
+                </Link>
+                .
               </p>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {combat.traits.map((trait) => (
-                  <li
-                    key={trait}
-                    className="rounded-lg border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs font-medium text-zinc-200"
-                  >
-                    {trait}
+                  <li key={trait}>
+                    <Link
+                      href={`/traits#${trait.toLowerCase()}`}
+                      className="inline-block rounded-lg border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs font-medium text-zinc-200 hover:border-emerald-500/40 hover:text-emerald-200"
+                    >
+                      {trait}
+                    </Link>
                   </li>
                 ))}
               </ul>

@@ -48,6 +48,20 @@ const featureCards = [
     tag: "Interactive",
   },
   {
+    href: "/natures",
+    icon: Swords,
+    title: "Natures",
+    desc: "Full +10% / −10% nature table and reroll tips by role.",
+    tag: "Stats",
+  },
+  {
+    href: "/traits",
+    icon: Sparkles,
+    title: "Traits",
+    desc: "Trait effects, rarity, and which pets can roll them.",
+    tag: "Passives",
+  },
+  {
     href: "/map-zones",
     icon: Map,
     title: "Map Zones",
