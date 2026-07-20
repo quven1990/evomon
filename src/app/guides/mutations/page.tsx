@@ -41,7 +41,7 @@ export default function MutationsGuidePage() {
                 name: "What is the difference between Shiny and Prismatic in Evomon?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Shiny gives a alternate color palette and a small stat boost. Prismatic (Sparkle in UI) is cosmetic only — random glow color and pattern on a body part. Prismatic pity is 150 captures; shiny pity is about 600 per species.",
+                  text: "Shiny boosts stats (~600 pity). Prismatic (Sparkle in the UI) is cosmetic only (~150 capture pity). Full Sparkle vs Shiny comparison: https://evomon.cc/guides/mutations/shiny-vs-sparkle",
                 },
               },
               {
@@ -49,7 +49,7 @@ export default function MutationsGuidePage() {
                 name: "How do shiny eggs work in Evomon?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Catch Evomon after defeating them to roll eggs. Shiny eggs hatch a guaranteed shiny; using a Prismatic Ball on hatch can add prismatic appearance. Boss species often require shiny eggs because they lack normal shiny pity.",
+                  text: "Eggs only roll after you catch a defeated target. Shiny eggs hatch a guaranteed shiny; bosses often need this path because they lack field shiny pity. Full shiny egg guide: https://evomon.cc/guides/mutations/shiny-egg",
                 },
               },
               {
@@ -87,15 +87,14 @@ export default function MutationsGuidePage() {
 
       <main className="mx-auto max-w-4xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         <PageBack href="/" />
-        <h1 className={pageTitleClass()}>Shiny & Prismatic Guide</h1>
+        <h1 className={pageTitleClass()}>How to Get Shiny Evomon</h1>
         <p className={pageLeadClass()}>
-          How shiny stats, prismatic cosmetics, pity counters, shiny eggs, and boss hunting work in
-          Evomon — compiled from community guides ({MUTATIONS_UPDATED}). Build your team first; see
-          the{" "}
+          Shiny hunt hub: pity rules, the 149 prismatic combo, and farm routes — from community guides
+          ({MUTATIONS_UPDATED}). Pick what to hunt on the{" "}
           <Link href="/tier-list" className="text-emerald-300 hover:underline">
             tier list
-          </Link>{" "}
-          for what to hunt.
+          </Link>
+          ; use the child guides below for Sparkle vs Shiny or shiny eggs.
         </p>
 
         <div className="mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 sm:p-6">
@@ -103,18 +102,25 @@ export default function MutationsGuidePage() {
             Quick answer
           </p>
           <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">
-            <strong className="text-white">Shiny</strong> = stat boost (~600 pity).{" "}
+            <strong className="text-white">Shiny</strong> = stat boost (~600 pity per species).{" "}
             <strong className="text-white">Prismatic / Sparkle</strong> = looks only (~150 capture
-            pity). Always <strong className="text-white">catch</strong> targets you farm — eggs and
-            prismatic pity need captures. Boss shinies often come from{" "}
-            <strong className="text-white">shiny eggs</strong>, not field pity. Look up any species in
-            the{" "}
+            pity). Always <strong className="text-white">catch</strong> what you farm — pity and eggs
+            need captures. Species lookup:{" "}
             <Link href="/dex" className="font-medium text-emerald-300 hover:underline">
               Evomon dex
+            </Link>
+            . Boss lines without field pity usually need the{" "}
+            <Link
+              href="/guides/mutations/shiny-egg"
+              className="font-medium text-emerald-300 hover:underline"
+            >
+              shiny egg path
             </Link>
             .
           </p>
         </div>
+
+        <GuideClusterRoutes cluster={mutationsCluster} />
 
         <div className="mt-5 rounded-2xl border border-cyan-500/25 bg-cyan-500/10 p-5 sm:p-6">
           <p className="text-xs font-semibold uppercase tracking-wide text-cyan-200">
@@ -123,15 +129,17 @@ export default function MutationsGuidePage() {
           <h2 className="mt-2 text-lg font-bold text-white">How to get eggs in Evomon</h2>
           <p className="mt-2 text-sm leading-7 text-zinc-300">
             Eggs only roll after you <strong className="text-white">catch</strong> a defeated target.
-            For normal eggs, shiny eggs, Prismatic Ball hatching, and boss routes, use the dedicated{" "}
+            For the full catch loop, use the{" "}
             <Link href="/blog/how-to-get-eggs-evomon" className="text-cyan-200 hover:underline">
               Evomon egg guide
+            </Link>
+            . For shiny eggs, Prismatic Ball, and boss routes, open the{" "}
+            <Link href="/guides/mutations/shiny-egg" className="text-cyan-200 hover:underline">
+              shiny egg guide
             </Link>
             .
           </p>
         </div>
-
-        <GuideClusterRoutes cluster={mutationsCluster} />
 
         <p className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs leading-6 text-zinc-500">
           Community-sourced mechanics — odds UI can patch. Not official.{" "}
@@ -149,7 +157,15 @@ export default function MutationsGuidePage() {
           <h2 className="text-xl font-bold text-white sm:text-2xl">Shiny vs Prismatic vs both</h2>
           <p className="mt-2 text-sm leading-6 text-zinc-400">
             In battle, KO the wild Evomon first — the shiny check happens in the smoke reveal. Check
-            the bottom-left HUD for icons and pity counters.
+            the bottom-left HUD for icons and pity counters. For Sparkle vs Shiny stats and Talent /
+            Nature differences, see{" "}
+            <Link
+              href="/guides/mutations/shiny-vs-sparkle"
+              className="text-emerald-300 hover:underline"
+            >
+              Shiny vs Sparkle
+            </Link>
+            .
           </p>
 
           <div className="mt-5 space-y-4">
@@ -257,17 +273,22 @@ export default function MutationsGuidePage() {
           </div>
         </section>
 
-        {/* Eggs */}
+        {/* Eggs — hub keeps a short cheat sheet; full guide is the child page */}
         <section id="eggs" className="scroll-mt-24 mt-14 sm:scroll-mt-8">
-          <h2 className="text-xl font-bold text-white sm:text-2xl">Shiny eggs & boss hunting</h2>
-          <p className="mt-2 text-sm leading-6 text-zinc-400">{eggHunting.intro}</p>
-          <p className="mt-3 text-sm leading-6 text-zinc-400">
-            Need the full catch loop first? Start with{" "}
+          <h2 className="text-xl font-bold text-white sm:text-2xl">Shiny eggs (quick reference)</h2>
+          <p className="mt-2 text-sm leading-6 text-zinc-400">
+            Short cheat sheet only. For Prismatic Ball, Catch Master, boss egg odds, and step-by-step
+            routes, use the{" "}
+            <Link href="/guides/mutations/shiny-egg" className="text-emerald-300 hover:underline">
+              shiny egg guide
+            </Link>
+            . Catch loop basics:{" "}
             <Link href="/blog/how-to-get-eggs-evomon" className="text-emerald-300 hover:underline">
               how to get eggs in Evomon
             </Link>
-            , then come back here for shiny odds, pity, and boss-specific notes.
+            .
           </p>
+          <p className="mt-3 text-sm leading-6 text-zinc-500">{eggHunting.intro}</p>
 
           <div className="mt-5 grid gap-3 sm:grid-cols-1">
             {eggHunting.rows.map((row) => (
@@ -312,19 +333,13 @@ export default function MutationsGuidePage() {
             ))}
           </div>
 
-          <div className="mt-6 rounded-2xl border border-amber-500/25 bg-amber-500/10 p-5">
-            <h3 className="font-semibold text-amber-100">Catch Master suit</h3>
-            <p className="mt-2 text-sm leading-7 text-zinc-300">
-              Community shiny-egg farmers use the <strong className="text-white">Catch Master</strong>{" "}
-              adventure suit for +10% capture success and an extra capture attempt — critical on
-              bosses where you must land the catch to roll eggs. Unlocks via equipment progression
-              (see{" "}
-              <Link href="/guides/level-30" className="text-emerald-300 hover:underline">
-                equipment dungeons (Lv40+)
-              </Link>{" "}
-              for dungeons at 40).
-            </p>
-          </div>
+          <p className="mt-6 rounded-xl border border-amber-500/25 bg-amber-500/10 px-4 py-3 text-sm leading-7 text-zinc-300">
+            Catch Master, Prismatic Ball hatching, and boss-only egg routes are covered in the{" "}
+            <Link href="/guides/mutations/shiny-egg" className="text-emerald-300 hover:underline">
+              shiny egg guide
+            </Link>
+            .
+          </p>
         </section>
 
         {/* Routes */}

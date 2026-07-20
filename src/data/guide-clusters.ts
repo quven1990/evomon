@@ -19,8 +19,8 @@ export const mutationsCluster: GuideCluster = {
   id: "mutations",
   hubHref: "/guides/mutations",
   hubLabel: "Mutations overview",
-  heading: "Focused mutation guides",
-  lead: "This page is the full reference. Open a focused guide when you have one specific question.",
+  heading: "Deep-dive guides",
+  lead: "Overview, pity, and the 149 trick stay on this page. Open a child guide when you only need Sparkle vs Shiny or shiny eggs.",
   schemaName: "Evomon Mutations Guide Pages",
   routes: [
     {

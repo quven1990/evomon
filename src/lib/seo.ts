@@ -256,8 +256,9 @@ export const PAGE_SEO = {
     }),
 
   mutationsGuide: () => {
-    const title = `How to Get Shiny Evomon (${monthLabel}) — 149 Pity Trick`;
-    const description = `Prismatic looks cool but only shiny boosts stats — don't mix them up. Catch-only pity, shiny egg boss path, and the 149 combo for prismatic shinies. ${monthLabel}.`;
+    // Hub owns shiny hunt overview + pity + 149. Egg/sparkle detail → child pages.
+    const title = `How to Get Shiny Evomon (${monthLabel}) — Pity & 149 Trick`;
+    const description = `Shiny hunt hub for Roblox Evomon: ~600 pity per species, catch-only counters, the 149 prismatic combo, and best farm routes. ${monthLabel}. Sparkle vs shiny and shiny eggs have dedicated guides.`;
 
     return {
       ...buildPageMetadata({
@@ -267,11 +268,11 @@ export const PAGE_SEO = {
         ogTitle: title,
         keywords: [
           "evomon shiny",
-          "evomon prismatic",
-          "evomon sparkle",
-          "evomon shiny egg",
-          "evomon shiny hunt",
+          "how to get shiny evomon",
           "evomon pity",
+          "evomon shiny hunt",
+          "evomon 149 trick",
+          "evomon prismatic",
         ],
       }),
       title: { absolute: title },
