@@ -16,7 +16,7 @@ export type PetCombatData = {
 };
 
 export const PET_COMBAT_SOURCE = "community-wiki";
-export const PET_COMBAT_LAST_CHECKED = "2026-07-18";
+export const PET_COMBAT_LAST_CHECKED = "2026-07-21";
 
 export const petCombatBySlug: Record<string, PetCombatData> = {
   "arcapex": {
@@ -121,7 +121,8 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "empixy": {
     stats: { hp: 78, attack: 81, defense: 68, spAtk: 100, spDef: 68, speed: 109 },
-    traits: ["Purify", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Sear", "Gale", "Toxin", "Inferno", "Frenzy", "Venomward", "Frost", "StoneHeart", "Arcane", "Psywall"], location: "Via Evo"
+    traits: ["Purify", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Sear", "Gale", "Toxin", "Inferno", "Frenzy", "Venomward", "Frost", "StoneHeart", "Arcane", "Psywall"],
+    location: "Via Evo from Emfox; Lava Crag boss (~Lv 45)",
   },
   "florawn": {
     stats: { hp: 60, attack: 62, defense: 53, spAtk: 50, spDef: 73, speed: 64 },
@@ -145,11 +146,13 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "frostlet": {
     stats: { hp: 60, attack: 57, defense: 53, spAtk: 66, spDef: 62, speed: 70 },
-    traits: ["Chillwind", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Gale", "Sear", "Psywall"], location: "Starter pack or Crystal Cascade"
+    traits: ["Chillwind", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Gale", "Sear", "Psywall"],
+    location: "Starter pack or Crystal Cascade (~Lv 111–113)",
   },
   "frostseer": {
     stats: { hp: 83, attack: 83, defense: 75, spAtk: 102, spDef: 87, speed: 98 },
-    traits: ["Chillwind", "Gale", "Sear", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Psywall", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Adapt"], location: "Via evo"
+    traits: ["Chillwind", "Gale", "Sear", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Psywall", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Adapt"],
+    location: "Via evo from Frostlet; Crystal Cascade boss (~Lv 125)",
   },
   "gempillar": {
     stats: { hp: 52, attack: 70, defense: 48, spAtk: 74, spDef: 48, speed: 70 },

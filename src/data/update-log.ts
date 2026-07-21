@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-21",
+        title: "Dex index — Frostlet, Frostseer, Empixy (+ Emfox)",
+        body: "Compared community wiki pet pages, then opened /dex/frostlet, /dex/frostseer, and /dex/empixy for search with thicker location and stone-priority copy. Emfox also indexed to complete the Sparkit line. Stats/traits already matched; we added Crystal Cascade / Lava Crag boss context and unique SERP blurbs.",
+        tags: ["Dex", "SEO"],
+        pages: ["/dex/frostlet", "/dex/frostseer", "/dex/empixy", "/dex/emfox", "/dex"],
+      },
+      {
+        date: "2026-07-21",
         title: "Codes — promote FORGROUP (Roblox group gift)",
         body: "Moved FORGROUP from the watchlist into active community codes (5 Medium EXP Fruits) with a note that it is the official Evomon Roblox group gift code. Checked date bumped to July 21.",
         tags: ["Codes"],

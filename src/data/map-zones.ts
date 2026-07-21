@@ -199,6 +199,8 @@ export const mapZones: MapZone[] = [
     levelRange: "105–125",
     huntTip: "Late water/ice mix — Gulpfish and Frostlet toward Frostseer.",
     related: [
+      { href: "/dex/frostlet", label: "Frostlet" },
+      { href: "/dex/frostseer", label: "Frostseer" },
       { href: "/type-chart", label: "Type chart" },
       { href: "/team-builder", label: "Team builder" },
     ],

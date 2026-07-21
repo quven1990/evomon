@@ -106,14 +106,68 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     metaTitle: "Sparkit Evomon — Location, Evolution & Fire Role",
     metaDescription:
       "Sparkit (#021) — early Fire catch and Blazpup alternative. Location notes, evolution line, matchups, and shiny hunt context on evomon.cc.",
-    location: "Early routes / Lava Crag area",
+    location: "Lava Crag (wild ~Lv 30–43)",
     weather: "Any",
     role: "Early fire DPS",
     blurb: "Common reason to skip the fire starter. Strong through mid game; stones often go to Lavite instead.",
     evolutionNote:
-      "Sparkit evolution searches usually mean whether to invest stones here or save for Lavite. Keep Sparkit as a fast early Fire option unless your Lava Crag route already has a stronger Fire/Rock carry.",
+      "Sparkit → Emfox → Empixy. Keep Sparkit as a fast early Fire option unless Lava Crag already has a stronger Fire/Rock carry (Lavite). See Empixy for the final-form / boss-name notes.",
     shinyHuntNote:
-      "Sparkit is a practical shiny target because encounters are fast on early routes. Shiny speed bumps can matter, but prioritize a useful Talent roll before long pity sessions.",
+      "Sparkit is a practical shiny target because encounters are fast on Lava Crag. Shiny speed bumps can matter, but prioritize a useful Talent roll before long pity sessions.",
+  },
+  emfox: {
+    metaTitle: "Emfox Evomon — Sparkit Mid Evolution Fire DPS",
+    metaDescription:
+      "Emfox (#022) is Sparkit’s mid Fire evolution toward Empixy. When to spend stones vs Lavite, Lava Crag context, and matchups on evomon.cc.",
+    location: "Evolve from Sparkit (Lava Crag line)",
+    weather: "Any",
+    role: "Mid fire striker",
+    blurb:
+      "Middle step of the Sparkit line. Evolve when you need more Fire damage now and Lavite is not yet online — or park stones if Lavarock is already your main fire slot.",
+    evolutionNote:
+      "Sparkit → Emfox → Empixy. Emfox is a bridge form; judge the line by Empixy’s role and by whether Lavite still owns your Evolution Stone budget.",
+  },
+  empixy: {
+    metaTitle: "Empixy Evomon — Sparkit Final Form & Lava Crag Boss",
+    metaDescription:
+      "Empixy (#023) is Sparkit’s Fire final evolution — Sp. Atk/Speed DPS. Evolution from Emfox, Lava Crag boss name overlap, and when Lavite still wins stones.",
+    location: "Evolve from Emfox; also Lava Crag boss (~Lv 45)",
+    weather: "Any",
+    role: "Fire special DPS / zone boss name",
+    blurb:
+      "Empixy finishes Sparkit → Emfox with a glassier Sp. Atk / Speed profile (community base: Sp. Atk 100, Speed 109). It fills early-to-mid Fire damage when you skipped Blazpup, but July 2026 stone guides still usually prefer Lavite → Lavarock for the long-term fire wall. Map data also lists Empixy as the Lava Crag island boss — treat wild/evolved Empixy and the boss encounter as related names, not identical farming loops.",
+    evolutionNote:
+      "Evolve Sparkit → Emfox → Empixy when this line is a real party slot. Prefer a keeper with usable Talent before the stone. If Lavite is already your main fire investment, Empixy can stay a secondary or collection evolve.",
+    shinyHuntNote:
+      "Most shiny volume is on wild Sparkit (Lava Crag), then evolve the keeper. Boss Empixy cycles are a different loop — do not assume boss shiny pity matches the wild Sparkit farm.",
+  },
+  frostlet: {
+    metaTitle: "Frostlet Evomon — Crystal Cascade Ice Catch",
+    metaDescription:
+      "Frostlet (#060) — Ice catch from starter pack or Crystal Cascade (~Lv 111–113). Evolves to Frostseer for high-HP boss Ice damage.",
+    location: "Starter pack or Crystal Cascade (wild ~Lv 111–113)",
+    weather: "Any",
+    role: "Ice line base / frostbite setup",
+    blurb:
+      "Frostlet opens the Frostseer Ice line used for high-HP boss answers in community mid/late guides. Catch it from the starter pack when available, or farm Crystal Cascade wilds once that island is unlocked — our map notes place Frostlet around Lv 111–113 there. Invest only when you need Ice coverage; early islands do not require it.",
+    evolutionNote:
+      "Frostlet → Frostseer (2-stage). Evolve when Ice is a real team slot for bosses — see Frostseer for the payoff and stone timing.",
+    shinyHuntNote:
+      "Shiny Frostlet is a late-route hunt on Crystal Cascade or via eggs. Finish a usable normal Frostlet for progression before long shiny sessions on a high-level island.",
+  },
+  frostseer: {
+    metaTitle: "Frostseer Evomon — Ice Final Form Boss DPS",
+    metaDescription:
+      "Frostseer (#061) is Frostlet’s Ice final evolution — Sp. Atk Ice for high-HP bosses. Evolution, Crystal Cascade catch/boss path, and stone priority.",
+    location: "Evolve from Frostlet; also Crystal Cascade boss (~Lv 125)",
+    weather: "Any",
+    role: "Ice Sp. Atk / high-HP boss answer",
+    blurb:
+      "Frostseer is why Frostlet stays on endgame must-have lists: Ice special pressure (community base Sp. Atk 102, Speed 98) into Grass / Ground / Flying / Dragon matchups, aimed at bulky bosses once Lavarock and Bluebird handle dailies. Signature trait pool opens with Chillwind. Catch Frostlet first (starter pack or Crystal Cascade wilds ~Lv 111–113), then evolve — map data also lists Frostseer as the Crystal Cascade boss (~Lv 125), separate from evolving your own copy.",
+    evolutionNote:
+      "Frostlet → Frostseer. Evolve after Cascade-era content is reachable and Ice solves a boss you actually run. Do not dump early stones here while Verdant → Lava Crag still needs Lavite / Bluebird.",
+    shinyHuntNote:
+      "Hunt shiny on Frostlet wilds, then evolve. Boss Frostseer cycles are a different loop. Prismatic cosmetics are separate from the Sp. Atk payoff — prioritize Talent and levels for boss clears.",
   },
   bluebird: {
     typesDisplay: "Flying / Electric",
