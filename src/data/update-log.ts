@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-21",
+        title: "Codes — promote FORGROUP (Roblox group gift)",
+        body: "Moved FORGROUP from the watchlist into active community codes (5 Medium EXP Fruits) with a note that it is the official Evomon Roblox group gift code. Checked date bumped to July 21.",
+        tags: ["Codes"],
+        pages: ["/codes"],
+      },
+      {
+        date: "2026-07-21",
         title: "Blog — Evomon TikTok Video Challenge (Jul 20–Aug 19)",
         body: "Added a short community-reported summary of the TikTok Video Challenge window, #evomon rules, 10k/300k view reward tracks, and the Evomon Devs 14-day payout gate.",
         tags: ["Blog", "Event"],
