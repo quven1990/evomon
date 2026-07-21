@@ -89,11 +89,13 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "clampip": {
     stats: { hp: 43, attack: 45, defense: 51, spAtk: 41, spDef: 39, speed: 37 },
-    traits: ["Raincall", "Adapt", "SkyFire", "Dread", "Thorns", "Foresight", "Awe", "VitalGaurd", "Abyss", "Toughskin", "Arcane", "Frost", "Venomward", "StoneHeart", "Inferno", "Frenzy", "Toxin", "Gale", "Sear", "Coldward", "Renew", "Psywall"], location: "Petal Pond"
+    traits: ["Raincall", "Adapt", "SkyFire", "Dread", "Thorns", "Foresight", "Awe", "VitalGaurd", "Abyss", "Toughskin", "Arcane", "Frost", "Venomward", "StoneHeart", "Inferno", "Frenzy", "Toxin", "Gale", "Sear", "Coldward", "Renew", "Psywall"],
+    location: "Petal Pond wild (~Lv 22–30)",
   },
   "clamspire": {
     stats: { hp: 85, attack: 105, defense: 100, spAtk: 65, spDef: 75, speed: 74 },
-    traits: ["Raincall", "SkyFire", "Gale", "Toxin", "Inferno", "Frenzy", "StoneHeart", "Venomward", "Frost", "Arcane", "Psywall", "Sear", "Coldward", "Toughskin", "Renew", "Adapt", "VitalGaurd", "Abyss", "Foresight", "Awe", "Thorns", "Dread"], location: "From Evo"
+    traits: ["Raincall", "SkyFire", "Gale", "Toxin", "Inferno", "Frenzy", "StoneHeart", "Venomward", "Frost", "Arcane", "Psywall", "Sear", "Coldward", "Toughskin", "Renew", "Adapt", "VitalGaurd", "Abyss", "Foresight", "Awe", "Thorns", "Dread"],
+    location: "Via Evo from Clamwhirl; Petal Pond boss (~Lv 30)",
   },
   "clamwhirl": {
     stats: { hp: 60, attack: 70, defense: 71, spAtk: 51, spDef: 54, speed: 52 },
@@ -212,7 +214,8 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "mopebun": {
     stats: { hp: 60, attack: 58, defense: 58, spAtk: 64, spDef: 58, speed: 63 },
-    traits: ["Adapt", "SkyFire", "Dread", "Thorns", "Foresight", "VitalGaurd", "Awe", "Toughskin", "Abyss", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Toxin", "Inferno", "Sear", "Gale", "Renew", "Coldward", "Psywall", "SoulShock"], location: "Petal Pond"
+    traits: ["Adapt", "SkyFire", "Dread", "Thorns", "Foresight", "VitalGaurd", "Awe", "Toughskin", "Abyss", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Toxin", "Inferno", "Sear", "Gale", "Renew", "Coldward", "Psywall", "SoulShock"],
+    location: "Petal Pond wild (~Lv 15–29)",
   },
   "mopillow": {
     stats: { hp: 85, attack: 85, defense: 79, spAtk: 90, spDef: 79, speed: 82 },
@@ -236,7 +239,8 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "pebroll": {
     stats: { hp: 51, attack: 55, defense: 84, spAtk: 52, spDef: 79, speed: 39 },
-    traits: ["UltGuard", "SkyFire", "Dread", "Thorns", "Awe", "VitalGaurd", "Foresight", "Abyss", "Toughskin", "Renew", "Psywall", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Gale", "Sear", "Coldward", "Adapt"], location: "Via Evo"
+    traits: ["UltGuard", "SkyFire", "Dread", "Thorns", "Awe", "VitalGaurd", "Foresight", "Abyss", "Toughskin", "Renew", "Psywall", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Gale", "Sear", "Coldward", "Adapt"],
+    location: "Verdant Valley mini-boss (~Lv 13–15); via evo from Pebble",
   },
   "pummash": {
     stats: { hp: 82, attack: 117, defense: 90, spAtk: 68, spDef: 69, speed: 88 },
@@ -284,7 +288,8 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "tarro": {
     stats: { hp: 62, attack: 64, defense: 53, spAtk: 52, spDef: 53, speed: 71 },
-    traits: ["Primeform", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "Awe", "Foresight", "VitalGaurd", "Thorns", "Dread", "SkyFire", "Sear", "Gale", "Toxin", "Inferno", "Frenzy", "StoneHeart", "Venomward", "Psywall", "Arcane", "Frost"], location: "Murkwood"
+    traits: ["Primeform", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "Awe", "Foresight", "VitalGaurd", "Thorns", "Dread", "SkyFire", "Sear", "Gale", "Toxin", "Inferno", "Frenzy", "StoneHeart", "Venomward", "Psywall", "Arcane", "Frost"],
+    location: "Murkwood wild (~Lv 142–150)",
   },
   "thordlord": {
     stats: { hp: 84, attack: 90, defense: 87, spAtk: 86, spDef: 86, speed: 81 },

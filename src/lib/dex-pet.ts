@@ -107,100 +107,87 @@ export function getElementMatchups(element: ElementType) {
   };
 }
 
-export type PetFaq = { q: string; a: string };
+export type { PetFaq } from "@/data/pet-details";
+import type { PetFaq } from "@/data/pet-details";
 
 export function buildPetFaqs(entry: DexEntry & { name: string }): PetFaq[] {
   const extra = getPetExtra(entry.name.toLowerCase());
+
+  // Curated pages: author FAQs only — no shared “What element / What traits” template.
+  if (extra?.faqs?.length) {
+    return extra.faqs;
+  }
+
   const line = getEvolutionLine(entry);
   const idx = line.findIndex((e) => e.name === entry.name);
   const prev = idx > 0 ? line[idx - 1] : null;
   const next = idx >= 0 && idx < line.length - 1 ? line[idx + 1] : null;
-
-  const faqs: PetFaq[] = [
-    {
-      q: `What element is ${entry.name} in Evomon?`,
-      a: `${entry.name} is a ${entry.element} element creature in Roblox Evomon (dex #${entry.number}).`,
-    },
-  ];
-
   const combat = getPetCombat(entry.name);
   const location = extra?.location ?? combat?.location;
+  const faqs: PetFaq[] = [];
+
   if (location) {
     faqs.push({
       q: `Where do you get ${entry.name} in Evomon?`,
-      a: `${entry.name} is found at ${location}.${extra?.weather ? ` Weather: ${extra.weather}.` : ""}`,
+      a: `${entry.name} is listed at ${location}. Confirm the current spawn UI in your client — island unlocks and level bands can shift with patches.`,
+    });
+  }
+
+  if (next) {
+    faqs.push({
+      q: `What does ${entry.name} evolve into?`,
+      a: extra?.evolutionNote
+        ? extra.evolutionNote
+        : `${entry.name} evolves into ${next.name} (dex #${next.number}). Check stone and level requirements in-game before spending materials.`,
+    });
+  } else if (prev) {
+    faqs.push({
+      q: `How do you get ${entry.name} from evolution?`,
+      a: extra?.evolutionNote
+        ? extra.evolutionNote
+        : `${entry.name} evolves from ${prev.name} (dex #${prev.number}). Prefer a keeper with usable Talent before the stone.`,
+    });
+  }
+
+  if (extra?.blurb) {
+    faqs.push({
+      q: `Is ${entry.name} worth using in Evomon?`,
+      a: extra.blurb,
+    });
+  } else if (entry.tier) {
+    faqs.push({
+      q: `Where does ${entry.name} sit in community tiers?`,
+      a: `Community tier signal: ${entry.tier}. Cross-check the tier list and your actual island blockers before investing Evolution Stones.`,
+    });
+  }
+
+  if (extra?.shinyHuntNote) {
+    faqs.push({
+      q: `Any shiny tips for ${entry.name}?`,
+      a: extra.shinyHuntNote,
     });
   }
 
   if (combat?.stats) {
     const s = combat.stats;
     faqs.push({
-      q: `What are ${entry.name}'s base stats?`,
-      a: `${entry.name}'s base stats are HP ${s.hp}, Attack ${s.attack}, Defense ${s.defense}, Sp. Atk ${s.spAtk}, Sp. Def ${s.spDef}, Speed ${s.speed}.`,
+      q: `What is ${entry.name}'s base stat spread?`,
+      a: `Community base stats (before Talent/Nature): HP ${s.hp}, Atk ${s.attack}, Def ${s.defense}, SpA ${s.spAtk}, SpD ${s.spDef}, Spe ${s.speed}.`,
     });
   }
 
-  if (combat?.traits?.length) {
-    faqs.push({
-      q: `What traits can ${entry.name} have?`,
-      a: `${entry.name} can roll these traits: ${combat.traits.join(", ")}.`,
-    });
-  }
-
-  if (next) {
-    faqs.push({
-      q: `Does ${entry.name} evolve in Evomon?`,
-      a: `${entry.name} evolves into ${next.name} (dex #${next.number}). Confirm stone and level gates in-game before spending materials.`,
-    });
-  } else if (prev) {
-    faqs.push({
-      q: `What does ${entry.name} evolve from?`,
-      a: `${entry.name} evolves from ${prev.name} (dex #${prev.number}).`,
-    });
-  } else if (line.length === 1) {
-    faqs.push({
-      q: `Does ${entry.name} evolve in Evomon?`,
-      a: `No confirmed evolution line is linked to ${entry.name} yet. Check back after community datamines or in-game confirmation.`,
-    });
-  }
-
-  if (extra?.role || extra?.blurb) {
-    faqs.push({
-      q: `Is ${entry.name} good in Evomon?`,
-      a: extra.blurb ?? `${entry.name} fills a ${extra.role} role. See the tier list for current meta rankings.`,
-    });
-  } else if (entry.tier) {
-    faqs.push({
-      q: `Is ${entry.name} good in Evomon?`,
-      a: `Community tier signal: ${entry.tier}. Compare on the tier list and test in your team builder before investing stones.`,
-    });
-  }
-
-  if (extra?.evolutionNote) {
-    faqs.push({
-      q: `What should I know about ${entry.name}'s evolution in Evomon?`,
-      a: extra.evolutionNote,
-    });
-  }
-
-  if (extra?.shinyHuntNote) {
-    faqs.push({
-      q: `How do you shiny hunt ${entry.name} in Evomon?`,
-      a: extra.shinyHuntNote,
-    });
-  }
-
-  const { weakTo, strongAgainst } = getElementMatchups(entry.element);
+  const { weakTo } = getElementMatchups(entry.element);
   if (weakTo.length > 0) {
     faqs.push({
-      q: `What types beat ${entry.name} in Evomon?`,
-      a: `${entry.name} is weak to ${weakTo.join(", ")} attacks in the public type chart. Dual-type pets may differ in real fights.`,
+      q: `What should I bring against ${entry.name}?`,
+      a: `On the public type chart, ${entry.element} takes super-effective damage from ${weakTo.join(", ")}. Dual-type pets and move pools can change real duel results.`,
     });
   }
-  if (strongAgainst.length > 0) {
+
+  if (faqs.length === 0) {
     faqs.push({
-      q: `What is ${entry.name} strong against?`,
-      a: `${entry.name}'s ${entry.element} attacks are super-effective vs ${strongAgainst.join(", ")} on the current chart.`,
+      q: `What is ${entry.name} in Evomon?`,
+      a: `${entry.name} is dex #${entry.number} (${entry.element}). Open the type chart and team builder once you have a catch plan — full route notes are still being filled in.`,
     });
   }
 

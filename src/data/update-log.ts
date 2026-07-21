@@ -21,6 +21,20 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-21",
+        title: "Dex index — Mopebun, Clampip, Clamspire, Pebroll, Tarro",
+        body: "Opened five route pets for search with pet-specific blurbs and custom FAQs (no shared “What element / What traits” template). Locations leveled on map-zones; Tarro/Terragon marked S-tier. FAQ builder now prefers author faqs[] when present.",
+        tags: ["Dex", "SEO"],
+        pages: [
+          "/dex/mopebun",
+          "/dex/clampip",
+          "/dex/clamspire",
+          "/dex/pebroll",
+          "/dex/tarro",
+          "/dex",
+        ],
+      },
+      {
+        date: "2026-07-21",
         title: "Dex index — Frostlet, Frostseer, Empixy (+ Emfox)",
         body: "Compared community wiki pet pages, then opened /dex/frostlet, /dex/frostseer, and /dex/empixy for search with thicker location and stone-priority copy. Emfox also indexed to complete the Sparkit line. Stats/traits already matched; we added Crystal Cascade / Lava Crag boss context and unique SERP blurbs.",
         tags: ["Dex", "SEO"],

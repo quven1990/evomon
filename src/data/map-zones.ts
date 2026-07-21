@@ -51,6 +51,8 @@ export const mapZones: MapZone[] = [
     huntTip:
       "Early rock tank line — grab Pebble for bulk, then clear Pebroll / Pebgolem when ready. Pair with beginner route and early-carries picks.",
     related: [
+      { href: "/dex/pebroll", label: "Pebroll dex" },
+      { href: "/dex/pebgolem", label: "Pebgolem dex" },
       { href: "/blog/pebble-evomon-guide", label: "Pebble guide" },
       { href: "/tier-list/early-carries", label: "Early carries" },
       { href: "/guides/beginner", label: "Beginner route" },
@@ -69,7 +71,9 @@ export const mapZones: MapZone[] = [
     levelRange: "15–30",
     huntTip: "Water island — farm Mopebun / Clampip for coverage before Lava Crag Fire lines.",
     related: [
-      { href: "/type-chart", label: "Type chart" },
+      { href: "/dex/mopebun", label: "Mopebun dex" },
+      { href: "/dex/clampip", label: "Clampip dex" },
+      { href: "/dex/clamspire", label: "Clamspire dex" },
       { href: "/guides/beginner", label: "Beginner guide" },
     ],
     spawns: [
@@ -243,8 +247,9 @@ export const mapZones: MapZone[] = [
     zone: 13,
     levelRange: "135–150",
     note: "Datunymph also appears here as a mini-boss.",
-    huntTip: "Poison/dragon late island — Vipip / Tarro toward Viparch.",
+    huntTip: "Poison/dragon late island — Vipip / Tarro toward Viparch / Terragon.",
     related: [
+      { href: "/dex/tarro", label: "Tarro dex" },
       { href: "/type-chart", label: "Type chart" },
       { href: "/guides/mutations", label: "Shiny hub" },
     ],

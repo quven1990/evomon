@@ -1,4 +1,6 @@
 /** Curated copy for indexable dex detail pages — single source for meta + on-page blurbs. */
+export type PetFaq = { q: string; a: string };
+
 export type PetDetailExtra = {
   /** Display typing in copy (e.g. "Fire / Rock"). Defaults to dex element. */
   typesDisplay?: string;
@@ -12,6 +14,11 @@ export type PetDetailExtra = {
   blurb?: string;
   evolutionNote?: string;
   shinyHuntNote?: string;
+  /**
+   * Page-specific FAQ answers. When set, replaces the shared FAQ template
+   * so indexable pets do not all ask “What element is X?”.
+   */
+  faqs?: PetFaq[];
 };
 
 export const petDetailExtras: Record<string, PetDetailExtra> = {
@@ -79,6 +86,96 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     evolutionNote:
       "Leafbun → Leafroge → Leafblade. Commit stones if you are building around Grass sustain; otherwise keep stones for stronger route tanks like Pebble once Verdant Valley opens.",
   },
+  mopebun: {
+    metaTitle: "Mopebun Evomon — Petal Pond Normal Catch",
+    metaDescription:
+      "Mopebun (#016) is a Petal Pond Normal wild (~Lv 15–29). Early filler catch before Clampip water coverage and Lava Crag — when to skip stone investment.",
+    location: "Petal Pond wild (~Lv 15–29)",
+    weather: "Any",
+    role: "Early Normal filler / EXP route",
+    blurb:
+      "Mopebun is the first Petal Pond wild many accounts farm after Verdant Valley. It fills party slots and EXP while you unlock Clampip water coverage for Lava Crag — community tier lists still often park Mopebun lower once real route carries arrive. Catch it; do not empty Evolution Stones here.",
+    evolutionNote:
+      "Mopebun → Mopillow. Evolve only if the line is still clearing content for you; Petal Pond priority usually shifts to Clampip → Clamspire for Water into Fire islands.",
+    faqs: [
+      {
+        q: "Where do you catch Mopebun in Evomon?",
+        a: "Petal Pond wild spawns around Lv 15–29 on our map-zones chart. It is an early second-island catch, not a late locked pet.",
+      },
+      {
+        q: "Is Mopebun worth Evolution Stones?",
+        a: "Usually no for long-term investment. Use Mopebun to progress Petal Pond, then prioritize Clampip water coverage and later Lavite/Bluebird stones over a Normal filler line.",
+      },
+      {
+        q: "Mopebun vs Clampip on Petal Pond — which first?",
+        a: "Catch both if you can. Clampip matters more for Lava Crag Fire matchups; Mopebun is the easier early wild for EXP and temporary slots.",
+      },
+      {
+        q: "What does Mopebun evolve into?",
+        a: "Mopebun evolves into Mopillow. Confirm stone/level gates in-game before spending materials.",
+      },
+    ],
+  },
+  clampip: {
+    metaTitle: "Clampip Evomon — Petal Pond Water Coverage",
+    metaDescription:
+      "Clampip (#031) is the Petal Pond Water wild (~Lv 22–30) that opens Clamspire. Grab it before Lava Crag Fire lines — stone priority vs Lavite.",
+    location: "Petal Pond wild (~Lv 22–30)",
+    weather: "Any",
+    role: "Water coverage into Lava Crag",
+    blurb:
+      "Clampip is the Petal Pond Water pickup beginner routes want before Lava Crag: Fire lines punish teams that skipped water. Community notes often call the Clampip line a strong early water answer — and warn not to stone Clampip, Gobfish, and Bubble in the same week. Evolve toward Clamspire when water bulk/damage is still your bottleneck, then expect Lavite to take leftover stones.",
+    evolutionNote:
+      "Clampip → Clamwhirl → Clamspire. Push the line for Petal Pond → Lava Crag coverage; Clamspire is also listed as the Petal Pond boss (~Lv 30).",
+    faqs: [
+      {
+        q: "Where is Clampip in Evomon?",
+        a: "Petal Pond wild band around Lv 22–30. Farm it after Mopebun opens the island and before you lean into Lava Crag Fire spawns.",
+      },
+      {
+        q: "Why do beginner guides tell me to catch Clampip?",
+        a: "Lava Crag is Fire-heavy. Clampip water coverage shortens Sparkit/Lavite fights and keeps the third-island loop sane — more than Mopebun’s Normal filler role.",
+      },
+      {
+        q: "Should Clampip get Evolution Stones before Lavite?",
+        a: "Evolve Clampip far enough that Lava Crag is comfortable. Once Lavite is online, most July 2026 lists give leftover stones to Lavite → Lavarock, not a second full water stone dump.",
+      },
+      {
+        q: "What does Clampip evolve into?",
+        a: "Clampip → Clamwhirl → Clamspire. See the Clamspire page for the final form and Petal Pond boss overlap.",
+      },
+    ],
+  },
+  clamspire: {
+    metaTitle: "Clamspire Evomon — Petal Pond Water Boss Form",
+    metaDescription:
+      "Clamspire (#033) finishes Clampip’s Water line — Petal Pond boss (~Lv 30) and bulky Atk/Def water. When to evolve vs saving stones for Lavite.",
+    location: "Evolve from Clamwhirl; Petal Pond boss (~Lv 30)",
+    weather: "Any",
+    role: "Water wall / Petal Pond boss name",
+    blurb:
+      "Clamspire is the Clampip line payoff: community bases show high Attack/Defense (105 / 100) for a bulky water closer. Map data also lists Clamspire as the Petal Pond boss at ~Lv 30 — evolve your keeper separately from farming the boss encounter. Use it to stabilize water coverage into Lava Crag; do not treat it as the forever stone sink once Lavite/Bluebird are available.",
+    evolutionNote:
+      "Clampip → Clamwhirl → Clamspire. Evolve when water bulk clears Petal Pond and softens Lava Crag. Signature trait pool opens with Raincall.",
+    faqs: [
+      {
+        q: "Is Clamspire only a boss, or can I evolve into it?",
+        a: "Both. Petal Pond lists Clamspire as the island boss (~Lv 30), and the playable line is Clampip → Clamwhirl → Clamspire. Boss cycles and your evolved copy are related names, not identical farm loops.",
+      },
+      {
+        q: "Is Clamspire better than Bubble’s line?",
+        a: "For Petal Pond → Lava Crag water coverage, Clampip → Clamspire is the route catch many guides prefer over forcing Bubblade stones. Bubble still wins the tutorial pick; Clamspire wins the island water slot for many accounts.",
+      },
+      {
+        q: "Clamspire vs Lavite stone priority?",
+        a: "Finish Clamspire if you still lack water for Fire islands. After Lavite is caught, leftover Evolution Stones usually go to Lavarock — avoid triple-funding Bubble + Clamspire + Lavite in one week.",
+      },
+      {
+        q: "What is Clamspire strong at statistically?",
+        a: "Community base spreads lean physical bulk and Attack (Def 100 / Atk 105) with Raincall in the trait pool — a water wall profile more than a glass special attacker.",
+      },
+    ],
+  },
   pebble: {
     metaTitle: "Pebble Evomon — Verdant Valley Catch & Evolution",
     metaDescription:
@@ -88,7 +185,37 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     role: "Early rock tank",
     blurb: "One of the best early-route catches. Reliable wall through mid game — replace before deep endgame.",
     evolutionNote:
-      "Pebble → Pebroll → Pebgolem. Catch and evolve when early bosses hurt; see the Pebgolem page for final-form tank value and when to stop investing stones after Lava Crag.",
+      "Pebble → Pebroll → Pebgolem. Catch and evolve when early bosses hurt; see [Pebroll](/dex/pebroll) and [Pebgolem](/dex/pebgolem) for mid/final-form tank value and when to stop investing stones after Lava Crag.",
+  },
+  pebroll: {
+    metaTitle: "Pebroll Evomon — Verdant Mini-Boss Rock Mid Form",
+    metaDescription:
+      "Pebroll (#019) is Pebble’s Rock mid evolution / Verdant Valley mini-boss (~Lv 13–15). When to evolve to Pebgolem and when Lavite takes the stones.",
+    location: "Verdant Valley mini-boss (~Lv 13–15); also evolve from Pebble",
+    weather: "Any",
+    role: "Mid Rock tank bridge",
+    blurb:
+      "Pebroll sits between the early Pebble catch and Pebgolem’s Counter wall. Map data lists it as a Verdant Valley mini-boss around Lv 13–15, so you can meet it as a fight target and as an evolution step. Use it to stabilize early bosses; do not treat mid-form stones as permanent — Pebgolem is the line’s payoff, and Lavite usually wins leftover stones after Lava Crag.",
+    evolutionNote:
+      "Pebble → Pebroll → Pebgolem. Evolve through Pebroll when bulk is the bottleneck. Stop heavy investment once Lavarock is online.",
+    faqs: [
+      {
+        q: "Where is Pebroll in Evomon?",
+        a: "Verdant Valley lists Pebroll as a mini-boss around Lv 13–15. You can also evolve a Pebble into Pebroll — treat wild/mini-boss and evolution as the same species line.",
+      },
+      {
+        q: "Should I evolve Pebble into Pebroll right away?",
+        a: "Yes if early Verdant bosses are chewing your team. Pebroll is a bridge form — push to Pebgolem when you need the final tank kit, then save stones for Lavite after Lava Crag.",
+      },
+      {
+        q: "Is Pebroll better than Pebgolem?",
+        a: "No. Pebroll is the mid step. Community early-carry notes value the line for early/mid walls, with Pebgolem as the Counter payoff and a planned bench once Lavarock arrives.",
+      },
+      {
+        q: "Pebroll vs Lavite — who gets Evolution Stones?",
+        a: "Finish Pebgolem if Rock bulk is still carrying your route. After Lava Crag opens, most July 2026 guides pivot leftover stones to Lavite → Lavarock.",
+      },
+    ],
   },
   pebgolem: {
     metaTitle: "Pebgolem Evomon — Early Rock Tank Final Form",
@@ -168,6 +295,37 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
       "Frostlet → Frostseer. Evolve after Cascade-era content is reachable and Ice solves a boss you actually run. Do not dump early stones here while Verdant → Lava Crag still needs Lavite / Bluebird.",
     shinyHuntNote:
       "Hunt shiny on Frostlet wilds, then evolve. Boss Frostseer cycles are a different loop. Prismatic cosmetics are separate from the Sp. Atk payoff — prioritize Talent and levels for boss clears.",
+  },
+  tarro: {
+    typesDisplay: "Grass / Dragon",
+    metaTitle: "Tarro Evomon — Murkwood Catch Toward Terragon",
+    metaDescription:
+      "Tarro (#066) is a late Murkwood Grass wild (~Lv 142–150) toward Terragon. Endgame grass/dragon tank line — when to invest after Lavite and Bluebird.",
+    location: "Murkwood wild (~Lv 142–150)",
+    weather: "Any",
+    role: "Late grass/dragon tank seed",
+    blurb:
+      "Tarro opens the Terragon grass/dragon wall line that July 2026 S-tier notes call out for self-sustain on long boss fights. It is a late Murkwood catch (~Lv 142–150) — not an early-island project. Community evolution-priority tips group Tarro with Arcub/Frostlet: unlock it after Lavarock + Bluebird (or equivalent) handle dailies, then invest when this boss answer is what you actually run.",
+    evolutionNote:
+      "Tarro → Terragon. Save the stone for a keeper with usable Talent once Murkwood is unlocked. Do not dump early-route stones here while Verdant → Lava Crag still needs Rock/Fire carries.",
+    faqs: [
+      {
+        q: "Where do you catch Tarro in Evomon?",
+        a: "Murkwood wild spawns around Lv 142–150 on our map-zones list. You need late-game island progress — this is not a Verdant Valley catch.",
+      },
+      {
+        q: "Is Tarro / Terragon worth Evolution Stones?",
+        a: "Yes as a late endgame grass/dragon tank once your daily clears are stable. Community S-tier notes highlight Terragon’s sustain for long bosses; it is a poor place to spend your first stones.",
+      },
+      {
+        q: "Should I hunt Tarro before Frostseer or Arcapex?",
+        a: "Pick the late answer that matches the bosses you are stuck on. Evolution-priority notes list Arcub, Frostlet, and Tarro as strong but harder obtains — fund the one your team actually needs next.",
+      },
+      {
+        q: "What does Tarro evolve into?",
+        a: "Tarro evolves into Terragon. Confirm stone/level requirements in-game before committing your best copy.",
+      },
+    ],
   },
   bluebird: {
     typesDisplay: "Flying / Electric",
