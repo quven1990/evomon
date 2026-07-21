@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-21",
+        title: "Blog — Evomon TikTok Video Challenge (Jul 20–Aug 19)",
+        body: "Added a short community-reported summary of the TikTok Video Challenge window, #evomon rules, 10k/300k view reward tracks, and the Evomon Devs 14-day payout gate.",
+        tags: ["Blog", "Event"],
+        pages: ["/blog/evomon-tiktok-video-challenge-july-august-2026", "/blog"],
+      },
+      {
+        date: "2026-07-21",
         title: "CTR polish + Team Builder inbound links",
         body: "Type chart lookup moved above the full table with a Last updated stamp. Beginner guide leads with Verdant→Petal→Lava and First 30 minutes. Eggs blog and codes/tier titles tightened for exact-match intent. Team Builder gets stronger links from Dex, Tier cards, mutations, codes, starters, and stone-priority pages.",
         tags: ["SEO", "CTR", "Tools"],

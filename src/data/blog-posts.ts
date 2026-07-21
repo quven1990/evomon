@@ -32,6 +32,98 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "evomon-tiktok-video-challenge-july-august-2026",
+    title: "Evomon TikTok Video Challenge (July 20–Aug 19, 2026) — Robux Rewards",
+    description:
+      "Evomon TikTok Video Challenge window: July 20–August 19, 2026 UTC. Post original #evomon videos for view milestones and ranked Robux rewards — join Evomon Devs early for payout eligibility.",
+    published: "2026-07-21",
+    gscTargets: [
+      "evomon video challenge",
+      "evomon tiktok challenge",
+      "evomon robux challenge",
+      "evomon tiktok robux",
+      "evomon video challenge robux",
+    ],
+    relatedGuides: ["/codes", "/guides/beginner", "/dex", "/blog"],
+    quickAnswer:
+      "From **July 20, 2026 07:00 UTC to August 19, 2026 07:00 UTC**, original **Evomon** videos first posted on **TikTok** with **#evomon** can earn Robux: **view rewards** for each eligible video with **10,000+** views, plus **ranked rewards** for videos with **300,000+** views. Keep videos public. To receive rewards you must be in the **Evomon Devs** Roblox group for **at least 14 days** when rewards are paid — join early.",
+    sections: [
+      {
+        heading: "Event window & platform",
+        paragraphs: [
+          "Community posts describe an **Evomon Video Challenge** running **July 20, 2026, 07:00 UTC – August 19, 2026, 07:00 UTC** on **TikTok** only. Treat this page as a player-facing summary of those rules; always confirm the live Event Rules in official Evomon Discord / Roblox group announcements before you spend a long shoot day.",
+        ],
+        bullets: [
+          "**Platform** — TikTok.",
+          "**Window** — July 20 → August 19, 2026 (07:00 UTC both ends).",
+          "**Hashtag** — include **#evomon** on the post.",
+          "**Visibility** — keep the video **public**.",
+        ],
+        callout: {
+          title: "Community-reported",
+          body: "This write-up is based on a community forum notice, not a pasted official press release. Cross-check dates, view thresholds, and payout rules in official channels before relying on them.",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "Two ways to earn",
+        paragraphs: [
+          "Reported reward tracks separate **per-video view milestones** from a **top video** leaderboard. There is no requirement to combine views across uploads for the first track — each qualifying video can count on its own.",
+        ],
+        bullets: [
+          "**Video View Rewards** — each eligible video with **10,000+** views can earn Robux. Post as many qualifying videos as you like.",
+          "**Top Video Rewards** — eligible videos with **300,000+** views can compete for ranked rewards.",
+          "**Eligible uploads** — original Evomon videos **first posted** on TikTok during the Event Period (not reuploads from earlier).",
+        ],
+      },
+      {
+        heading: "How to join (checklist)",
+        bullets: [
+          "Shoot an **original** Evomon video (gameplay, guides, hunts — still original footage).",
+          "Post it on TikTok **during** the UTC window above.",
+          "Add **#evomon** and leave the video **public**.",
+          "Read the full Event Rules wherever the organizers link them (often tagged as the video-challenge notice in Discord/forum).",
+          "Join [Evomon Devs on Roblox](https://www.roblox.com/communities/665060893/Evomon-Devs) **now** so you clear the **14-day membership** gate before reward distribution.",
+        ],
+        callout: {
+          title: "Reward delivery gate",
+          body: "Reported rule: you must have been a member of the Evomon Devs Group for at least 14 days at payout time. Late joiners who hit view goals can still miss Robux if the clock is short.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "While you wait for views",
+        paragraphs: [
+          "If you are grinding content for the challenge, keep your in-game account fed: redeem [Evomon codes](/codes), follow the [beginner route](/guides/beginner), and grab sprites or spawn notes from the [dex](/dex) so your TikToks stay accurate.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "When is the Evomon TikTok Video Challenge?",
+        a: "Community notices list July 20, 2026, 07:00 UTC through August 19, 2026, 07:00 UTC. Confirm on official Evomon channels before you plan uploads.",
+      },
+      {
+        q: "Do I need 10,000 total views across all videos?",
+        a: "No — the reported view-reward track counts each eligible video with 10,000+ views on its own. You can post multiple qualifying videos.",
+      },
+      {
+        q: "What hashtag do I need?",
+        a: "Include #evomon when you post. Keep the video public and first-posted on TikTok during the event window.",
+      },
+      {
+        q: "Why join the Evomon Devs Roblox group?",
+        a: "Reported payout rule: you must be a group member for at least 14 days when rewards are distributed. Join early at the Evomon Devs community page on Roblox.",
+      },
+    ],
+    sources: [
+      {
+        label: "Evomon Devs (Roblox group)",
+        url: "https://www.roblox.com/communities/665060893/Evomon-Devs#!/about",
+      },
+    ],
+  },
+  {
     slug: "shiny-sparkit-evomon-guide",
     title: "Shiny Sparkit Evomon Guide — Lava Crag Hunt & Worth It",
     description:
