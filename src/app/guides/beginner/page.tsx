@@ -142,11 +142,109 @@ export default function BeginnerGuidePage() {
             <Link href="/guides/farming#daily" className="text-emerald-300 hover:underline">
               daily quests
             </Link>
-            . Player level — not creature level — unlocks the game.
+            . Player level — not creature level — unlocks the game. Then{" "}
+            <Link href="/team-builder" className="text-emerald-300 hover:underline">
+              plan a 5-pet party
+            </Link>
+            .
           </p>
         </div>
 
-        <section className="mt-6 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6">
+        <section
+          aria-label="First three islands"
+          className="mt-6 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6"
+        >
+          <h2 className="text-lg font-semibold text-white">First route — 3 islands</h2>
+          <p className="mt-2 text-sm text-zinc-400">
+            Clear in order, then open the{" "}
+            <Link href="#islands" className="text-emerald-300 hover:underline">
+              full island chart
+            </Link>{" "}
+            or{" "}
+            <Link href="/map-zones" className="text-emerald-300 hover:underline">
+              map zones
+            </Link>
+            .
+          </p>
+          <ol className="mt-4 grid gap-3 sm:grid-cols-3">
+            {[
+              {
+                n: "1",
+                name: "Verdant Valley",
+                tip: "Pebble tank line",
+                href: "/map-zones#verdant-valley",
+              },
+              {
+                n: "2",
+                name: "Petal Pond",
+                tip: "Water coverage",
+                href: "/map-zones#petal-pond",
+              },
+              {
+                n: "3",
+                name: "Lava Crag",
+                tip: "Catch Lavite",
+                href: "/map-zones#lava-crag",
+              },
+            ].map((step) => (
+              <li
+                key={step.n}
+                className="rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3"
+              >
+                <p className="text-xs font-bold uppercase tracking-wide text-emerald-400">
+                  Island {step.n}
+                </p>
+                <Link
+                  href={step.href}
+                  className="mt-1 block text-base font-semibold text-white hover:text-emerald-300 hover:underline"
+                >
+                  {step.name}
+                </Link>
+                <p className="mt-1 text-xs text-zinc-500">{step.tip}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section id="start" className="scroll-mt-24 mt-8 sm:scroll-mt-8">
+          <h2 className="text-xl font-bold text-white sm:text-2xl">First 30 minutes — 4 steps</h2>
+          <ol className="mt-5 space-y-3">
+            {quickStart.map((item, index) => (
+              <li
+                key={item.step}
+                className="flex gap-4 rounded-xl border border-white/10 bg-[#0b1512] p-4 sm:p-5"
+              >
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-sm font-bold text-emerald-300">
+                  {index + 1}
+                </span>
+                <div>
+                  <p className="font-semibold text-white">
+                    {item.href ? (
+                      <Link href={item.href} className="text-emerald-300 hover:underline">
+                        {item.step} →
+                      </Link>
+                    ) : (
+                      item.step
+                    )}
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-zinc-400">{item.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+
+          <h3 className="mt-8 text-lg font-semibold text-white">Which balls to use</h3>
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            {ballRules.map((row) => (
+              <div key={row.ball} className="rounded-xl border border-white/10 bg-[#0b1512] p-4">
+                <p className="font-medium text-white">{row.ball}</p>
+                <p className="mt-2 text-sm leading-6 text-zinc-400">{row.use}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-8 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6">
           <h2 className="text-lg font-semibold text-white">Quick answers</h2>
           <div className="mt-4 space-y-4 text-sm">
             <div>
@@ -207,50 +305,8 @@ export default function BeginnerGuidePage() {
           <BeginnerGuideNav />
         </div>
 
-        {/* Quick start */}
-        <section id="start" className="scroll-mt-24 mt-10 sm:scroll-mt-8">
-          <h2 className="text-xl font-bold text-white sm:text-2xl">First 30 minutes</h2>
-          <ol className="mt-5 space-y-3">
-            {quickStart.map((item, index) => (
-              <li
-                key={item.step}
-                className="flex gap-4 rounded-xl border border-white/10 bg-[#0b1512] p-4 sm:p-5"
-              >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-sm font-bold text-emerald-300">
-                  {index + 1}
-                </span>
-                <div>
-                  <p className="font-semibold text-white">
-                    {item.href ? (
-                      <Link href={item.href} className="text-emerald-300 hover:underline">
-                        {item.step} →
-                      </Link>
-                    ) : (
-                      item.step
-                    )}
-                  </p>
-                  <p className="mt-1 text-sm leading-6 text-zinc-400">{item.detail}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-
-          <h3 className="mt-8 text-lg font-semibold text-white">Which balls to use</h3>
-          <div className="mt-4 grid gap-3 sm:grid-cols-3">
-            {ballRules.map((row) => (
-              <div
-                key={row.ball}
-                className="rounded-xl border border-white/10 bg-[#0b1512] p-4"
-              >
-                <p className="font-medium text-white">{row.ball}</p>
-                <p className="mt-2 text-sm leading-6 text-zinc-400">{row.use}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Islands */}
-        <section id="islands" className="scroll-mt-24 mt-14 sm:scroll-mt-8">
+        <section id="islands" className="scroll-mt-24 mt-10 sm:scroll-mt-8">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Island route — catch vs skip</h2>
           <p className="mt-2 text-sm text-zinc-400">
             Progression order from community beginner guides. Pair with the{" "}

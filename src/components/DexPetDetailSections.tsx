@@ -327,8 +327,11 @@ export function DexPetDetailSections({
             )}
           </dl>
           <div className="mt-5 space-y-2 border-t border-white/10 pt-5 text-sm">
-            <Link href={`/team-builder?t=${slug}`} className="block text-emerald-300 hover:underline">
-              Add to team builder →
+            <Link
+              href={`/team-builder?t=${slug}`}
+              className="flex min-h-[44px] items-center justify-center rounded-xl border border-emerald-500/40 bg-emerald-500/15 px-3 py-2.5 text-center text-sm font-semibold text-emerald-200 transition hover:bg-emerald-500/25"
+            >
+              Add to team builder
             </Link>
             <Link href="/map-zones" className="block text-emerald-300 hover:underline">
               Map zones →

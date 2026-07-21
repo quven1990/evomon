@@ -860,9 +860,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "how-to-get-eggs-evomon",
-    title: "How to Get Eggs in Evomon — Shiny & Prismatic Egg Guide",
+    title: "How to Get Eggs in Evomon (2026) — Catch Loop & Shiny Eggs",
     description:
-      "How to get eggs in Evomon: catch defeated targets to roll normal or shiny eggs, farm boss routes with Catch Master, and use Prismatic Ball hatching correctly.",
+      "How to get eggs in Evomon in 2026: 1) defeat, 2) catch, 3) roll normal/shiny eggs, 4) farm boss routes with Catch Master. Prismatic Ball hatching tips included.",
     published: "2026-07-11",
     gscTargets: [
       "how to get eggs in evomon",
@@ -878,11 +878,12 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations/shiny-egg",
       "/guides/mutations",
       "/guides/beginner",
+      "/team-builder",
       "/codes",
       "/dex",
     ],
     quickAnswer:
-      "To get eggs in Evomon, **defeat the target and then catch it** — KO-and-run never rolls eggs. A successful catch can drop a **normal egg**, a rarer **shiny egg**, or nothing. Searches for **Prismatic Egg** usually mean hatching a shiny egg with a **Prismatic Ball**; there is no separate prismatic egg item confirmed in-game.",
+      "Most stable egg path: **(1)** Defeat the wild Evomon — do not run. **(2)** Catch it (eggs only roll after a successful catch). **(3)** Hope for a normal egg (S Talent) or rarer shiny egg. **(4)** For boss/mount lines without field pity, farm catches with Catch Master and hatch shiny eggs — Prismatic Ball on hatch for Shiny + Prismatic looks. There is no separate “prismatic egg” item.",
     sections: [
       {
         heading: "The three egg outcomes",

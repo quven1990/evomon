@@ -1,5 +1,7 @@
 import type { ElementType } from "@/data/dex";
 
+export const TYPE_CHART_LAST_CHECKED = "2026-07-21";
+
 export const elementStyles: Record<
   ElementType,
   { bg: string; border: string; text: string; dot: string }

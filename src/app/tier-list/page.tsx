@@ -61,7 +61,9 @@ export default function TierListPage() {
 
       <main className="mx-auto max-w-5xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         <PageBack href="/" />
-        <h1 className={pageTitleClass()}>Evomon Tier List</h1>
+        <h1 className={pageTitleClass()}>
+          Evomon Tier List ({TIER_LIST_UPDATED}) — S-Tier: Lavite, Bluebird, Frostseer
+        </h1>
         <p className={pageLeadClass()}>
           Two views: <strong className="font-semibold text-zinc-200">endgame meta</strong> (what
           creators rank for bosses & late teams) and{" "}

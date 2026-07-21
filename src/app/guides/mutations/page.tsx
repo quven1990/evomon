@@ -416,6 +416,11 @@ export default function MutationsGuidePage() {
                 </Link>
               </li>
               <li>
+                <Link href="/team-builder" className="text-emerald-300 hover:underline">
+                  Team builder — plan the hunt target →
+                </Link>
+              </li>
+              <li>
                 <Link href="/tier-list" className="text-emerald-300 hover:underline">
                   Tier list — what to hunt →
                 </Link>

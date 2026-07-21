@@ -91,7 +91,7 @@ export function homeMetadata(): Metadata {
 
 export const PAGE_SEO = {
   codes: () => {
-    const title = `${codeCount} Free Evomon Codes (${monthLabel}) — Copy & Redeem`;
+    const title = `Evomon Codes (${monthLabel}) — ${codeCount} Active, Copy & Redeem`;
     const description = `${codeCount} working Evomon codes for ${monthLabel} — including 100DCUNITY, EVO120HYPE & EVO60SPARK. Free Summon Tickets, EXP Fruits, Evolution Stones & Advanced Balls. One-click copy, source labels, and redeem troubleshooting.`;
 
     return {
@@ -99,7 +99,7 @@ export const PAGE_SEO = {
         title,
         description,
         path: "/codes",
-        ogTitle: `Free Evomon Codes (${monthLabel}) — ${codeCount} Active Codes`,
+        ogTitle: `Evomon Codes (${monthLabel}) — ${codeCount} Active Codes`,
         keywords: [
           "evomon codes",
           "roblox evomon codes",
@@ -207,9 +207,9 @@ export const PAGE_SEO = {
 
   typeChart: () => {
     // Absolute title: keep ≤60 chars. Avoid "Clickable" — GSC showed it hurt CTR vs weakness intent.
-    const title = "Evomon Type Chart — Weaknesses & What Beats Each Type";
+    const title = "Evomon Type Chart — Weaknesses & What Beats Each Type (2026)";
     const description =
-      "Water beats Fire; Electric beats Flying; Ice beats Grass. Full Evomon weakness chart for all 15 types — strengths, resists, and matchup lookup.";
+      "Water beats Fire; Electric beats Flying; Ice beats Grass. Interactive Evomon type chart — strengths, weaknesses, and resists for all 15 types. Last updated July 2026.";
 
     return {
       ...buildPageMetadata({
@@ -232,8 +232,8 @@ export const PAGE_SEO = {
 
   tierList: () => {
     // ≤60 chars total — absolute title skips the layout `| Evomon Wiki` suffix.
-    const title = `Best Evomon Tier List (${monthLabel}) — Lavite & S-Tier`;
-    const description = `Who's worth evolution stones after Lava Crag? Boss rankings, early catches, starter debates, and a 6-step farm list. Community meta, ${monthLabel}.`;
+    const title = "Evomon Tier List (July 2026) — Lavite, Bluebird & S-Tier";
+    const description = `Community Evomon tier list for July 2026: S-tier Lavite, Bluebird, Frostseer and more. Boss rankings, early catches, and who gets Evolution Stones first.`;
 
     return {
       ...buildPageMetadata({
@@ -265,8 +265,8 @@ export const PAGE_SEO = {
     }),
 
   beginnerGuide: () => {
-    const title = `Evomon Beginner Guide — Islands, Lavite & Level 30 (${monthLabel})`;
-    const description = `New player route for Roblox Evomon: island catch/skip chart, Lavite on Lava Crag, daily EXP for level 30 & Ascension, and where to spend balls vs evolution stones. Updated ${monthLabel}.`;
+    const title = `Evomon Beginner Guide — 4 Steps & 3 Islands (${monthLabel})`;
+    const description = `New to Evomon? About 30 minutes: redeem codes, follow main quests, clear Verdant Valley → Petal Pond → Lava Crag, catch Lavite, and hit daily EXP for Ascension. Updated ${monthLabel}.`;
 
     return {
       ...buildPageMetadata({

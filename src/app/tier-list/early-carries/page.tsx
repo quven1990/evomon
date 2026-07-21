@@ -71,7 +71,11 @@ export default function EarlyCarriesPage() {
           <Link href="/tier-list" className="text-emerald-300 hover:underline">
             main tier list
           </Link>{" "}
-          ({TIER_LIST_UPDATED}).
+          ({TIER_LIST_UPDATED}). Slot early catches in the{" "}
+          <Link href="/team-builder" className="text-emerald-300 hover:underline">
+            team builder
+          </Link>
+          .
         </p>
 
         <div className="mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 sm:p-6">

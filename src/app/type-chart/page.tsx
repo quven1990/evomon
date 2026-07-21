@@ -7,7 +7,7 @@ import { TypeChartExplorer } from "@/components/TypeChartExplorer";
 import { TypeChartNav } from "@/components/TypeChartNav";
 import { TypeChartTypeLink, TypeChartTypeLinkList } from "@/components/TypeChartTypeLink";
 import { islandTypeTips, typeChartFaqs } from "@/data/type-chart-islands";
-import { elementStyles, typeChart } from "@/data/type-chart";
+import { TYPE_CHART_LAST_CHECKED, elementStyles, typeChart } from "@/data/type-chart";
 import { PAGE_SEO } from "@/lib/seo";
 import { canonical } from "@/lib/site";
 
@@ -43,13 +43,14 @@ export default function TypeChartPage() {
       <main className="mx-auto max-w-5xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         <PageBack href="/" />
         <h1 className={pageTitleClass()}>Evomon Type Chart</h1>
+        <p className="mt-2 text-xs text-zinc-500">Last updated {TYPE_CHART_LAST_CHECKED}</p>
         <p className={pageLeadClass()}>
-          Every elemental weakness and strength for Roblox Evomon — Water beats Fire, Electric beats Flying,
-          Ice beats Grass, and all 15 types below. Click any type name below to open the matchup lookup, or use the interactive lookup for one type, or open the{" "}
+          Every elemental weakness and strength for Roblox Evomon — Water beats Fire, Electric beats
+          Flying, Ice beats Grass. Use the interactive lookup below, then{" "}
           <Link href="/team-builder" className="text-emerald-300 hover:underline">
-            team builder
+            build a 5-pet team
           </Link>{" "}
-          to check squad coverage.
+          to check coverage.
         </p>
 
         <section id="quick-answer" className="scroll-mt-32 mt-6 sm:scroll-mt-8">
@@ -60,7 +61,44 @@ export default function TypeChartPage() {
             <strong className="text-white">Fire</strong> hits Grass, Bug, and Ice for double damage.{" "}
             <strong className="text-white">Electric</strong> beats Water and Flying.{" "}
             <strong className="text-white">Ground</strong> is the hard counter to Electric. Endgame pets
-            often have two types — treat this table as the baseline, then verify in duels.
+            often have two types — treat this chart as the baseline, then verify in duels.
+          </p>
+        </section>
+
+        {/* Interactive lookup — first tool users see after the answer */}
+        <section id="lookup" className="scroll-mt-32 mt-6 sm:scroll-mt-8 sm:mt-8">
+          <h2 className="text-xl font-bold text-white sm:text-2xl">Type lookup</h2>
+          <p className="mt-2 text-sm leading-6 text-zinc-400">
+            <span className="text-zinc-300">
+              Water → Fire (Lava Crag) · Electric → Flying · Ice → Grass
+            </span>
+            <span className="mt-1 block sm:mt-0 sm:inline sm:before:content-['_|_']">
+              Share: <TypeChartTypeLink type="Water" size="sm" />
+            </span>
+          </p>
+          <div className="mt-3 hidden rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-4 py-3 text-sm leading-6 text-zinc-300 sm:block">
+            Endgame pets often have <strong className="text-white">two types</strong> — use this chart
+            as the baseline, then verify in duels.
+          </div>
+          <Suspense
+            fallback={
+              <div className="mt-6 rounded-2xl border border-white/10 bg-[#0b1512] p-8 text-center text-zinc-500">
+                Loading chart…
+              </div>
+            }
+          >
+            <TypeChartExplorer />
+          </Suspense>
+        </section>
+
+        <div className="mt-8">
+          <TypeChartNav />
+        </div>
+
+        <section id="all-types" className="scroll-mt-32 mt-10 sm:scroll-mt-8">
+          <h2 className="text-xl font-bold text-white sm:text-2xl">All 15 types</h2>
+          <p className="mt-2 text-sm text-zinc-400">
+            Full reference table — tap a type name to jump back to the lookup.
           </p>
 
           <div className="mt-5 space-y-3 lg:hidden">
@@ -131,38 +169,6 @@ export default function TypeChartPage() {
           </div>
         </section>
 
-        <div className="mt-8">
-          <TypeChartNav />
-        </div>
-
-        {/* Interactive lookup — above the fold on mobile */}
-        <section id="lookup" className="scroll-mt-32 mt-5 sm:scroll-mt-8 sm:mt-8">
-          <h2 className="text-xl font-bold text-white sm:text-2xl">Type lookup</h2>
-          <p className="mt-2 text-sm leading-6 text-zinc-400">
-            <span className="text-zinc-300">
-              Water → Fire (Lava Crag) · Electric → Flying · Ice → Grass
-            </span>
-            <span className="mt-1 block sm:mt-0 sm:inline sm:before:content-['_|_']">
-              Share:{" "}
-              <TypeChartTypeLink type="Water" size="sm" />
-            </span>
-          </p>
-          <div className="mt-3 hidden rounded-xl border border-emerald-500/20 bg-emerald-500/5 px-4 py-3 text-sm leading-6 text-zinc-300 sm:block">
-            Endgame pets often have <strong className="text-white">two types</strong> — use this chart as
-            the baseline, then verify in duels.
-          </div>
-          <Suspense
-            fallback={
-              <div className="mt-6 rounded-2xl border border-white/10 bg-[#0b1512] p-8 text-center text-zinc-500">
-                Loading chart…
-              </div>
-            }
-          >
-            <TypeChartExplorer />
-          </Suspense>
-        </section>
-
-        {/* Island tips */}
         <section id="islands" className="scroll-mt-32 mt-12 sm:scroll-mt-8 sm:mt-14">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Types by island</h2>
           <p className="mt-2 text-sm text-zinc-400">
@@ -182,7 +188,9 @@ export default function TypeChartPage() {
                 <h3 className="text-lg font-semibold text-white">{row.island}</h3>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-zinc-500">Common types</p>
+                    <p className="text-xs font-bold uppercase tracking-wide text-zinc-500">
+                      Common types
+                    </p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {row.dominantTypes.map((type) => (
                         <TypeChartTypeLink key={type} type={type} size="sm" />
@@ -209,24 +217,6 @@ export default function TypeChartPage() {
           </div>
         </section>
 
-        {/* Full reference */}
-        <section id="reference" className="scroll-mt-32 mt-12 sm:scroll-mt-8 sm:mt-14">
-          <h2 className="text-xl font-bold text-white sm:text-2xl">Full type reference</h2>
-          <p className="mt-2 text-sm text-zinc-400">
-            The{" "}
-            <Link href="#quick-answer" className="text-emerald-300 hover:underline">
-              quick-answer table
-            </Link>{" "}
-            above lists all 15 types. Use Type lookup for shareable single-type links.
-          </p>
-
-          <p className="mt-4 text-sm text-zinc-500">
-            <strong className="text-zinc-400">Normal</strong> appears on dex entries but is not in this offensive
-            chart yet. Confirm Normal matchups in-game before ranked duels.
-          </p>
-        </section>
-
-        {/* Teams + FAQ */}
         <section id="teams" className="scroll-mt-32 mt-12 sm:scroll-mt-8 sm:mt-14">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Build your squad</h2>
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
@@ -272,6 +262,11 @@ export default function TypeChartPage() {
           <h2 className="text-lg font-semibold text-white">Related tools</h2>
           <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2">
             <li>
+              <Link href="/team-builder" className="text-emerald-300 hover:underline">
+                Team builder →
+              </Link>
+            </li>
+            <li>
               <Link href="/codes#codes-list" className="text-emerald-300 hover:underline">
                 Evomon codes →
               </Link>
@@ -279,11 +274,6 @@ export default function TypeChartPage() {
             <li>
               <Link href="/guides/beginner" className="text-emerald-300 hover:underline">
                 Beginner guide →
-              </Link>
-            </li>
-            <li>
-              <Link href="/starters" className="text-emerald-300 hover:underline">
-                Best starter pick →
               </Link>
             </li>
             <li>

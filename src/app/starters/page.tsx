@@ -195,7 +195,11 @@ export default function StartersPage() {
         </section>
 
         <p className="mt-8 text-sm text-zinc-500">
-          Next step: read the{" "}
+          Next step:{" "}
+          <Link href="/team-builder" className="text-emerald-300 hover:underline">
+            plan a 5-pet party
+          </Link>
+          , read the{" "}
           <Link href="/guides/beginner" className="text-emerald-300 hover:underline">
             beginner guide
           </Link>{" "}

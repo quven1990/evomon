@@ -62,9 +62,12 @@ export default function CodesPage() {
           </div>
 
           <h1 className="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl">
-            {activeCodes.length} Free Evomon Codes
-            <span className="mt-1 block bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-2xl text-transparent sm:text-3xl">
-              Copy → Paste in Settings → Get rewards
+            Evomon Codes
+            <span className="mt-1 block text-2xl font-bold text-zinc-200 sm:text-3xl">
+              {activeCodes.length} active — copy & redeem
+            </span>
+            <span className="mt-2 block bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-lg font-semibold text-transparent sm:text-xl">
+              Latest: {featured[0]?.code ?? highlights[0]?.code ?? allSorted[0]?.code ?? "—"}
             </span>
           </h1>
 
@@ -213,6 +216,9 @@ export default function CodesPage() {
         <section className="mt-10 flex flex-wrap gap-4 border-t border-white/10 pt-8 text-sm">
           <Link href="/about" className="text-emerald-300 hover:underline">
             Data sources &amp; disclaimer →
+          </Link>
+          <Link href="/team-builder" className="text-emerald-300 hover:underline">
+            Team Builder →
           </Link>
           <Link href="/dex" className="text-emerald-300 hover:underline">
             Evomon Dex →

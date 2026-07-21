@@ -1,12 +1,25 @@
 import type { TierPick } from "@/data/tier-list";
-import { PickNameLinked } from "@/lib/dex-link";
+import { PickNameLinked, resolveDexSlug } from "@/lib/dex-link";
+import Link from "next/link";
 
 type Props = {
   pick: TierPick;
   compact?: boolean;
 };
 
+function teamBuilderSlug(pickName: string): string | null {
+  const base = pickName
+    .replace(/ line$/i, "")
+    .replace(/ quest$/i, "")
+    .split(" → ")[0]
+    ?.split(" / ")[0]
+    ?.trim();
+  return base ? resolveDexSlug(base) : null;
+}
+
 export function TierPickCard({ pick, compact }: Props) {
+  const tbSlug = teamBuilderSlug(pick.name);
+
   return (
     <article
       className={`rounded-xl border border-white/10 bg-[#0b1512] ${
@@ -23,6 +36,14 @@ export function TierPickCard({ pick, compact }: Props) {
             <span className="rounded-md bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-300">
               {pick.role}
             </span>
+            {tbSlug ? (
+              <Link
+                href={`/team-builder?t=${tbSlug}`}
+                className="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-medium text-emerald-300 hover:bg-emerald-500/20"
+              >
+                Build team
+              </Link>
+            ) : null}
           </div>
         </div>
         {pick.obtain ? (

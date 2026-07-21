@@ -137,6 +137,11 @@ export default function EvolutionPriorityPage() {
           <h2 className="text-lg font-semibold text-white">Related pages</h2>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
+              <Link href="/team-builder" className="text-emerald-300 hover:underline">
+                Team builder — slot your stone priority →
+              </Link>
+            </li>
+            <li>
               <Link href="/tier-list/early-carries" className="text-emerald-300 hover:underline">
                 Early route carries (0–30) →
               </Link>

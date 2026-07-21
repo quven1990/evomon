@@ -13,12 +13,26 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-20";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-21";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-21",
+        title: "CTR polish + Team Builder inbound links",
+        body: "Type chart lookup moved above the full table with a Last updated stamp. Beginner guide leads with Verdant→Petal→Lava and First 30 minutes. Eggs blog and codes/tier titles tightened for exact-match intent. Team Builder gets stronger links from Dex, Tier cards, mutations, codes, starters, and stone-priority pages.",
+        tags: ["SEO", "CTR", "Tools"],
+        pages: [
+          "/type-chart",
+          "/guides/beginner",
+          "/blog/how-to-get-eggs-evomon",
+          "/codes",
+          "/tier-list",
+          "/team-builder",
+        ],
+      },
       {
         date: "2026-07-20",
         title: "Natures, Traits, and thicker Map Zones",
