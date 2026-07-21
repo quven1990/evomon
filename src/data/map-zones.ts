@@ -88,6 +88,7 @@ export const mapZones: MapZone[] = [
       "Best early shiny Fire farm (Sparkit) and stone priority (Lavite → Lavarock). Bring Water coverage.",
     related: [
       { href: "/blog/shiny-sparkit-evomon-guide", label: "Shiny Sparkit" },
+      { href: "/dex/empixy", label: "Empixy" },
       { href: "/blog/shiny-lavite-evomon-guide", label: "Shiny Lavite" },
       { href: "/blog/best-nature-lavite-evomon", label: "Lavite nature" },
       { href: "/guides/mutations", label: "Shiny hub" },
