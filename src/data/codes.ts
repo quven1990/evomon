@@ -8,8 +8,8 @@ export interface CodeEntry {
   addedAt?: string;
 }
 
-export const CODES_LAST_UPDATED = "2026-07-15";
-export const CODES_DATA_CHECKED = "2026-07-15";
+export const CODES_LAST_UPDATED = "2026-07-21";
+export const CODES_DATA_CHECKED = "2026-07-21";
 
 /** Past codes listed on the Roblox game page description (official). */
 export const officialRobloxCodes = [
@@ -34,6 +34,13 @@ export const activeCodes: CodeEntry[] = [
     sourceNote: "Official Discord announcement",
     addedAt: "2026-07-15",
   },
+  {
+    code: "FORGROUP",
+    reward: "5 Medium EXP Fruits",
+    source: "community",
+    sourceNote: "Join the official Evomon Roblox group gift code",
+    addedAt: "2026-07-21",
+  },
   { code: "EVO120HYPE", reward: "3 Summon Tickets, 2 Trait Reroll Potions", source: "official", sourceNote: robloxListingNote },
   { code: "EVO60SPARK", reward: "3 Summon Tickets, 2 Trait Reroll Potions", source: "official", sourceNote: robloxListingNote },
   { code: "30K-LIKES", reward: "2 Trait Reroll Potions, 2 Talent Vector Potions, 2 Nature Reroll Potions", source: "official", sourceNote: robloxListingNote },
@@ -56,7 +63,6 @@ export const activeCodes: CodeEntry[] = [
 
 export const watchlistCodes: CodeEntry[] = [
   { code: "YTBgift", reward: "2,000 Coins", source: "third-party", sourceNote: "Try after main list" },
-  { code: "FORGROUP", reward: "5 Medium EXP Fruits", source: "third-party" },
   { code: "10KLIKES", reward: "Unknown", source: "third-party", sourceNote: "Milestone — unconfirmed" },
   { code: "100KVisits", reward: "Unknown", source: "third-party", sourceNote: "Milestone — unconfirmed" },
 ];
@@ -67,7 +73,7 @@ export const expiredCodes: CodeEntry[] = [];
 export const featuredCodeIds = ["EVO120HYPE", "2K-LIKES", "THXFOR5K"] as const;
 
 /** Popular community codes — shown after official block */
-export const highlightCodeIds = ["100DCUNITY", "EVO60SPARK", "30K-LIKES", "D50CREW", "DCGIFT"] as const;
+export const highlightCodeIds = ["100DCUNITY", "FORGROUP", "EVO60SPARK", "30K-LIKES", "D50CREW"] as const;
 
 export function getFeaturedCodes(): CodeEntry[] {
   return featuredCodeIds
