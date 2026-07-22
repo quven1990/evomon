@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-22";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-23";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-23",
+        title: "Dex batch fact-check vs evomon.wiki",
+        body: "Re-aligned the 31 map+combat thick dex blurbs/FAQs/evolution notes to evomon.wiki wiki pages + map-zones (fixed wrong lines like Humding→Flutterby, Budling→Florawn, Stardrift→Frostelle, Sundercrene←Graycrene, Gempillar→Gempress, Pummpaw→Pummash, Mudbud→Thordlord). Synced our map-zones spawn bands to the same source.",
+        tags: ["Dex", "Accuracy"],
+        pages: ["/dex", "/map-zones"],
+      },
       {
         date: "2026-07-22",
         title: "Dex thick batch — 31 map+combat pets",
