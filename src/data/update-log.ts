@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-22",
+        title: "Dex thick batch — 31 map+combat pets",
+        body: "Hand-curated location/role/blurb/evolution + per-pet FAQs for 31 species that already have combat stats and map-zone spawns (Chirppy line, Gulpfish, Clamwhirl, Glacitadel line, Chitaladin, Spikumane, Tinkore, Datunymph, etc.). Opened indexing for those slugs. Copy grounded in community map-zones + pet-combat — not generic FAQ templates.",
+        tags: ["Dex", "SEO"],
+        pages: ["/dex", "/map-zones"],
+      },
+      {
+        date: "2026-07-22",
         title: "Dex details — per-pet differentiation (no 404)",
         body: "Thin dex pages stay live. Added map-zone catch blocks, signature-trait highlighting, stat-archetype reads, evolution-stage labels, auto blurbs/FAQs from combat+spawn data, and collapsed generic type matchups on non-curated pages so species pages stop looking identical.",
         tags: ["Dex", "UX"],

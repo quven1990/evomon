@@ -1,3 +1,5 @@
+import { petDetailsMapCombatBatch } from "./pet-details-map-combat-batch";
+
 /** Curated copy for indexable dex detail pages — single source for meta + on-page blurbs. */
 export type PetFaq = { q: string; a: string };
 
@@ -433,4 +435,5 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     role: "Fighting carry",
     blurb: "High-impact fighting pick for teams that need a physical closer in harder content.",
   },
+  ...petDetailsMapCombatBatch,
 };
