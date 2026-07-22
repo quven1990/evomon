@@ -32,6 +32,140 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "evomon-pity-system-explained",
+    title: "Evomon Pity System Explained — When to Use the 149 Trick",
+    description:
+      "How Evomon shiny and prismatic pity work (UI odds, 150/600 counters), what catching vs KO-and-run changes, when to park at 149, and when to skip the trick for eggs or boss lines.",
+    published: "2026-07-22",
+    gscTargets: [
+      "evomon pity",
+      "evomon pity system",
+      "evomon 149 trick",
+      "evomon prismatic pity",
+      "149 pity evomon",
+      "how does pity work in evomon",
+    ],
+    relatedGuides: [
+      "/guides/mutations",
+      "/guides/mutations/shiny-vs-sparkle",
+      "/guides/mutations/shiny-egg",
+      "/blog/what-does-shiny-do-evomon",
+    ],
+    quickAnswer:
+      "Evomon pity is the **per-species guarantee counter** shown bottom-left in battle. Community UI reads (July 2026) put **prismatic ~0.8% with ~150 capture pity** and **shiny ~0.2% with ~600 pity**. **Prismatic pity only rises when you capture** that species — KO-and-run does not. The **149 trick** parks prismatic pity one below the guarantee, then you only catch when a **natural shiny** appears so one catch can land **Shiny + Prismatic**. Skip the trick for early progression, boss lines without field shiny pity, or when you still need egg volume from every catch.",
+    sections: [
+      {
+        heading: "What “pity” means in Evomon",
+        paragraphs: [
+          "Unlike Pokémon-style soft resets, Evomon shows **odds and pity in the UI** after you fight a wild target. Creator [ImSoaren](https://www.youtube.com/watch?v=kA5s2l7tE7M) walks through a live panel: prismatic and shiny are **separate lines**, each with a percent chance and a pity number underneath.",
+        ],
+        bullets: [
+          "**Prismatic (Sparkle)** — glow/pattern cosmetic. ImSoaren’s July 2026 UI read: **~0.8% (1 in 125)** and pity **150**.",
+          "**Shiny** — recolor plus combat stats. Same video: **~0.2% (1 in 500)** and pity **600**.",
+          "**Reveal timing** — you must **knock out** the wild Evomon; shiny shows after the **smoke** animation (not on the encounter splash).",
+        ],
+        callout: {
+          title: "Community UI, not a patch notes dump",
+          body: "Rates and pity caps are what creators read from the client in June–July 2026. Confirm the bottom-left panel on your own target after patches — numbers can differ by species or update.",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "What actually raises pity (catch vs run)",
+        paragraphs: [
+          "This is the part most “just KO forever” sessions get wrong. [Macrolo](https://www.youtube.com/watch?v=xnc9cEJF1V8) opens with it: if you keep knocking out Evomon and **running away**, you slow prismatic progress because **prismatic pity is capture-based**.",
+        ],
+        bullets: [
+          "**Prismatic pity** — rises on a **successful capture** of that species. No capture → prismatic counter stays put (ImSoaren + Macrolo).",
+          "**Catching also** — rolls **egg** drops and, per ImSoaren, advances the **shiny** pity line when you capture.",
+          "**Shiny check** — still requires the KO + smoke reveal; Macrolo: you cannot see shiny status mid-fight, only after knockout.",
+        ],
+        callout: {
+          title: "Default farm habit",
+          body: "Unless you are deliberately parking prismatic pity at 149, catch the species you are grinding. Catching builds pity, XP, and egg odds in one loop.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "The 149 trick — steps creators agree on",
+        paragraphs: [
+          "Goal: spend the **150th prismatic capture** on an Evomon that is **already shiny**, so you get **Shiny Prismatic** without burning a Prismatic Ball. Short-form [DoffyRobloxnoob](https://www.youtube.com/shorts/PeEeTIKeDZY) and full guides from ImSoaren / Macrolo describe the same stack:",
+        ],
+        bullets: [
+          "1. Catch **one species** until prismatic pity shows **149 / 150** (or one below whatever your UI lists as the guarantee).",
+          "2. **Stop catching** that species — KO, check smoke, and leave/move on if it is not shiny so the counter stays parked.",
+          "3. When smoke reveals a **shiny**, catch it. That capture should consume the prismatic pity threshold and target **Shiny + Prismatic**.",
+          "4. Prefer a **King Ball** on that catch if you want **SSS talent** on top — ImSoaren: no need for a Prismatic Ball if pity already forced prismatic; King Ball covers talent.",
+        ],
+        callout: {
+          title: "Accidental catch = rebuild",
+          body: "If you catch a non-shiny while parked at 149, you can spend the prismatic guarantee on a normal copy and have to rebuild the stack. Treat 149 as a hard stop on routine catches.",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "When to use 149 — and when to skip it",
+        paragraphs: [
+          "Pity stacking is a **flex / keeper** tool, not the default early-game route. Use the decision cut below so you do not freeze egg progress or stall story islands.",
+        ],
+        bullets: [
+          "**Use 149** when you already have a working team, balls to spare, and you want **one Shiny Prismatic keeper** of a wild species you will keep (trade flex or long-term shiny).",
+          "**Skip 149** while you still need **every catch** for eggs, dex fills, or XP — parking means **zero catches** on that species until a shiny appears.",
+          "**Skip for many boss / mount lines** — ImSoaren: King of Flying and Thunder Cliffs boss lines **do not have field shiny pity**; the realistic shiny path is **shiny eggs from catches**, not 600 field pity. See [Shiny Egg Guide](/guides/mutations/shiny-egg).",
+          "**Alternate to 149** — save a **Prismatic Ball** for a shiny encounter or **shiny egg hatch** (Macrolo) if you would rather spend the item than park for hundreds of KO checks.",
+        ],
+      },
+      {
+        heading: "When to stop a pity grind",
+        bullets: [
+          "**Stop parking** if you have not seen a shiny after a long KO streak and you need eggs/XP again — resume catching; you can rebuild prismatic pity later.",
+          "**Stop chasing SSS on every shiny** if you only care about looks — ImSoaren: any shiny is fine for flex; SSS matters when you want battle strength.",
+          "**Switch species** if the target is too slow to KO — volume of smoke reveals matters more than stubbornness on one hard spawn.",
+          "**Read the full hub** for tables and boss rows: [Mutations Guide](/guides/mutations). For “does shiny even matter in fights?”, see [What Does Shiny Do](/blog/what-does-shiny-do-evomon).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is Evomon pity?",
+        a: "A per-species guarantee counter in the battle UI (bottom-left). Community reads put prismatic near 150 captures and shiny near 600. Hit the number and the next qualifying outcome is treated as guaranteed for that line.",
+      },
+      {
+        q: "Does knocking out without catching raise prismatic pity?",
+        a: "No. Creator guides (ImSoaren, Macrolo) say prismatic pity only increases on a successful capture of that species.",
+      },
+      {
+        q: "How does the 149 pity trick work?",
+        a: "Raise prismatic pity to 149, stop catching that species, KO until a natural shiny appears, then catch it so the 150th capture lands on the shiny for Shiny + Prismatic. Optional King Ball for SSS talent.",
+      },
+      {
+        q: "Should beginners use the 149 trick?",
+        a: "Usually no. Build a usable team and catch volume first. Park pity only when you can afford to skip catches on that species for a long shiny wait.",
+      },
+      {
+        q: "Do boss shinies use the same pity?",
+        a: "Several boss/mount lines lack field shiny pity. Community guides rely on catching for shiny eggs instead — different loop from the 149 wild trick.",
+      },
+    ],
+    sources: [
+      {
+        label: "ImSoaren — Best Shiny Hunting Guide (odds, pity, 149, eggs, bosses)",
+        url: "https://www.youtube.com/watch?v=kA5s2l7tE7M",
+        channel: "ImSoaren",
+      },
+      {
+        label: "Macrolo — Shiny hunting & prismatic guide (catch pity, 149 park, Prismatic Ball eggs)",
+        url: "https://www.youtube.com/watch?v=xnc9cEJF1V8",
+        channel: "Macrolo",
+      },
+      {
+        label: "DoffyRobloxnoob Shorts — 149/150 pity stacking",
+        url: "https://www.youtube.com/shorts/PeEeTIKeDZY",
+        channel: "DoffyRobloxnoob",
+      },
+    ],
+  },
+  {
     slug: "evomon-tiktok-video-challenge-july-august-2026",
     title: "Evomon TikTok Video Challenge (July 20–Aug 19, 2026) — Robux Rewards",
     description:

@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-21";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-22";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-22",
+        title: "Blog — Evomon pity system & when to use 149",
+        body: "New /blog/evomon-pity-system-explained targets pity / 149-trick queries. Based on ImSoaren, Macrolo, and DoffyRobloxnoob YouTube guides: capture-only prismatic pity, 149 park steps, when to skip for eggs/bosses. Links to mutations hub without replacing it.",
+        tags: ["Blog", "SEO"],
+        pages: ["/blog/evomon-pity-system-explained", "/guides/mutations", "/blog"],
+      },
       {
         date: "2026-07-21",
         title: "Dex index — Mopebun, Clampip, Clamspire, Pebroll, Tarro",
