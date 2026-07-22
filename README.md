@@ -29,6 +29,7 @@ Direct links to the main hub pages on [evomon.cc](https://evomon.cc/):
 | Page | URL |
 |------|-----|
 | Blog index | [https://evomon.cc/blog](https://evomon.cc/blog) |
+| Prismatic Egg Evomon | [https://evomon.cc/blog/prismatic-egg-evomon](https://evomon.cc/blog/prismatic-egg-evomon) |
 | Evomon Pity System Explained | [https://evomon.cc/blog/evomon-pity-system-explained](https://evomon.cc/blog/evomon-pity-system-explained) |
 | Shiny Sparkit Evomon Guide | [https://evomon.cc/blog/shiny-sparkit-evomon-guide](https://evomon.cc/blog/shiny-sparkit-evomon-guide) |
 | Shiny Lavite Evomon Guide | [https://evomon.cc/blog/shiny-lavite-evomon-guide](https://evomon.cc/blog/shiny-lavite-evomon-guide) |

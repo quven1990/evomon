@@ -32,6 +32,131 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "prismatic-egg-evomon",
+    title: "Prismatic Egg Evomon — Shiny Egg + Prismatic Ball vs Pass Eggs",
+    description:
+      "What “prismatic egg” means in Evomon: hatch a shiny egg with a Prismatic Ball for Shiny + Prismatic + SSS, vs a named Prismatic Egg reward that hatches a random cosmetic prismatic. Sources from Purp, Macrolo, and community egg guides.",
+    published: "2026-07-22",
+    gscTargets: [
+      "prismatic egg evomon",
+      "evomon prismatic egg",
+      "prismatic egg",
+      "evomon shiny egg prismatic ball",
+      "hatch shiny egg prismatic ball evomon",
+    ],
+    relatedGuides: [
+      "/guides/mutations/shiny-egg",
+      "/guides/mutations",
+      "/guides/mutations/shiny-vs-sparkle",
+      "/blog/how-to-get-eggs-evomon",
+      "/blog/evomon-pity-system-explained",
+    ],
+    quickAnswer:
+      "Most **“prismatic egg Evomon”** searches mean this combo: get a **Shiny Egg** from catching, then hatch it with a **Prismatic Ball** so the hatch is **Shiny + Prismatic (Sparkle)** — Purp also says that hatch path lands **SSS talent**. Separately, some reward tracks list a named **Prismatic Egg** item (Battle Pass / login style rewards in community write-ups) that hatches a **random prismatic cosmetic** Evomon — not the same as the shiny-egg + ball flex. Prismatic alone does **not** add combat stats.",
+    sections: [
+      {
+        heading: "Two things people call a “prismatic egg”",
+        paragraphs: [
+          "Google mixes two different loops under the same phrase. Creator hunt videos (YouTube) almost always mean the **shiny egg + Prismatic Ball** hatch. Written egg / Battle Pass guides also mention an inventory egg literally labeled **Prismatic Egg**. Answer the query by picking which inventory item you actually have.",
+        ],
+        bullets: [
+          "**A — Shiny Egg + Prismatic Ball (YouTube meta)** — farm a species **Shiny Egg**, hatch with a **Prismatic Ball** → guaranteed shiny looks + prismatic (Sparkle) looks; Purp: also **triple S talent** on that hatch option.",
+          "**B — Named Prismatic Egg reward** — community egg guides (e.g. Gamezebo) describe a **Prismatic Egg** that hatches a **random** Evomon as its **prismatic / sparkling** variant with at least **S talent** — cosmetic flex, not a shiny guarantee.",
+          "**Not the same as field pity** — wild prismatic pity (~150 captures) and the [149 trick](/blog/evomon-pity-system-explained) are live-catch routes, not egg labels.",
+        ],
+        callout: {
+          title: "Check the egg name in your bag",
+          body: "If the egg says “Shiny [Species] Egg”, use path A. If it literally says “Prismatic Egg”, treat it as path B and confirm the current Battle Pass / login reward text in-game.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "Path A — hatch a Shiny Egg with a Prismatic Ball",
+        paragraphs: [
+          "[Purp’s full shiny/prismatic guide](https://www.youtube.com/watch?v=t3Ar4Bslgzg) is the clearest July 2026 walkthrough: normal eggs (e.g. Mudbug egg) hatch with **guaranteed S talent**; a **shiny egg** is the special drop; when you hatch that shiny egg you can choose to use a **Prismatic Ball**, and that option **guarantees Shiny + Prismatic + SSS** in one hatch.",
+          "[Macrolo](https://www.youtube.com/watch?v=xnc9cEJF1V8) repeats the same item logic: save a Prismatic Ball for a shiny egg hatch to skip the long wild combo grind.",
+        ],
+        bullets: [
+          "1. **Defeat** then **catch** the target — eggs only roll after a successful catch (Macrolo / ImSoaren).",
+          "2. Farm until a **Shiny [Species] Egg** drops (boss lines often rely on this when field shiny pity is missing — ImSoaren).",
+          "3. Open the hatch UI and select hatch **with a Prismatic Ball** when you want the Sparkle appearance on the guaranteed shiny.",
+          "4. Prefer boss / mount farms when the species lacks field shiny pity; use Catch Master on hard catches — see [Shiny Egg Guide](/guides/mutations/shiny-egg).",
+        ],
+        callout: {
+          title: "Prismatic Ball UI wording",
+          body: "Purp notes the ball text may say “sparkle appearance” — in practice that is the prismatic cosmetic layer (five-point star), not a second shiny.",
+          variant: "note",
+        },
+      },
+      {
+        heading: "Path B — named Prismatic Egg rewards",
+        paragraphs: [
+          "Community written guides document a separate **Prismatic Egg** reward (not a wild shiny-egg drop). [Gamezebo’s eggs FAQ](https://www.gamezebo.com/walkthroughs/how-to-get-eggs-in-evomon/) describes it as hatching **any** Evomon as its prismatic sparkling variant with **at least S talent**. Other pass write-ups list Prismatic Eggs among Battle Pass / login-style rewards — **confirm the live pass track in your client**, because season reward rows change.",
+        ],
+        bullets: [
+          "**Expect cosmetics, not shiny stats** — prismatic/Sparkle alone does not buff combat (Purp + ImSoaren).",
+          "**Species is random** on that reward egg type (per Gamezebo) — do not expect a chosen boss mount from path B.",
+          "**Do not spend a Prismatic Ball “fixing” path B** the same way as a shiny egg unless the hatch UI explicitly offers that option — save Prismatic Balls for shiny encounters or shiny eggs (Purp).",
+        ],
+      },
+      {
+        heading: "When to spend a Prismatic Ball",
+        bullets: [
+          "**Yes** — hatching a **Shiny Egg** you want as Shiny + Prismatic + SSS (Purp).",
+          "**Yes** — capturing a **confirmed wild shiny** when you want prismatic looks without parking the 149 pity stack (Purp’s alternate to the egg method).",
+          "**No** — random normal catches; balls are scarce mid-game.",
+          "**Alternate** — park prismatic pity at 149 and catch the natural shiny with a **King Ball** instead ([pity explained](/blog/evomon-pity-system-explained)); ImSoaren: King Ball covers SSS when pity already forces prismatic.",
+        ],
+      },
+      {
+        heading: "Related pages (don’t duplicate farms here)",
+        paragraphs: [
+          "Catch loop and normal eggs: [How to Get Eggs](/blog/how-to-get-eggs-evomon). Field odds and boss egg notes: [Shiny Egg Chance](/blog/evomon-shiny-egg-chance). Sparkle vs shiny combat value: [Shiny vs Sparkle](/guides/mutations/shiny-vs-sparkle).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What is a prismatic egg in Evomon?",
+        a: "Usually players mean hatching a Shiny Egg with a Prismatic Ball for Shiny + Prismatic. Separately, some rewards grant an item named Prismatic Egg that hatches a random prismatic (cosmetic) Evomon — check the exact egg name in your inventory.",
+      },
+      {
+        q: "Does a Prismatic Egg give shiny stats?",
+        a: "A named Prismatic Egg reward is described as a prismatic/cosmetic hatch, not a shiny. Shiny stats come from a Shiny Egg hatch or a wild/field shiny. Prismatic alone does not add combat stats.",
+      },
+      {
+        q: "How do I get Shiny + Prismatic from an egg?",
+        a: "Farm a Shiny Egg by catching after KOs, then hatch it using a Prismatic Ball. Purp’s July 2026 guide says that hatch option guarantees shiny, prismatic, and SSS talent together.",
+      },
+      {
+        q: "Should I use a Prismatic Ball on every egg?",
+        a: "No. Save Prismatic Balls for shiny eggs or confirmed shiny catches. Normal species eggs are the volume farm and do not need the ball.",
+      },
+    ],
+    sources: [
+      {
+        label: "Purp — Full Shiny/Prismatic Guide (shiny egg + Prismatic Ball hatch)",
+        url: "https://www.youtube.com/watch?v=t3Ar4Bslgzg",
+        channel: "Purp",
+      },
+      {
+        label: "Macrolo — Shiny hunting guide (Prismatic Ball on shiny egg)",
+        url: "https://www.youtube.com/watch?v=xnc9cEJF1V8",
+        channel: "Macrolo",
+      },
+      {
+        label: "ImSoaren — Shiny hunting (eggs, boss no field pity, Prismatic Ball notes)",
+        url: "https://www.youtube.com/watch?v=kA5s2l7tE7M",
+        channel: "ImSoaren",
+      },
+      {
+        label: "Gamezebo — Eggs FAQ (named Prismatic Egg description)",
+        url: "https://www.gamezebo.com/walkthroughs/how-to-get-eggs-in-evomon/",
+        channel: "Gamezebo",
+      },
+    ],
+  },
+  {
     slug: "evomon-pity-system-explained",
     title: "Evomon Pity System Explained — When to Use the 149 Trick",
     description:
@@ -1095,8 +1220,6 @@ export const blogPosts: BlogPost[] = [
       "how to get egg in evomon",
       "evomon egg",
       "evomon egg drop rate",
-      "prismatic egg evomon",
-      "evomon prismatic egg",
       "how to get shiny egg evomon",
       "how to get shiny egg in evomon",
     ],
@@ -1107,9 +1230,10 @@ export const blogPosts: BlogPost[] = [
       "/team-builder",
       "/codes",
       "/dex",
+      "/blog/prismatic-egg-evomon",
     ],
     quickAnswer:
-      "Most stable egg path: **(1)** Defeat the wild Evomon — do not run. **(2)** Catch it (eggs only roll after a successful catch). **(3)** Hope for a normal egg (S Talent) or rarer shiny egg. **(4)** For boss/mount lines without field pity, farm catches with Catch Master and hatch shiny eggs — Prismatic Ball on hatch for Shiny + Prismatic looks. There is no separate “prismatic egg” item.",
+      "Most stable egg path: **(1)** Defeat the wild Evomon — do not run. **(2)** Catch it (eggs only roll after a successful catch). **(3)** Hope for a normal egg (S Talent) or rarer shiny egg. **(4)** For boss/mount lines without field pity, farm catches with Catch Master and hatch shiny eggs — Prismatic Ball on hatch for Shiny + Prismatic looks. Searches for **“prismatic egg”** are covered on the [Prismatic Egg guide](/blog/prismatic-egg-evomon).",
     sections: [
       {
         heading: "The three egg outcomes",
@@ -1152,17 +1276,10 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: 'What "prismatic egg" actually means',
+        heading: 'What "prismatic egg" searches usually want',
         paragraphs: [
-          'Google searches for **"prismatic egg evomon"** usually mean: hatch a **shiny egg** using a **Prismatic Ball** → guaranteed shiny **with** prismatic appearance.',
-          "There is no separate prismatic egg item. The combo is: **farm shiny egg → hatch with Prismatic Ball**.",
-          "Advanced players also use the [149 prismatic pity trick](/guides/mutations) on live shiny encounters — different path, same Prismatic Ball payoff.",
+          "If you landed here from **prismatic egg evomon**, open the dedicated [Prismatic Egg guide](/blog/prismatic-egg-evomon). Short version: YouTube creators usually mean **hatch a Shiny Egg with a Prismatic Ball**; some reward tracks also grant a named **Prismatic Egg** item for a random prismatic cosmetic hatch.",
         ],
-        callout: {
-          title: "Not a glitch",
-          body: 'Some YouTube titles call Catch Master a "hack" — it is a legitimate adventure suit, not an exploit.',
-          variant: "warn",
-        },
       },
       {
         heading: "Beginner mistake to avoid",
@@ -1178,7 +1295,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         q: "What is a prismatic egg in Evomon?",
-        a: "Community shorthand for hatching a shiny egg with a Prismatic Ball — not a separate egg type.",
+        a: "See the Prismatic Egg guide — usually shiny egg + Prismatic Ball hatch, or a named reward egg for random prismatic cosmetics.",
       },
       {
         q: "Which bosses need shiny eggs?",

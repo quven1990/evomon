@@ -21,6 +21,18 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-22",
+        title: "Blog — Prismatic Egg clarified (shiny egg + ball vs reward egg)",
+        body: "New /blog/prismatic-egg-evomon owns prismatic-egg queries (~224 GSC impressions). Separates YouTube shiny-egg + Prismatic Ball hatch (Purp/Macrolo) from named Prismatic Egg rewards (Gamezebo). Removed those targets from the general eggs post to cut cannibalization.",
+        tags: ["Blog", "SEO"],
+        pages: [
+          "/blog/prismatic-egg-evomon",
+          "/blog/how-to-get-eggs-evomon",
+          "/guides/mutations/shiny-egg",
+          "/blog",
+        ],
+      },
+      {
+        date: "2026-07-22",
         title: "Blog — Evomon pity system & when to use 149",
         body: "New /blog/evomon-pity-system-explained targets pity / 149-trick queries. Based on ImSoaren, Macrolo, and DoffyRobloxnoob YouTube guides: capture-only prismatic pity, 149 park steps, when to skip for eggs/bosses. Links to mutations hub without replacing it.",
         tags: ["Blog", "SEO"],
