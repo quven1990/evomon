@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DexSourceBadge } from "@/components/Badges";
-import { buildPetFaqs, DexPetDetailSections } from "@/components/DexPetDetailSections";
+import { DexPetDetailSections } from "@/components/DexPetDetailSections";
 import { pageTitleClass } from "@/components/PageShell";
 import { PetAvatar } from "@/components/PetAvatar";
 import { StructuredData } from "@/components/StructuredData";
 import { dexEntries } from "@/data/dex";
 import { elementStyles } from "@/data/type-chart";
-import { getEvolutionLine, getPetExtra } from "@/lib/dex-pet";
+import { buildPetFaqs, getEvolutionLine, getPetLeadCopy } from "@/lib/dex-pet";
 import { dexPetMetadata } from "@/lib/seo";
 import { canonical } from "@/lib/site";
 
@@ -40,8 +40,8 @@ export default async function DexDetailPage({ params }: Props) {
   const pet = { ...entry, name: entry.name };
 
   const styles = elementStyles[pet.element];
-  const extra = getPetExtra(slug);
   const line = getEvolutionLine(pet);
+  const lead = getPetLeadCopy(pet);
   const pageUrl = canonical(`/dex/${slug}`);
   const faqs = buildPetFaqs(pet);
 
@@ -95,15 +95,16 @@ export default async function DexDetailPage({ params }: Props) {
               {line.length > 1 ? ` · ${pet.element} line` : ` · ${pet.element}`}
             </p>
             <h1 className={pageTitleClass()}>{pet.name}</h1>
-            <p className="mt-2 text-sm text-zinc-400">
-              {extra?.role
-                ? `${extra.role} — Roblox Evomon dex entry.`
-                : `Roblox Evomon dex entry #${pet.number}.`}
-            </p>
+            <p className="mt-2 text-sm text-zinc-400">{lead.roleLine}</p>
             <div className="mt-3 flex flex-wrap justify-center gap-2 sm:justify-start">
               <span className={`rounded-full px-3 py-1 text-sm ${styles.bg} ${styles.text}`}>
                 {pet.element}
               </span>
+              {line.length > 1 && (
+                <span className="rounded-full bg-white/10 px-3 py-1 text-sm text-zinc-200">
+                  {line.length}-stage line
+                </span>
+              )}
               {pet.tier && (
                 <span className="rounded-full bg-amber-500/15 px-3 py-1 text-sm font-bold text-amber-300">
                   {pet.tier} Tier
