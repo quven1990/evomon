@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HeroBackground } from "@/components/HeroBackground";
 import { FeaturedPets } from "@/components/FeaturedPets";
 import { FeaturedPetsDesktop } from "@/components/FeaturedPetsDesktop";
+import { latestActiveCode } from "@/data/codes";
 import { monthYear } from "@/lib/site";
 
 const monthLabel = monthYear();
@@ -50,7 +51,7 @@ export function HeroBanner() {
               href="/codes#codes-list"
               className="rounded-xl border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/15"
             >
-              Free Codes
+              Codes · {latestActiveCode.code}
             </Link>
           </div>
         </div>

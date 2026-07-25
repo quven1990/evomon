@@ -68,6 +68,9 @@ export const activeCodes: CodeEntry[] = [
   { code: "EvomonVip", reward: "5 Medium EXP Fruits", source: "community" },
 ];
 
+/** Newest active code — keep first in `activeCodes`; used for homepage teaser. */
+export const latestActiveCode = activeCodes[0];
+
 export const watchlistCodes: CodeEntry[] = [
   { code: "YTBgift", reward: "2,000 Coins", source: "third-party", sourceNote: "Try after main list" },
   { code: "10KLIKES", reward: "Unknown", source: "third-party", sourceNote: "Milestone — unconfirmed" },

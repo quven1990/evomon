@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-25",
+        title: "Homepage — light NEW code teaser",
+        body: "Hero Codes CTA and Explore card show the newest code (240evoRISE) without dumping a full redeem list on the home first viewport. Active-codes stat links to /codes.",
+        tags: ["Codes", "UX"],
+        pages: ["/", "/codes"],
+      },
+      {
+        date: "2026-07-25",
         title: "Codes — 240evoRISE (240K likes)",
         body: "Added 240evoRISE from the official 240K Roblox likes gift (5 Summon Tickets, 3 Trait Reroll Potions). Promoted it in popular community codes and bumped the next like milestone watch to 300K.",
         tags: ["Codes"],

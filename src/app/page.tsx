@@ -15,7 +15,7 @@ import {
 import { HeroBanner } from "@/components/HeroBanner";
 import { StructuredData } from "@/components/StructuredData";
 import { homeMetadata } from "@/lib/seo";
-import { activeCodes } from "@/data/codes";
+import { activeCodes, latestActiveCode } from "@/data/codes";
 import { dexStats } from "@/data/dex";
 import { navSections } from "@/data/navigation";
 import { GAME } from "@/lib/game";
@@ -37,8 +37,8 @@ const featureCards = [
     href: "/codes#codes-list",
     icon: Gift,
     title: "Active Codes",
-    desc: "One-click copy, source labels, and redeem troubleshooting.",
-    tag: `${activeCodes.length} active`,
+    desc: `Newest: ${latestActiveCode.code} — one-click copy and redeem tips.`,
+    tag: `NEW · ${latestActiveCode.code}`,
   },
   {
     href: "/type-chart",
@@ -137,7 +137,7 @@ export default function HomePage() {
             {[
               { label: "Pet sprites", value: "76+" },
               { label: "Dex slots", value: String(stats.total), href: "/dex" as const },
-              { label: "Active codes", value: String(activeCodes.length) },
+              { label: "Active codes", value: String(activeCodes.length), href: "/codes#codes-list" as const },
               { label: "Named", value: String(stats.named), href: "/dex" as const },
             ].map((item) => {
               const inner = (
