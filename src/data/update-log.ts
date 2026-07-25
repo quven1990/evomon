@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-23";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-25";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-25",
+        title: "Codes — 240evoRISE (240K likes)",
+        body: "Added 240evoRISE from the official 240K Roblox likes gift (5 Summon Tickets, 3 Trait Reroll Potions). Promoted it in popular community codes and bumped the next like milestone watch to 300K.",
+        tags: ["Codes"],
+        pages: ["/codes"],
+      },
       {
         date: "2026-07-23",
         title: "Dex batch fact-check vs evomon.wiki",

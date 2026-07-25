@@ -8,8 +8,8 @@ export interface CodeEntry {
   addedAt?: string;
 }
 
-export const CODES_LAST_UPDATED = "2026-07-21";
-export const CODES_DATA_CHECKED = "2026-07-21";
+export const CODES_LAST_UPDATED = "2026-07-25";
+export const CODES_DATA_CHECKED = "2026-07-25";
 
 /** Past codes listed on the Roblox game page description (official). */
 export const officialRobloxCodes = [
@@ -22,11 +22,18 @@ export const officialRobloxCodes = [
   "EVO120HYPE",
 ] as const;
 
-export const NEXT_LIKE_MILESTONE = "240K likes";
+export const NEXT_LIKE_MILESTONE = "300K likes";
 
 const robloxListingNote = "Listed in Roblox game description";
 
 export const activeCodes: CodeEntry[] = [
+  {
+    code: "240evoRISE",
+    reward: "5 Summon Tickets, 3 Trait Reroll Potions",
+    source: "community",
+    sourceNote: "Official 240K Roblox likes milestone gift",
+    addedAt: "2026-07-25",
+  },
   {
     code: "100DCUNITY",
     reward: "Discord 100K members milestone gift",
@@ -73,7 +80,7 @@ export const expiredCodes: CodeEntry[] = [];
 export const featuredCodeIds = ["EVO120HYPE", "2K-LIKES", "THXFOR5K"] as const;
 
 /** Popular community codes — shown after official block */
-export const highlightCodeIds = ["100DCUNITY", "FORGROUP", "EVO60SPARK", "30K-LIKES", "D50CREW"] as const;
+export const highlightCodeIds = ["240evoRISE", "100DCUNITY", "FORGROUP", "EVO60SPARK", "30K-LIKES", "D50CREW"] as const;
 
 export function getFeaturedCodes(): CodeEntry[] {
   return featuredCodeIds
@@ -103,7 +110,7 @@ export const codeTroubleshooting = [
 export const codesFaq = [
   {
     q: "What are the active Evomon codes?",
-    a: "Start with official Roblox-description codes (EVO120HYPE, 2K-LIKES, THXFOR5K, 30K-LIKES), then try Discord milestone codes like 100DCUNITY, D50CREW, and DCGIFT in a fresh server.",
+    a: "Start with the newest milestone code 240evoRISE (240K likes), then official Roblox-description codes (EVO120HYPE, 2K-LIKES, THXFOR5K, 30K-LIKES), plus Discord codes like 100DCUNITY, D50CREW, and DCGIFT in a fresh server.",
   },
   {
     q: "Why does an Evomon code fail?",
