@@ -16,7 +16,7 @@ export type PetCombatData = {
 };
 
 export const PET_COMBAT_SOURCE = "community-wiki";
-export const PET_COMBAT_LAST_CHECKED = "2026-07-21";
+export const PET_COMBAT_LAST_CHECKED = "2026-07-25";
 
 export const petCombatBySlug: Record<string, PetCombatData> = {
   "arcapex": {
@@ -108,6 +108,42 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   "clanxor": {
     stats: { hp: 71, attack: 88, defense: 115, spAtk: 78, spDef: 96, speed: 60 },
     traits: [], location: "Floating Island"
+  },
+  "clipdow": {
+    stats: { hp: 43, attack: 54, defense: 35, spAtk: 44, spDef: 39, speed: 57 },
+    traits: [], location: "Boss Battle (Lunaria Isle)"
+  },
+  "cliphas": {
+    stats: { hp: 60, attack: 75, defense: 49, spAtk: 57, spDef: 55, speed: 79 },
+    traits: [], location: "Via Evolved"
+  },
+  "clipexor": {
+    stats: { hp: 83, attack: 110, defense: 68, spAtk: 72, spDef: 76, speed: 110 },
+    traits: [], location: "Via Evolved"
+  },
+  "glowy": {
+    stats: { hp: 41, attack: 44, defense: 55, spAtk: 52, spDef: 37, speed: 30 },
+    traits: [], location: "Floating Realm"
+  },
+  "glowres": {
+    stats: { hp: 58, attack: 63, defense: 76, spAtk: 72, spDef: 52, speed: 40 },
+    traits: [], location: "Via Evolved"
+  },
+  "goliath": {
+    stats: { hp: 81, attack: 88, defense: 107, spAtk: 102, spDef: 74, speed: 57 },
+    traits: [], location: "Via Evolved"
+  },
+  "wispark": {
+    stats: { hp: 41, attack: 40, defense: 39, spAtk: 56, spDef: 37, speed: 58 },
+    traits: ["Momentum"], location: "Boss Battle (Solaris Isle)"
+  },
+  "wisflare": {
+    stats: { hp: 57, attack: 54, defense: 55, spAtk: 78, spDef: 51, speed: 81 },
+    traits: ["Momentum"], location: "Via Evolved"
+  },
+  "wispreign": {
+    stats: { hp: 78, attack: 74, defense: 77, spAtk: 108, spDef: 70, speed: 114 },
+    traits: ["Momentum"], location: "Via Evolved"
   },
   "datubud": {
     stats: { hp: 58, attack: 46, defense: 56, spAtk: 76, spDef: 57, speed: 70 },

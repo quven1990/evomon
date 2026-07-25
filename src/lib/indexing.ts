@@ -27,6 +27,10 @@ export const INDEXABLE_DEX_SLUGS = [
   "frostlet",
   "frostseer",
   "tarro",
+  "tarragon",
+  "glowy",
+  "glowres",
+  "goliath",
   "arcub",
   "arcapex",
   "wispuff",
@@ -64,6 +68,15 @@ export const INDEXABLE_DEX_SLUGS = [
   "datunymph",
   "mudbud",
   "mudthorn",
+  // Season-1 batch (boss-reward + seasonal island lines, curated thick copy)
+  "wispark",
+  "wisflare",
+  "wispreign",
+  "clipdow",
+  "cliphas",
+  "clipexor",
+  "clanx",
+  "clanxor",
 ] as const;
 
 export type IndexableDexSlug = (typeof INDEXABLE_DEX_SLUGS)[number];

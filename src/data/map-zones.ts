@@ -256,9 +256,10 @@ export const mapZones: MapZone[] = [
     zone: 13,
     levelRange: "135–150",
     note: "Datunymph also appears here as a mini-boss.",
-    huntTip: "Poison/dragon late island — Vipip / Tarro toward Viparch / Terragon.",
+    huntTip: "Poison/dragon late island — Vipip / Tarro toward Viparch / Tarragon.",
     related: [
       { href: "/dex/tarro", label: "Tarro dex" },
+      { href: "/dex/tarragon", label: "Tarragon dex" },
       { href: "/type-chart", label: "Type chart" },
       { href: "/guides/mutations", label: "Shiny hub" },
     ],
@@ -289,6 +290,24 @@ export const mapZones: MapZone[] = [
       { name: "Wispshade", level: "156–160", role: "wild" },
       { name: "Starmuse", level: "165", role: "mini-boss" },
       { name: "Starmuse", level: "165", role: "boss" },
+    ],
+  },
+  {
+    id: "floating-realm",
+    name: "Floating Realm / Floating Island",
+    zone: 20,
+    levelRange: "140–195",
+    note: "Seasonal map via World Select (community unlock ~account Lv 30). Names vary: Floating Realm vs Floating Island.",
+    huntTip: "Seasonal Ground/Steel — Glowy toward Goliath; Clanx toward Clanxor. Boss loops sit higher than the wild band.",
+    related: [
+      { href: "/dex/glowy", label: "Glowy dex" },
+      { href: "/dex/goliath", label: "Goliath dex" },
+      { href: "/type-chart", label: "Type chart" },
+    ],
+    spawns: [
+      { name: "Glowy", level: "140–145", role: "wild" },
+      { name: "Clanx", level: "140–160", role: "wild" },
+      { name: "Clanxor", level: "195", role: "boss" },
     ],
   },
   {

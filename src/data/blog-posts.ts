@@ -673,7 +673,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Pebble evolution line",
         paragraphs: [
           "The site's cross-source Dex records the line as **Pebble → Pebroll → Pebgolem**. The value of evolving is durability: ItzVexo calls Pebble an amazing early-game Evomon and a good midgame tank, while warning that it falls off in deep endgame.",
-          "Do not confuse Pebble with Tarro/Terragon — they are different lines. Pebble is the early Rock wall; Tarro/Terragon is the later Grass/Dragon tank.",
+          "Do not confuse Pebble with Tarro/Tarragon — they are different lines. Pebble is the early Rock wall; Tarro/Tarragon is the later Grass/Dragon tank.",
         ],
         bullets: [
           "**Pebble** — early Verdant Valley catch.",

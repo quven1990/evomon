@@ -81,13 +81,13 @@ export const islandRoute: IslandGuide[] = [
     island: "Amber Acres",
     anchor: "amber-acres",
     catch: ["Summon runes — NPC duels for Evolution Stone tokens"],
-    skip: ["Dattbug line for most players — outscaled by Wispuff + Terragon later"],
+    skip: ["Dattbug line for most players — outscaled by Wispuff + Tarragon later"],
     notes: "Exchange tokens for Evolution Stones before EXP fruits.",
   },
   {
     island: "Autumn Hill",
     anchor: "autumn-hill",
-    catch: ["Tarro / Terragon — endgame grass/dragon tank (party or ice-types help)"],
+    catch: ["Tarro / Tarragon — endgame grass/dragon tank (party or ice-types help)"],
     skip: ["Gym leader rush without prep — bring Lavarock and type counters"],
     notes: "Murkwood Tarro fights are easier with a high-level friend; ice deals 4× damage to grass.",
   },
@@ -123,7 +123,7 @@ export const islandRoute: IslandGuide[] = [
 
 export const coreTeamTargets = [
   { name: "Lavarock", role: "Fire / rock carry", priority: "Evolve first" },
-  { name: "Terragon", role: "Main tank", priority: "Mid-game hunt" },
+  { name: "Tarragon", role: "Main tank", priority: "Mid-game hunt" },
   { name: "Bluebird / Volcrest", role: "Flying / electric DPS", priority: "Raven Ridge" },
   { name: "Frostlet", role: "Ice AoE + frostbite", priority: "Late mid-game" },
   { name: "Wispuff", role: "Psychic / poison", priority: "Netherland area" },

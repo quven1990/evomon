@@ -35,6 +35,12 @@ const GENERIC_TRAITS = new Set([
   "Psywall",
 ]);
 
+/**
+ * Base forms that start a new line even when the previous dex number shares the
+ * element — e.g. Wispark #094–096 and Clipdow #097–099 are both Normal lines.
+ */
+const LINE_START_SLUGS = new Set(["wispark", "clipdow"]);
+
 /** Consecutive dex numbers with the same element — likely evolution line (community-confirmed where noted). */
 export function getEvolutionLine(entry: DexEntry & { name: string }): (DexEntry & { name: string })[] {
   const named = namedEntries();
@@ -42,6 +48,8 @@ export function getEvolutionLine(entry: DexEntry & { name: string }): (DexEntry 
 
   let start = entry.number;
   while (true) {
+    const cur = byNumber.get(start);
+    if (cur && LINE_START_SLUGS.has(cur.name.toLowerCase())) break;
     const prev = byNumber.get(start - 1);
     if (!prev || prev.element !== entry.element) break;
     start -= 1;
@@ -51,6 +59,7 @@ export function getEvolutionLine(entry: DexEntry & { name: string }): (DexEntry 
   while (true) {
     const next = byNumber.get(end + 1);
     if (!next || next.element !== entry.element) break;
+    if (LINE_START_SLUGS.has(next.name.toLowerCase())) break;
     end += 1;
   }
 

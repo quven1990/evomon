@@ -56,7 +56,7 @@ export const endgameTiers: TierGroup[] = [
         obtain: "Funder Cliff boss",
       },
       {
-        name: "Tarro → Terragon",
+        name: "Tarro → Tarragon",
         types: "Grass / Dragon",
         role: "Main tank",
         why: "Self-sustain and bulk for long boss fights. Often called a must-have grass/dragon wall for endgame teams.",

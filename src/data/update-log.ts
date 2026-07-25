@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-25",
+        title: "Dex — Season-1 lines added as thick pages",
+        body: "Renamed Terragon→Tarragon (#067) site-wide and replaced unverified third-party slot names (#094–101) with the confirmed Season-1 lines: Wispark → Wisflare → Wispreign, Clipdow → Cliphas → Clipexor, Clanx → Clanxor. Filled empty #104–106 with Glowy → Glowres → Goliath. All 12 shipped as curated thick pages (meta/blurb/FAQ), added the Floating Realm map zone, and 301-redirected the retired slugs.",
+        tags: ["Dex", "SEO"],
+        pages: ["/dex/tarragon", "/dex/glowy", "/dex/goliath", "/dex/clipdow", "/dex/wispark", "/dex/clanx", "/map-zones"],
+      },
+      {
+        date: "2026-07-25",
         title: "Homepage — light NEW code teaser",
         body: "Hero Codes CTA and Explore card show the newest code (240evoRISE) without dumping a full redeem list on the home first viewport. Active-codes stat links to /codes.",
         tags: ["Codes", "UX"],

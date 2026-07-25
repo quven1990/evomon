@@ -28,7 +28,7 @@ export interface DexEntry {
   source: DexSource;
 }
 
-export const DEX_LAST_CHECKED = "2026-06-24";
+export const DEX_LAST_CHECKED = "2026-07-25";
 export const DEX_TOTAL_SLOTS = 108;
 
 export const dexEntries: DexEntry[] = [
@@ -98,7 +98,7 @@ export const dexEntries: DexEntry[] = [
   { number: 64, name: "Gempillar", element: "Bug", tier: null, source: "cross-source" },
   { number: 65, name: "Gempress", element: "Bug", tier: null, source: "community" },
   { number: 66, name: "Tarro", element: "Grass", tier: "S", source: "cross-source" },
-  { number: 67, name: "Terragon", element: "Grass", tier: "S", source: "community" },
+  { number: 67, name: "Tarragon", element: "Grass", tier: "S", source: "cross-source" },
   { number: 68, name: "Emberhorn", element: "Fire", tier: null, source: "third-party" },
   { number: 69, name: "Horninferno", element: "Fire", tier: null, source: "third-party" },
   { number: 70, name: "Arcub", element: "Electric", tier: null, source: "cross-source" },
@@ -125,19 +125,19 @@ export const dexEntries: DexEntry[] = [
   { number: 91, name: "Celesthorn", element: "Psychic", tier: null, source: "third-party" },
   { number: 92, name: "Metavolt", element: "Steel", tier: null, source: "third-party" },
   { number: 93, name: "Metascythe", element: "Steel", tier: null, source: "third-party" },
-  { number: 94, name: "Lumikid", element: "Light", tier: null, source: "third-party" },
-  { number: 95, name: "Lumisoul", element: "Light", tier: null, source: "third-party" },
-  { number: 96, name: "Luminarch", element: "Light", tier: null, source: "third-party" },
-  { number: 97, name: "Snipkit", element: "Dark", tier: null, source: "third-party" },
-  { number: 98, name: "Snipdoll", element: "Dark", tier: null, source: "third-party" },
-  { number: 99, name: "Snipslash", element: "Dark", tier: null, source: "third-party" },
-  { number: 100, name: "Shellgrit", element: "Steel", tier: null, source: "third-party" },
-  { number: 101, name: "Shellspike", element: "Steel", tier: null, source: "third-party" },
+  { number: 94, name: "Wispark", element: "Normal", tier: null, source: "cross-source" },
+  { number: 95, name: "Wisflare", element: "Normal", tier: null, source: "cross-source" },
+  { number: 96, name: "Wispreign", element: "Normal", tier: null, source: "cross-source" },
+  { number: 97, name: "Clipdow", element: "Normal", tier: null, source: "cross-source" },
+  { number: 98, name: "Cliphas", element: "Normal", tier: null, source: "cross-source" },
+  { number: 99, name: "Clipexor", element: "Normal", tier: null, source: "cross-source" },
+  { number: 100, name: "Clanx", element: "Steel", tier: null, source: "cross-source" },
+  { number: 101, name: "Clanxor", element: "Steel", tier: null, source: "cross-source" },
   { number: 102, name: "Frostin", element: "Ice", tier: null, source: "third-party" },
   { number: 103, name: "Frostclaw", element: "Ice", tier: null, source: "third-party" },
-  { number: 104, name: null, element: "Unknown", tier: null, source: "unpublished" },
-  { number: 105, name: null, element: "Unknown", tier: null, source: "unpublished" },
-  { number: 106, name: null, element: "Unknown", tier: null, source: "unpublished" },
+  { number: 104, name: "Glowy", element: "Ground", tier: null, source: "cross-source" },
+  { number: 105, name: "Glowres", element: "Ground", tier: null, source: "cross-source" },
+  { number: 106, name: "Goliath", element: "Ground", tier: null, source: "cross-source" },
   { number: 107, name: null, element: "Unknown", tier: null, source: "unpublished" },
   { number: 108, name: null, element: "Unknown", tier: null, source: "unpublished" },
 ];

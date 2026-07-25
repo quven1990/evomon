@@ -1,2 +1,22 @@
 # Cloudflare Pages — trailing slashes on static XML files return 404 without redirects
 /sitemap.xml/ /sitemap.xml 301
+
+# Dex renames — 301 old slugs to the corrected name (avoid dead links after fixes)
+/dex/terragon /dex/tarragon 301
+/dex/terragon/ /dex/tarragon 301
+/dex/lumikid /dex/wispark 301
+/dex/lumikid/ /dex/wispark 301
+/dex/lumisoul /dex/wisflare 301
+/dex/lumisoul/ /dex/wisflare 301
+/dex/luminarch /dex/wispreign 301
+/dex/luminarch/ /dex/wispreign 301
+/dex/snipkit /dex/clipdow 301
+/dex/snipkit/ /dex/clipdow 301
+/dex/snipdoll /dex/cliphas 301
+/dex/snipdoll/ /dex/cliphas 301
+/dex/snipslash /dex/clipexor 301
+/dex/snipslash/ /dex/clipexor 301
+/dex/shellgrit /dex/clanx 301
+/dex/shellgrit/ /dex/clanx 301
+/dex/shellspike /dex/clanxor 301
+/dex/shellspike/ /dex/clanxor 301

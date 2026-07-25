@@ -1,4 +1,5 @@
 import { petDetailsMapCombatBatch } from "./pet-details-map-combat-batch";
+import { petDetailsSeason1Batch } from "./pet-details-season1-batch";
 
 /** Curated copy for indexable dex detail pages — single source for meta + on-page blurbs. */
 export type PetFaq = { q: string; a: string };
@@ -300,24 +301,24 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
   },
   tarro: {
     typesDisplay: "Grass / Dragon",
-    metaTitle: "Tarro Evomon — Murkwood Catch Toward Terragon",
+    metaTitle: "Tarro Evomon — Murkwood Catch Toward Tarragon",
     metaDescription:
-      "Tarro (#066) is a late Murkwood Grass wild (~Lv 142–150) toward Terragon. Endgame grass/dragon tank line — when to invest after Lavite and Bluebird.",
-    location: "Murkwood wild (~Lv 142–150)",
+      "Tarro (#066) is a late Murkwood Grass wild (~Lv 140–150) toward Tarragon. Endgame grass/dragon tank line — when to invest after Lavite and Bluebird.",
+    location: "Murkwood wild (~Lv 140–150)",
     weather: "Any",
     role: "Late grass/dragon tank seed",
     blurb:
-      "Tarro opens the Terragon grass/dragon wall line that July 2026 S-tier notes call out for self-sustain on long boss fights. It is a late Murkwood catch (~Lv 142–150) — not an early-island project. Community evolution-priority tips group Tarro with Arcub/Frostlet: unlock it after Lavarock + Bluebird (or equivalent) handle dailies, then invest when this boss answer is what you actually run.",
+      "Tarro opens the Tarragon grass/dragon wall line that community S-tier notes keep for self-sustain on long boss fights. It is a late Murkwood catch (~Lv 140–150) — not an early-island project. Evolution-priority tips group Tarro with Arcub/Frostlet: unlock it after Lavarock + Bluebird handle dailies, then invest when this boss answer is what you actually run.",
     evolutionNote:
-      "Tarro → Terragon. Save the stone for a keeper with usable Talent once Murkwood is unlocked. Do not dump early-route stones here while Verdant → Lava Crag still needs Rock/Fire carries.",
+      "Tarro → Tarragon. Save the stone for a keeper with usable Talent once Murkwood is unlocked. Do not dump early-route stones here while Verdant → Lava Crag still needs Rock/Fire carries.",
     faqs: [
       {
         q: "Where do you catch Tarro in Evomon?",
-        a: "Murkwood wild spawns around Lv 142–150 on our map-zones list. You need late-game island progress — this is not a Verdant Valley catch.",
+        a: "Murkwood wild spawns around Lv 140–150 on our map-zones list. You need late-game island progress — this is not a Verdant Valley catch.",
       },
       {
-        q: "Is Tarro / Terragon worth Evolution Stones?",
-        a: "Yes as a late endgame grass/dragon tank once your daily clears are stable. Community S-tier notes highlight Terragon’s sustain for long bosses; it is a poor place to spend your first stones.",
+        q: "Is Tarro / Tarragon worth Evolution Stones?",
+        a: "Yes as a late endgame grass/dragon tank once your daily clears are stable. Community S-tier notes highlight Tarragon’s sustain for long bosses; it is a poor place to spend your first stones.",
       },
       {
         q: "Should I hunt Tarro before Frostseer or Arcapex?",
@@ -325,7 +326,7 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
       },
       {
         q: "What does Tarro evolve into?",
-        a: "Tarro evolves into Terragon. Confirm stone/level requirements in-game before committing your best copy.",
+        a: "Tarro evolves into Tarragon. Confirm stone/level requirements in-game before committing your best copy.",
       },
     ],
   },
@@ -436,4 +437,5 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     blurb: "High-impact fighting pick for teams that need a physical closer in harder content.",
   },
   ...petDetailsMapCombatBatch,
+  ...petDetailsSeason1Batch,
 };

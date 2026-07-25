@@ -155,7 +155,7 @@ export const huntRoutes = [
     why: "Fast encounters; shiny speed bumps can matter in PvP metas.",
   },
   {
-    target: "Tarro / Terragon",
+    target: "Tarro / Tarragon",
     where: "Late grass routes",
     difficulty: "Hard",
     why: "Leech Seed / healing moves make wild Tarro slow to farm — party or overlevel first.",
