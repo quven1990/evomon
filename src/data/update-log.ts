@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-25",
+        title: "Blog — How to Hatch Eggs in Evomon",
+        body: "New answer post for hatch-chamber UI searches (how to hatch egg / eggs in Evomon Roblox). Covers Hatching Chamber steps, community hatch timers, and Prismatic Ball-before-hatch for shiny eggs. Linked from the existing How to Get Eggs post.",
+        tags: ["Blog", "Eggs", "SEO"],
+        pages: ["/blog", "/blog/how-to-hatch-eggs-evomon", "/blog/how-to-get-eggs-evomon"],
+      },
+      {
+        date: "2026-07-25",
         title: "Dex — complete broken evolution lines (15 thick pages)",
         body: "Thick-wrote and indexed the missing mid/final forms on already-open lines: Blazmane, Leafroge/Leafblade, Chirphantom, Flutterby/Twirlby, Mopillow, Florawn/Silvanarch, Vipour, Frostelle, Graycrene, Gempress, Pummash, Wispshade, Thordlord. Dual typings follow wiki (e.g. Twirlby Bug/Flying, Frostelle Grass/Ice). No URL changes to existing indexed pets.",
         tags: ["Dex", "SEO"],
