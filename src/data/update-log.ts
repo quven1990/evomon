@@ -21,6 +21,18 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-25",
+        title: "Blog — Shiny Glowy & Shiny Arcapex guides",
+        body: "Two species shiny guides for queries already ranking top-5: Shiny Glowy (Floating Realm route, 149 prismatic-pity trick, Goliath stone plan) and Shiny Arcapex (no boss shiny pity — repeated boss catches for a shiny egg, Catch Master suit, Prismatic Ball at hatch). Also corrected the Thunder Cliffs hunt tip, which wrongly told players to prep shiny pity on a no-pity boss.",
+        tags: ["Blog", "Shiny", "SEO"],
+        pages: [
+          "/blog",
+          "/blog/shiny-glowy-evomon-guide",
+          "/blog/shiny-arcapex-evomon-guide",
+          "/map-zones",
+        ],
+      },
+      {
+        date: "2026-07-25",
         title: "Blog — How to Hatch Eggs in Evomon",
         body: "New answer post for hatch-chamber UI searches (how to hatch egg / eggs in Evomon Roblox). Covers Hatching Chamber steps, community hatch timers, and Prismatic Ball-before-hatch for shiny eggs. Linked from the existing How to Get Eggs post.",
         tags: ["Blog", "Eggs", "SEO"],

@@ -307,6 +307,7 @@ export const mapZones: MapZone[] = [
     related: [
       { href: "/dex/glowy", label: "Glowy dex" },
       { href: "/dex/goliath", label: "Goliath dex" },
+      { href: "/blog/shiny-glowy-evomon-guide", label: "Shiny Glowy guide" },
       { href: "/type-chart", label: "Type chart" },
     ],
     spawns: [
@@ -339,9 +340,10 @@ export const mapZones: MapZone[] = [
     name: "Thunder Cliffs",
     zone: 16,
     levelRange: "175+",
-    huntTip: "Electric end boss — Arcapex. Prep Electric checks and shiny pity if hunting.",
+    huntTip: "Electric end boss — Arcapex. No shiny pity here: repeated catches for a shiny egg are the shiny route.",
     related: [
       { href: "/dex/arcapex", label: "Arcapex dex" },
+      { href: "/blog/shiny-arcapex-evomon-guide", label: "Shiny Arcapex guide" },
       { href: "/guides/mutations", label: "Shiny hub" },
     ],
     spawns: [{ name: "Arcapex", level: "200", role: "boss" }],

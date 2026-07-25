@@ -32,6 +32,265 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "shiny-glowy-evomon-guide",
+    title: "Shiny Glowy Evomon Guide — Floating Realm Hunt & Goliath Plan",
+    description:
+      "Hunt Shiny Glowy on Floating Realm (Seasonal Island, ~Lv 140–145 past the stone bridge). Route, pity mechanics, the 149 prismatic trick, and when to evolve the keeper into Goliath.",
+    published: "2026-07-25",
+    gscTargets: [
+      "shiny glowy evomon",
+      "glowy shiny evomon",
+      "evomon glowy shiny",
+      "evomon shiny glowy",
+      "glowy evomon shiny",
+      "glowy evomon",
+      "evomon glowy",
+    ],
+    relatedGuides: [
+      "/dex/glowy",
+      "/dex/goliath",
+      "/map-zones#floating-realm",
+      "/guides/mutations",
+      "/blog/what-does-shiny-do-evomon",
+      "/blog/evomon-pity-system-explained",
+      "/type-chart",
+    ],
+    quickAnswer:
+      "To hunt **Shiny Glowy in Evomon**, open **World Select → Seasonal Island → Floating Realm** (community guides gate the seasonal map around **account Lv 30**), cross the stone bridge, and farm the wild Glowy band at roughly **Lv 140–145**. Knock each Glowy out and check the post-KO smoke reveal — shiny status is invisible during battle. Odds and the per-species **pity counter** display in the bottom-left while the Evomon is alive. Bring **Grass, Flying, or Dragon** pressure so fights stay short, then evolve your keeper: **Glowy → Glowres → Goliath**.",
+    sections: [
+      {
+        heading: "Where to hunt Shiny Glowy",
+        paragraphs: [
+          "Glowy is a **Season 1 seasonal spawn**, not a main-map wild. Gamezebo's Season 1 coverage lists Floating Realm as its home island, reached through the **World Select** menu (map icon, top-left) once your account clears the seasonal unlock — community guides put that around **account Lv 30**. Teleport to Floating Realm, cross the **stone bridge**, and the wild Glowy pack spawns beyond it at about **Lv 140–145** on our [Map Zones](/map-zones#floating-realm) sheet.",
+          "Level check first: a Lv 140+ wild band means an underleveled team turns every shiny check into a slog. AllThings.how's Glowy route guide recommends **Grass, Flying, or Dragon** attackers to chip it down fast — match that against our [Type Chart](/type-chart) before you commit to a long session.",
+        ],
+        callout: {
+          title: "Route answer",
+          body: "World Select → Seasonal Island → Floating Realm → past the stone bridge. If you cannot see Seasonal Island in World Select yet, level your account first — the seasonal map is gated.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "How the shiny check works on Glowy",
+        paragraphs: [
+          "Evomon does not show shiny status during battle. ImSoaren's shiny hunting guide walks the loop: **KO the wild Evomon**, wait for the smoke on the capture screen, and the reveal shows whether it is Shiny, Prismatic, or both. The **odds and pity counters sit bottom-left** of the combat screen while the target is alive — pity values differ per species, so read Glowy's own numbers in your client rather than assuming another pet's thresholds.",
+          "Remember which overlay you are hunting: **Shiny adds real stats**, Prismatic is cosmetic only. Full comparison with in-game numbers is on [What Does Shiny Do](/blog/what-does-shiny-do-evomon).",
+        ],
+        bullets: [
+          "**KO first, reveal second** — shiny is confirmed on the post-knockout smoke screen.",
+          "**Pity is per species** — captures advance Glowy's counters; KO-and-leave does not.",
+          "**Shiny = stats, Prismatic = looks** — hunt shiny for combat value, prismatic for the flex.",
+        ],
+      },
+      {
+        heading: "The 149 trick: guaranteed Shiny Prismatic Glowy",
+        paragraphs: [
+          "Because captures (not KOs) advance pity, hunters park the **Prismatic pity one below its guarantee** and save the trigger for a shiny reveal. ImSoaren, Gamezebo, and Roonby all describe the same setup on species with a 150 Prismatic pity: catch Glowy until the Prismatic counter reads **149**, then **stop catching**. Keep KOing Glowy and checking reveals — leave without catching if it is not shiny. When a **Shiny Glowy** finally shows in the smoke, catch it: that capture fires the Prismatic guarantee on a mon that is already shiny, producing a **Shiny Prismatic Glowy**.",
+          "No Prismatic Ball needed for this route — the pity supplies the Prismatic layer. Community guides suggest saving a **King Ball** for the final catch if you also want top Talent on the keeper. General pity math lives on [Pity System Explained](/blog/evomon-pity-system-explained).",
+        ],
+        callout: {
+          title: "Do not waste the trigger",
+          body: "One careless catch at 149 spends the Prismatic guarantee on a normal Glowy and the setup is gone. Confirm the number before every capture, and confirm Glowy's own guarantee value in your client — thresholds can differ per species.",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "After the catch: Glowy → Glowres → Goliath",
+        paragraphs: [
+          "The reason Glowy is worth a shiny project is the ceiling. **Goliath**, the final form, peaks at **Defense 107 / Sp. Atk 102** on community base-stat sheets — a seasonal tank-DPS hybrid. Goliath also appears as a **Lv 195 boss** on Floating Realm, but the practical shiny path is evolving a shiny Glowy, not praying at the boss.",
+          "AllThings.how's material table lists **10 Evolution Stones + 6 Ground + 6 Light element stones** for Glowy → Glowres, then a much heavier **30 Evolution + 15 Ground + 15 Light** for Glowres → Goliath. Treat those as community-reported costs and verify in your client before pressing evolve — seasonal balancing can move numbers.",
+        ],
+        bullets: [
+          "**Hunt shiny on the base form** — Glowy loops are the volume play; Glowres and Goliath have no listed wild band.",
+          "**Bank stones before evolving** — the second step is the expensive one; parking on Glowres wastes the seasonal grind.",
+          "**Talent still matters** — a shiny with junk Talent is a collection piece, not a carry. Read Talent before celebrating.",
+        ],
+      },
+      {
+        heading: "Quick checklist before a Shiny Glowy session",
+        bullets: [
+          "Seasonal Island unlocked in World Select (community guides: ~account Lv 30).",
+          "Team comfortably clears Lv 140–145 — Grass / Flying / Dragon coverage ready.",
+          "Ball stock topped up (grab active [codes](/codes) first).",
+          "Decide the goal: plain shiny keeper, or the 149-park Shiny Prismatic project.",
+          "Stone budget planned for Glowres → Goliath before you burn the first evolve.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Where do you find Shiny Glowy in Evomon?",
+        a: "Same place as normal Glowy — Floating Realm on the Seasonal Island map, past the stone bridge, around Lv 140–145. Shiny status is rolled per encounter and revealed after the KO.",
+      },
+      {
+        q: "Does Glowy have shiny pity?",
+        a: "Wild Glowy shows shiny and prismatic odds plus pity counters in the bottom-left of the combat screen. Pity advances on successful captures of that species, and thresholds differ per species — read Glowy's own numbers in your client.",
+      },
+      {
+        q: "How do I get a Shiny Prismatic Glowy?",
+        a: "Park Glowy's Prismatic pity one below its guarantee (149 on a 150-pity species), stop catching, and only capture when the post-KO reveal shows a shiny. That catch triggers the Prismatic guarantee on the shiny.",
+      },
+      {
+        q: "Should I evolve my Shiny Glowy?",
+        a: "Yes if the Talent is usable and you can afford the full stone plan — community tables cite 10 Evolution + 6 Ground + 6 Light stones to Glowres, then 30 / 15 / 15 to Goliath. Verify costs in-game first.",
+      },
+      {
+        q: "Is Shiny Glowy stronger than normal Glowy?",
+        a: "Yes — shiny adds a real stat boost on top of the recolor. Prismatic alone is cosmetic. Details with in-game comparisons: What Does Shiny Do in Evomon.",
+      },
+    ],
+    sources: [
+      {
+        label: "ImSoaren — The BEST Shiny Hunting Guide in Roblox Evomon!",
+        url: "https://www.youtube.com/watch?v=kA5s2l7tE7M",
+        channel: "ImSoaren",
+      },
+      {
+        label: "AllThings.how — How to Get Glowy and Evolve It Into Goliath in Evomon",
+        url: "https://allthings.how/evomon-how-to-get-glowy-and-evolve-it-into-goliath/",
+      },
+      {
+        label: "Gamezebo — Everything NEW in the Evomon Seasonal Update (Season 1)",
+        url: "https://gameupnews.com/everything-new-in-the-evomon-seasonal-update-season-1-gamezebo/",
+      },
+      {
+        label: "Gamezebo — Evomon Shiny Hunting Guide (Prismatic & Pris Shinies)",
+        url: "https://www.gamezebo.com/walkthroughs/evomon-shiny-hunting-guide/",
+      },
+    ],
+  },
+  {
+    slug: "shiny-arcapex-evomon-guide",
+    title: "Shiny Arcapex Evomon Guide — No Pity, Farm the Shiny Egg",
+    description:
+      "Shiny Arcapex has no field shiny pity — the route is catching the Thunder Cliffs Lv 200 boss repeatedly until a shiny Arcapex egg drops. Catch Master suit, hatch steps, and Prismatic Ball timing.",
+    published: "2026-07-25",
+    gscTargets: [
+      "shiny arcapex evomon",
+      "evomon shiny arcapex",
+      "shiny arcapex",
+      "arcapex shiny evomon",
+      "arcapex shiny",
+      "how to get shiny arcapex",
+      "how to get shiny arcapex evomon",
+      "evomon shiny arcub",
+      "shiny arcub",
+    ],
+    relatedGuides: [
+      "/dex/arcapex",
+      "/dex/arcub",
+      "/map-zones#thunder-cliffs",
+      "/guides/mutations/shiny-egg",
+      "/blog/evomon-shiny-egg-chance",
+      "/blog/how-to-hatch-eggs-evomon",
+      "/type-chart",
+    ],
+    quickAnswer:
+      "**Shiny Arcapex has no field shiny pity.** Community guides (ImSoaren, 2kane Unleashed) agree the route is the **shiny egg**: defeat the **Thunder Cliffs Lv 200 Arcapex boss**, **successfully catch it** — eggs only roll on catches, not KOs — and repeat until a **Shiny Arcapex Egg** drops. A shiny egg hatches a guaranteed shiny. Wear the **Catch Master suit** (+10% capture success, +1 capture attempt) so failed throws do not waste whole boss cycles, and select a **Prismatic Ball before hatching** if you want the Shiny Prismatic version.",
+    sections: [
+      {
+        heading: "Why you cannot pity-hunt Shiny Arcapex",
+        paragraphs: [
+          "Regular wild Evomon show shiny odds and a pity counter bottom-left in combat — catch enough and a shiny is guaranteed. **Boss Arcapex is the exception.** ImSoaren's shiny hunting guide calls out the two big boss Evomon — the flying king at Flying Territory and the **Thunder Cliffs electric king (Arcapex)** — as having **no shiny pity**: \"the only way to get a shiny version of this Evomon is getting a shiny egg.\"",
+          "That flips the whole hunt. Instead of grinding encounters toward a guaranteed number, you are farming **catches for an egg drop**, then hoping the egg rolls shiny. Our [Shiny Egg Chance](/blog/evomon-shiny-egg-chance) post covers why the egg roll — not a field roll — is the bottleneck on boss lines like this.",
+        ],
+        callout: {
+          title: "Set expectations",
+          body: "No pity means no guarantee. 2kane Unleashed pulled two shiny boss eggs in one recorded session; other players farm far longer. The only number you control is catches per hour.",
+          variant: "note",
+        },
+      },
+      {
+        heading: "The Shiny Arcapex farm loop",
+        paragraphs: [
+          "Arcapex sits at the top of **Thunder Cliffs** as a **Lv 200 boss** on our [Map Zones](/map-zones#thunder-cliffs) sheet. Buhamon's June 2026 priority guide flags it as extremely time-consuming to solo — bring a party or an endgame team with answers to Electric (check the [Type Chart](/type-chart) before you queue up a long session).",
+          "The loop community videos show is simple but strict: **every step only counts if the catch lands.**",
+        ],
+        bullets: [
+          "**Defeat the boss** — Lv 200, high HP; slow clears are the real cost of this farm.",
+          "**Catch it — successfully** — 2kane Unleashed: \"you need to capture the Evomon to actually get the shiny eggs.\" Failed throws burn the entire cycle.",
+          "**Check the egg** — catches can drop an Arcapex egg; the rare outcome is a **Shiny Arcapex Egg**.",
+          "**Repeat** — no counter is ticking toward a guarantee, so consistency of catches is everything.",
+        ],
+      },
+      {
+        heading: "Catch Master suit: the one gear check",
+        paragraphs: [
+          "Because the whole farm dies on a failed throw, 2kane Unleashed's shiny egg video leans on the **Catch Master suit**: **+10% capture success rate and +1 capture attempt** (three tries per cycle instead of two). On a boss you spent minutes clearing, that extra attempt is the difference between a wasted cycle and an egg roll.",
+          "Ball choice on the boss catch itself is about securing the capture, not shiny odds — the shiny decision happens later at the egg. Save premium balls for where they change outcomes.",
+        ],
+      },
+      {
+        heading: "Hatching: where the Prismatic Ball comes in",
+        paragraphs: [
+          "A **Shiny Arcapex Egg hatches a guaranteed shiny** — you do not need anything extra for the shiny itself. The optional upgrade: Buhamon recommends spending a **Prismatic Ball on boss shiny eggs specifically**, because Shiny Prismatic boss mons are \"the rarest and highest flex Evomon in the game right now.\" Select the Prismatic Ball on the hatch UI **before** confirming Hatch — hatching plain gives a normal shiny only.",
+          "Full chamber walkthrough (where the hatch UI hides, timers per egg type) is on [How to Hatch Eggs](/blog/how-to-hatch-eggs-evomon).",
+        ],
+        callout: {
+          title: "Prismatic Ball timing",
+          body: "The ball must be selected before you press Hatch. There is no way to add the Prismatic layer after a shiny egg has already hatched.",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "What about Shiny Arcub?",
+        paragraphs: [
+          "Plenty of searches ask for **shiny Arcub** — the base form on the Funder Cliff boss route that evolves into Arcapex. Community guides group the Arcapex line with the boss lines that **lack field shiny pity**, which is why the egg route dominates the discussion. Before planning an Arcub pity grind, check the bottom-left odds panel on a live Arcub encounter in your client: if no pity counter shows for it, the boss egg farm above is the realistic path.",
+          "If you mainly want the line for combat rather than the shiny flex, a strong normal Arcub evolved into Arcapex is still one of the game's best Electric AOE clears — see the [Arcapex dex page](/dex/arcapex) for stats and team fit.",
+        ],
+      },
+      {
+        heading: "Quick checklist before an Arcapex session",
+        bullets: [
+          "Team clears the Lv 200 Thunder Cliffs boss reliably — solo attempts without answers to Electric waste hours.",
+          "Catch Master suit equipped (+10% success, +1 attempt).",
+          "Ball stock deep enough for repeated boss catches — top up via [codes](/codes).",
+          "One Prismatic Ball reserved in case the shiny egg drops.",
+          "Patience calibrated: this is an RNG egg farm, not a pity countdown.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do you get Shiny Arcapex in Evomon?",
+        a: "Farm the Thunder Cliffs Lv 200 Arcapex boss: defeat it, successfully catch it, and repeat until a Shiny Arcapex Egg drops. The shiny egg hatches a guaranteed shiny. There is no field shiny pity on this boss.",
+      },
+      {
+        q: "Does Arcapex have shiny pity?",
+        a: "No — community guides consistently list the big boss Evomon, including the Thunder Cliffs Arcapex, as having no shiny pity. Shiny eggs from repeated successful catches are the only route.",
+      },
+      {
+        q: "Why am I not getting Arcapex eggs?",
+        a: "Eggs only roll on successful captures, not knockouts. If your throws keep failing, equip the Catch Master suit (+10% capture success, +1 attempt) so each boss clear actually converts into an egg chance.",
+      },
+      {
+        q: "Should I use a Prismatic Ball on the Shiny Arcapex Egg?",
+        a: "The shiny is guaranteed either way. Use a Prismatic Ball before hatching only if you also want the Shiny Prismatic version — community creators rate boss Shiny Prismatics as the top flex in the game.",
+      },
+      {
+        q: "Can I hunt Shiny Arcub and evolve it instead?",
+        a: "Community guides group the Arcapex line with boss lines that lack field shiny pity, so the egg farm is the documented route. Verify on a live Arcub encounter in your client — if no pity counter displays, do not plan a pity grind.",
+      },
+    ],
+    sources: [
+      {
+        label: "ImSoaren — The BEST Shiny Hunting Guide in Roblox Evomon! (boss shinies = egg only)",
+        url: "https://www.youtube.com/watch?v=kA5s2l7tE7M",
+        channel: "ImSoaren",
+      },
+      {
+        label: "2kane Unleashed — How To EASILY Get SHINY EGGS In Evomon (Catch Master suit)",
+        url: "https://www.youtube.com/watch?v=cdToZL_GwLQ",
+        channel: "2kane Unleashed",
+      },
+      {
+        label: "Buhamon — Evomon Priority Guide June 2026 (Prismatic Balls on boss shiny eggs)",
+        url: "https://www.youtube.com/watch?v=6lmuGBKpTwI",
+        channel: "Buhamon",
+      },
+    ],
+  },
+  {
     slug: "how-to-hatch-eggs-evomon",
     title: "How to Hatch Eggs in Evomon (2026) — Hatching Chamber Steps",
     description:
@@ -1252,6 +1511,7 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations/shiny-vs-sparkle",
       "/guides/mutations",
       "/dex/lavite",
+      "/blog/shiny-glowy-evomon-guide",
     ],
     quickAnswer:
       "Shiny Evomon give a **small but real stat boost** — not just a recolor. Community in-game comparisons show roughly **~2.5% higher total stats (Flare) on the base form** and **~4% after evolution** (e.g. Lavite +9 Flare; Lavarock +20). **Prismatic (Sparkle)** is cosmetic only and does **not** add combat stats. Hunt shinies on species you will actually use in battle.",
