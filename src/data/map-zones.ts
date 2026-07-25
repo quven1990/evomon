@@ -153,12 +153,17 @@ export const mapZones: MapZone[] = [
     name: "Flying Territory",
     zone: 7,
     levelRange: "75+",
-    huntTip: "Boss island focus — Sundercrene. Prep Flying checks on the type chart.",
+    huntTip: "Boss island focus — Graycrene reward → Sundercrene. Prep Flying checks on the type chart.",
     related: [
+      { href: "/dex/graycrene", label: "Graycrene dex" },
+      { href: "/dex/sundercrene", label: "Sundercrene dex" },
       { href: "/type-chart", label: "Type chart" },
       { href: "/tier-list", label: "Tier list" },
     ],
-    spawns: [{ name: "Sundercrene", level: "100", role: "boss" }],
+    spawns: [
+      { name: "Graycrene", level: "100", role: "boss" },
+      { name: "Sundercrene", level: "100", role: "boss" },
+    ],
   },
   {
     id: "raven-ridge",

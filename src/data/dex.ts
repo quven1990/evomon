@@ -118,7 +118,7 @@ export const dexEntries: DexEntry[] = [
   { number: 84, name: "Wisphex", element: "Poison", tier: null, source: "community" },
   { number: 85, name: "Mudbud", element: "Ground", tier: "B", source: "cross-source" },
   { number: 86, name: "Mudthorn", element: "Ground", tier: null, source: "community" },
-  { number: 87, name: "Thordlord", element: "Ground", tier: null, source: "third-party" },
+  { number: 87, name: "Thordlord", element: "Ground", tier: null, source: "cross-source" },
   { number: 88, name: "Astraknight", element: "Fighting", tier: null, source: "cross-source" },
   { number: 89, name: "Boltonia", element: "Electric", tier: null, source: "cross-source" },
   { number: 90, name: "Unikid", element: "Psychic", tier: null, source: "third-party" },

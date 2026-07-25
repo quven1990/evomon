@@ -21,6 +21,22 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-25",
+        title: "Dex — complete broken evolution lines (15 thick pages)",
+        body: "Thick-wrote and indexed the missing mid/final forms on already-open lines: Blazmane, Leafroge/Leafblade, Chirphantom, Flutterby/Twirlby, Mopillow, Florawn/Silvanarch, Vipour, Frostelle, Graycrene, Gempress, Pummash, Wispshade, Thordlord. Dual typings follow wiki (e.g. Twirlby Bug/Flying, Frostelle Grass/Ice). No URL changes to existing indexed pets.",
+        tags: ["Dex", "SEO"],
+        pages: [
+          "/dex/blazmane",
+          "/dex/leafblade",
+          "/dex/chirphantom",
+          "/dex/twirlby",
+          "/dex/silvanarch",
+          "/dex/wispshade",
+          "/dex/thordlord",
+          "/dex/graycrene",
+        ],
+      },
+      {
+        date: "2026-07-25",
         title: "Dex — Season-1 lines added as thick pages",
         body: "Renamed Terragon→Tarragon (#067) site-wide and replaced unverified third-party slot names (#094–101) with the confirmed Season-1 lines: Wispark → Wisflare → Wispreign, Clipdow → Cliphas → Clipexor, Clanx → Clanxor. Filled empty #104–106 with Glowy → Glowres → Goliath. All 12 shipped as curated thick pages (meta/blurb/FAQ), added the Floating Realm map zone, and 301-redirected the retired slugs.",
         tags: ["Dex", "SEO"],

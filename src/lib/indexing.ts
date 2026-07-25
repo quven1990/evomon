@@ -77,6 +77,23 @@ export const INDEXABLE_DEX_SLUGS = [
   "clipexor",
   "clanx",
   "clanxor",
+  // Line-fill batch (complete partially indexed evolution lines)
+  "blazmane",
+  "leafroge",
+  "leafblade",
+  "chirphantom",
+  "flutterby",
+  "twirlby",
+  "mopillow",
+  "florawn",
+  "silvanarch",
+  "vipour",
+  "frostelle",
+  "graycrene",
+  "gempress",
+  "pummash",
+  "wispshade",
+  "thordlord",
 ] as const;
 
 export type IndexableDexSlug = (typeof INDEXABLE_DEX_SLUGS)[number];

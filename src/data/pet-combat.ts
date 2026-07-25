@@ -176,7 +176,7 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "flutterby": {
     stats: { hp: 58, attack: 67, defense: 66, spAtk: 49, spDef: 52, speed: 74 },
-    traits: ["SkyFire", "Dread", "Thorns", "Foresight", "VitalGaurd", "Awe", "Abyss", "Toughskin", "Renew", "Coldward", "Sear", "Gale", "Frenzy", "Inferno", "Toxin", "StoneHeart", "Venomward", "Frost", "Arcane", "Psywall", "Blight", "Adapt"], location: "Via Evo"
+    traits: ["SkyFire", "Dread", "Thorns", "Foresight", "VitalGaurd", "Awe", "Abyss", "Toughskin", "Renew", "Coldward", "Sear", "Gale", "Frenzy", "Inferno", "Toxin", "StoneHeart", "Venomward", "Frost", "Arcane", "Psywall", "Blight", "Adapt"], location: "Silent Sands wild (~Lv 96–105); or Via Evo"
   },
   "frostelle": {
     stats: { hp: 81, attack: 80, defense: 71, spAtk: 92, spDef: 81, speed: 113 },
@@ -198,7 +198,7 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "gempress": {
     stats: { hp: 73, attack: 98, defense: 68, spAtk: 104, spDef: 68, speed: 97 },
-    traits: ["Unseen", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Gale", "Sear", "Toxin", "Inferno", "Frenzy", "StoneHeart", "Venomward", "Frost", "Arcane", "Psywall"], location: "Via Evolved"
+    traits: ["Unseen", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Gale", "Sear", "Toxin", "Inferno", "Frenzy", "StoneHeart", "Venomward", "Frost", "Arcane", "Psywall"], location: "Canyon Oasis wild (~Lv 120–135); or Via Evolved"
   },
   "glacitadel": {
     stats: { hp: 75, attack: 108, defense: 67, spAtk: 102, spDef: 67, speed: 93 },
@@ -214,7 +214,7 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "graycrene": {
     stats: { hp: 60, attack: 78, defense: 54, spAtk: 70, spDef: 65, speed: 73 },
-    traits: ["Pursuit", "Adapt", "Dread", "SkyFire", "Thorns", "Foresight", "StoneHeart", "Awe", "VitalGaurd", "Abyss", "Toughskin", "Arcane", "Frost", "Venomward", "Frenzy", "Inferno", "Toxin", "Gale", "Sear", "Coldward", "Psywall", "Renew"], location: "After Boss Fight in King Of Flying"
+    traits: ["Pursuit", "Adapt", "Dread", "SkyFire", "Thorns", "Foresight", "StoneHeart", "Awe", "VitalGaurd", "Abyss", "Toughskin", "Arcane", "Frost", "Venomward", "Frenzy", "Inferno", "Toxin", "Gale", "Sear", "Coldward", "Psywall", "Renew"], location: "After King of Flying boss (Flying Territory)"
   },
   "gulpfish": {
     stats: { hp: 82, attack: 60, defense: 55, spAtk: 69, spDef: 55, speed: 35 },
@@ -280,7 +280,7 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "pummash": {
     stats: { hp: 82, attack: 117, defense: 90, spAtk: 68, spDef: 69, speed: 88 },
-    traits: ["Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "Awe", "VitalGaurd", "Foresight", "Thorns", "Dread", "SkyFire", "Sear", "Gale", "Inferno", "Toxin", "Frenzy", "StoneHeart", "Venomward", "Arcane", "Frost", "Psywall", "TrueDmg"], location: "Via Evo"
+    traits: ["Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "Awe", "VitalGaurd", "Foresight", "Thorns", "Dread", "SkyFire", "Sear", "Gale", "Inferno", "Toxin", "Frenzy", "StoneHeart", "Venomward", "Arcane", "Frost", "Psywall", "TrueDmg"], location: "Dusk Town wild (~Lv 115–120); or Via Evo"
   },
   "pummpaw": {
     stats: { hp: 58, attack: 83, defense: 64, spAtk: 49, spDef: 50, speed: 63 },
@@ -353,7 +353,7 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "vipour": {
     stats: { hp: 54, attack: 82, defense: 46, spAtk: 55, spDef: 46, speed: 76 },
-    traits: ["Infect", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Gale", "Sear", "Psywall"], location: "Via Evo"
+    traits: ["Infect", "Adapt", "Coldward", "Renew", "Toughskin", "Abyss", "VitalGaurd", "Awe", "Foresight", "Thorns", "Dread", "SkyFire", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Gale", "Sear", "Psywall"], location: "Murkwood wild (~Lv 135–150); or Via Evo"
   },
   "volcrest": {
     stats: { hp: 74, attack: 90, defense: 66, spAtk: 95, spDef: 70, speed: 120 },
@@ -365,7 +365,7 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   },
   "wispshade": {
     stats: { hp: 52, attack: 62, defense: 56, spAtk: 67, spDef: 48, speed: 78 },
-    traits: ["Evolve", "Adapt", "SkyFire", "Dread", "Thorns", "Foresight", "Awe", "VitalGaurd", "Abyss", "Toughskin", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Coldward", "Renew", "Gale", "Sear", "Psywall"], location: "Via Evo"
+    traits: ["Evolve", "Adapt", "SkyFire", "Dread", "Thorns", "Foresight", "Awe", "VitalGaurd", "Abyss", "Toughskin", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Coldward", "Renew", "Gale", "Sear", "Psywall"], location: "Nether Land wild (~Lv 156–160); or Via Evo"
   },
   "wispuff": {
     stats: { hp: 37, attack: 44, defense: 40, spAtk: 48, spDef: 34, speed: 56 },

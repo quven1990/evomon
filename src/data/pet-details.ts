@@ -1,5 +1,6 @@
 import { petDetailsMapCombatBatch } from "./pet-details-map-combat-batch";
 import { petDetailsSeason1Batch } from "./pet-details-season1-batch";
+import { petDetailsLineFillBatch } from "./pet-details-line-fill-batch";
 
 /** Curated copy for indexable dex detail pages — single source for meta + on-page blurbs. */
 export type PetFaq = { q: string; a: string };
@@ -438,4 +439,5 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
   },
   ...petDetailsMapCombatBatch,
   ...petDetailsSeason1Batch,
+  ...petDetailsLineFillBatch,
 };
