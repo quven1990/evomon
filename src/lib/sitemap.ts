@@ -1,5 +1,9 @@
 import type { MetadataRoute } from "next";
 import { getAllBlogPosts } from "@/data/blog-posts";
+import { CODES_LAST_UPDATED } from "@/data/codes";
+import { DEX_LAST_CHECKED } from "@/data/dex";
+import { TYPE_CHART_LAST_CHECKED } from "@/data/type-chart";
+import { UPDATE_LOG_LAST_PUBLISHED, getAllUpdateLogEntries } from "@/data/update-log";
 import { INDEXABLE_DEX_SLUGS } from "@/lib/indexing";
 import { SITE } from "@/lib/site";
 
@@ -35,26 +39,93 @@ const indexableRoutes: {
   { path: "/tier-list/early-carries", priority: 0.72, changeFrequency: "monthly" },
 ];
 
-export function getSitemapEntries(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+/** Site launch / first public content — last resort when no better signal exists. */
+const SITE_LAUNCH = "2026-07-03";
 
-  const staticEntries = indexableRoutes.map(({ path, priority, changeFrequency }) => ({
-    url: `${SITE.url}${path || "/"}`,
-    lastModified,
-    changeFrequency,
-    priority,
-  }));
+/**
+ * Hard freshness signals from page copy / data constants.
+ * Prefer these over "build time" so Google can trust lastmod.
+ */
+const KNOWN_LASTMOD: Record<string, string> = {
+  "/": CODES_LAST_UPDATED,
+  "/codes": CODES_LAST_UPDATED,
+  "/dex": DEX_LAST_CHECKED,
+  "/type-chart": TYPE_CHART_LAST_CHECKED,
+  "/update-log": UPDATE_LOG_LAST_PUBLISHED,
+  "/privacy": "2026-07-17",
+  "/cookies": "2026-07-17",
+  "/terms": "2026-07-08",
+};
+
+function parseDay(iso: string): Date {
+  return new Date(`${iso.slice(0, 10)}T00:00:00.000Z`);
+}
+
+function maxDay(...values: Array<string | Date | undefined | null>): Date {
+  let best = 0;
+  for (const value of values) {
+    if (!value) continue;
+    const t = value instanceof Date ? value.getTime() : parseDay(value).getTime();
+    if (!Number.isNaN(t) && t > best) best = t;
+  }
+  return new Date(best || parseDay(SITE_LAUNCH).getTime());
+}
+
+/** Newest update-log date per path from `pages[]` (honest content touch dates). */
+function buildUpdateLogLastmod(): Map<string, string> {
+  const map = new Map<string, string>();
+  for (const entry of getAllUpdateLogEntries()) {
+    for (const page of entry.pages ?? []) {
+      const key = page === "" ? "/" : page;
+      const prev = map.get(key);
+      if (!prev || entry.date > prev) map.set(key, entry.date);
+    }
+  }
+  return map;
+}
+
+function lastmodForPath(
+  path: string,
+  logDates: Map<string, string>,
+  extra?: Array<string | Date | undefined | null>,
+): Date {
+  const normalized = path === "" ? "/" : path;
+  return maxDay(KNOWN_LASTMOD[normalized], logDates.get(normalized), ...(extra ?? []));
+}
+
+export function getSitemapEntries(): MetadataRoute.Sitemap {
+  const logDates = buildUpdateLogLastmod();
+  const posts = getAllBlogPosts();
+  const latestBlogPublished = posts.reduce<string | undefined>((best, post) => {
+    if (!best || post.published > best) return post.published;
+    return best;
+  }, undefined);
+
+  const staticEntries = indexableRoutes.map(({ path, priority, changeFrequency }) => {
+    const normalized = path || "/";
+    const extras: Array<string | undefined> = [];
+    if (normalized === "/" || normalized === "/blog") {
+      extras.push(latestBlogPublished);
+    }
+    return {
+      url: `${SITE.url}${path || "/"}`,
+      lastModified: lastmodForPath(normalized, logDates, extras),
+      changeFrequency,
+      priority,
+    };
+  });
 
   const dexEntries: MetadataRoute.Sitemap = INDEXABLE_DEX_SLUGS.map((slug) => ({
     url: `${SITE.url}/dex/${slug}`,
-    lastModified,
+    // Prefer the changelog touch for that species; fall back to dex data check date.
+    lastModified: lastmodForPath(`/dex/${slug}`, logDates, [DEX_LAST_CHECKED, logDates.get("/dex")]),
     changeFrequency: "weekly" as const,
     priority: 0.65,
   }));
 
-  const blogEntries: MetadataRoute.Sitemap = getAllBlogPosts().map((post) => ({
+  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${SITE.url}/blog/${post.slug}`,
-    lastModified: new Date(post.published),
+    lastModified: lastmodForPath(`/blog/${post.slug}`, logDates, [post.published]),
     changeFrequency: "monthly" as const,
     priority: 0.62,
   }));

@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-25",
+        title: "Sitemap — honest lastmod dates",
+        body: "Stopped stamping every URL with the build date. Sitemap lastmod now comes from real signals: codes/dex/type-chart freshness constants, blog published dates, and update-log page touch dates — so Google can trust which URLs actually changed.",
+        tags: ["SEO", "Infrastructure"],
+        pages: ["/sitemap.xml", "/update-log"],
+      },
+      {
+        date: "2026-07-25",
         title: "Blog — Shiny Glowy & Shiny Arcapex guides",
         body: "Two species shiny guides for queries already ranking top-5: Shiny Glowy (Floating Realm route, 149 prismatic-pity trick, Goliath stone plan) and Shiny Arcapex (no boss shiny pity — repeated boss catches for a shiny egg, Catch Master suit, Prismatic Ball at hatch). Also corrected the Thunder Cliffs hunt tip, which wrongly told players to prep shiny pity on a no-pity boss.",
         tags: ["Blog", "Shiny", "SEO"],
