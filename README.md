@@ -10,8 +10,7 @@ Direct links to the main hub pages on [evomon.cc](https://evomon.cc/):
 
 | Page | URL |
 |------|-----|
-| Homepage | [https://evomon.cc/](https://evomon.cc/
-) |
+| Homepage | [https://evomon.cc/](https://evomon.cc/) |
 | Evomon Codes | [https://evomon.cc/codes](https://evomon.cc/codes) |
 | Shiny & Mutations Guide | [https://evomon.cc/guides/mutations](https://evomon.cc/guides/mutations) |
 | Evomon Dex | [https://evomon.cc/dex](https://evomon.cc/dex) |
