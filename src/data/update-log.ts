@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-26",
+        title: "Redirect — legacy mutation URLs",
+        body: "Added permanent redirects from /mutations and its shiny subpaths to the canonical /guides/mutations pages, preventing old links and trailing-slash requests from returning 404.",
+        tags: ["SEO", "Redirects"],
+        pages: ["/guides/mutations", "/guides/mutations/shiny-egg", "/guides/mutations/shiny-vs-sparkle", "/update-log"],
+      },
+      {
+        date: "2026-07-26",
         title: "A11y — image alt text on homepage pets",
         body: "Filled empty alt attributes on homepage featured pet sprites and hero artwork (SEO audit flagged 13 images). Also fixed mobile nav icon and starter page sprites.",
         tags: ["SEO", "A11y"],

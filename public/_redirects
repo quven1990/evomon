@@ -1,6 +1,14 @@
 # Cloudflare Pages — trailing slashes on static XML files return 404 without redirects
 /sitemap.xml/ /sitemap.xml 301
 
+# Legacy mutation routes — canonical pages live under /guides/mutations
+/mutations /guides/mutations 301
+/mutations/ /guides/mutations 301
+/mutations/shiny-egg /guides/mutations/shiny-egg 301
+/mutations/shiny-egg/ /guides/mutations/shiny-egg 301
+/mutations/shiny-vs-sparkle /guides/mutations/shiny-vs-sparkle 301
+/mutations/shiny-vs-sparkle/ /guides/mutations/shiny-vs-sparkle 301
+
 # Dex renames — 301 old slugs to the corrected name (avoid dead links after fixes)
 /dex/terragon /dex/tarragon 301
 /dex/terragon/ /dex/tarragon 301
