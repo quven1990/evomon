@@ -32,6 +32,108 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "what-is-sparkle-evomon",
+    title: "Sparkle Evomon — What Sparkle Means (Prismatic Explained)",
+    description:
+      "Sparkle is the in-game label for Prismatic Evomon: a random glow color + pattern on one body part, cosmetic only. Odds, the 150-catch pity, five-point star icon, and whether Sparkle is worth keeping.",
+    published: "2026-07-26",
+    gscTargets: [
+      "sparkle evomon",
+      "evomon sparkle",
+      "sparkling evomon",
+      "what is sparkle in evomon",
+      "what does sparkle do in evomon",
+      "sparkle vs shiny evomon",
+      "evomon sparkle vs shiny",
+    ],
+    relatedGuides: [
+      "/guides/mutations/shiny-vs-sparkle",
+      "/guides/mutations",
+      "/blog/what-does-shiny-do-evomon",
+      "/blog/evomon-pity-system-explained",
+      "/blog/prismatic-egg-evomon",
+    ],
+    quickAnswer:
+      "**Sparkle** is what the Evomon UI calls the variant the community knows as **Prismatic**: a random glow color and pattern on one body part, marked by a **five-point star icon**. It is **cosmetic only — zero stat change**. Community-reported odds run about **0.2–0.8% per encounter**, with a **pity at 150 captures** of the same species (catches advance the counter; KO-and-run does not). If you want power, hunt **Shiny** instead — that one adds stats. Both can stack on the same Evomon.",
+    sections: [
+      {
+        heading: "Sparkle = Prismatic (one variant, two names)",
+        paragraphs: [
+          "The in-game star panel labels the variant **Sparkle**, while creators and wiki sheets almost always say **Prismatic** — same mechanic. ImSoaren's hunting guide shows the tell: click the five-point star icon and the panel reads **color and pattern** — for example a rose glowing purple with triangles popping off it. Because both the glow color and the pattern are rolled randomly, two Sparkle copies of the same species can look completely different.",
+          "That randomness is also the collector angle: community trade talk rates **white and black glows** as the rarest-looking rolls. But none of it touches combat — a Sparkle Evomon fights exactly like the normal version.",
+        ],
+        callout: {
+          title: "Icon cheat sheet",
+          body: "Five-point star = Sparkle/Prismatic (cosmetic, random look). Four-point star = Shiny (fixed alternate palette + real stat boost). Both stars together = Shiny Prismatic.",
+          variant: "note",
+        },
+      },
+      {
+        heading: "What Sparkle actually does (and does not)",
+        bullets: [
+          "**Does** — adds a glow color + emitted pattern (petals, hearts, triangles…) on one body part.",
+          "**Does** — raise trade/flex value, especially rare glow colors.",
+          "**Does not** — change any stat, move, Talent, or Nature. Zero combat effect.",
+          "**Does not** — replace Shiny: shiny is the variant with the stat layer (see [What Does Shiny Do](/blog/what-does-shiny-do-evomon)).",
+        ],
+      },
+      {
+        heading: "Sparkle odds and the 150-catch pity",
+        paragraphs: [
+          "Odds display bottom-left during battle. ImSoaren's example species showed **0.8% (1 in 125)** for Prismatic vs 0.2% for Shiny; community reports across species run roughly **0.2–0.8%**, so read your target's own panel. The pity counter sits under the odds: at **150 captures** of that species, the next catch is guaranteed Prismatic.",
+          "The rule that trips people up: **Prismatic pity only advances on successful captures.** Knocking the Evomon out and leaving does nothing for this counter. Macrolo's guide builds the whole farm loop around that — catch volume, not KO volume.",
+          "Want the guaranteed **Shiny Prismatic** combo instead? Park the counter at 149 and save the trigger for a shiny reveal — the full walkthrough is in the [Pity System post](/blog/evomon-pity-system-explained) and on the [Mutations hub](/guides/mutations).",
+        ],
+      },
+      {
+        heading: "Is a Sparkle Evomon worth keeping?",
+        paragraphs: [
+          "Keep it if you like the look or expect trade value — rare glow colors are the flex. Do not keep it **over** a better-Talent normal copy for battle: since Sparkle adds no stats, a junk-Talent Sparkle is a display piece. The practical priority most guides land on: Talent/Nature first, Shiny second for the stat layer, Sparkle as the bonus roll on top.",
+          "One shortcut exists: a **Prismatic Ball** forces the Sparkle appearance on a catch or an egg hatch, no pity needed. Where those balls are best spent is covered in the [Prismatic Egg guide](/blog/prismatic-egg-evomon).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What does sparkle mean in Evomon?",
+        a: "Sparkle is the in-game name for the Prismatic variant: a random glow color and pattern on one body part, shown with a five-point star icon. It is purely cosmetic.",
+      },
+      {
+        q: "Does sparkle do anything in Evomon?",
+        a: "No combat effect — no stats, moves, or Talent changes. Its value is looks and trade flex. Shiny is the variant that adds stats.",
+      },
+      {
+        q: "How rare is a sparkle Evomon?",
+        a: "Community-reported odds are roughly 0.2–0.8% per encounter depending on species, with a pity that guarantees one after 150 captures of that species. The exact odds show bottom-left in battle.",
+      },
+      {
+        q: "Sparkle vs shiny — which should I hunt?",
+        a: "Shiny if you want power (it adds a real stat boost). Sparkle if you want looks or trade value. The 149 pity trick lets you aim for both on one catch.",
+      },
+      {
+        q: "Can I force a sparkle without the pity?",
+        a: "Yes — use a Prismatic Ball on a catch or when hatching an egg to guarantee the Sparkle/Prismatic appearance.",
+      },
+    ],
+    sources: [
+      {
+        label: "ImSoaren — The BEST Shiny Hunting Guide in Roblox Evomon! (Sparkle panel & odds)",
+        url: "https://www.youtube.com/watch?v=kA5s2l7tE7M",
+        channel: "ImSoaren",
+      },
+      {
+        label: "Macrolo — How To Get SHINY Evomon FAST (catch-based prismatic pity)",
+        url: "https://www.youtube.com/watch?v=xnc9cEJF1V8",
+        channel: "Macrolo",
+      },
+      {
+        label: "Purp — Shiny vs Prismatic overview",
+        url: "https://www.youtube.com/watch?v=t3Ar4Bslgzg",
+        channel: "Purp",
+      },
+    ],
+  },
+  {
     slug: "shiny-glowy-evomon-guide",
     title: "Shiny Glowy Evomon Guide — Floating Realm Hunt & Goliath Plan",
     description:
@@ -1512,6 +1614,7 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations",
       "/dex/lavite",
       "/blog/shiny-glowy-evomon-guide",
+      "/blog/what-is-sparkle-evomon",
     ],
     quickAnswer:
       "Shiny Evomon give a **small but real stat boost** — not just a recolor. Community in-game comparisons show roughly **~2.5% higher total stats (Flare) on the base form** and **~4% after evolution** (e.g. Lavite +9 Flare; Lavarock +20). **Prismatic (Sparkle)** is cosmetic only and does **not** add combat stats. Hunt shinies on species you will actually use in battle.",

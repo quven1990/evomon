@@ -30,6 +30,7 @@ Direct links to the main hub pages on [evomon.cc](https://evomon.cc/):
 | Page | URL |
 |------|-----|
 | Blog index | [https://evomon.cc/blog](https://evomon.cc/blog) |
+| What Is Sparkle in Evomon | [https://evomon.cc/blog/what-is-sparkle-evomon](https://evomon.cc/blog/what-is-sparkle-evomon) |
 | Shiny Glowy Evomon Guide | [https://evomon.cc/blog/shiny-glowy-evomon-guide](https://evomon.cc/blog/shiny-glowy-evomon-guide) |
 | Shiny Arcapex Evomon Guide | [https://evomon.cc/blog/shiny-arcapex-evomon-guide](https://evomon.cc/blog/shiny-arcapex-evomon-guide) |
 | Prismatic Egg Evomon | [https://evomon.cc/blog/prismatic-egg-evomon](https://evomon.cc/blog/prismatic-egg-evomon) |
