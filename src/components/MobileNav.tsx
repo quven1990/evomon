@@ -90,7 +90,7 @@ function NavDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
           <div className="flex items-center gap-2">
             <Image
               src="/images/game-icon.png"
-              alt=""
+              alt="Evomon"
               width={32}
               height={32}
               className="rounded-lg border border-emerald-500/30"

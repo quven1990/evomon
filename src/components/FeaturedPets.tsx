@@ -25,7 +25,7 @@ export function FeaturedPets({ imageLoading = "eager" }: Props) {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`/pets/${pet!.name!.toLowerCase()}.png`}
-              alt=""
+              alt={`${pet!.name} Evomon`}
               width={120}
               height={120}
               loading={imageLoading}

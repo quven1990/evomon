@@ -5,7 +5,7 @@ export function HeroBackground() {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/images/hero.webp"
-        alt=""
+        alt="Evomon Roblox world landscape"
         width={1280}
         height={720}
         fetchPriority="high"

@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-26",
+        title: "A11y — image alt text on homepage pets",
+        body: "Filled empty alt attributes on homepage featured pet sprites and hero artwork (SEO audit flagged 13 images). Also fixed mobile nav icon and starter page sprites.",
+        tags: ["SEO", "A11y"],
+        pages: ["/", "/starters", "/update-log"],
+      },
+      {
+        date: "2026-07-26",
         title: "Blog — Sparkle Evomon explained",
         body: "Dedicated answer post for the ~270-impression 'sparkle evomon' cluster the shiny-vs-sparkle guide was ranking pos 7–8 with near-zero CTR. Covers Sparkle = Prismatic naming, five-point star icon, 0.2–0.8% odds, the 150-catch pity, and why it adds no stats — same takeover pattern that worked for the shiny query cluster.",
         tags: ["Blog", "SEO"],
