@@ -144,12 +144,12 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
   clipdow: {
     metaTitle: "Clipdow Evomon — Lunaria Boss Reward Normal",
     metaDescription:
-      "Clipdow is the Lunaria Isle boss reward that opens Cliphas → Clipexor. Normal typing, how to unlock, and stone timing on evomon.cc.",
+      "Clipdow (often searched as Clipdown) is the Lunaria Isle boss reward that opens Cliphas → Clipexor. Normal typing, unlock path, and stone timing on evomon.cc.",
     location: "Boss reward — Dark King Clipexor on Lunaria Isle (Seasonal)",
     weather: "Any",
     role: "Seasonal Normal seed / Clipexor line",
     blurb:
-      "Clipdow is a Seasonal Island boss drop, not a grass-route wild: beat Dark King Clipexor on Lunaria Isle and claim the Normal-type seed for Cliphas → Clipexor. The boss itself is Dark-typed; the playable line on our sheet is Normal — do not build as if your party Clipdow shares the boss’s Dark typing. Speed (57) leads the base spread; Fighting hits the line hard, while Psychic/Dark matchups are where Normal bulk helps.",
+      "Clipdow is a Seasonal Island boss drop, not a grass-route wild: beat Dark King Clipexor on Lunaria Isle and claim the Normal-type seed for Cliphas → Clipexor. The boss itself is Dark-typed; the playable line on our sheet is Normal — do not build as if your party Clipdow shares the boss’s Dark typing. Speed (57) leads the base spread; Fighting hits the line hard, while Psychic/Dark matchups are where Normal bulk helps. Community searches often spell it “Clipdown” — same pet, correct in-game name is Clipdow.",
     evolutionNote:
       "Clipdow → Cliphas → Clipexor (3-stage). Evolve after you have a keeper Talent copy; the final form is the design goal of the line.",
     shinyHuntNote:
@@ -158,6 +158,10 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
       {
         q: "How do you get Clipdow?",
         a: "Defeat Dark King Clipexor on Lunaria Isle (Seasonal / World Select) and take the Clipdow reward. It is not a standard main-map wild on our chart.",
+      },
+      {
+        q: "Is it Clipdow or Clipdown?",
+        a: "In-game and on our dex the name is Clipdow. Clipdown is a common community misspelling for the same pet.",
       },
       {
         q: "Is Clipdow the same typing as Dark King Clipexor?",

@@ -12,6 +12,9 @@
 /dex/luminarch/ /dex/wispreign 301
 /dex/snipkit /dex/clipdow 301
 /dex/snipkit/ /dex/clipdow 301
+# Common community misspelling of Clipdow
+/dex/clipdown /dex/clipdow 301
+/dex/clipdown/ /dex/clipdow 301
 /dex/snipdoll /dex/cliphas 301
 /dex/snipdoll/ /dex/cliphas 301
 /dex/snipslash /dex/clipexor 301

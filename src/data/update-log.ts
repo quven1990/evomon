@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-25";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-26";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-26",
+        title: "Dex — Clipdown misspelling → Clipdow",
+        body: "Added 301 redirects from /dex/clipdown to /dex/clipdow (common community spelling). Updated Clipdow meta/FAQ to clarify Clipdown is the same pet so the high-volume misspelling query can resolve to the thick page.",
+        tags: ["Dex", "SEO"],
+        pages: ["/dex/clipdow"],
+      },
       {
         date: "2026-07-25",
         title: "Sitemap — honest lastmod dates",
