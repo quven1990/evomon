@@ -24,14 +24,14 @@ export const updateLogGroups: UpdateLogGroup[] = [
         title: "Blog — Sparkle Evomon explained",
         body: "Dedicated answer post for the ~270-impression 'sparkle evomon' cluster the shiny-vs-sparkle guide was ranking pos 7–8 with near-zero CTR. Covers Sparkle = Prismatic naming, five-point star icon, 0.2–0.8% odds, the 150-catch pity, and why it adds no stats — same takeover pattern that worked for the shiny query cluster.",
         tags: ["Blog", "SEO"],
-        pages: ["/blog", "/blog/what-is-sparkle-evomon"],
+        pages: ["/blog", "/blog/what-is-sparkle-evomon", "/update-log"],
       },
       {
         date: "2026-07-26",
         title: "Dex — Clipdown misspelling → Clipdow",
         body: "Added 301 redirects from /dex/clipdown to /dex/clipdow (common community spelling). Updated Clipdow meta/FAQ to clarify Clipdown is the same pet so the high-volume misspelling query can resolve to the thick page.",
         tags: ["Dex", "SEO"],
-        pages: ["/dex/clipdow"],
+        pages: ["/dex/clipdow", "/update-log"],
       },
       {
         date: "2026-07-25",
