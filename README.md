@@ -8,6 +8,7 @@ Unofficial fan wiki for **Evomon** on Roblox — codes, dex, type chart, tier li
 
 Direct links to the main hub pages on [evomon.cc](https://evomon.cc/):
 
+
 | Page | URL |
 |------|-----|
 | Homepage | [https://evomon.cc/](https://evomon.cc/) |
