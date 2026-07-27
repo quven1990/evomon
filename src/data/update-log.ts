@@ -13,12 +13,19 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-26";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-28";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-28",
+        title: "Dex gallery — GEO schema & citable FAQ",
+        body: "Added CollectionPage + Breadcrumb + FAQ JSON-LD on /dex, plus server-rendered pokedex facts, element counts, and FAQs so AI/search crawlers get structured, quotable answers beyond the interactive gallery alone.",
+        tags: ["Dex", "SEO", "GEO"],
+        pages: ["/dex", "/update-log"],
+      },
       {
         date: "2026-07-26",
         title: "Redirect — legacy mutation URLs",

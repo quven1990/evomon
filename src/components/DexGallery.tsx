@@ -71,8 +71,10 @@ export function DexGallery({ initialQuery = "" }: Props) {
       <PageBack href="/" />
       <h1 className={pageTitleClass()}>Evomon Dex</h1>
       <p className={pageLeadClass()}>
-        Pokedex-style gallery for all {stats.total} numbered slots. {stats.named} creatures named (
-        {stats.percent}%). Unknown slots are shown as silhouettes — we don&apos;t invent data.
+        Unofficial Roblox Evomon pokedex / dex gallery for all {stats.total} numbered slots.{" "}
+        {stats.named} creatures are named with sprites ({stats.percent}%). Unknown slots stay as
+        silhouettes — we don&apos;t invent names. Search or filter by element, then open a card for
+        catch notes and evolutions when a detail page exists.
       </p>
       <div className="mt-4">
         <DataFreshness label="Data checked" date={DEX_LAST_CHECKED} />

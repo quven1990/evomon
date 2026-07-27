@@ -88,7 +88,7 @@ export function generateLlmsTxt(): string {
     "## Optional",
     `- [Homepage](${canonical("/")}): Site hub and feature overview.`,
     `- [Robots](${canonical("/robots.txt")}): Crawler rules.`,
-    "Individual /dex/[name] pages exist for navigation but are thin reference stubs; prefer the main Dex gallery and llms-full.txt for creature lists.",
+    `Individual /dex/[name] pages: ${INDEXABLE_DEX_SLUGS.length} indexable thick guides plus thinner stubs for navigation; prefer the main Dex gallery (${canonical("/dex")}) and llms-full.txt for the full numbered list.`,
   );
 }
 
