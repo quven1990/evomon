@@ -133,12 +133,55 @@ export default function MutationsGuidePage() {
             <Link href="/blog/how-to-get-eggs-evomon" className="text-cyan-200 hover:underline">
               Evomon egg guide
             </Link>
+            . To incubate an egg in the Hatching Chamber, see{" "}
+            <Link href="/blog/how-to-hatch-eggs-evomon" className="text-cyan-200 hover:underline">
+              how to hatch eggs
+            </Link>
             . For shiny eggs, Prismatic Ball, and boss routes, open the{" "}
             <Link href="/guides/mutations/shiny-egg" className="text-cyan-200 hover:underline">
               shiny egg guide
             </Link>
             .
           </p>
+        </div>
+
+        <div className="mt-5 rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+            Related deep-dives
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-7 text-zinc-300">
+            <li>
+              <Link href="/blog/what-is-sparkle-evomon" className="text-emerald-300 hover:underline">
+                What is Sparkle?
+              </Link>{" "}
+              — UI name for Prismatic, odds, and why it adds no stats.
+            </li>
+            <li>
+              <Link
+                href="/blog/evomon-pity-system-explained"
+                className="text-emerald-300 hover:underline"
+              >
+                Pity system &amp; 149 trick
+              </Link>{" "}
+              — when to park prismatic pity and when to skip.
+            </li>
+            <li>
+              <Link
+                href="/blog/shiny-glowy-evomon-guide"
+                className="text-emerald-300 hover:underline"
+              >
+                Shiny Glowy
+              </Link>{" "}
+              /{" "}
+              <Link
+                href="/blog/shiny-arcapex-evomon-guide"
+                className="text-emerald-300 hover:underline"
+              >
+                Shiny Arcapex
+              </Link>{" "}
+              — species routes (wild seasonal vs boss egg path).
+            </li>
+          </ul>
         </div>
 
         <p className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs leading-6 text-zinc-500">

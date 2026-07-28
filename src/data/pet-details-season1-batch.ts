@@ -58,6 +58,10 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
       "Glowy → Glowres → Goliath (3-stage). Community material tables often list ~10 Evolution + 6 Ground (+ matching Light stones in some guides) for the first evo, then a heavier second stack — verify live costs in your client.",
     shinyHuntNote:
       "Seasonal island loops are the shiny volume play. Evolve a keeper Glowy rather than hoping for a wild Goliath.",
+    relatedLinks: [
+      { href: "/blog/shiny-glowy-evomon-guide", label: "Shiny Glowy hunt guide" },
+      { href: "/map-zones#floating-realm", label: "Floating Realm map zone" },
+    ],
     faqs: [
       {
         q: "Where do you catch Glowy?",
@@ -88,6 +92,11 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
       "Glowres is the bridge form — better stats than Glowy, not yet the Goliath ceiling. Evolve only when you already own a keeper Glowy and can afford the second stone stack soon after; parking forever on Glowres wastes the seasonal grind. Same Ground typing as the rest of the line on our sheet.",
     evolutionNote:
       "Glowy → Glowres → Goliath. Second evolution is the expensive step in community material tables — bank tickets/stones before you press the first evolve if Goliath is the real goal.",
+    relatedLinks: [
+      { href: "/dex/glowy", label: "Glowy catch route" },
+      { href: "/blog/shiny-glowy-evomon-guide", label: "Shiny Glowy hunt guide" },
+      { href: "/dex/goliath", label: "Goliath final form" },
+    ],
     faqs: [
       {
         q: "How do you get Glowres?",
@@ -120,6 +129,10 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
       "Glowy → Glowres → Goliath. Community tables often cite ~30 Evolution Stones plus heavy Ground (and sometimes Light) element stones for the last step — confirm in-game before dumping tickets.",
     shinyHuntNote:
       "Hunt shiny on Glowy seasonal loops, then evolve. Cosmetics do not replace Talent/Nature investment for the final form.",
+    relatedLinks: [
+      { href: "/blog/shiny-glowy-evomon-guide", label: "Shiny Glowy hunt guide" },
+      { href: "/dex/glowy", label: "Glowy catch route" },
+    ],
     faqs: [
       {
         q: "Can you catch Goliath in the wild?",
@@ -154,6 +167,10 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
       "Clipdow → Cliphas → Clipexor (3-stage). Evolve after you have a keeper Talent copy; the final form is the design goal of the line.",
     shinyHuntNote:
       "Boss-reward loops are slower shiny volume than wild farms. Prioritize a usable Talent Clipdow before spending double evolution stacks.",
+    relatedLinks: [
+      { href: "/guides/mutations/shiny-egg", label: "Shiny egg path for boss lines" },
+      { href: "/dex/clipexor", label: "Clipexor final form" },
+    ],
     faqs: [
       {
         q: "How do you get Clipdow?",
@@ -187,6 +204,11 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
     blurb:
       "Cliphas is the mid spike after the Lunaria reward — better Attack/Speed than Clipdow, still short of Clipexor’s final sheet. Evolve when you are ready to finish the line soon; stopping mid-stack leaves a seasonal boss pet underleveled for the content that unlocked it.",
     evolutionNote: "Clipdow → Cliphas → Clipexor. Plan both stone spends as one project after the boss clear.",
+    relatedLinks: [
+      { href: "/dex/clipdow", label: "Clipdow unlock route" },
+      { href: "/guides/mutations/shiny-egg", label: "Shiny egg path for boss lines" },
+      { href: "/dex/clipexor", label: "Clipexor final form" },
+    ],
     faqs: [
       {
         q: "How do you get Cliphas?",
@@ -216,6 +238,10 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
     blurb:
       "Clipexor is the Normal final with community Attack 110 / Speed 110 — the form players actually want after Lunaria. Remember: Dark King Clipexor (boss) ≠ playable Clipexor typing. Use the evolved Normal form into Psychic/Dark pressure; respect Fighting leads. Evolve-only on our map data.",
     evolutionNote: "Clipdow → Cliphas → Clipexor. Final stage is evolve-from-Cliphas.",
+    relatedLinks: [
+      { href: "/dex/clipdow", label: "Clipdow unlock route" },
+      { href: "/guides/mutations/shiny-egg", label: "Shiny egg path for boss lines" },
+    ],
     faqs: [
       {
         q: "Can you catch playable Clipexor from the boss?",

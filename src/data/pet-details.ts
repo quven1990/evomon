@@ -18,6 +18,8 @@ export type PetDetailExtra = {
   blurb?: string;
   evolutionNote?: string;
   shinyHuntNote?: string;
+  /** Contextual internal links (species guides, map, egg path). Keep 1–3. */
+  relatedLinks?: { href: string; label: string }[];
   /**
    * Page-specific FAQ answers. When set, replaces the shared FAQ template
    * so indexable pets do not all ask “What element is X?”.

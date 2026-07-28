@@ -201,6 +201,35 @@ export default function ShinyEggPage() {
           </p>
         </section>
 
+        <section className="mt-12 rounded-2xl border border-cyan-500/25 bg-cyan-500/10 p-5 sm:p-6">
+          <p className="text-xs font-semibold uppercase tracking-wide text-cyan-200">
+            Next steps
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-7 text-zinc-300">
+            <li>
+              Chamber UI only:{" "}
+              <Link href="/blog/how-to-hatch-eggs-evomon" className="text-cyan-200 hover:underline">
+                how to hatch eggs
+              </Link>
+            </li>
+            <li>
+              Boss line without field shiny pity:{" "}
+              <Link
+                href="/blog/shiny-arcapex-evomon-guide"
+                className="text-cyan-200 hover:underline"
+              >
+                Shiny Arcapex egg route
+              </Link>
+            </li>
+            <li>
+              Catch loop first:{" "}
+              <Link href="/blog/how-to-get-eggs-evomon" className="text-cyan-200 hover:underline">
+                how to get eggs
+              </Link>
+            </li>
+          </ul>
+        </section>
+
         <section className="mt-12">
           <h2 className="text-xl font-bold text-white sm:text-2xl">FAQ</h2>
           <dl className="mt-4 space-y-4">

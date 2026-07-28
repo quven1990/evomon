@@ -155,6 +155,7 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations",
       "/blog/what-does-shiny-do-evomon",
       "/blog/evomon-pity-system-explained",
+      "/blog/what-is-sparkle-evomon",
       "/type-chart",
     ],
     quickAnswer:
@@ -538,6 +539,7 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations",
       "/guides/mutations/shiny-vs-sparkle",
       "/blog/how-to-get-eggs-evomon",
+      "/blog/how-to-hatch-eggs-evomon",
       "/blog/evomon-pity-system-explained",
     ],
     quickAnswer:
@@ -664,6 +666,8 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations/shiny-vs-sparkle",
       "/guides/mutations/shiny-egg",
       "/blog/what-does-shiny-do-evomon",
+      "/blog/what-is-sparkle-evomon",
+      "/blog/shiny-glowy-evomon-guide",
     ],
     quickAnswer:
       "Evomon pity is the **per-species guarantee counter** shown bottom-left in battle. Community UI reads (July 2026) put **prismatic ~0.8% with ~150 capture pity** and **shiny ~0.2% with ~600 pity**. **Prismatic pity only rises when you capture** that species — KO-and-run does not. The **149 trick** parks prismatic pity one below the guarantee, then you only catch when a **natural shiny** appears so one catch can land **Shiny + Prismatic**. Skip the trick for early progression, boss lines without field shiny pity, or when you still need egg volume from every catch.",
@@ -1277,6 +1281,7 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations",
       "/guides/mutations/shiny-vs-sparkle",
       "/guides/mutations/shiny-egg",
+      "/blog/shiny-glowy-evomon-guide",
       "/tier-list",
     ],
     quickAnswer:
@@ -1515,6 +1520,8 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations/shiny-egg",
       "/guides/mutations",
       "/blog/how-to-get-eggs-evomon",
+      "/blog/how-to-hatch-eggs-evomon",
+      "/blog/shiny-arcapex-evomon-guide",
     ],
     quickAnswer:
       "**Field shiny chance** in Evomon is about **0.2% (1 in 500)** per encounter, with **600 KO/capture pity** per species. **Shiny eggs** are a **separate roll after you catch** a defeated Evomon — the game UI does not show a fixed shiny-egg percentage, but community guides treat it as much rarer than a normal egg. Boss lines (flying/thunder kings) **lack field shiny pity**, so shiny eggs are the realistic path.",

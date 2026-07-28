@@ -90,7 +90,12 @@ export default function ShinyVsSparklePage() {
               <p className="font-semibold text-white">Sparkle / Prismatic</p>
               <p className="mt-1">
                 Cosmetic only: random color and pattern on the Evomon. Sparkle is valuable for
-                collecting and future trading, but it does not increase damage, HP, or speed.
+                collecting and future trading, but it does not increase damage, HP, or speed. For the
+                naming + pity answer page, see{" "}
+                <Link href="/blog/what-is-sparkle-evomon" className="text-emerald-300 hover:underline">
+                  what Sparkle is in Evomon
+                </Link>
+                .
               </p>
             </div>
             <div>

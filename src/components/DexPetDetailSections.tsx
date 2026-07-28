@@ -340,15 +340,43 @@ export function DexPetDetailSections({
                   <div className="rounded-xl border border-violet-300/20 bg-violet-500/10 p-4 sm:p-5">
                     <h3 className="font-semibold text-violet-100">Shiny hunting note</h3>
                     <p className="mt-2 text-sm leading-7 text-zinc-300">{extra.shinyHuntNote}</p>
-                    <Link
-                      href="/guides/mutations"
-                      className="mt-3 inline-flex text-sm text-emerald-300 hover:underline"
-                    >
-                      Shiny & prismatic guide →
-                    </Link>
+                    <div className="mt-3 flex flex-col gap-1.5">
+                      {(extra.relatedLinks ?? []).map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className="inline-flex text-sm text-emerald-300 hover:underline"
+                        >
+                          {link.label} →
+                        </Link>
+                      ))}
+                      <Link
+                        href="/guides/mutations"
+                        className="inline-flex text-sm text-emerald-300 hover:underline"
+                      >
+                        Shiny & prismatic hub →
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>
+            </section>
+          )}
+
+          {extra?.relatedLinks &&
+            extra.relatedLinks.length > 0 &&
+            !extra.shinyHuntNote && (
+            <section>
+              <h2 className="text-xl font-bold text-white">Related guides</h2>
+              <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                {extra.relatedLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-emerald-300 hover:underline">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
 
