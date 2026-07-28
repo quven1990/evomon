@@ -21,6 +21,22 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-28",
+        title: "Cash-cow blogs — in-body links to new shiny posts",
+        body: "Added contextual markdown links inside /blog/evomon-shiny-egg-chance (hatch chamber + Arcapex egg route) and /blog/what-does-shiny-do-evomon (Sparkle naming, pity stack, Shiny Glowy example). Keeps Google landing pages as hubs that pass readers to newer posts without meta changes.",
+        tags: ["Blog", "SEO", "Internal links"],
+        pages: [
+          "/blog/evomon-shiny-egg-chance",
+          "/blog/what-does-shiny-do-evomon",
+          "/blog/how-to-hatch-eggs-evomon",
+          "/blog/shiny-arcapex-evomon-guide",
+          "/blog/what-is-sparkle-evomon",
+          "/blog/evomon-pity-system-explained",
+          "/blog/shiny-glowy-evomon-guide",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-07-28",
         title: "Internal links — new shiny blogs ↔ mutations & Season-1 dex",
         body: "Wired contextual links from the mutations hub, shiny-egg, and shiny-vs-sparkle guides into the new Sparkle / hatch / Glowy / Arcapex posts; pointed Glowy and Clipdow evolution pages at the matching hunt or shiny-egg guides. No meta or indexing changes — crawlable cross-links only.",
         tags: ["SEO", "Internal links"],

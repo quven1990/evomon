@@ -1559,14 +1559,14 @@ export const blogPosts: BlogPost[] = [
           "When a catch succeeds, the game can drop a normal egg, a **shiny egg** (labeled e.g. “Shiny Frostlet Egg”), or nothing. ImSoaren notes shiny eggs are **not guaranteed** — there is “a chance” on top of the catch, separate from field shiny pity.",
           "Our [mutations data](/guides/mutations) and [Shiny Egg Guide](/guides/mutations/shiny-egg) align: **no community-verified fixed %** for shiny-egg drops is published in UI. Treat farming as volume + Catch Master (+10% capture, +1 attempt) on boss cycles.",
           "**Normal eggs** — community reports **guaranteed S-tier talent** on hatch (triple SSS from eggs alone is unconfirmed).",
-          "**Shiny eggs** — hatch a **guaranteed shiny**; optional **Prismatic Ball** at hatch for shiny + prismatic look.",
+          "**Shiny eggs** — hatch a **guaranteed shiny**; optional **Prismatic Ball** at hatch for shiny + prismatic look. Chamber steps: [how to hatch eggs](/blog/how-to-hatch-eggs-evomon).",
         ],
       },
       {
         heading: "Boss lines: no field shiny pity → eggs matter more",
         paragraphs: [
           "Several mount/boss Evomon — including **King of Flying** (Flying Territory) and the **Thunder Cliffs** boss line — **do not build field shiny pity**. ImSoaren’s rule: the **only realistic shiny path is repeated catches for shiny eggs**.",
-          "That makes **shiny egg chance** the bottleneck for Arcapex/Thunder Crane-style hunts, not the 1-in-500 field roll. Pair with our [egg farming post](/blog/how-to-get-eggs-evomon) and boss notes in [Shiny Egg Guide](/guides/mutations/shiny-egg).",
+          "That makes **shiny egg chance** the bottleneck for Arcapex/Thunder Crane-style hunts, not the 1-in-500 field roll. Worked example: [Shiny Arcapex guide](/blog/shiny-arcapex-evomon-guide). Pair with our [egg farming post](/blog/how-to-get-eggs-evomon) and boss notes in [Shiny Egg Guide](/guides/mutations/shiny-egg).",
         ],
       },
       {
@@ -1622,19 +1622,20 @@ export const blogPosts: BlogPost[] = [
       "/dex/lavite",
       "/blog/shiny-glowy-evomon-guide",
       "/blog/what-is-sparkle-evomon",
+      "/blog/evomon-pity-system-explained",
     ],
     quickAnswer:
-      "Shiny Evomon give a **small but real stat boost** — not just a recolor. Community in-game comparisons show roughly **~2.5% higher total stats (Flare) on the base form** and **~4% after evolution** (e.g. Lavite +9 Flare; Lavarock +20). **Prismatic (Sparkle)** is cosmetic only and does **not** add combat stats. Hunt shinies on species you will actually use in battle.",
+      "Shiny Evomon give a **small but real stat boost** — not just a recolor. Community in-game comparisons show roughly **~2.5% higher total stats (Flare) on the base form** and **~4% after evolution** (e.g. Lavite +9 Flare; Lavarock +20). **Prismatic (Sparkle)** is cosmetic only and does **not** add combat stats — see [what Sparkle is](/blog/what-is-sparkle-evomon). Hunt shinies on species you will actually use in battle.",
     sections: [
       {
         heading: "Shiny vs Prismatic — only one buffs stats",
         paragraphs: [
-          "Evomon has two rare overlays that look similar in thumbnails but behave very differently in combat.",
+          "Evomon has two rare overlays that look similar in thumbnails but behave very differently in combat. If you only want the naming answer for **Sparkle**, open [What is Sparkle Evomon?](/blog/what-is-sparkle-evomon).",
         ],
         bullets: [
           "**Shiny** (four-point star icon) — alternate color palette **plus** a stat boost. Revealed after you KO the wild Evomon.",
           "**Prismatic / Sparkle** (five-point star icon) — random glow color and body pattern. **Cosmetic only** — zero combat buff.",
-          "**Shiny + Prismatic** — shiny stats with prismatic looks. The endgame flex; see our [Shiny vs Sparkle guide](/guides/mutations/shiny-vs-sparkle) for odds and pity.",
+          "**Shiny + Prismatic** — shiny stats with prismatic looks. The endgame flex; see our [Shiny vs Sparkle guide](/guides/mutations/shiny-vs-sparkle) for odds and pity, or the [149 pity walkthrough](/blog/evomon-pity-system-explained) when you are stacking both.",
         ],
         callout: {
           title: "Do not mix them up",
@@ -1664,7 +1665,7 @@ export const blogPosts: BlogPost[] = [
         heading: "When a shiny is worth the grind",
         bullets: [
           "**Yes** — your main carry or PvP anchor (e.g. [Lavite](/dex/lavite) → Lavarock line you already run).",
-          "**Yes** — species you will evolve and keep — the ~4% evolved gap beats flexing a non-shiny meta pick.",
+          "**Yes** — species you will evolve and keep — the ~4% evolved gap beats flexing a non-shiny meta pick. Seasonal example: [Shiny Glowy](/blog/shiny-glowy-evomon-guide) on Floating Realm toward Goliath.",
           "**Lower priority** — prismatic-only hunting for trade flex with no shiny stat layer.",
           "**Skip early game** — build a strong normal team first ([Beginner Guide](/guides/beginner)), then shiny sessions go faster.",
         ],
