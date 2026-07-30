@@ -168,6 +168,7 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
     shinyHuntNote:
       "Boss-reward loops are slower shiny volume than wild farms. Prioritize a usable Talent Clipdow before spending double evolution stacks.",
     relatedLinks: [
+      { href: "/blog/clipdow-evomon-guide", label: "Clipdow full guide" },
       { href: "/guides/mutations/shiny-egg", label: "Shiny egg path for boss lines" },
       { href: "/dex/clipexor", label: "Clipexor final form" },
     ],

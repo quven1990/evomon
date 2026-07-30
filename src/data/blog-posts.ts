@@ -32,6 +32,289 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "sparkit-evolution-vs-lavite",
+    title: "Sparkit Evolution vs Lavite — When to Evolve on Lava Crag",
+    description:
+      "Sparkit → Emfox → Empixy for early Lava Crag Fire DPS. Once Lavite is online, leftover Evolution Stones usually go to Lavarock — not a second full Fire line.",
+    published: "2026-07-30",
+    gscTargets: [
+      "sparkit evolution",
+      "sparkit evolution evomon",
+      "sparkit evomon evolution",
+      "sparkit vs lavite",
+      "when to evolve sparkit",
+      "empixy evolution",
+      "emfox evolution",
+      "sparkit or lavite",
+    ],
+    relatedGuides: [
+      "/dex/sparkit",
+      "/dex/emfox",
+      "/dex/empixy",
+      "/dex/lavite",
+      "/dex/lavarock",
+      "/map-zones#lava-crag",
+      "/tier-list/evolution-priority",
+      "/blog/shiny-sparkit-evomon-guide",
+      "/blog/shiny-lavite-evomon-guide",
+      "/blog/best-nature-lavite-evomon",
+    ],
+    quickAnswer:
+      "**Evolve Sparkit → Emfox → Empixy** when you need **early Fire DPS now** on **Lava Crag** (~Lv 30–43 wilds) and Lavite is not online yet. Once **Lavite** is caught, most July 2026 guides give leftover **Evolution Stones to Lavarock**, not a second full Fire line. Empixy is also the island **boss name** — evolving your Sparkit and farming boss Empixy are related labels, not the same loop.",
+    sections: [
+      {
+        heading: "Two Fire projects on the same island",
+        paragraphs: [
+          "Lava Crag hosts both lines. **Sparkit** is the early wild Fire catch that Candyblox-style hunt videos farm for speed; it evolves into **Emfox**, then **Empixy**. **Lavite** is the Fire/Rock catch Purp, Rexon, and ItzVexo-style guides keep funding into **Lavarock** for mid/late walls.",
+          "The GSC question “Sparkit evolution” is usually **stone timing**, not shiny odds. For shiny loops see [Shiny Sparkit](/blog/shiny-sparkit-evomon-guide) and [Shiny Lavite](/blog/shiny-lavite-evomon-guide) — this page answers **when to press Evolve**.",
+        ],
+        callout: {
+          title: "One-line rule",
+          body: "Sparkit line = temporary Fire DPS bridge. Lavite line = default long-term Fire/Rock stone sink on Lava Crag. Do not fully fund Blazpup + Sparkit + Lavite in the same week.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "Sparkit evolution line (what you unlock)",
+        paragraphs: [
+          "Dex order is **Sparkit (#021) → Emfox (#022) → Empixy (#023)**. Confirm stone and level gates in the in-game Evolve panel — we do not invent exact counts here.",
+        ],
+        bullets: [
+          "**Sparkit** — Lava Crag wild (~Lv 30–43); community bases lean Sp. Atk 50 / Speed 55 (glassier early Fire).",
+          "**Emfox** — mid bridge (Sp. Atk 70 / Speed 78); evolve when you need damage **now** and Lavite is missing.",
+          "**Empixy** — final special DPS (Sp. Atk 100 / Speed 109). Map data also lists Empixy as the Lava Crag boss (~Lv 45) — boss cycles ≠ evolving your keeper.",
+        ],
+      },
+      {
+        heading: "When you should evolve Sparkit",
+        bullets: [
+          "**Yes — evolve** if Bubble/Leafbun teams lack Fire and Sparkit is your main clear for Lava Crag Grass/Bug/Ice/Steel matchups.",
+          "**Yes — push to Empixy** if this line is still a real party slot and Lavite is not caught yet (or stones are stocked enough for both projects).",
+          "**Partial evolve** is fine: Emfox can bridge a few islands; park the second stone if Lavarock is the next bottleneck.",
+          "**Talent first** — evolve a usable Talent copy; junk Talent finals waste the Lava Crag farm.",
+        ],
+        paragraphs: [
+          "Cross-source compare notes (and our [evolution-priority](/tier-list/evolution-priority) framing) treat Sparkit as the **earlier Fire coverage** pick — useful when you skipped or benched Blazpup — not as the forever fire wall.",
+        ],
+      },
+      {
+        heading: "When Lavite should take the stones instead",
+        paragraphs: [
+          "Once Lavite is online, July 2026 creator guidance (Purp beginner route, Rexon investment notes, ItzVexo tier framing) repeatedly points leftover Evolution Stones at **Lavite → Lavarock**: Fire/Rock bulk, Counter-oriented late value, and a clearer “main fire slot” ROI than finishing Empixy as a second full sink.",
+          "If Sparkit is only patching damage while you hunt Lavite, **delay Empixy**. Keep Sparkit/Emfox as a secondary or collection evolve after Lavarock is safe.",
+        ],
+        bullets: [
+          "**Prioritize Lavite stones** — long-term Fire/Rock carry on the same island.",
+          "**Keep Sparkit evolved “enough”** — stop when Fire coverage is no longer the bottleneck.",
+          "**Natures** — Lavite Counter builds want HP/defense direction; see [Best Nature for Lavite](/blog/best-nature-lavite-evomon).",
+        ],
+        callout: {
+          title: "Verify live costs",
+          body: "Community pages sometimes quote exact Lavite levels and stone stacks. Patches move those numbers — always confirm the Evolve UI before spending rare stock.",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "Decision checklist",
+        bullets: [
+          "Need Fire **this session** and no Lavite? → Evolve Sparkit toward Empixy.",
+          "Lavite caught, stones scarce? → Fund Lavarock; park Sparkit mid-line if needed.",
+          "Both online and stones plentiful? → Finish the line you actually run daily; Empixy can stay a secondary special Fire.",
+          "Shiny hunting? → Separate decision: Sparkit is the faster wild loop; Lavite is the deeper carry project.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What does Sparkit evolve into?",
+        a: "Sparkit → Emfox → Empixy. Confirm stone/level requirements in-game before spending materials.",
+      },
+      {
+        q: "What does Emfox evolve into?",
+        a: "Emfox evolves into Empixy — the Sparkit-line final. Emfox is only the mid bridge.",
+      },
+      {
+        q: "Should I evolve Sparkit or save stones for Lavite?",
+        a: "Evolve Sparkit far enough to cover early Lava Crag Fire needs. Once Lavite is online, most guides give leftover stones to Lavite → Lavarock.",
+      },
+      {
+        q: "Is Empixy better than Lavarock?",
+        a: "Different jobs. Empixy is a Sp. Atk/Speed Fire final from the Sparkit line; Lavarock is the Fire/Rock wall most mid/late lists keep funding. Pick based on the slot you need, not the shiny color alone.",
+      },
+      {
+        q: "Where do you catch Sparkit and Lavite?",
+        a: "Both are Lava Crag (third island) catches. Sparkit sits in the mid wild band (~Lv 30–43 on our map); Lavite is the Fire/Rock pickup on the same island.",
+      },
+      {
+        q: "Is the Empixy boss the same as evolving Sparkit?",
+        a: "Related name only. Map data lists Empixy as the Lava Crag boss (~Lv 45); your playable Empixy comes from evolving Emfox. Treat the loops separately.",
+      },
+      {
+        q: "Sparkit vs Blazpup for Fire stones?",
+        a: "Many Bubble starters skip Blazpup and catch Sparkit on Lava Crag instead. Do not fully fund the starter Fire line and Sparkit and Lavite together.",
+      },
+    ],
+    sources: [
+      {
+        label: "Candyblox — I Caught Shiny Sparkit in EVOMON Roblox (Lava Crag Sparkit route footage)",
+        url: "https://www.youtube.com/watch?v=p7lPXM3i_6A",
+        channel: "Candyblox",
+      },
+      {
+        label: "Purp — Beginner guide (Lavite route / long-term fire investment framing)",
+        url: "https://www.youtube.com/watch?v=KRWoAlccQeU",
+        channel: "Purp",
+      },
+      {
+        label: "Rexon — Beginner guide (Lavarock investment notes)",
+        url: "https://www.youtube.com/watch?v=NOB08m6Pjuw",
+        channel: "Rexon",
+      },
+      {
+        label: "ItzVexo — Tier list (Lavite access and endgame fire-wall framing)",
+        url: "https://www.youtube.com/watch?v=QT1vdzAAjn0",
+        channel: "ItzVexo",
+      },
+    ],
+  },
+  {
+    slug: "clipdow-evomon-guide",
+    title: "Clipdow (Clipdown) Evomon Guide — How to Get & Evolve",
+    description:
+      "Clipdow (often searched Clipdown) comes from Dark King Clipexor on Lunaria Isle. Evolve Clipdow → Cliphas → Clipexor — Normal line, not the boss’s Dark typing.",
+    published: "2026-07-30",
+    gscTargets: [
+      "clipdow evomon",
+      "clipdown evomon",
+      "clipdow evolution",
+      "clipdow egg evomon",
+      "how to get clipdow",
+      "how to get clipdow evomon",
+      "clipexor evomon",
+      "cliphas evomon",
+      "clipdown evomon roblox",
+    ],
+    relatedGuides: [
+      "/dex/clipdow",
+      "/dex/cliphas",
+      "/dex/clipexor",
+      "/type-chart",
+      "/guides/mutations/shiny-egg",
+      "/blog/how-to-know-if-evomon-is-shiny",
+      "/tier-list/evolution-priority",
+    ],
+    quickAnswer:
+      "**Clipdow** (often misspelled **Clipdown**) is the **Lunaria Isle** Seasonal reward after **Dark King Clipexor** — not a main-map wild. Claim the seed, then evolve **Clipdow → Cliphas → Clipexor**. The boss is **Dark**; the playable line is **Normal** (Fighting hurts it; Psychic/Dark matchups are where it helps). Final form community bases peak **Atk/Spe 110**.",
+    sections: [
+      {
+        heading: "Clipdow vs Clipdown — same pet",
+        paragraphs: [
+          "Google often sends **clipdown evomon** traffic to the homepage. In-game and on our dex the name is **Clipdow**. Clipdown is the common community misspelling for the same Seasonal Normal seed — we already 301 `/dex/clipdown` → `/dex/clipdow`. Use Clipdow when you search or link.",
+        ],
+        callout: {
+          title: "Spelling check",
+          body: "Clipdow = correct. Clipdown = same monster, wrong spelling. Clipexor = the final evolution (and the Dark King’s name), not a separate early wild.",
+          variant: "note",
+        },
+      },
+      {
+        heading: "How to get Clipdow on Lunaria Isle",
+        paragraphs: [
+          "Season 1 unlocks Seasonal Island from **World Select** once you meet the account gate community guides put around **Lv 30**. Open the map pin → World Select → Seasonal Island → teleport to **Lunaria Isle**, then enter the **Dark King Clipexor** fight.",
+          "Gamezebo’s Clipdow walkthrough and Dark/Light Season-1 notes agree on the payoff: after you defeat the Dark King, you get a shot at **Clipdow** (reward / catch of the lesser evolution) — then you evolve that copy yourself. Nerdschalk’s boss route mirrors the same Lunaria path and treats the clear as an endgame capture attempt; either way, the party seed you keep is **Clipdow**, not a free playable Dark Clipexor.",
+        ],
+        bullets: [
+          "**Unlock** — Seasonal Island via World Select (community ~account Lv 30).",
+          "**Island** — Lunaria Isle (Dark King Clipexor).",
+          "**Reward** — Clipdow seed for the Normal line.",
+          "**Not** — a Verdant/Petal Pond wild spawn on our map chart.",
+        ],
+      },
+      {
+        heading: "Boss typing ≠ party typing",
+        paragraphs: [
+          "Dark King Clipexor is a **Dark** boss. Playable **Clipdow / Cliphas / Clipexor** are listed as **Normal** on community dex sheets (and on ours). Do not build the party mon as if it keeps the boss’s Dark typing — that mismatch is the #1 trap after the clear.",
+          "On the [Type Chart](/type-chart), Normal takes **2× from Fighting** and resists **Psychic / Dark** (0.5×) in the public chart. Gamezebo’s Clipdow guide uses the same matchup framing for when to slot the line.",
+        ],
+        callout: {
+          title: "Bring Fighting answers when you fight the line",
+          body: "Astraknight / Pummash-class Fighting checks Normal. For the Dark King clear itself, community write-ups lean Bug/Poison (Chitaladin) or Ground/Grass sustain (Thordlord) — verify moves and levels in your client before spending premium balls.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "Evolution: Clipdow → Cliphas → Clipexor",
+        paragraphs: [
+          "The line is three stages. Confirm stone and level gates on the in-game Evolve panel before dumping stock — we do not publish exact stone counts here because Season-1 costs shift.",
+          "Plan both evolves as one project after Lunaria. Stopping forever on Cliphas leaves a Seasonal unlock underleveled. Dex detail pages: [Clipdow](/dex/clipdow), [Cliphas](/dex/cliphas), [Clipexor](/dex/clipexor).",
+        ],
+        bullets: [
+          "**Clipdow** — base seed (community: HP 43 / Atk 54 / Spe 57).",
+          "**Cliphas** — mid form (HP 60 / Atk 75 / Spe 79).",
+          "**Clipexor** — final (HP 83 / Atk 110 / Spe 110) — the form most players actually want.",
+        ],
+      },
+      {
+        heading: "When the line earns a team slot",
+        paragraphs: [
+          "Use Cliphas/Clipexor when **Psychic or Dark** walls are slowing clears and you already finished the stone project. It is a poor place to spend your first Evolution Stones while Verdant → Lava Crag still needs Rock/Fire carries — see [Evolution Priority](/tier-list/evolution-priority).",
+          "Compared with early Normal fillers like Mopebun/Mopillow, Clipdow’s line is a **later Seasonal ceiling**, not a Petal Pond farm pet.",
+        ],
+      },
+      {
+        heading: "Shiny, eggs, and “clipdow egg” searches",
+        paragraphs: [
+          "Boss-reward loops are slower shiny volume than wild farms. Prioritize a usable Talent Clipdow before double-evolving. Field shiny ID still uses the KO → smoke checklist — [How to Know If an Evomon Is Shiny](/blog/how-to-know-if-evomon-is-shiny).",
+          "Some players search **clipdow egg**. We do not invent a Clipdow-only egg rate. For boss-adjacent shiny eggs and Prismatic Ball hatching, use the general [Shiny Egg Guide](/guides/mutations/shiny-egg) and [egg chance post](/blog/evomon-shiny-egg-chance), then verify whether your Clipdow encounters show a pity panel in-client.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do you get Clipdow in Evomon?",
+        a: "Unlock Seasonal Island (community ~Lv 30), go to Lunaria Isle, defeat Dark King Clipexor, and claim/catch the Clipdow reward. It is not a standard main-map wild.",
+      },
+      {
+        q: "Is Clipdow the same as Clipdown?",
+        a: "Yes — Clipdown is a common misspelling. The in-game name is Clipdow.",
+      },
+      {
+        q: "What does Clipdow evolve into?",
+        a: "Clipdow → Cliphas → Clipexor. Confirm stone/level requirements in the Evolve UI before spending materials.",
+      },
+      {
+        q: "Is playable Clipexor Dark-type like the boss?",
+        a: "No. Dark King Clipexor is Dark; community dex data lists the playable Clipdow line as Normal.",
+      },
+      {
+        q: "What are Clipexor’s base stats?",
+        a: "Community bases for the final form: HP 83, Attack 110, Defense 68, Sp. Atk 72, Sp. Def 76, Speed 110.",
+      },
+      {
+        q: "When should I put Clipdow’s line on my team?",
+        a: "After you evolve toward Clipexor and need a Normal answer into Psychic/Dark pressure. Do not fund it before your early-route carries are online.",
+      },
+      {
+        q: "What is a Clipdow egg in Evomon?",
+        a: "Searches for “clipdow egg” usually mean a species egg or shiny-egg drop tied to that line. We do not invent a Clipdow-only egg rate — use the Shiny Egg Guide and check whether your client shows pity/odds on Clipdow encounters.",
+      },
+    ],
+    sources: [
+      {
+        label: "Gamezebo — Evomon Clipdow (obtain, evolution, Normal matchups, base stats)",
+        url: "https://www.gamezebo.com/walkthroughs/evomon-clipdow/",
+      },
+      {
+        label: "Gamezebo — Dark and Light Season 1 (Seasonal Island unlock, catch Clipdow after Dark King)",
+        url: "https://www.gamezebo.com/walkthroughs/evomon-dark-and-light/",
+      },
+      {
+        label: "Nerdschalk — How to Beat Dark King Clipexor (Lunaria path, Lv 200 Dark boss framing)",
+        url: "https://nerdschalk.com/beat-dark-king-clipexor-evomon/",
+      },
+    ],
+  },
+  {
     slug: "how-to-know-if-evomon-is-shiny",
     title: "How to Know If an Evomon Is Shiny (2026) — Smoke Reveal & Icons",
     description:
@@ -1022,6 +1305,7 @@ export const blogPosts: BlogPost[] = [
       "/guides/mutations",
       "/tier-list/evolution-priority",
       "/blog/shiny-lavite-evomon-guide",
+      "/blog/sparkit-evolution-vs-lavite",
       "/tier-list/early-carries",
     ],
     quickAnswer:
@@ -1148,6 +1432,7 @@ export const blogPosts: BlogPost[] = [
       "/dex/lavite",
       "/dex/lavarock",
       "/blog/best-nature-lavite-evomon",
+      "/blog/sparkit-evolution-vs-lavite",
       "/guides/mutations",
       "/tier-list/evolution-priority",
       "/guides/beginner",

@@ -159,8 +159,8 @@ export default async function BlogPostPage({ params }: Props) {
         <section className="mt-12 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6">
           <h2 className="text-lg font-bold text-white">Sources</h2>
           <p className="mt-2 text-sm leading-7 text-zinc-400">
-            Community video guides cross-checked with Evomon Wiki mutations data (July 2026). Not
-            official Roblox/Evomon developer documentation.
+            Community guides and creator footage cross-checked with Evomon Wiki route and dex data
+            (July 2026). Not official Roblox/Evomon developer documentation.
           </p>
           <ul className="mt-4 space-y-3">
             {post.sources.map((source) => (

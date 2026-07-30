@@ -21,6 +21,33 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-30",
+        title: "Blog — Sparkit evolution vs Lavite stone timing",
+        body: "New GSC long-tail post: when to evolve Sparkit → Emfox → Empixy versus saving stones for Lavite → Lavarock on Lava Crag. Empixy boss-name caveat; no invented stone counts. Links from Sparkit/Lavite dex and shiny blogs.",
+        tags: ["Blog", "SEO", "Dex"],
+        pages: [
+          "/blog",
+          "/blog/sparkit-evolution-vs-lavite",
+          "/dex/sparkit",
+          "/dex/lavite",
+          "/blog/shiny-sparkit-evomon-guide",
+          "/blog/shiny-lavite-evomon-guide",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-07-30",
+        title: "Blog — Clipdow Evomon guide (Clipdown spelling)",
+        body: "New GSC long-tail post for Clipdow/Clipdown: Lunaria Dark King reward path, Normal vs boss Dark typing, Clipdow → Cliphas → Clipexor, team use, and egg/shiny caveats. Sourced from Gamezebo + Nerdschalk; no invented stone counts. Dex Clipdow relatedLinks point at the post.",
+        tags: ["Blog", "SEO", "Dex"],
+        pages: [
+          "/blog",
+          "/blog/clipdow-evomon-guide",
+          "/dex/clipdow",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-07-30",
         title: "Blog — how to know if an Evomon is shiny",
         body: "New GSC long-tail answer post: post-KO smoke reveal, Shiny label, four-point vs five-point star icons, and Sparkle mix-ups. Sourced from ImSoaren + Purp captions; links into mutations hub and existing shiny/Sparkle posts. No invented odds.",
         tags: ["Blog", "SEO", "Shiny"],

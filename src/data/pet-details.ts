@@ -378,8 +378,10 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     shinyHuntNote:
       "Sparkit is a practical shiny target because encounters are fast on Lava Crag. Shiny speed bumps can matter, but prioritize a useful Talent roll before long pity sessions.",
     relatedLinks: [
+      { href: "/blog/sparkit-evolution-vs-lavite", label: "Sparkit evolution vs Lavite" },
       { href: "/dex/empixy", label: "Empixy (final / boss name)" },
       { href: "/dex/lavite", label: "Lavite (stone priority)" },
+      { href: "/blog/shiny-sparkit-evomon-guide", label: "Shiny Sparkit hunt" },
       { href: "/map-zones", label: "Map zones" },
     ],
     faqs: [
@@ -534,6 +536,7 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
       { href: "/dex/lavarock", label: "Lavarock (final)" },
       { href: "/blog/shiny-lavite-evomon-guide", label: "Shiny Lavite guide" },
       { href: "/blog/best-nature-lavite-evomon", label: "Lavite natures" },
+      { href: "/blog/sparkit-evolution-vs-lavite", label: "Sparkit evolution vs Lavite" },
       { href: "/tier-list/evolution-priority", label: "Evolution priority" },
     ],
     faqs: [
