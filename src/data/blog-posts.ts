@@ -32,6 +32,126 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-know-if-evomon-is-shiny",
+    title: "How to Know If an Evomon Is Shiny (2026) — Smoke Reveal & Icons",
+    description:
+      "You cannot see shiny mid-fight in Evomon. KO the wild mon, wait for the smoke reveal, then check the alternate palette, Shiny label, and four-point star — plus how that differs from Sparkle/Prismatic.",
+    published: "2026-07-30",
+    gscTargets: [
+      "how to know if evomon is shiny",
+      "how to know if the evomon is shiny",
+      "how to know if an evomon is shiny",
+      "how to tell if evomon is shiny",
+      "how to tell if an evomon is shiny",
+      "is my evomon shiny",
+      "evomon shiny indicator",
+      "evomon shiny icon",
+    ],
+    relatedGuides: [
+      "/guides/mutations",
+      "/guides/mutations/shiny-vs-sparkle",
+      "/blog/what-does-shiny-do-evomon",
+      "/blog/what-is-sparkle-evomon",
+      "/blog/evomon-pity-system-explained",
+      "/blog/evomon-shiny-egg-chance",
+    ],
+    quickAnswer:
+      "**You cannot tell mid-fight.** Unlike Pokémon’s encounter splash, Evomon only reveals Shiny **after you knock the wild mon out** — wait for the **smoke animation**, then look for the **full alternate color palette**, the **“Shiny” label**, and a **four-point star** icon. A **five-point star** is Sparkle/Prismatic (cosmetic only). Odds/pity numbers bottom-left are hunt progress, not the shiny check itself.",
+    sections: [
+      {
+        heading: "Why shiny is invisible during the fight",
+        paragraphs: [
+          "Players coming from Pokémon expect the shiny to flash on the encounter screen. ImSoaren’s hunting guide calls that out directly: in Evomon you **must knock the Evomon out** first. Only when the smoke clears on the capture/reveal screen does the alternate palette (or the normal look) show up.",
+          "That is why “is this shiny?” searches are really asking for the **post-KO checklist**, not a wild-spawn aura. While the target is still alive you can read **odds and pity** bottom-left for farm planning — those numbers do not paint the current mon shiny until the reveal.",
+        ],
+        callout: {
+          title: "Hunt loop in one line",
+          body: "KO → wait for smoke → confirm Shiny (or leave) → then decide whether to catch. Volume of reveals matters more than staring at the battle UI.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "Step-by-step: confirm a wild shiny",
+        bullets: [
+          "**Defeat the wild Evomon** — do not rely on the encounter splash.",
+          "**Wait for the smoke** on the post-battle reveal/capture screen.",
+          "**Check the body colors** — Shiny uses a fixed alternate palette for that species (two shinies of the same species match; Prismatic glow rolls do not).",
+          "**Read the UI label** — ImSoaren: pure shinies show a star indicator and explicitly say **Shiny**.",
+          "**Match the star shape** — Purp: Shiny uses a **four-pointed star**; Prismatic/Sparkle uses a **five-pointed star** (often bottom-left on the Evomon card).",
+        ],
+        paragraphs: [
+          "If the reveal looks normal, leave or catch for pity progress as needed — then spawn the next copy. Species routes (Lavite, Sparkit, Glowy, Bluebird…) are covered in their own hunt posts; this page only answers the ID question.",
+        ],
+      },
+      {
+        heading: "Already in your party? Read the icons",
+        paragraphs: [
+          "For Evomon you already own, open the party/inventory card. Purp’s shiny vs prismatic overview shows the same icon language on owned mons: **four-point star = Shiny**, **five-point star = Prismatic/Sparkle**. Clicking a Prismatic star opens the **color and pattern** panel (random glow on one body part) — that is Sparkle, not the combat shiny layer.",
+          "If both stars appear, you are looking at **Shiny + Prismatic** (stats + cosmetics). Full naming and combat differences live on [What Does Shiny Do](/blog/what-does-shiny-do-evomon) and [What Is Sparkle](/blog/what-is-sparkle-evomon).",
+        ],
+        callout: {
+          title: "Icon cheat sheet",
+          body: "Four-point star + “Shiny” = real shiny (palette + stats). Five-point star / Sparkle panel = Prismatic cosmetics only. Both = Shiny Prismatic flex.",
+          variant: "note",
+        },
+      },
+      {
+        heading: "Common mix-ups (don’t fail the check)",
+        bullets: [
+          "**Sparkle ≠ Shiny** — glow + pattern with a five-point star is cosmetic; it will not match a shiny palette check.",
+          "**Shiny eggs** — a **Shiny [Species] Egg** hatches a guaranteed shiny; that is a different path from field smoke reveals (see [Shiny Egg Chance](/blog/evomon-shiny-egg-chance)).",
+          "**Boss lines without field pity** — some bosses (e.g. Thunder Cliffs Arcapex) still use egg routes; the smoke rule for field mons does not invent pity where the client shows none.",
+          "**Talent still matters** — confirming shiny is step one; keep a usable Talent before celebrating (see [Mutations hub](/guides/mutations)).",
+        ],
+      },
+      {
+        heading: "What to do after you confirm shiny",
+        paragraphs: [
+          "Catch when you want the keeper — especially if you parked Prismatic pity at **149** for a Shiny Prismatic stack ([Pity System explained](/blog/evomon-pity-system-explained)). If you only needed the visual ID answer, stop here and return to your route guide.",
+          "Want the combat reason to keep hunting? Shiny adds a small real Flare/stat bump; Prismatic does not — details on [What Does Shiny Do in Evomon](/blog/what-does-shiny-do-evomon).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do you know if an Evomon is shiny?",
+        a: "Knock it out, wait for the smoke reveal, then look for the alternate color palette, the Shiny label, and a four-point star icon. You cannot see shiny status mid-fight.",
+      },
+      {
+        q: "Can you tell if an Evomon is shiny before the battle ends?",
+        a: "No. Creator guides (ImSoaren) show that Evomon only reveals shiny after the knockout smoke — unlike Pokémon’s encounter splash.",
+      },
+      {
+        q: "What does the shiny icon look like in Evomon?",
+        a: "Shiny uses a four-pointed star (and a Shiny label). Prismatic/Sparkle uses a five-pointed star and opens a color/pattern panel — cosmetic only.",
+      },
+      {
+        q: "Is Sparkle the same as shiny?",
+        a: "No. Sparkle is the in-game name for Prismatic cosmetics. Shiny changes the full palette and adds stats. You can have both on one Evomon.",
+      },
+      {
+        q: "Do the bottom-left odds mean this encounter is shiny?",
+        a: "No. Those panels show species odds and pity progress while the target is alive. The shiny confirmation is still the post-KO smoke reveal.",
+      },
+      {
+        q: "How do I know if my owned Evomon is shiny?",
+        a: "Open its party/inventory card and check for the four-point Shiny star (and Shiny labeling). A five-point star alone means Prismatic/Sparkle, not shiny stats.",
+      },
+    ],
+    sources: [
+      {
+        label: "ImSoaren — The BEST Shiny Hunting Guide in Roblox Evomon! (KO + smoke reveal, Shiny label)",
+        url: "https://www.youtube.com/watch?v=kA5s2l7tE7M",
+        channel: "ImSoaren",
+      },
+      {
+        label: "Purp — FULL GUIDE to SHINY and PRISMATIC (four-point vs five-point star icons)",
+        url: "https://www.youtube.com/watch?v=t3Ar4Bslgzg",
+        channel: "Purp",
+      },
+    ],
+  },
+  {
     slug: "what-is-sparkle-evomon",
     title: "Sparkle Evomon — What Sparkle Means (Prismatic Explained)",
     description:
@@ -1636,6 +1756,7 @@ export const blogPosts: BlogPost[] = [
       "/blog/shiny-glowy-evomon-guide",
       "/blog/what-is-sparkle-evomon",
       "/blog/evomon-pity-system-explained",
+      "/blog/how-to-know-if-evomon-is-shiny",
     ],
     quickAnswer:
       "Shiny Evomon give a **small but real stat boost** — not just a recolor. Community in-game comparisons show roughly **~2.5% higher total stats (Flare) on the base form** and **~4% after evolution** (e.g. Lavite +9 Flare; Lavarock +20). **Prismatic (Sparkle)** is cosmetic only and does **not** add combat stats — see [what Sparkle is](/blog/what-is-sparkle-evomon). Hunt shinies on species you will actually use in battle.",
@@ -1706,6 +1827,10 @@ export const blogPosts: BlogPost[] = [
       {
         q: "Should I hunt shiny before beating the story?",
         a: "Most guides recommend a solid normal team first. Shiny hunting is easier once you one-shot farm routes and have balls to spare.",
+      },
+      {
+        q: "How do I know if this encounter is shiny?",
+        a: "You cannot tell mid-fight. KO the Evomon, wait for the smoke reveal, then check the alternate palette, Shiny label, and four-point star — full checklist on How to Know If an Evomon Is Shiny.",
       },
     ],
     sources: [

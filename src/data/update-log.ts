@@ -21,6 +21,17 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-30",
+        title: "Blog — how to know if an Evomon is shiny",
+        body: "New GSC long-tail answer post: post-KO smoke reveal, Shiny label, four-point vs five-point star icons, and Sparkle mix-ups. Sourced from ImSoaren + Purp captions; links into mutations hub and existing shiny/Sparkle posts. No invented odds.",
+        tags: ["Blog", "SEO", "Shiny"],
+        pages: [
+          "/blog",
+          "/blog/how-to-know-if-evomon-is-shiny",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-07-30",
         title: "Thickened short dex pages for AdSense content review",
         body: "Expanded blurbs, evolution notes, and pet-specific FAQs on the thinnest indexable dex entries plus traffic pets (Bubble line mids, Blazgrowl, Pebble, Sparkit, Lavite, Arcub/Arcapex, Wispuff/Wisphex, Astraknight). Facts drawn from existing map-zones, pet-combat, and on-site guides — no invented spawn levels or move sets. Corrected Astraknight obtain to Battle Pass (not a wild catch route).",
         tags: ["Dex", "Content", "AdSense"],
