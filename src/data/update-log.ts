@@ -21,6 +21,27 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-07-30",
+        title: "Thickened short dex pages for AdSense content review",
+        body: "Expanded blurbs, evolution notes, and pet-specific FAQs on the thinnest indexable dex entries plus traffic pets (Bubble line mids, Blazgrowl, Pebble, Sparkit, Lavite, Arcub/Arcapex, Wispuff/Wisphex, Astraknight). Facts drawn from existing map-zones, pet-combat, and on-site guides — no invented spawn levels or move sets. Corrected Astraknight obtain to Battle Pass (not a wild catch route).",
+        tags: ["Dex", "Content", "AdSense"],
+        pages: [
+          "/dex/bubble",
+          "/dex/bubboxer",
+          "/dex/bubblade",
+          "/dex/blazgrowl",
+          "/dex/pebble",
+          "/dex/sparkit",
+          "/dex/lavite",
+          "/dex/arcub",
+          "/dex/arcapex",
+          "/dex/wispuff",
+          "/dex/wisphex",
+          "/dex/astraknight",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-07-30",
         title: "Long-tail copy — lava rock nature, sparkling egg, dex evolution titles",
         body: "Aligned existing pages to new GSC long-tails without rewriting cash-cow titles: Lavite nature FAQ/aliases for lava rock; Sparkle + shiny-egg body/FAQ for sparkling egg; Mopebun/Fluffastar meta titles for evolution intent. No URL or indexing changes.",
         tags: ["SEO", "Copy"],
