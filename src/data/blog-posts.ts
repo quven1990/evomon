@@ -41,6 +41,7 @@ export const blogPosts: BlogPost[] = [
       "sparkle evomon",
       "evomon sparkle",
       "sparkling evomon",
+      "sparkling egg evomon",
       "what is sparkle in evomon",
       "what does sparkle do in evomon",
       "sparkle vs shiny evomon",
@@ -61,6 +62,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "The in-game star panel labels the variant **Sparkle**, while creators and wiki sheets almost always say **Prismatic** — same mechanic. ImSoaren's hunting guide shows the tell: click the five-point star icon and the panel reads **color and pattern** — for example a rose glowing purple with triangles popping off it. Because both the glow color and the pattern are rolled randomly, two Sparkle copies of the same species can look completely different.",
           "That randomness is also the collector angle: community trade talk rates **white and black glows** as the rarest-looking rolls. But none of it touches combat — a Sparkle Evomon fights exactly like the normal version.",
+          "Searches for a **sparkling egg** usually mean the same cosmetic layer: either a field Sparkle/Prismatic catch, or hatching a shiny egg with a **Prismatic Ball** so the hatch also looks Sparkle. The egg/ball loop is covered in the [Prismatic Egg guide](/blog/prismatic-egg-evomon) and [Shiny Egg Guide](/guides/mutations/shiny-egg) — this page is only the naming + combat answer.",
         ],
         callout: {
           title: "Icon cheat sheet",
@@ -113,6 +115,10 @@ export const blogPosts: BlogPost[] = [
       {
         q: "Can I force a sparkle without the pity?",
         a: "Yes — use a Prismatic Ball on a catch or when hatching an egg to guarantee the Sparkle/Prismatic appearance.",
+      },
+      {
+        q: "What is a sparkling egg in Evomon?",
+        a: "People usually mean Sparkle/Prismatic looks on an egg hatch: hatch a shiny egg with a Prismatic Ball (or catch with one) so the result has Sparkle cosmetics. Sparkle itself still adds no combat stats.",
       },
     ],
     sources: [
@@ -1406,6 +1412,9 @@ export const blogPosts: BlogPost[] = [
       "best nature for lavite in evomon",
       "lavite best nature evomon",
       "evomon best nature for lavite",
+      "best nature for lavarock",
+      "best nature for lava rock",
+      "best nature for lavarock evomon",
       "best trait for lavite evomon",
       "evomon lavite build",
     ],
@@ -1417,7 +1426,7 @@ export const blogPosts: BlogPost[] = [
       "/guides/beginner",
     ],
     quickAnswer:
-      "For the standard **Counter** Lavite/Lavarock build, community guides prioritize a nature that **raises HP (+10%)** — Purp ranks **HP first**, then defenses, then attack. **Avoid any nature that lowers HP** (e.g. **Anxious** in his reroll demo). Do **not** chase speed or special attack on Counter sets; those stats do not help Counter damage. Reroll with **nature potions** until you hit +HP.",
+      "For the standard **Counter** Lavite/Lavarock build (Lavarock is often searched as **lava rock**), community guides prioritize a nature that **raises HP (+10%)** — Purp ranks **HP first**, then defenses, then attack. **Avoid any nature that lowers HP** (e.g. **Anxious** in his reroll demo). Do **not** chase speed or special attack on Counter sets; those stats do not help Counter damage. Reroll with **nature potions** until you hit +HP.",
     sections: [
       {
         heading: "How nature works in Evomon",
@@ -1471,6 +1480,10 @@ export const blogPosts: BlogPost[] = [
       {
         q: "What is the best nature for Lavite in Evomon?",
         a: "For Counter boss builds: any nature with +10% HP. Second choice: +Defense or +Special Defense. Third: +Attack. Avoid −HP natures and avoid boosting Speed or Special Attack.",
+      },
+      {
+        q: "What is the best nature for Lavarock / lava rock?",
+        a: "Same Counter priority as Lavite: +HP first, then defenses, then Attack. Avoid −HP and skip Speed / Special Attack. Lavarock is the evolved form — the nature rolls on the pet and stays after evolution.",
       },
       {
         q: "Is Adamant good on Lavite?",

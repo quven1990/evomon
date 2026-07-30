@@ -34,6 +34,10 @@ const eggFaqs = [
     q: "Does KO-and-run work for egg farming?",
     a: "No. Eggs and prismatic pity require catches after you defeat the target.",
   },
+  {
+    q: "What is a sparkling egg in Evomon?",
+    a: "Most “sparkling egg” searches mean Sparkle/Prismatic cosmetics on a hatch — use a Prismatic Ball when hatching a shiny egg. Sparkle/Prismatic is cosmetic only; shiny is the stat layer.",
+  },
 ];
 
 export default function ShinyEggPage() {
@@ -73,6 +77,12 @@ export default function ShinyEggPage() {
           compare types on{" "}
           <Link href="/guides/mutations/shiny-vs-sparkle" className="text-emerald-300 hover:underline">
             shiny vs sparkle
+          </Link>
+          . Searches for a{" "}
+          <strong className="text-white">sparkling egg</strong> usually mean Sparkle/Prismatic looks on
+          hatch — see{" "}
+          <Link href="/blog/what-is-sparkle-evomon" className="text-emerald-300 hover:underline">
+            what Sparkle is
           </Link>
           .
         </p>

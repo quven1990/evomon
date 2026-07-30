@@ -13,12 +13,26 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-28";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-30";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-30",
+        title: "Long-tail copy — lava rock nature, sparkling egg, dex evolution titles",
+        body: "Aligned existing pages to new GSC long-tails without rewriting cash-cow titles: Lavite nature FAQ/aliases for lava rock; Sparkle + shiny-egg body/FAQ for sparkling egg; Mopebun/Fluffastar meta titles for evolution intent. No URL or indexing changes.",
+        tags: ["SEO", "Copy"],
+        pages: [
+          "/blog/best-nature-lavite-evomon",
+          "/blog/what-is-sparkle-evomon",
+          "/guides/mutations/shiny-egg",
+          "/dex/mopebun",
+          "/dex/fluffastar",
+          "/update-log",
+        ],
+      },
       {
         date: "2026-07-28",
         title: "Cash-cow blogs — in-body links to new shiny posts",

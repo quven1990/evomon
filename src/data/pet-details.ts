@@ -93,9 +93,9 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
       "Leafbun → Leafroge → Leafblade. Commit stones if you are building around Grass sustain; otherwise keep stones for stronger route tanks like Pebble once Verdant Valley opens.",
   },
   mopebun: {
-    metaTitle: "Mopebun Evomon — Petal Pond Normal Catch",
+    metaTitle: "Mopebun Evomon — Evolution to Mopillow",
     metaDescription:
-      "Mopebun (#016) is a Petal Pond Normal wild (~Lv 15–29). Early filler catch before Clampip water coverage and Lava Crag — when to skip stone investment.",
+      "Mopebun (#016) evolves into Mopillow. Petal Pond Normal wild (~Lv 15–29): catch route, when to skip Evolution Stones, vs Clampip priority.",
     location: "Petal Pond wild (~Lv 15–29)",
     weather: "Any",
     role: "Early Normal filler / EXP route",
@@ -109,16 +109,16 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
         a: "Petal Pond wild spawns around Lv 15–29 on our map-zones chart. It is an early second-island catch, not a late locked pet.",
       },
       {
+        q: "What does Mopebun evolve into?",
+        a: "Mopebun evolves into Mopillow. Confirm stone/level gates in-game before spending materials.",
+      },
+      {
         q: "Is Mopebun worth Evolution Stones?",
         a: "Usually no for long-term investment. Use Mopebun to progress Petal Pond, then prioritize Clampip water coverage and later Lavite/Bluebird stones over a Normal filler line.",
       },
       {
         q: "Mopebun vs Clampip on Petal Pond — which first?",
         a: "Catch both if you can. Clampip matters more for Lava Crag Fire matchups; Mopebun is the easier early wild for EXP and temporary slots.",
-      },
-      {
-        q: "What does Mopebun evolve into?",
-        a: "Mopebun evolves into Mopillow. Confirm stone/level gates in-game before spending materials.",
       },
     ],
   },

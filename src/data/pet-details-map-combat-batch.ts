@@ -163,8 +163,9 @@ export const petDetailsMapCombatBatch: Record<string, PetDetailExtra> = {
     ],
   },
   fluffastar: {
-    metaTitle: "Fluffastar Evomon — Fluffet final form",
-    metaDescription: "Fluffastar — Rocky Ridge wild (~Lv 172–177) / mini-boss (~Lv 180). Fluffet → Fluffastar (2-stage). Rock type on evomon.cc.",
+    metaTitle: "Fluffastar Evomon — Fluffet Evolution (Final Form)",
+    metaDescription:
+      "Fluffastar is Fluffet’s final Rock evolution. Rocky Ridge wild (~Lv 172–177) / mini-boss (~Lv 180), or evolve Fluffet. Stats and catch notes on evomon.cc.",
     location: "Rocky Ridge wild (~Lv 172–177) / mini-boss (~Lv 180); or evolve from Fluffet",
     weather: "Any",
     role: "Fluffet final form / Ridge wild & mini-boss",
@@ -172,7 +173,8 @@ export const petDetailsMapCombatBatch: Record<string, PetDetailExtra> = {
     evolutionNote: "Fluffet → Fluffastar (2-stage).",
     faqs: [
       { q: "Where do you catch Fluffastar?", a: "Fluffastar is listed at Rocky Ridge wild (~Lv 172–177) / mini-boss (~Lv 180) on the community map (aligned with evomon.wiki map-zones)." },
-      { q: "What does Fluffastar evolve into?", a: "Fluffet → Fluffastar (2-stage)." },
+      { q: "What does Fluffet evolve into?", a: "Fluffet → Fluffastar (2-stage). Fluffastar is the final form." },
+      { q: "Is it Fluffastar or Fluffstar?", a: "Our dex uses Fluffastar (aligned with community wiki naming). Fluffstar is a common misspelling for the same pet." },
       { q: "Fluffastar wild or mini-boss?", a: "Rocky Ridge lists Fluffastar as wild (~Lv 172–177) and mini-boss (~Lv 180), or evolve from Fluffet." },
       { q: "What are Fluffastar's base stats?", a: "Fluffastar's base stats are HP 78, Attack 73, Defense 98, Sp. Atk 102, Sp. Def 75, Speed 94." },
       { q: "What element is Fluffastar?", a: "Fluffastar is a Rock element Evomon." },
