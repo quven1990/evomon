@@ -13,12 +13,25 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-30";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-31";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "July 2026",
     entries: [
+      {
+        date: "2026-07-31",
+        title: "Blog — Shiny Tarro Evomon guide (Murkwood)",
+        body: "New GSC long-tail post for shiny tarro / taro misspelling: deep Murkwood farm, Ice 4× coverage, Lavarock clear loops, Tarro → Tarragon payoff, pity/smoke rules. Sourced from NerdPurp, AR3ZY, 2kane, Hicko, ImSoaren (+ Mikey KT title). Dex Tarro/Tarragon relatedLinks point at the post.",
+        tags: ["Blog", "SEO", "Shiny", "Dex"],
+        pages: [
+          "/blog",
+          "/blog/shiny-tarro-evomon-guide",
+          "/dex/tarro",
+          "/dex/tarragon",
+          "/update-log",
+        ],
+      },
       {
         date: "2026-07-30",
         title: "Blog — Sparkit evolution vs Lavite stone timing",

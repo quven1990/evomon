@@ -23,7 +23,12 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
     evolutionNote:
       "Tarro → Tarragon (2-stage). Prefer evolving a keeper Talent Tarro over forcing a wild Tarragon catch. Confirm stone counts in-game before spending the stack.",
     shinyHuntNote:
-      "Shiny volume is easier on Tarro wilds, then evolve. Wild Tarragon is the same island band but usually slower KO loops.",
+      "Shiny volume is easier on Tarro wilds, then evolve. Wild Tarragon is the same island band but usually slower KO loops. Full Murkwood shiny route: Shiny Tarro guide.",
+    relatedLinks: [
+      { href: "/blog/shiny-tarro-evomon-guide", label: "Shiny Tarro hunt guide" },
+      { href: "/dex/tarro", label: "Tarro (base)" },
+      { href: "/map-zones#murkwood", label: "Murkwood map" },
+    ],
     faqs: [
       {
         q: "How do you get Tarragon in Evomon?",

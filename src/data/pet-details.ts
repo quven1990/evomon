@@ -469,6 +469,14 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
       "Tarro opens the Tarragon grass/dragon wall line that community S-tier notes keep for self-sustain on long boss fights. It is a late Murkwood catch (~Lv 140–150) — not an early-island project. Evolution-priority tips group Tarro with Arcub/Frostlet: unlock it after Lavarock + Bluebird handle dailies, then invest when this boss answer is what you actually run.",
     evolutionNote:
       "Tarro → Tarragon. Save the stone for a keeper with usable Talent once Murkwood is unlocked. Do not dump early-route stones here while Verdant → Lava Crag still needs Rock/Fire carries.",
+    shinyHuntNote:
+      "Hunt shiny on deep-Murkwood Tarro wilds (faster than wild Tarragon), then evolve. Ice coverage shortens the Hard loop — full route: Shiny Tarro guide.",
+    relatedLinks: [
+      { href: "/blog/shiny-tarro-evomon-guide", label: "Shiny Tarro hunt guide" },
+      { href: "/dex/tarragon", label: "Tarragon (final)" },
+      { href: "/map-zones#murkwood", label: "Murkwood map" },
+      { href: "/tier-list/evolution-priority", label: "Evolution priority" },
+    ],
     faqs: [
       {
         q: "Where do you catch Tarro in Evomon?",

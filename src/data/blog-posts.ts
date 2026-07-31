@@ -32,6 +32,170 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "shiny-tarro-evomon-guide",
+    title: "Shiny Tarro Evomon Guide — Murkwood Hunt Toward Tarragon",
+    description:
+      "Farm Shiny Tarro at Murkwood’s end (~Lv 140–150). Ice for 4× Grass, faster Tarro loops, then evolve into Tarragon — the late Grass/Dragon tank.",
+    published: "2026-07-31",
+    gscTargets: [
+      "shiny tarro evomon",
+      "evomon shiny tarro",
+      "tarro shiny evomon",
+      "tarro evomon shiny",
+      "evomon tarro shiny",
+      "shiny taro evomon",
+      "shiny tarro",
+      "shiny tarragon evomon",
+      "evomon tarragon shiny",
+      "how to get shiny tarro in evomon",
+    ],
+    relatedGuides: [
+      "/dex/tarro",
+      "/dex/tarragon",
+      "/map-zones#murkwood",
+      "/guides/mutations",
+      "/blog/how-to-know-if-evomon-is-shiny",
+      "/blog/evomon-pity-system-explained",
+      "/blog/what-does-shiny-do-evomon",
+      "/tier-list/evolution-priority",
+      "/type-chart",
+      "/blog/shiny-arcapex-evomon-guide",
+    ],
+    quickAnswer:
+      "To hunt **Shiny Tarro in Evomon**, unlock **Murkwood**, push to the **far end of the island**, and farm the **Tarro / Tarragon** wild band (~**Lv 140–150** on our map). Bring **Ice** (community: Frostseer / Glacitadel-class) — the line is **4× weak to Ice**. KO each Tarro, check the post-KO smoke reveal, and prefer a usable **Talent** keeper before evolving **Tarro → Tarragon**. Shiny adds stats; Prismatic alone does not.",
+    sections: [
+      {
+        heading: "Where to hunt Shiny Tarro",
+        paragraphs: [
+          "Tarro is a **late Murkwood** wild — not an early-island farm. NerdPurp’s get-Tarro route and 2kane Unleashed’s shiny priority list both send you to **Murkwood** and tell you to walk **all the way to the end of the map**, where **Tarros and Tarragons** share the spawn pocket. Our [Map Zones](/map-zones#murkwood) sheet puts that band around **Lv 140–150**.",
+          "AR3ZY’s Tarragon speed clear stresses hunting **Tarro (first form)** when you can: lower HP than wild Tarragon, same island, faster KO loops for shiny checks. Dex pages: [Tarro](/dex/tarro) and [Tarragon](/dex/tarragon).",
+        ],
+        callout: {
+          title: "Route answer",
+          body: "Murkwood → deep end of the island → Tarro/Tarragon pocket. If fights drag past a minute, you are underleveled or missing Ice — fix coverage before a long shiny session.",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "Why Tarro is a Hard shiny (and still worth it)",
+        paragraphs: [
+          "Our [Mutations](/guides/mutations) hunt table lists **Tarro / Tarragon** as **Hard**: Leech Seed / healing kits make wild Tarro slow unless you overlevel or bring a party. 2kane still ranks **shiny Tarragon** among the shinies worth grinding because the final form’s sustain (Seed Bomb / Fighting Will-style kits in creator footage) is what many players use to **solo late Thunder Cliffs pressure** — including Arcapex clears once the kit is online.",
+          "That is an **endgame project**. Evolution-priority notes group Tarro with Arcub/Frostlet: unlock after **Lavarock + Bluebird** handle dailies, then fund the late answer you actually need. Do not burn your first Evolution Stones here.",
+        ],
+        bullets: [
+          "**Hard loop** — healing wilds punish weak teams; Ice shortens every check.",
+          "**S-tier payoff** — community lists keep Tarragon as a late Grass/Dragon sustain tank.",
+          "**Hunt base form** — shiny volume is easier on Tarro wilds, then evolve (same note on our Tarragon dex).",
+          "**Shiny = stats** — Prismatic/Sparkle alone is cosmetic; see [What Does Shiny Do](/blog/what-does-shiny-do-evomon).",
+        ],
+      },
+      {
+        heading: "Coverage: Ice is the clear button",
+        paragraphs: [
+          "NerdPurp calls Tarragon **quadra weak to Ice** and recommends **Frostseer** (or another Ice) for the Murkwood farm. That matches our [Type Chart](/type-chart) island note: Ice deals **4×** into Grass on Murkwood Tarro fights. AR3ZY’s clear combo layers **Volcrest Electrify stacks** into a **Glacitadel** frost kit (Frostbite → Frigid Force) — use it if those mons are already built; otherwise any reliable Ice answer is enough.",
+          "Hicko’s “Tarro farm for noobs” clip shows a **Lavarock** loop many mid/late accounts already own: **Wildfire twice → Fatal Rebound → Sandstorm** to chop Tarro HP fast. Treat that as a **clear-speed** tip for people who lack a dedicated Ice mon — not as a replacement for reading Tarro’s own shiny/pity counters in-client.",
+        ],
+        callout: {
+          title: "Pity still follows captures",
+          body: "General shiny rules (ImSoaren): odds + pity sit bottom-left while the mon is alive; **successful captures** advance that species’ pity. Do not invent Tarro-only rates — read the live panel. Smoke-reveal ID: [How to Know If an Evomon Is Shiny](/blog/how-to-know-if-evomon-is-shiny).",
+          variant: "warn",
+        },
+      },
+      {
+        heading: "Shiny check loop on Tarro",
+        paragraphs: [
+          "Same field loop as other wilds: **defeat Tarro → wait for the smoke reveal → read Shiny / Prismatic overlays**. You cannot see shiny mid-fight. If you are also chasing Shiny Prismatic, park Prismatic pity one below guarantee (often **149** on a 150-pity species) and only capture on a shiny reveal — full steps on [Pity System Explained](/blog/evomon-pity-system-explained).",
+          "Mikey KT’s catch video (title-level confirmation) shows players do land **shiny Tarro** and evolve the line; we could not pull stable captions under rate limits, so we do not invent session length or ball counts from that clip.",
+        ],
+        bullets: [
+          "**KO → smoke → decide** — catch only keepers with usable Talent.",
+          "**Ball plan** — King Ball for Talent goals; Prismatic Ball only if you want cosmetics and are not using pity for Prismatic.",
+          "**Spelling** — GSC also shows **shiny taro**; in-game name is **Tarro** (final **Tarragon**, not Terragon).",
+        ],
+      },
+      {
+        heading: "After the catch: Tarro → Tarragon",
+        paragraphs: [
+          "Dex order is **Tarro (#066) → Tarragon (#067)** — Grass/Dragon on our sheets. Community bases for Tarragon peak around **HP 87 / Atk 90 / Spe 100** (bulky wall with usable Speed). Confirm Evolution + element stone costs in the Evolve UI before pressing — we do not invent exact counts here.",
+          "2kane’s framing: shiny **Tarragon** is the combat goal (solo tools into late bosses). Evolving a junk-Talent shiny wastes the Murkwood grind — keep farming until Talent is acceptable, or park a strong normal SSS Tarro for stones while the shiny hunt continues.",
+        ],
+        callout: {
+          title: "Stone budget",
+          body: "A Shiny Tarro is a keeper for late sustain. Scarce stones should still follow [Evolution Priority](/tier-list/evolution-priority) — Lavite/Bluebird dailies first, then this line when Murkwood bosses are the bottleneck.",
+          variant: "note",
+        },
+      },
+      {
+        heading: "Quick checklist before a Shiny Tarro session",
+        bullets: [
+          "Murkwood unlocked; team comfortable in the Lv 140–150 band.",
+          "Ice coverage ready (Frostseer / Glacitadel-class) — or a proven Lavarock clear loop.",
+          "Ball stock + codes topped up before a multi-hour pity grind.",
+          "Decide: plain shiny keeper vs 149-park Shiny Prismatic project.",
+          "Stone budget reserved for Tarro → Tarragon on a usable Talent copy.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Where do you find Shiny Tarro in Evomon?",
+        a: "Same place as normal Tarro — deep Murkwood at the end of the island, around Lv 140–150 with Tarragon. Shiny status rolls per encounter and shows after the KO smoke reveal.",
+      },
+      {
+        q: "Is Shiny Tarro / Tarragon worth hunting?",
+        a: "Yes as a late endgame Grass/Dragon sustain project once dailies are stable. Creators rank shiny Tarragon highly for long boss timers; it is a poor early shiny farm compared with Sparkit or Lavite.",
+      },
+      {
+        q: "What is Tarro weak to when shiny hunting?",
+        a: "Ice hits the Grass/Dragon line for 4×. Community routes lean Frostseer or other Ice; some players clear with Lavarock kits if Ice is missing.",
+      },
+      {
+        q: "Should I shiny hunt Tarro or wild Tarragon?",
+        a: "Prefer Tarro wilds for faster KO loops, then evolve. Wild Tarragon is the same band but usually slower per check.",
+      },
+      {
+        q: "Is shiny taro the same as shiny Tarro?",
+        a: "Yes — taro is a common misspelling. The in-game name is Tarro; the final evolution is Tarragon.",
+      },
+      {
+        q: "Does Tarro have shiny pity?",
+        a: "Wild Tarro uses the standard field shiny/prismatic panels and per-species pity advanced by captures. Read Tarro’s own counters in-client — do not copy another species’ thresholds.",
+      },
+    ],
+    sources: [
+      {
+        label: "NerdPurp — How to Get Tarro & Tarragon in Roblox Evomon",
+        url: "https://www.youtube.com/watch?v=269U-DGIDhA",
+        channel: "NerdPurp",
+      },
+      {
+        label: "AR3ZY — How To Get Tarragon FAST In Roblox EvoMon",
+        url: "https://www.youtube.com/watch?v=px_JnVQ1dJk",
+        channel: "AR3ZY",
+      },
+      {
+        label: "2kane Unleashed — Top 5 SHINY EVOMON'S You NEED in Evomon",
+        url: "https://www.youtube.com/watch?v=S9BjLhyjBAc",
+        channel: "2kane Unleashed",
+      },
+      {
+        label: "Hicko — Tarro farm for noobs | Evomon Roblox",
+        url: "https://www.youtube.com/watch?v=e1E65-HZccA",
+        channel: "Hicko",
+      },
+      {
+        label: "ImSoaren — The BEST Shiny Hunting Guide in Roblox Evomon!",
+        url: "https://www.youtube.com/watch?v=kA5s2l7tE7M",
+        channel: "ImSoaren",
+      },
+      {
+        label: "Mikey KT — I finally caught a shiny Tarro and evolved it (title confirmation; captions rate-limited)",
+        url: "https://www.youtube.com/watch?v=BHehFCNrV74",
+        channel: "Mikey KT",
+      },
+    ],
+  },
+  {
     slug: "sparkit-evolution-vs-lavite",
     title: "Sparkit Evolution vs Lavite — When to Evolve on Lava Crag",
     description:
