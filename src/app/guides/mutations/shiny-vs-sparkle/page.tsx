@@ -12,12 +12,8 @@ export const metadata: Metadata = PAGE_SEO.mutationsShinyVsSparkle();
 
 const faqs = [
   {
-    q: "What is Sparkle in Evomon?",
-    a: "Sparkle is the in-game UI label for Prismatic. It changes the pet's look with a random color and pattern, but it does not add combat stats.",
-  },
-  {
     q: "What is the difference between Shiny and Sparkle in Evomon?",
-    a: "Shiny (four-point star) gives an alternate palette and a small stat boost. Sparkle / Prismatic (five-point star) is cosmetic only. Pity counters are separate per species.",
+    a: "Shiny (four-point star) gives an alternate palette and a small stat boost. Sparkle / Prismatic (five-point star) is cosmetic only. Pity counters are separate per species. For the full Sparkle naming answer, see the Sparkle Evomon blog.",
   },
   {
     q: "Does Sparkle give stats in Evomon?",
@@ -36,9 +32,9 @@ const faqs = [
 export default function ShinyVsSparklePage() {
   const article = guideArticleSchema({
     path: "/guides/mutations/shiny-vs-sparkle",
-    headline: "Evomon Shiny vs Sparkle (Prismatic) — Stats & Differences",
+    headline: "Evomon Shiny vs Sparkle — Stats Buff vs Cosmetic",
     description:
-      "Shiny gives a small stat boost; Sparkle (Prismatic) is cosmetic only. Compare odds, pity counters, and how mutation differs from Talent and Nature.",
+      "Compare Shiny (stat buff) vs Sparkle/Prismatic (cosmetic only): icons, pity, and which to chase. Sparkle naming answer lives on the Sparkle blog.",
   });
 
   return (
@@ -60,24 +56,27 @@ export default function ShinyVsSparklePage() {
 
       <main className="mx-auto max-w-4xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         <PageBack href="/guides/mutations" label="Mutations guide" />
-        <h1 className={pageTitleClass()}>Sparkle vs Shiny in Evomon</h1>
+        <h1 className={pageTitleClass()}>Shiny vs Sparkle in Evomon</h1>
         <p className={pageLeadClass()}>
-          In-game UI labels prismatic mutations as <strong className="text-white">Sparkle</strong>.
-          This page answers the common search question: Sparkle is cosmetic, while Shiny gives the
-          stat buff. It compares mutation types only — not Talent grades or Nature rolls. Community
-          notes from {MUTATIONS_UPDATED}; full hunt routes stay on the{" "}
+          Side-by-side comparison only: <strong className="text-white">Shiny</strong> adds a small
+          stat buff; <strong className="text-white">Sparkle</strong> (UI name for Prismatic) is
+          cosmetic. Only need “what is Sparkle?” →{" "}
+          <Link href="/blog/what-is-sparkle-evomon" className="text-emerald-300 hover:underline">
+            Sparkle Evomon explained
+          </Link>
+          . Hunt routes stay on the{" "}
           <Link href="/guides/mutations" className="text-emerald-300 hover:underline">
             mutations hub
           </Link>
-          .
+          . Notes from {MUTATIONS_UPDATED}.
         </p>
 
         <div className="mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 sm:p-6">
           <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300">Quick answer</p>
           <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">
-            <strong className="text-white">Sparkle / Prismatic</strong> = looks only.{" "}
-            <strong className="text-white">Shiny</strong> = fixed shiny palette plus a small stat buff.
-            A shiny pet can still have bad Talent or Nature, so check all three systems separately.
+            <strong className="text-white">Shiny</strong> = fixed palette + small stat buff.{" "}
+            <strong className="text-white">Sparkle / Prismatic</strong> = looks only. A shiny pet can
+            still have bad Talent or Nature — check all three systems separately.
           </p>
         </div>
 

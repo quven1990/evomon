@@ -13,9 +13,27 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-07-31";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-08-02";
 
 export const updateLogGroups: UpdateLogGroup[] = [
+  {
+    month: "August 2026",
+    entries: [
+      {
+        date: "2026-08-02",
+        title: "SEO — eggs + Sparkle intent ownership (CTR)",
+        body: "Front-load how-to-get-eggs and Sparkle Evomon titles/QA; mutations hub and shiny-vs-sparkle cede definition/catch-loop ownership to the blogs so GSC impressions stop splitting across competing pages.",
+        tags: ["SEO", "Blog", "Guides"],
+        pages: [
+          "/blog/how-to-get-eggs-evomon",
+          "/blog/what-is-sparkle-evomon",
+          "/guides/mutations",
+          "/guides/mutations/shiny-vs-sparkle",
+          "/update-log",
+        ],
+      },
+    ],
+  },
   {
     month: "July 2026",
     entries: [

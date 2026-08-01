@@ -41,7 +41,7 @@ export default function MutationsGuidePage() {
                 name: "What is the difference between Shiny and Prismatic in Evomon?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Shiny boosts stats (~600 pity). Prismatic (Sparkle in the UI) is cosmetic only (~150 capture pity). Full Sparkle vs Shiny comparison: https://evomon.cc/guides/mutations/shiny-vs-sparkle",
+                  text: "Shiny boosts stats (~600 pity). Prismatic (Sparkle in the UI) is cosmetic only (~150 capture pity). Sparkle naming answer: https://evomon.cc/blog/what-is-sparkle-evomon — comparison: https://evomon.cc/guides/mutations/shiny-vs-sparkle",
                 },
               },
               {
@@ -49,7 +49,7 @@ export default function MutationsGuidePage() {
                 name: "How do shiny eggs work in Evomon?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Eggs only roll after you catch a defeated target. Shiny eggs hatch a guaranteed shiny; bosses often need this path because they lack field shiny pity. Full shiny egg guide: https://evomon.cc/guides/mutations/shiny-egg",
+                  text: "Shiny eggs hatch a guaranteed shiny; many bosses need this path because they lack field shiny pity. Catch-loop basics: https://evomon.cc/blog/how-to-get-eggs-evomon — full shiny egg guide: https://evomon.cc/guides/mutations/shiny-egg",
                 },
               },
               {
@@ -104,8 +104,8 @@ export default function MutationsGuidePage() {
           <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">
             <strong className="text-white">Shiny</strong> = stat boost (~600 pity per species).{" "}
             <strong className="text-white">Prismatic / Sparkle</strong> = looks only (~150 capture
-            pity). Always <strong className="text-white">catch</strong> what you farm — pity and eggs
-            need captures. Species lookup:{" "}
+            pity). Always <strong className="text-white">catch</strong> what you farm — pity advances
+            on captures. Species lookup:{" "}
             <Link href="/dex" className="font-medium text-emerald-300 hover:underline">
               Evomon dex
             </Link>
@@ -126,18 +126,17 @@ export default function MutationsGuidePage() {
           <p className="text-xs font-semibold uppercase tracking-wide text-cyan-200">
             Looking for eggs?
           </p>
-          <h2 className="mt-2 text-lg font-bold text-white">How to get eggs in Evomon</h2>
+          <h2 className="mt-2 text-lg font-bold text-white">Egg catch loop → separate guide</h2>
           <p className="mt-2 text-sm leading-7 text-zinc-300">
-            Eggs only roll after you <strong className="text-white">catch</strong> a defeated target.
-            For the full catch loop, use the{" "}
-            <Link href="/blog/how-to-get-eggs-evomon" className="text-cyan-200 hover:underline">
-              Evomon egg guide
+            Full step-by-step for{" "}
+            <Link href="/blog/how-to-get-eggs-evomon" className="font-medium text-cyan-200 hover:underline">
+              how to get eggs in Evomon
             </Link>
-            . To incubate an egg in the Hatching Chamber, see{" "}
+            . Hatching Chamber UI:{" "}
             <Link href="/blog/how-to-hatch-eggs-evomon" className="text-cyan-200 hover:underline">
               how to hatch eggs
             </Link>
-            . For shiny eggs, Prismatic Ball, and boss routes, open the{" "}
+            . Shiny eggs / Prismatic Ball / boss routes:{" "}
             <Link href="/guides/mutations/shiny-egg" className="text-cyan-200 hover:underline">
               shiny egg guide
             </Link>
@@ -152,9 +151,9 @@ export default function MutationsGuidePage() {
           <ul className="mt-3 space-y-2 text-sm leading-7 text-zinc-300">
             <li>
               <Link href="/blog/what-is-sparkle-evomon" className="text-emerald-300 hover:underline">
-                What is Sparkle?
+                Sparkle Evomon explained
               </Link>{" "}
-              — UI name for Prismatic, odds, and why it adds no stats.
+              — what Sparkle means, odds, pity, and why it adds no stats.
             </li>
             <li>
               <Link

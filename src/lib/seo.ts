@@ -305,7 +305,7 @@ export const PAGE_SEO = {
   mutationsGuide: () => {
     // Hub owns shiny hunt overview + pity + 149. Egg/sparkle detail → child pages.
     const title = `How to Get Shiny Evomon (${monthLabel}) — Pity & 149 Trick`;
-    const description = `Shiny hunt hub for Roblox Evomon: ~600 pity per species, catch-only counters, the 149 prismatic combo, and best farm routes. ${monthLabel}. Sparkle vs shiny and shiny eggs have dedicated guides.`;
+    const description = `Shiny hunt hub for Roblox Evomon: ~600 pity per species, catch-only counters, the 149 prismatic combo, and best farm routes. ${monthLabel}. Sparkle definition and how to get eggs have dedicated blog guides.`;
 
     return {
       ...buildPageMetadata({
@@ -328,18 +328,17 @@ export const PAGE_SEO = {
 
   mutationsShinyVsSparkle: () =>
     buildPageMetadata({
-      title: "Evomon Sparkle vs Shiny — Stats, Buff & Prismatic",
+      title: "Evomon Shiny vs Sparkle — Stats Buff vs Cosmetic",
       description:
-        "Sparkle in Evomon means Prismatic cosmetics only; Shiny gives the stat buff. Compare shiny stats, sparkle looks, pity counters, and icons.",
+        "Compare Shiny (stat buff, four-point star) vs Sparkle/Prismatic (looks only, five-point star): icons, pity, and which to chase. Definition of Sparkle lives on the Sparkle blog.",
       path: "/guides/mutations/shiny-vs-sparkle",
       keywords: [
-        "evomon sparkle",
-        "sparkle evomon",
+        "evomon shiny vs sparkle",
+        "shiny vs sparkle evomon",
         "evomon shiny vs prismatic",
-        "what is sparkle evomon",
         "evomon shiny buff",
         "evomon shiny stats",
-        "evomon prismatic",
+        "does sparkle give stats",
       ],
     }),
 

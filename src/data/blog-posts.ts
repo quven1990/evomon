@@ -600,9 +600,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "what-is-sparkle-evomon",
-    title: "Sparkle Evomon — What Sparkle Means (Prismatic Explained)",
+    title: "Sparkle Evomon Explained — Prismatic Looks, No Combat Stats",
     description:
-      "Sparkle is the in-game label for Prismatic Evomon: a random glow color + pattern on one body part, cosmetic only. Odds, the 150-catch pity, five-point star icon, and whether Sparkle is worth keeping.",
+      "A Sparkle Evomon is the UI name for Prismatic: random glow + pattern, five-point star, cosmetic only. Odds (~0.2–0.8%), 150-catch pity, and Sparkle vs Shiny.",
     published: "2026-07-26",
     gscTargets: [
       "sparkle evomon",
@@ -611,6 +611,8 @@ export const blogPosts: BlogPost[] = [
       "sparkling egg evomon",
       "what is sparkle in evomon",
       "what does sparkle do in evomon",
+      "what is sparkle evomon",
+      "what is a sparkle evomon",
       "sparkle vs shiny evomon",
       "evomon sparkle vs shiny",
     ],
@@ -622,7 +624,7 @@ export const blogPosts: BlogPost[] = [
       "/blog/prismatic-egg-evomon",
     ],
     quickAnswer:
-      "**Sparkle** is what the Evomon UI calls the variant the community knows as **Prismatic**: a random glow color and pattern on one body part, marked by a **five-point star icon**. It is **cosmetic only — zero stat change**. Community-reported odds run about **0.2–0.8% per encounter**, with a **pity at 150 captures** of the same species (catches advance the counter; KO-and-run does not). If you want power, hunt **Shiny** instead — that one adds stats. Both can stack on the same Evomon.",
+      "A **Sparkle Evomon** is what the game UI calls **Prismatic**: a **random glow color + pattern** on one body part, marked by a **five-point star**. It is **cosmetic only — zero combat stats**. Community odds sit around **0.2–0.8%** per encounter, with a **150-capture pity** (catches advance it; KO-and-run does not). Want power? Hunt **Shiny** (four-point star) instead. Side-by-side comparison: [Shiny vs Sparkle](/guides/mutations/shiny-vs-sparkle).",
     sections: [
       {
         heading: "Sparkle = Prismatic (one variant, two names)",
@@ -663,6 +665,10 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     faqs: [
+      {
+        q: "What is a Sparkle Evomon?",
+        a: "A Sparkle Evomon is the UI name for Prismatic: random glow color + pattern on one body part, five-point star icon, cosmetic only — zero combat stats.",
+      },
       {
         q: "What does sparkle mean in Evomon?",
         a: "Sparkle is the in-game name for the Prismatic variant: a random glow color and pattern on one body part, shown with a five-point star icon. It is purely cosmetic.",
@@ -2297,9 +2303,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "how-to-get-eggs-evomon",
-    title: "How to Get Eggs in Evomon (2026) — Catch Loop & Shiny Eggs",
+    title: "How to Get Eggs in Evomon — Defeat, Catch, Then Roll",
     description:
-      "How to get eggs in Evomon in 2026: 1) defeat, 2) catch, 3) roll normal/shiny eggs, 4) farm boss routes with Catch Master. Prismatic Ball hatching tips included.",
+      "How to get eggs in Evomon: KO the wild mon, catch it (eggs never roll on run), then repeat. Normal eggs for S Talent; shiny eggs for boss lines — Catch Master helps.",
     published: "2026-07-11",
     gscTargets: [
       "how to get eggs in evomon",
@@ -2308,6 +2314,9 @@ export const blogPosts: BlogPost[] = [
       "evomon egg drop rate",
       "how to get shiny egg evomon",
       "how to get shiny egg in evomon",
+      "how to get eggs in evomon roblox",
+      "how to get eggs evomon",
+      "evomon how to get eggs",
     ],
     relatedGuides: [
       "/guides/mutations/shiny-egg",
@@ -2320,62 +2329,59 @@ export const blogPosts: BlogPost[] = [
       "/blog/how-to-hatch-eggs-evomon",
     ],
     quickAnswer:
-      "Most stable egg path: **(1)** Defeat the wild Evomon — do not run. **(2)** Catch it (eggs only roll after a successful catch). **(3)** Hope for a normal egg (S Talent) or rarer shiny egg. **(4)** For boss/mount lines without field pity, farm catches with Catch Master and hatch shiny eggs — Prismatic Ball on hatch for Shiny + Prismatic looks. Searches for **“prismatic egg”** are covered on the [Prismatic Egg guide](/blog/prismatic-egg-evomon).",
+      "**How to get eggs in Evomon:** **(1)** Defeat the wild Evomon. **(2)** Catch it — eggs only roll after a **successful catch**, never after KO-and-run. **(3)** Repeat until a **normal egg** (S Talent hatch) or rarer **shiny egg** drops. **(4)** On boss/mount lines without field shiny pity, keep catching with **Catch Master** and hatch shiny eggs. Chamber UI: [How to Hatch Eggs](/blog/how-to-hatch-eggs-evomon). Prismatic Ball / named Prismatic Egg: [Prismatic Egg guide](/blog/prismatic-egg-evomon).",
     sections: [
       {
-        heading: "The three egg outcomes",
+        heading: "How to get eggs in Evomon (the catch rule)",
         paragraphs: [
-          "After a successful catch, the game can roll one of three egg-related outcomes. Normal eggs are the volume farm; shiny eggs are the boss-line chase; Prismatic Ball hatching is the endgame flex combo. If you are asking **how to get eggs in Evomon**, the important rule is simple: the egg roll happens after the catch, not after the knockout.",
+          "If you searched **how to get eggs in Evomon**, the loop is short: **defeat → catch → egg roll**. The roll happens **after the catch**, not after the knockout. Running from the capture screen skips both eggs and prismatic pity.",
         ],
         bullets: [
-          "**Normal egg** — hatches with guaranteed **S-tier Talent** (community reports). Best for early route farming.",
-          "**Shiny egg** — hatches a guaranteed **Shiny** of that species. Main path for boss/mount lines without field shiny pity.",
-          "**Shiny egg + Prismatic Ball** — hatch with a Prismatic Ball to force **Shiny + Prismatic look** in one step.",
+          "**Normal egg** — volume farm; hatches with guaranteed **S-tier Talent** (community reports).",
+          "**Shiny egg** — guaranteed **Shiny** of that species; main path for several boss/mount lines.",
+          "**Hatch UI** — inventory → Hatching Chamber; full steps on [How to Hatch Eggs](/blog/how-to-hatch-eggs-evomon).",
         ],
+        callout: {
+          title: "One rule that fixes most “no eggs” complaints",
+          body: "KO alone is not enough. You must land the catch. Stock balls and claim [codes](/codes) before long sessions.",
+          variant: "tip",
+        },
       },
       {
-        heading: "Egg sources: what to farm first",
-        paragraphs: [
-          "There is no public in-game table for every egg drop rate, so treat this as a practical farming map rather than a guaranteed percentage chart.",
-        ],
+        heading: "Step-by-step farm on any route",
         bullets: [
-          "**Regular route targets** — best for learning the loop and collecting normal eggs; catch every target after the KO.",
-          "**Boss and mount lines** — best for shiny egg hunting because several boss lines do not use normal field shiny pity.",
-          "**Event or patched routes** — check the in-game UI first; odds and available targets can change faster than community videos.",
-          "**Codes and ball supply** — claim [Evomon codes](/codes) before long egg sessions so failed catches do not end the farm early.",
+          "Pick a target your team KOs quickly (e.g. Lavarock clears on Lava Crag).",
+          "Fight until the wild Evomon faints — odds/pity HUD sits bottom-left while it is alive.",
+          "Throw until the catch lands — do not leave the capture screen empty-handed if you want eggs.",
+          "Repeat until a normal or shiny egg appears in inventory.",
+          "Hatch from the chamber. Optional: **Prismatic Ball** on a shiny-egg hatch for Sparkle looks — details on the [Prismatic Egg guide](/blog/prismatic-egg-evomon), not this page’s main job.",
         ],
       },
       {
-        heading: "Step-by-step: farm eggs on any route",
-        bullets: [
-          "Build a team that can KO the target reliably — one-shotting low-level routes (e.g. Lavarock in Lava Crag) saves time.",
-          "Battle until the wild Evomon faints — pity counters (prismatic 150 captures, shiny 600 KOs/captures) show bottom-left after the fight.",
-          "Always attempt a catch — KO-and-run does not advance prismatic pity or roll eggs.",
-          "Repeat until a normal or shiny egg drops into your inventory.",
-          "Hatch from the egg menu — full UI steps on [How to Hatch Eggs](/blog/how-to-hatch-eggs-evomon). For a shiny egg, optionally use a **Prismatic Ball** at hatch to force prismatic colors (UI label: Sparkle).",
-        ],
-      },
-      {
-        heading: "Boss lines: why catch rate matters",
+        heading: "Boss lines: Catch Master matters",
         paragraphs: [
-          "Several high-value bosses — including **Arcapex** and **Thunder Cream** lines — are easiest to shiny via **shiny eggs from repeated catches**, not field shiny pity.",
-          "The **Catch Master** suit (+10% capture success, +1 capture attempt) is widely used because failed catches waste entire boss cycles. Community creator [2kane Unleashed](https://www.youtube.com/watch?v=cdToZL_GwLQ) reports two Arcapex shiny eggs in one session using this setup — luck varies, but the capture-first logic matches our [Shiny Egg Guide](/guides/mutations/shiny-egg).",
+          "Several high-value bosses (including **Arcapex**) are easiest to shiny via **repeated catches for shiny eggs**, not field shiny pity. Failed throws waste the whole cycle.",
+          "The **Catch Master** suit (+10% capture success, +1 attempt) is the community default for those farms. Creator [2kane Unleashed](https://www.youtube.com/watch?v=cdToZL_GwLQ) shows the capture-first loop — luck varies; the rule matches our [Shiny Egg Guide](/guides/mutations/shiny-egg).",
         ],
       },
       {
-        heading: 'What "prismatic egg" searches usually want',
+        heading: "Related searches (not this page’s main job)",
         paragraphs: [
-          "If you landed here from **prismatic egg evomon**, open the dedicated [Prismatic Egg guide](/blog/prismatic-egg-evomon). Short version: YouTube creators usually mean **hatch a Shiny Egg with a Prismatic Ball**; some reward tracks also grant a named **Prismatic Egg** item for a random prismatic cosmetic hatch.",
+          "**Prismatic egg** wording → [Prismatic Egg guide](/blog/prismatic-egg-evomon). **Shiny egg odds / pity** → [Shiny Egg Chance](/blog/evomon-shiny-egg-chance) and the [shiny egg guide](/guides/mutations/shiny-egg). This post owns **how to get eggs** (the catch loop).",
         ],
       },
       {
         heading: "Beginner mistake to avoid",
         paragraphs: [
-          "Both community sources agree: do not shiny hunt on day one. Finish a strong **normal-form** team first ([Beginner Guide](/guides/beginner)), then farm eggs faster with higher level and better balls.",
+          "Do not start egg shiny hunts on day one. Finish a strong **normal-form** team first ([Beginner Guide](/guides/beginner)), then farm eggs faster with levels and balls.",
         ],
       },
     ],
     faqs: [
+      {
+        q: "How do you get eggs in Evomon?",
+        a: "Defeat the wild Evomon, then catch it. Eggs only roll after a successful catch. Repeat on a target you can clear quickly; use Catch Master on hard boss routes.",
+      },
       {
         q: "Do eggs drop if I KO and run?",
         a: "No. You must catch the Evomon after defeating it. KO-and-run does not roll eggs or raise prismatic pity.",
@@ -2390,11 +2396,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         q: "Can eggs hatch shiny Evomon?",
-        a: "Yes. A shiny egg hatches a guaranteed shiny Evomon. Normal eggs are different; they are used for talent farming and are not guaranteed shiny.",
+        a: "Yes. A shiny egg hatches a guaranteed shiny Evomon. Normal eggs are for talent farming and are not guaranteed shiny.",
       },
       {
         q: "What is the best way to farm eggs in Evomon?",
-        a: "Pick a target you can defeat quickly, catch after every KO, use enough balls before the session, and use Catch Master on boss routes where failed catches waste the egg roll.",
+        a: "Pick a target you can defeat quickly, catch after every KO, stock balls first, and use Catch Master on boss routes where failed catches waste the egg roll.",
       },
     ],
     sources: [
