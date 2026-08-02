@@ -16,7 +16,7 @@ export type PetCombatData = {
 };
 
 export const PET_COMBAT_SOURCE = "community-wiki";
-export const PET_COMBAT_LAST_CHECKED = "2026-07-25";
+export const PET_COMBAT_LAST_CHECKED = "2026-08-02";
 
 export const petCombatBySlug: Record<string, PetCombatData> = {
   "arcapex": {
@@ -46,6 +46,10 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   "bluebird": {
     stats: { hp: 58, attack: 62, defense: 45, spAtk: 66, spDef: 50, speed: 86 },
     traits: ["Drain", "Adapt", "SkyFire", "Dread", "Thorns", "Foresight", "Awe", "VitalGaurd", "Abyss", "Toughskin", "Arcane", "Venomward", "Frost", "StoneHeart", "Frenzy", "Inferno", "Toxin", "Gale", "Sear", "Coldward", "Renew", "Psywall"], location: "Raven Ridge"
+  },
+  "boltonia": {
+    stats: { hp: 76, attack: 60, defense: 73, spAtk: 113, spDef: 73, speed: 115 },
+    traits: ["TrueDmg", "Toxin", "Psywall", "Arcane", "Frost", "Venomward", "StoneHeart", "Frenzy", "Inferno", "Coldward", "Sear", "Renew", "Toughskin", "Abyss", "Awe", "Foresight", "Thorns", "Dread", "Gale", "Adapt", "SkyFire", "VitalGaurd"], location: "Season Pass egg (free track ~Lv 10)"
   },
   "bubblade": {
     stats: { hp: 86, attack: 81, defense: 78, spAtk: 100, spDef: 85, speed: 91 },
@@ -120,6 +124,26 @@ export const petCombatBySlug: Record<string, PetCombatData> = {
   "clipexor": {
     stats: { hp: 83, attack: 110, defense: 68, spAtk: 72, spDef: 76, speed: 110 },
     traits: [], location: "Via Evolved"
+  },
+  "coulomb": {
+    stats: { hp: 36, attack: 42, defense: 40, spAtk: 45, spDef: 50, speed: 43 },
+    traits: ["Thunderlord", "Coldward", "Sear", "Arcane", "Frost", "Frenzy", "Gale", "Inferno", "Psywall", "StoneHeart", "Toxin", "Venomward", "Abyss", "Adapt", "Awe", "Dread", "Foresight", "Renew", "SkyFire", "Thorns", "Toughskin", "VitalGaurd"], location: "Cyanrock Valley (Expedition Isles)"
+  },
+  "coulomtis": {
+    stats: { hp: 74, attack: 85, defense: 80, spAtk: 100, spDef: 96, speed: 83 },
+    traits: ["Thunderlord", "Arcane", "Coldward", "Frost", "Frenzy", "Gale", "Inferno", "Psywall", "Sear", "StoneHeart", "Toxin", "Venomward", "Abyss", "Adapt", "Awe", "Dread", "Foresight", "Renew", "SkyFire", "Thorns", "Toughskin", "VitalGaurd"], location: "Cyanrock Valley (Expedition Isles); or Via Evo"
+  },
+  "coultron": {
+    stats: { hp: 51, attack: 57, defense: 57, spAtk: 65, spDef: 70, speed: 60 },
+    traits: ["Thunderlord", "Arcane", "Coldward", "Frost", "Frenzy", "Gale", "Inferno", "Psywall", "Sear", "StoneHeart", "Toxin", "Venomward", "Abyss", "Adapt", "Awe", "Dread", "Foresight", "Renew", "SkyFire", "Thorns", "Toughskin", "VitalGaurd"], location: "Cyanrock Valley (Expedition Isles); or Via Evo"
+  },
+  "cyanie": {
+    stats: { hp: 51, attack: 55, defense: 69, spAtk: 63, spDef: 83, speed: 42 },
+    traits: ["Relay", "Arcane", "Coldward", "Frost", "Frenzy", "Gale", "Inferno", "Psywall", "Sear", "StoneHeart", "Toxin", "Venomward", "Abyss", "Adapt", "Awe", "Dread", "Foresight", "Renew", "SkyFire", "Thorns", "Toughskin", "VitalGaurd"], location: "Cyanrock Valley (Expedition Isles)"
+  },
+  "cyanknight": {
+    stats: { hp: 71, attack: 78, defense: 80, spAtk: 96, spDef: 111, speed: 68 },
+    traits: ["Relay", "Arcane", "Coldward", "Frost", "Frenzy", "Gale", "Inferno", "Psywall", "Sear", "StoneHeart", "Toxin", "Toughskin", "Thorns", "SkyFire", "Renew", "Foresight", "Dread", "Awe", "Adapt", "Abyss", "Venomward", "VitalGaurd"], location: "Cyanrock Valley (Expedition Isles); or Via Evo"
   },
   "glowy": {
     stats: { hp: 41, attack: 44, defense: 55, spAtk: 52, spDef: 37, speed: 30 },

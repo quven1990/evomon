@@ -28,7 +28,7 @@ export interface DexEntry {
   source: DexSource;
 }
 
-export const DEX_LAST_CHECKED = "2026-07-25";
+export const DEX_LAST_CHECKED = "2026-08-02";
 export const DEX_TOTAL_SLOTS = 108;
 
 export const dexEntries: DexEntry[] = [
@@ -59,9 +59,9 @@ export const dexEntries: DexEntry[] = [
   { number: 25, name: "Mirefish", element: "Water", tier: null, source: "community" },
   { number: 26, name: "Bluebird", element: "Flying", tier: null, source: "cross-source" },
   { number: 27, name: "Volcrest", element: "Flying", tier: null, source: "community" },
-  { number: 28, name: null, element: "Unknown", tier: null, source: "unpublished" },
-  { number: 29, name: null, element: "Unknown", tier: null, source: "unpublished" },
-  { number: 30, name: null, element: "Unknown", tier: null, source: "unpublished" },
+  { number: 28, name: "Coulomb", element: "Electric", tier: null, source: "cross-source" },
+  { number: 29, name: "Coultron", element: "Electric", tier: null, source: "cross-source" },
+  { number: 30, name: "Coulomtis", element: "Electric", tier: null, source: "cross-source" },
   { number: 31, name: "Clampip", element: "Water", tier: "A", source: "cross-source" },
   { number: 32, name: "Clamwhirl", element: "Water", tier: "A", source: "cross-source" },
   { number: 33, name: "Clamspire", element: "Water", tier: "B", source: "cross-source" },
@@ -138,8 +138,8 @@ export const dexEntries: DexEntry[] = [
   { number: 104, name: "Glowy", element: "Ground", tier: null, source: "cross-source" },
   { number: 105, name: "Glowres", element: "Ground", tier: null, source: "cross-source" },
   { number: 106, name: "Goliath", element: "Ground", tier: null, source: "cross-source" },
-  { number: 107, name: null, element: "Unknown", tier: null, source: "unpublished" },
-  { number: 108, name: null, element: "Unknown", tier: null, source: "unpublished" },
+  { number: 107, name: "Cyanie", element: "Electric", tier: null, source: "cross-source" },
+  { number: 108, name: "Cyanknight", element: "Electric", tier: null, source: "cross-source" },
 ];
 
 export function dexStats() {

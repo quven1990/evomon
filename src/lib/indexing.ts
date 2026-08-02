@@ -94,6 +94,13 @@ export const INDEXABLE_DEX_SLUGS = [
   "pummash",
   "wispshade",
   "thordlord",
+  // Season Pass + Expedition Isles (Cyanrock) — thick copy 2026-08-02
+  "boltonia",
+  "coulomb",
+  "coultron",
+  "coulomtis",
+  "cyanie",
+  "cyanknight",
 ] as const;
 
 export type IndexableDexSlug = (typeof INDEXABLE_DEX_SLUGS)[number];

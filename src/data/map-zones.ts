@@ -25,7 +25,7 @@ export type MapZone = {
   spawns: MapSpawn[];
 };
 
-export const MAP_ZONES_LAST_CHECKED = "2026-07-20";
+export const MAP_ZONES_LAST_CHECKED = "2026-08-02";
 
 /** Map display name → dex slug when simple lowercasing is wrong. */
 const SPAWN_SLUG_ALIASES: Record<string, string> = {
@@ -314,6 +314,30 @@ export const mapZones: MapZone[] = [
       { name: "Glowy", level: "140–145", role: "wild" },
       { name: "Clanx", level: "140–160", role: "wild" },
       { name: "Clanxor", level: "195", role: "boss" },
+    ],
+  },
+  {
+    id: "cyanrock-valley",
+    name: "Cyanrock Valley (Expedition Isles)",
+    zone: null,
+    levelRange: "Player Lv 55+ unlock",
+    note: "Expedition Isles world — community guides gate access around Player Level 55 / Expedition questline. Only island currently hosting Cyanie and Coulomb lines.",
+    huntTip:
+      "Endgame Electric island — farm Coulomb → Coulomtis and Cyanie → Cyanknight. Boss Cyanknight clears (~Lv 195) help unlock catch prompts; Grass answers the boss heal loop.",
+    related: [
+      { href: "/dex/cyanie", label: "Cyanie dex" },
+      { href: "/dex/cyanknight", label: "Cyanknight dex" },
+      { href: "/dex/coulomb", label: "Coulomb dex" },
+      { href: "/dex/coulomtis", label: "Coulomtis dex" },
+      { href: "/type-chart", label: "Type chart" },
+    ],
+    spawns: [
+      { name: "Coulomb", level: "island wild", role: "wild" },
+      { name: "Coultron", level: "island wild", role: "wild" },
+      { name: "Coulomtis", level: "island wild", role: "wild" },
+      { name: "Cyanie", level: "island wild", role: "wild" },
+      { name: "Cyanknight", level: "island wild", role: "wild" },
+      { name: "Cyanknight", level: "195", role: "boss" },
     ],
   },
   {

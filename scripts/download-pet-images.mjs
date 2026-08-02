@@ -33,9 +33,18 @@ async function download(url, dest) {
 
 function candidates(slug, manifestFile) {
   const urls = [];
-  if (manifestFile) urls.push(`${CDN}/${manifestFile}`);
+  if (manifestFile) {
+    urls.push(`${CDN}/${manifestFile}`);
+    // Seasonal catalog often ships .webp while older rows used .png
+    if (manifestFile.endsWith(".png")) {
+      urls.push(`${CDN}/${manifestFile.replace(/\.png$/, ".webp")}`);
+    } else if (manifestFile.endsWith(".webp")) {
+      urls.push(`${CDN}/${manifestFile.replace(/\.webp$/, ".png")}`);
+    }
+  }
   urls.push(`${WIKI}/${slug}.png`);
   urls.push(`${CDN}/${slug}.png`);
+  urls.push(`${CDN}/${slug}.webp`);
   urls.push(`${CDN}/evomon-${slug}.png`);
   return urls;
 }

@@ -26,6 +26,9 @@
   "mirefish": "evomon-025.png",
   "bluebird": "evomon-026.png",
   "volcrest": "evomon-027.png",
+  "coulomb": "evomon-028.webp",
+  "coultron": "evomon-029.webp",
+  "coulomtis": "evomon-030.webp",
   "clampip": null,
   "clamwhirl": null,
   "clamspire": null,
@@ -97,5 +100,7 @@
   "cliphas": "evomon-098.webp",
   "clipexor": "evomon-099.webp",
   "clanx": "evomon-100.webp",
-  "clanxor": "evomon-101.webp"
+  "clanxor": "evomon-101.webp",
+  "cyanie": "evomon-107.webp",
+  "cyanknight": "evomon-108.webp"
 }

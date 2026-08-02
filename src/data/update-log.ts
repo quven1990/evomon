@@ -21,6 +21,23 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-08-02",
+        title: "Dex — Boltonia + Cyanrock Expedition lines",
+        body: "Index Boltonia (Season Pass Electric #089) and fill unpublished slots with Coulomb → Coultron → Coulomtis (#028–030) plus Cyanie → Cyanknight (#107–108). Community wiki stats/traits; obtain from Season Pass / Cyanrock Valley guides. New map-zones entry for Cyanrock Valley. Sprites synced.",
+        tags: ["Dex", "SEO", "Map"],
+        pages: [
+          "/dex",
+          "/dex/boltonia",
+          "/dex/coulomb",
+          "/dex/coultron",
+          "/dex/coulomtis",
+          "/dex/cyanie",
+          "/dex/cyanknight",
+          "/map-zones",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-08-02",
         title: "SEO — eggs + Sparkle intent ownership (CTR)",
         body: "Front-load how-to-get-eggs and Sparkle Evomon titles/QA; mutations hub and shiny-vs-sparkle cede definition/catch-loop ownership to the blogs so GSC impressions stop splitting across competing pages.",
         tags: ["SEO", "Blog", "Guides"],
