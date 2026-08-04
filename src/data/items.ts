@@ -20,6 +20,8 @@ export type ItemSourceRef = {
 export type ItemEntry = {
   name: string;
   category: ItemCategory;
+  /** Local sprite under /items/{icon}.png (community item art CDN). */
+  icon: string;
   /** What it does — rewrite in our voice; no invented numbers. */
   does: string;
   /** When to spend. */
@@ -74,6 +76,7 @@ export const itemCategories: {
 export const itemEntries: ItemEntry[] = [
   {
     name: "Basic Catcher / Basic Ball",
+    icon: "basic-catcher",
     category: "catchers",
     does: "Standard capture tool for wild Evomon after a KO. Community guides treat it as the always-available starter catcher.",
     spendWhen: "Early routes and volume farming when the target is weakened.",
@@ -90,6 +93,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Advanced Ball / Advance Catcher",
+    icon: "advanced-ball",
     category: "catchers",
     does: "Stronger capture ball for tougher wilds and bosses. Community lists often call out a high catch guarantee — confirm the live tooltip.",
     spendWhen: "Boss catches and routes where failed throws waste time (egg farms).",
@@ -105,6 +109,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "King Ball",
+    icon: "king-ball",
     category: "catchers",
     does: "Premium catcher community guides use when they want a high Talent outcome on the catch (often described as SSS-oriented). Exact UI wording can patch — read the ball tooltip.",
     spendWhen: "Keeper catches that matter (final forms, boss eggs you will build).",
@@ -121,6 +126,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Prismatic Ball",
+    icon: "prismatic-ball",
     category: "catchers",
     does: "Forces the Sparkle / Prismatic cosmetic layer on a catch or when used on a shiny-egg hatch. Community creators treat it as the flex/cosmetic ball — not a substitute for field shiny pity math.",
     spendWhen: "Shiny eggs you already earned (especially boss eggs) when you also want Prismatic looks.",
@@ -138,6 +144,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Evolution Stone",
+    icon: "evolution-stone",
     category: "evolution",
     does: "Universal evolution catalyst. Paired with matching Element Stones (and level milestone) in the Evolve UI.",
     spendWhen: "Only on the line you will keep — see evolution priority.",
@@ -155,6 +162,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Element Stones",
+    icon: "element-stone",
     category: "evolution",
     does: "Type-locked stones (Fire, Water, Grass, Electric, …). Dual-type lines need both elements covered. Exact counts are per Evolve UI — we do not invent numbers.",
     spendWhen: "When evolving the matching element line you are funding.",
@@ -170,6 +178,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Omni Stone / Omni-Stone",
+    icon: "omni-stone",
     category: "evolution",
     does: "Substitutes for a missing Element Stone (one Omni ≈ one Element slot). Still need Evolution Stones and the level gate.",
     spendWhen: "When a specific Element Stone is the only blocker on a keeper evolve.",
@@ -187,6 +196,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Nature Reroll Potion",
+    icon: "nature-reroll",
     category: "rerolls",
     does: "Rerolls Nature (+10% / −10% stat personality).",
     spendWhen: "On a keeper with the right Talent/Trait already locked.",
@@ -203,6 +213,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Trait Reroll Potion",
+    icon: "trait-reroll",
     category: "rerolls",
     does: "Rerolls the passive Trait on a caught Evomon.",
     spendWhen: "When the species Trait pool has a Legendary you are chasing on a keeper.",
@@ -218,6 +229,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Talent Vector Potion",
+    icon: "talent-vector",
     category: "rerolls",
     does: "Rerolls Talent stat distribution. Community notes: it does not raise Talent letter rank by itself.",
     spendWhen: "On high-rank Talent keepers whose IV-like spread is awkward.",
@@ -233,6 +245,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Summon Ticket",
+    icon: "summon-ticket",
     category: "tickets",
     does: "Spawns Summon Ruins bosses — feeds Exchange Tokens, Element Stones, and related shop loops.",
     spendWhen: "When you need stones/tokens for the Exchange Merchant or a typed boss farm.",
@@ -248,6 +261,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "EXP Challenge / Multidrop tickets",
+    icon: "exchange-token",
     category: "tickets",
     does: "Entry tickets for daily EXP Dungeon (Petal Pond, unlock ~Lv 10) and Equipment Dungeon (Silent Sands, unlock Lv 40). Community guides list free daily allotments — confirm in-client.",
     spendWhen: "Every day you can clear the dungeon reliably.",
@@ -263,6 +277,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "EXP Fruit (Small / Medium / Large)",
+    icon: "exp-fruit",
     category: "exp",
     does: "Feeds EXP without battling. Community tables treat Large as far more valuable than Small — save Large for keepers.",
     spendWhen: "Pushing a carry to an evolve gate or Ultimate breakpoint.",
@@ -280,6 +295,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Refine Stone",
+    icon: "refine-stone",
     category: "gear-mats",
     does: "Rerolls bonus stats / grades on equipment (community: best spent on Legendary bases). Full loop on the equipment page.",
     spendWhen: "After you have a Legendary piece with a primary stat worth keeping.",
@@ -292,6 +308,7 @@ export const itemEntries: ItemEntry[] = [
   },
   {
     name: "Enhance Stone",
+    icon: "enhance-stone",
     category: "gear-mats",
     does: "Raises a piece’s primary (top-line) power. Costs stones + Coins at the Gear Station (community).",
     spendWhen: "Only on gear you plan to keep or transfer forward.",

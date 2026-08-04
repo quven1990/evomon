@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import { StructuredData } from "@/components/StructuredData";
@@ -15,6 +16,18 @@ import { PAGE_SEO } from "@/lib/seo";
 import { canonical } from "@/lib/site";
 
 export const metadata: Metadata = PAGE_SEO.equipment();
+
+const STEP_ICONS = [
+  "/items/equipment-set-a.png",
+  "/items/equipment-set-b.png",
+  "/items/enhance-stone.png",
+  "/items/refine-stone.png",
+] as const;
+
+const COMPARE_ICONS = {
+  Enhance: "/items/enhance-stone.png",
+  Refine: "/items/refine-stone.png",
+} as const;
 
 export default function EquipmentPage() {
   const pageUrl = canonical("/equipment");
@@ -43,40 +56,62 @@ export default function EquipmentPage() {
         ]}
       />
 
-      <main className="mx-auto max-w-4xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
+      <main className="mx-auto max-w-5xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         <PageBack href="/" />
         <h1 className={pageTitleClass()}>Evomon Equipment — Dungeons, Refine & Enhance</h1>
         <p className={pageLeadClass()}>
-          Silent Sands gear loop after trainer level 40: Equipment Challenges, Enhance vs Refine,
-          and Gear Station habits. Last checked {EQUIPMENT_LAST_CHECKED}.
+          Silent Sands gear loop after trainer level 40. Last checked {EQUIPMENT_LAST_CHECKED}.
         </p>
 
-        <div className="mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 sm:p-6">
-          <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300">
-            Quick answer
-          </p>
-          <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">{equipmentQuickAnswer}</p>
+        <div className="mt-6 overflow-hidden rounded-2xl border border-emerald-500/30 bg-emerald-500/10">
+          <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:p-6">
+            <div className="flex -space-x-3">
+              {["/items/equipment-set-a.png", "/items/equipment-set-c.png", "/items/equipment-set-b.png"].map(
+                (src) => (
+                  <div
+                    key={src}
+                    className="relative h-16 w-16 rounded-2xl border border-white/15 bg-black/50 p-1.5 shadow-lg"
+                  >
+                    <Image src={src} alt="" width={56} height={56} className="h-full w-full object-contain" />
+                  </div>
+                ),
+              )}
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300">
+                Quick answer
+              </p>
+              <p className="mt-2 text-sm leading-7 text-zinc-200 sm:text-base">{equipmentQuickAnswer}</p>
+            </div>
+          </div>
         </div>
-
-        <p className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs leading-6 text-zinc-500">
-          Unofficial. Ticket counts, map counts, and refine rates differ slightly across community
-          guides and can patch — verify portals and tooltips in your client. We do not list every
-          set name or invented drop %.
-        </p>
 
         <section className="mt-10">
           <h2 className="text-xl font-bold text-white sm:text-2xl">How the gear loop works</h2>
-          <ol className="mt-5 space-y-4">
+          <ol className="mt-5 grid gap-4 sm:grid-cols-2">
             {equipmentSteps.map((step, i) => (
               <li
                 key={step.title}
                 className="rounded-2xl border border-white/10 bg-[#0b1512] p-4 sm:p-5"
               >
-                <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300/90">
-                  Step {i + 1}
-                </p>
-                <h3 className="mt-1 text-base font-semibold text-white">{step.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-300">{step.body}</p>
+                <div className="flex items-start gap-3">
+                  <div className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-black/40">
+                    <Image
+                      src={STEP_ICONS[i] ?? STEP_ICONS[0]}
+                      alt=""
+                      width={48}
+                      height={48}
+                      className="h-10 w-10 object-contain"
+                    />
+                    <span className="absolute -left-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-black">
+                      {i + 1}
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-white">{step.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-zinc-300">{step.body}</p>
+                  </div>
+                </div>
               </li>
             ))}
           </ol>
@@ -88,10 +123,21 @@ export default function EquipmentPage() {
             {enhanceVsRefine.map((row) => (
               <div
                 key={row.name}
-                className="rounded-2xl border border-white/10 bg-[#0b1512] p-4 sm:p-5"
+                className="rounded-2xl border border-orange-500/20 bg-gradient-to-br from-orange-500/10 to-[#0b1512] p-5"
               >
-                <h3 className="text-lg font-semibold text-white">{row.name}</h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-300">{row.does}</p>
+                <div className="flex items-center gap-3">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-black/40">
+                    <Image
+                      src={COMPARE_ICONS[row.name as keyof typeof COMPARE_ICONS]}
+                      alt=""
+                      width={56}
+                      height={56}
+                      className="h-12 w-12 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{row.name}</h3>
+                </div>
+                <p className="mt-4 text-sm leading-6 text-zinc-300">{row.does}</p>
                 <p className="mt-3 text-sm leading-6 text-emerald-200/90">
                   <span className="font-medium text-emerald-300">Spend when:</span> {row.spendWhen}
                 </p>
@@ -105,11 +151,13 @@ export default function EquipmentPage() {
 
         <section className="mt-12">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Spend rules</h2>
-          <ul className="mt-4 space-y-2 text-sm leading-7 text-zinc-300">
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
             {equipmentSpendRules.map((rule) => (
-              <li key={rule} className="flex gap-2">
-                <span className="text-emerald-400">·</span>
-                <span>{rule}</span>
+              <li
+                key={rule}
+                className="rounded-xl border border-white/10 bg-[#0b1512] px-4 py-3 text-sm leading-6 text-zinc-300"
+              >
+                {rule}
               </li>
             ))}
           </ul>
@@ -121,39 +169,32 @@ export default function EquipmentPage() {
             <li>
               <Link href="/guides/level-30" className="text-emerald-300 hover:underline">
                 Level 30 Ascension checkpoint
-              </Link>{" "}
-              — Ultimate + pre-gear progression before Silent Sands.
+              </Link>
             </li>
             <li>
               <Link href="/items" className="text-emerald-300 hover:underline">
-                Items — Refine / Enhance stones in the bag
+                Items — balls, stones, Refine / Enhance in the bag
               </Link>
             </li>
             <li>
               <Link href="/guides/farming" className="text-emerald-300 hover:underline">
-                Farming — daily tickets and EXP loops
+                Farming — daily tickets
               </Link>
             </li>
             <li>
               <Link href="/guides/mutations/shiny-egg" className="text-emerald-300 hover:underline">
                 Catch Master suit
               </Link>{" "}
-              — adventure suit for boss egg catches (separate from dungeon gear).
-            </li>
-            <li>
-              <Link href="/tier-list/evolution-priority" className="text-emerald-300 hover:underline">
-                Evolution priority
-              </Link>{" "}
-              — who gets stones while you gear.
+              — separate from dungeon gear
             </li>
           </ul>
         </section>
 
         <section className="mt-12">
           <h2 className="text-xl font-bold text-white sm:text-2xl">FAQ</h2>
-          <dl className="mt-4 space-y-4">
+          <dl className="mt-4 grid gap-4 sm:grid-cols-2">
             {equipmentFaqs.map((item) => (
-              <div key={item.q} className="rounded-xl border border-white/10 bg-[#0b1512] p-4">
+              <div key={item.q} className="rounded-2xl border border-white/10 bg-[#0b1512] p-4">
                 <dt className="font-semibold text-white">{item.q}</dt>
                 <dd className="mt-2 text-sm leading-6 text-zinc-400">{item.a}</dd>
               </div>
