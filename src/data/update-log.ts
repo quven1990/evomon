@@ -22,7 +22,7 @@ export const updateLogGroups: UpdateLogGroup[] = [
       {
         date: "2026-08-04",
         title: "Optional Adsterra banner slots (deferred, fixed size)",
-        body: "Added opt-in Adsterra Banner component (interaction + scroll gated, iframe-isolated, no popunder). Slots on mutations, shiny-egg, items, and codes — inactive until NEXT_PUBLIC_ADSTERRA_BANNER_KEY is set. Privacy notes third-party banners.",
+        body: "Opt-in Adsterra 300×250 Banner (interaction + scroll gated, iframe-isolated). Live on mutations, shiny-egg, items, codes — not homepage/legal. 320×50 kept unused to protect mobile nav. Adult/popunder not used.",
         tags: ["Ads", "UX"],
         pages: [
           "/guides/mutations",
