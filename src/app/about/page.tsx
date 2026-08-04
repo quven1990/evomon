@@ -193,7 +193,7 @@ export default function AboutPage() {
             </li>
           </ul>
 
-          <h2>How we source data</h2>
+          <h2 id="how-we-source">How we source data</h2>
           <p>
             We are not inside the game&apos;s servers. Data is compiled manually and from public
             community sources, then tagged by confidence:

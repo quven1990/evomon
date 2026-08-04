@@ -82,14 +82,6 @@ export const equipmentSources: EquipmentSourceRef[] = [
     url: "https://nerdschalk.com/evomon-equipment-refine-enhance-guide/",
   },
   {
-    label: "Nerdschalk — Enhance & Refine progression",
-    url: "https://nerdschalk.com/evomon-equipment-enhance-refine-stones-guide/",
-  },
-  {
-    label: "AllThings.How — EXP vs Equipment dungeons",
-    url: "https://allthings.how/evomon-dungeons-how-the-exp-and-equipment-runs-work/",
-  },
-  {
     label: "AllThings.How — Sets, passives, refine",
     url: "https://allthings.how/evomon-equipment-how-to-unlock-sets-passives-and-refine-gear/",
   },

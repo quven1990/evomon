@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { CitationSources } from "@/components/CitationSources";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import { StructuredData } from "@/components/StructuredData";
 import {
@@ -244,27 +245,7 @@ export default function EquipmentPage() {
           </dl>
         </section>
 
-        <section className="mt-12">
-          <h2 className="text-lg font-semibold text-white">Sources</h2>
-          <ul className="mt-3 space-y-1 text-sm text-zinc-400">
-            {equipmentSources.map((src) => (
-              <li key={src.label}>
-                {src.url ? (
-                  <a
-                    href={src.url}
-                    className="inline-flex min-h-11 items-center text-emerald-300/90 hover:underline"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {src.label}
-                  </a>
-                ) : (
-                  <span className="inline-flex min-h-11 items-center">{src.label}</span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </section>
+        <CitationSources className="mt-12" sources={equipmentSources} />
       </main>
     </>
   );

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ExternalLink } from "lucide-react";
 import { AdsterraBanner } from "@/components/AdsterraBanner";
+import { CitationSources } from "@/components/CitationSources";
 import { StructuredData } from "@/components/StructuredData";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import { blogPosts, getBlogPost } from "@/data/blog-posts";
@@ -159,37 +159,13 @@ export default async function BlogPostPage({ params }: Props) {
           </dl>
         </section>
 
-        <section className="mt-12 rounded-2xl border border-white/10 bg-[#0b1512] p-5 sm:p-6">
-          <h2 className="text-lg font-bold text-white">Sources</h2>
-          <p className="mt-2 text-sm leading-7 text-zinc-400">
-            Community guides and creator footage cross-checked with Evomon Wiki route and dex data
-            (July 2026). Not official Roblox/Evomon developer documentation.
-          </p>
-          <ul className="mt-4 space-y-3">
-            {post.sources.map((source) => (
-              <li key={source.url}>
-                <a
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm text-emerald-300 hover:underline"
-                >
-                  {source.label}
-                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
-                </a>
-                {source.channel && (
-                  <span className="ml-2 text-xs text-zinc-500">({source.channel})</span>
-                )}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-xs leading-6 text-zinc-500">
-            See also:{" "}
-            <Link href="/about" className="text-emerald-300/80 hover:underline">
-              About & Trust
-            </Link>
-          </p>
-        </section>
+        <CitationSources
+          className="mt-12"
+          sources={post.sources.map((source) => ({
+            label: source.channel ? `${source.label} (${source.channel})` : source.label,
+            url: source.url,
+          }))}
+        />
       </main>
     </>
   );

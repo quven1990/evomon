@@ -344,17 +344,34 @@ export function itemsInCategory(category: ItemCategory): ItemEntry[] {
   return itemEntries.filter((item) => item.category === category);
 }
 
-/** Deduped page-level sources for GEO / citation footers. */
+/** Deduped page-level sources — one external host + one on-site note. */
 export function itemPageSources(): ItemSourceRef[] {
-  const seen = new Set<string>();
+  const seenHost = new Set<string>();
   const out: ItemSourceRef[] = [];
+  let hasOnSite = false;
+
   for (const entry of itemEntries) {
     for (const src of entry.sources) {
-      const key = `${src.label}|${src.url ?? ""}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
-      out.push(src);
+      if (!src.url) {
+        hasOnSite = true;
+        continue;
+      }
+      try {
+        const host = new URL(src.url).hostname.replace(/^www\./i, "").toLowerCase();
+        if (seenHost.has(host)) continue;
+        seenHost.add(host);
+        out.push(src);
+      } catch {
+        out.push(src);
+      }
     }
+  }
+
+  if (hasOnSite) {
+    out.push({
+      label: "Evomon Wiki — on-site codes, beginner, eggs & farming guides",
+      url: "/about#how-we-source",
+    });
   }
   return out;
 }

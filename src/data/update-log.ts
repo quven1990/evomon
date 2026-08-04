@@ -21,6 +21,23 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-08-04",
+        title: "Citation footers — collapse, nofollow, trim outbound",
+        body: "Sources blocks on items, equipment, blog posts, and GuideTrustFooter guides are collapsed by default, link to /about#how-we-source, use rel=nofollow on external citations, and trim items/equipment lists to one host each.",
+        tags: ["SEO", "UX"],
+        pages: [
+          "/items",
+          "/equipment",
+          "/blog",
+          "/guides/mutations/shiny-egg",
+          "/guides/mutations/shiny-vs-sparkle",
+          "/tier-list/early-carries",
+          "/tier-list/evolution-priority",
+          "/about",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-08-04",
         title: "Adsterra — allow mainland China visitors",
         body: "Removed the CN geo block on Adsterra banners and static ad iframes. Fill still depends on Adsterra serving the visitor IP; VPN/datacenter 403 unchanged.",
         tags: ["Ads"],

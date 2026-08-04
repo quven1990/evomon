@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
+import { citationExternalRel } from "@/components/CitationSources";
 import { DataFreshness } from "@/components/DataFreshness";
 import {
   confidenceLabels,
@@ -56,37 +57,59 @@ export function GuideTrustFooter({ pageId }: { pageId: GuideTrustPageId }) {
           </Link>
         </p>
 
-        <h3 className="mt-8 text-sm font-bold uppercase tracking-wide text-zinc-500">Sources</h3>
-        <ul className="mt-3 space-y-3">
-          {config.sources.map((source) => (
-            <li
-              key={source.label}
-              className="rounded-xl border border-white/5 bg-white/[0.02] px-4 py-3"
-            >
-              <div className="flex flex-wrap items-center gap-2">
-                {source.href ? (
-                  <Link
-                    href={source.href}
-                    className="text-sm font-medium text-emerald-300 hover:underline"
-                    {...(source.href.startsWith("http")
-                      ? { target: "_blank", rel: "noopener noreferrer" }
-                      : {})}
-                  >
-                    {source.label}
-                  </Link>
-                ) : (
-                  <span className="text-sm font-medium text-white">{source.label}</span>
-                )}
-                <span
-                  className={`rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${confidenceStyles[source.confidence]}`}
+        <p className="mt-6 text-sm leading-7 text-zinc-500">
+          Cross-checked from community guides — not a scraped catalog.{" "}
+          <Link href="/about#how-we-source" className="text-emerald-300 hover:underline">
+            How we source data →
+          </Link>
+        </p>
+
+        <details className="mt-4 rounded-xl border border-white/10 bg-white/[0.02]">
+          <summary className="cursor-pointer px-4 py-3 text-sm font-semibold uppercase tracking-wide text-zinc-400 marker:content-none [&::-webkit-details-marker]:hidden">
+            <span className="inline-flex items-center gap-2 normal-case">
+              <span aria-hidden className="text-zinc-500">
+                ▸
+              </span>
+              Sources
+              <span className="font-normal normal-case text-zinc-500">
+                ({config.sources.length})
+              </span>
+            </span>
+          </summary>
+          <ul className="space-y-3 border-t border-white/10 px-4 py-3">
+            {config.sources.map((source) => {
+              const external = Boolean(source.href && /^https?:\/\//i.test(source.href));
+              return (
+                <li
+                  key={source.label}
+                  className="rounded-xl border border-white/5 bg-white/[0.02] px-4 py-3"
                 >
-                  {confidenceLabels[source.confidence]}
-                </span>
-              </div>
-              <p className="mt-1.5 text-sm leading-6 text-zinc-500">{source.note}</p>
-            </li>
-          ))}
-        </ul>
+                  <div className="flex flex-wrap items-center gap-2">
+                    {source.href ? (
+                      <Link
+                        href={source.href}
+                        className="text-sm font-medium text-emerald-300 hover:underline"
+                        {...(external
+                          ? { target: "_blank", rel: citationExternalRel }
+                          : {})}
+                      >
+                        {source.label}
+                      </Link>
+                    ) : (
+                      <span className="text-sm font-medium text-white">{source.label}</span>
+                    )}
+                    <span
+                      className={`rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${confidenceStyles[source.confidence]}`}
+                    >
+                      {confidenceLabels[source.confidence]}
+                    </span>
+                  </div>
+                  <p className="mt-1.5 text-sm leading-6 text-zinc-500">{source.note}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </details>
       </section>
     </footer>
   );
