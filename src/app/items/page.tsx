@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import { StructuredData } from "@/components/StructuredData";
 import {
@@ -103,6 +104,8 @@ export default function ItemsPage() {
             .
           </p>
         </div>
+
+        <AdsterraBanner className="mt-8" />
 
         <nav aria-label="Item categories" className="mt-8 flex flex-wrap gap-2">
           {itemCategories.map((cat) => (

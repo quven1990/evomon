@@ -1,1 +1,2 @@
 google.com, pub-9101692675645964, DIRECT, f08c47fec0942fa0
+# After Adsterra approves your site, paste their ads.txt line(s) below from the publisher dashboard.

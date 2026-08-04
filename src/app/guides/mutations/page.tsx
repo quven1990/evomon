@@ -4,6 +4,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { GuideClusterRoutes } from "@/components/GuideClusterRoutes";
 import { MutationVideoEvidence } from "@/components/MutationVideoEvidence";
 import { MutationsNav } from "@/components/MutationsNav";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import {
   MUTATIONS_UPDATED,
@@ -119,6 +120,8 @@ export default function MutationsGuidePage() {
             .
           </p>
         </div>
+
+        <AdsterraBanner className="mt-8" />
 
         <GuideClusterRoutes cluster={mutationsCluster} />
 

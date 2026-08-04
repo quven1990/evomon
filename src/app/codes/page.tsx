@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { CopyButton } from "@/components/CopyButton";
 import { CodeCard } from "@/components/CodeCard";
 import { DataFreshness } from "@/components/DataFreshness";
@@ -128,6 +129,8 @@ export default function CodesPage() {
         <div className="mt-8">
           <RedeemGuide />
         </div>
+
+        <AdsterraBanner className="mt-10" />
 
         {/* All codes — card layout, works on mobile */}
         <section id="all-codes" className="mt-10 scroll-mt-24">

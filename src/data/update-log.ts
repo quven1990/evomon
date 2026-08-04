@@ -21,6 +21,20 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-08-04",
+        title: "Optional Adsterra banner slots (deferred, fixed size)",
+        body: "Added opt-in Adsterra Banner component (interaction + scroll gated, iframe-isolated, no popunder). Slots on mutations, shiny-egg, items, and codes — inactive until NEXT_PUBLIC_ADSTERRA_BANNER_KEY is set. Privacy notes third-party banners.",
+        tags: ["Ads", "UX"],
+        pages: [
+          "/guides/mutations",
+          "/guides/mutations/shiny-egg",
+          "/items",
+          "/codes",
+          "/privacy",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-08-04",
         title: "Items + Equipment hubs (spend-first, multi-source)",
         body: "New /items decision guide (balls, evolution/Omni stones, rerolls, tickets, EXP fruit) and /equipment Silent Sands Refine/Enhance loop from Sportskeeda/Nerdschalk/AllThings/Bloxodes — not a scraped wiki catalog. Local item sprites + icon card grids; Article/HowTo/FAQ schema, Sources footers, and mobile tap targets tightened. Level-30 retargeted to Ascension checkpoint; nav adds both under Wiki & Data (not top bar).",
         tags: ["SEO", "Guides", "Items"],

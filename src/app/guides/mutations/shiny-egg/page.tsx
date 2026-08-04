@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
 import { GuideTrustFooter } from "@/components/GuideTrustFooter";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import { eggHunting, MUTATIONS_UPDATED, pityRules } from "@/data/mutations";
 import { guideArticleSchema } from "@/lib/guide-trust";
@@ -98,6 +99,8 @@ export default function ShinyEggPage() {
             routes where every failed catch wastes an egg roll.
           </p>
         </div>
+
+        <AdsterraBanner className="mt-8" />
 
         <section className="mt-10">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Egg types</h2>

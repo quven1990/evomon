@@ -113,7 +113,8 @@ export default function PrivacyPage() {
 
           <h3>Advertising</h3>
           <p>
-            We may display ads served by Google AdSense and/or other advertising networks. Third-party
+            We may display ads served by Google AdSense and/or other advertising networks (for
+            example banner networks such as Adsterra when enabled). Third-party
             vendors, including Google, use cookies to serve ads based on a user&apos;s prior visits to
             this site or other sites on the Internet. Google&apos;s use of advertising cookies enables
             it and its partners to serve ads to you based on your visit to this site and/or other sites
