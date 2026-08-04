@@ -16,7 +16,7 @@ const dailyChecklist = [
   { label: "7-day login rewards", href: "#login-rewards", note: "Stones, ticket, crystals" },
   { label: "Daily quests", href: "/guides/beginner#xp", note: "~2,000 player EXP" },
   { label: "EXP Challenge (×2 free)", href: "/guides/beginner#petal-pond", note: "50 EXP each" },
-  { label: "Equipment Challenge (Lv40+)", href: "/guides/level-30#equipment-dungeons", note: "200 EXP per ticket" },
+  { label: "Equipment Challenge (Lv40+)", href: "/equipment", note: "200 EXP per ticket (community)" },
 ] as const;
 
 export default function FarmingGuidePage() {
@@ -97,14 +97,14 @@ export default function FarmingGuidePage() {
             ) — 50 EXP each, 2 free/day
           </li>
           <li>
-            <Link href="/guides/level-30#equipment-dungeons" className={wikiLinkClass()}>
+            <Link href="/equipment" className={wikiLinkClass()}>
               Equipment Challenge
             </Link>{" "}
             (
             <Link href="/guides/beginner#silent-sands" className={wikiLinkClass()}>
               Silent Sands
             </Link>
-            , Lv40+) — 200 EXP per ticket
+            , Lv40+) — 200 EXP per ticket (community)
           </li>
         </ol>
 

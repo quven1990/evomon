@@ -42,8 +42,8 @@ export const navSections = [
       },
       {
         href: "/guides/level-30",
-        label: "Equipment (Lv40+)",
-        desc: "Gear dungeons on Silent Sands after Ascension",
+        label: "Level 30 Ascension",
+        desc: "Ultimate unlock and pre-gear checkpoint",
       },
       { href: "/starters", label: "Best Starter", desc: "Bubble, Blazpup, or Leafbun" },
     ],
@@ -74,6 +74,16 @@ export const navSections = [
         href: "/traits",
         label: "Traits",
         desc: "Trait effects and which pets can roll them",
+      },
+      {
+        href: "/items",
+        label: "Items",
+        desc: "Balls, stones, potions — what to spend first",
+      },
+      {
+        href: "/equipment",
+        label: "Equipment",
+        desc: "Silent Sands dungeons, Refine & Enhance",
       },
       {
         href: "/map-zones",
@@ -128,10 +138,12 @@ export const footerLinks = [
   { href: "/type-chart", label: "Type Chart" },
   { href: "/natures", label: "Natures" },
   { href: "/traits", label: "Traits" },
+  { href: "/items", label: "Items" },
+  { href: "/equipment", label: "Equipment" },
   { href: "/map-zones", label: "Map Zones" },
   { href: "/team-builder", label: "Team Builder" },
   { href: "/guides/beginner", label: "Beginner Guide" },
-  { href: "/guides/level-30", label: "Equipment (Lv40+)" },
+  { href: "/guides/level-30", label: "Level 30 Ascension" },
   { href: "/guides/farming", label: "Farming" },
 ] as const;
 

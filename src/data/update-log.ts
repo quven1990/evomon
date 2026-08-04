@@ -13,12 +13,24 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-08-02";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-08-04";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "August 2026",
     entries: [
+      {
+        date: "2026-08-04",
+        title: "Items + Equipment hubs (spend-first, multi-source)",
+        body: "New /items decision guide (balls, evolution/Omni stones, rerolls, tickets, EXP fruit) and /equipment Silent Sands Refine/Enhance loop from Sportskeeda/Nerdschalk/AllThings/Bloxodes — not a scraped wiki catalog. Level-30 retargeted to Ascension checkpoint; nav adds both under Wiki & Data (not top bar).",
+        tags: ["SEO", "Guides", "Items"],
+        pages: [
+          "/items",
+          "/equipment",
+          "/guides/level-30",
+          "/update-log",
+        ],
+      },
       {
         date: "2026-08-02",
         title: "Dex — Boltonia + Cyanrock Expedition lines",

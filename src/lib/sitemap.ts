@@ -20,6 +20,8 @@ const indexableRoutes: {
   { path: "/type-chart", priority: 0.85, changeFrequency: "monthly" },
   { path: "/natures", priority: 0.82, changeFrequency: "monthly" },
   { path: "/traits", priority: 0.82, changeFrequency: "monthly" },
+  { path: "/items", priority: 0.84, changeFrequency: "weekly" },
+  { path: "/equipment", priority: 0.84, changeFrequency: "weekly" },
   { path: "/map-zones", priority: 0.85, changeFrequency: "weekly" },
   { path: "/team-builder", priority: 0.8, changeFrequency: "monthly" },
   { path: "/tier-list", priority: 0.8, changeFrequency: "weekly" },

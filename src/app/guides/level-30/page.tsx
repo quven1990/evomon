@@ -9,14 +9,15 @@ export default function Level30GuidePage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
       <PageBack href="/guides/beginner" label="Beginner guide" />
-      <h1 className={pageTitleClass()}>Equipment Dungeons & Post-30 Progression</h1>
+      <h1 className={pageTitleClass()}>Level 30 Ascension & What Unlocks Next</h1>
       <p className={pageLeadClass()}>
-        Island routing, Lavite, and the level 30 Ultimate/Ascension spike live on the{" "}
+        Island routing, Lavite, and early clears live on the{" "}
         <Link href="/guides/beginner" className="text-emerald-300 hover:underline">
           beginner guide
         </Link>
-        . This page covers what opens after that — especially{" "}
-        <strong className="text-white">Equipment Dungeons at trainer level 40</strong> on Silent Sands.
+        . This page is the{" "}
+        <strong className="text-white">trainer level 30 checkpoint</strong> — Ultimate, Ascension,
+        then the handoff to Silent Sands gear.
       </p>
 
       <div className="mt-6 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 sm:p-6">
@@ -26,9 +27,11 @@ export default function Level30GuidePage() {
           <Link href="/guides/beginner" className="font-medium text-emerald-300 hover:underline">
             beginner route
           </Link>
-          . At level 40, Silent Sands unlocks Equipment Dungeons — run daily Equipment Challenge
-          tickets for gear, enhance keeper pieces only, and save Refine Stones for Legendary bonus
-          rolls.
+          . Gear itself unlocks later at level 40 — full dungeon / Refine / Enhance loop is on the{" "}
+          <Link href="/equipment" className="font-medium text-emerald-300 hover:underline">
+            equipment guide
+          </Link>
+          .
         </p>
       </div>
 
@@ -47,50 +50,61 @@ export default function Level30GuidePage() {
           <li>Visit Daisy in Main City for additional skills after trainer level 30.</li>
         </ul>
 
-        <h2 id="equipment-dungeons">Level 40+ — Equipment Dungeons</h2>
+        <h2 id="toward-equipment">Toward level 40 gear</h2>
         <p>
-          Silent Sands is the core gear faucet. Ground and Steel types dominate the route — check the{" "}
-          <Link href="/type-chart?type=Water" className={wikiLinkClass()}>
-            type chart
-          </Link>{" "}
-          for Water/Fire/Fighting counters before you push dungeons.
+          Silent Sands Equipment Challenges are the mid-game gear faucet. Community guides unlock
+          them at trainer level 40 after Ascension raises your cap. Do not spread Evolution Stones
+          across duplicates while you push — see{" "}
+          <Link href="/tier-list/evolution-priority" className={wikiLinkClass()}>
+            evolution priority
+          </Link>
+          .
         </p>
         <ul>
-          <li>Equipment Dungeons unlock when your trainer reaches level 40 on Silent Sands.</li>
           <li>
-            Run Equipment Challenge tickets daily — each grants{" "}
-            <strong className="text-white">200 player EXP</strong> (see the{" "}
-            <Link href="/guides/farming#daily" className={wikiLinkClass()}>
-              farming checklist
+            Full loop (Enhance vs Refine, Carly’s Gear Station, daily tickets) →{" "}
+            <Link href="/equipment" className={wikiLinkClass()}>
+              Evomon equipment guide
             </Link>
-            ).
+            .
           </li>
-          <li>Enhance only gear you will keep long-term; fodder pieces stop at +0.</li>
-          <li>Use Refine Stones on Legendary equipment when you are rolling for bonus stats.</li>
           <li>
-            Catch Master suit (+10% capture) pays off once you start boss{" "}
+            Bag materials (Refine / Enhance stones, balls, Omni) →{" "}
+            <Link href="/items" className={wikiLinkClass()}>
+              items spend guide
+            </Link>
+            .
+          </li>
+          <li>
+            Catch Master suit for boss{" "}
             <Link href="/guides/mutations/shiny-egg" className={wikiLinkClass()}>
               shiny egg
             </Link>{" "}
-            routes — farm dungeons first, then hunt.
+            routes — farm gear first if captures are failing.
           </li>
         </ul>
 
         <h2>Who to level while gearing</h2>
         <p>
-          Do not spread evolution stones across duplicates. The{" "}
-          <Link href="/tier-list/evolution-priority" className={wikiLinkClass()}>
-            evolution priority guide
-          </Link>{" "}
-          and{" "}
+          The{" "}
           <Link href="/tier-list" className={wikiLinkClass()}>
             tier list
           </Link>{" "}
-          list which carries stay relevant through Silent Sands and beyond.
+          lists which carries stay relevant through Silent Sands and beyond.
         </p>
 
         <h2>Related</h2>
         <ul>
+          <li>
+            <Link href="/equipment" className={wikiLinkClass()}>
+              Equipment — dungeons, Refine & Enhance
+            </Link>
+          </li>
+          <li>
+            <Link href="/items" className={wikiLinkClass()}>
+              Items — what to spend first
+            </Link>
+          </li>
           <li>
             <Link href="/guides/beginner" className={wikiLinkClass()}>
               Beginner guide — islands through level 30
@@ -99,16 +113,6 @@ export default function Level30GuidePage() {
           <li>
             <Link href="/guides/farming" className={wikiLinkClass()}>
               Farming guide — daily EXP and tickets
-            </Link>
-          </li>
-          <li>
-            <Link href="/guides/mutations/shiny-egg" className={wikiLinkClass()}>
-              Shiny egg & boss routes
-            </Link>
-          </li>
-          <li>
-            <Link href="/tier-list" className={wikiLinkClass()}>
-              Tier list
             </Link>
           </li>
         </ul>

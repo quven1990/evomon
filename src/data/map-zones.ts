@@ -193,7 +193,7 @@ export const mapZones: MapZone[] = [
     note: "Tinkore appears as both mini-boss and boss in community data.",
     huntTip: "Ascension island — equipment dungeons unlock around trainer Lv40+; steel line Tinkog / Tinkore.",
     related: [
-      { href: "/guides/level-30", label: "Equipment (Lv40+)" },
+      { href: "/equipment", label: "Equipment guide" },
       { href: "/guides/farming", label: "Daily farming" },
     ],
     spawns: [

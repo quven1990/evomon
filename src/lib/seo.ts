@@ -205,6 +205,54 @@ export const PAGE_SEO = {
     };
   },
 
+  items: () => {
+    const title = "Evomon Items — Balls, Stones & What to Spend First";
+    const description =
+      "Evomon item spend guide: King vs Prismatic Ball, Evolution / Element / Omni Stones, reroll potions, Summon tickets, and EXP fruit — with sources, not a scraped catalog.";
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/items",
+        ogTitle: title,
+        keywords: [
+          "evomon items",
+          "evomon evolution stone",
+          "evomon prismatic ball",
+          "evomon king ball",
+          "evomon omni stone",
+          "evomon trait reroll potion",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
+
+  equipment: () => {
+    const title = "Evomon Equipment — Silent Sands Dungeons, Refine & Enhance";
+    const description =
+      "Unlock gear at trainer level 40 on Silent Sands: Equipment Challenges, Enhance vs Refine Stones, Carly’s Gear Station, and what to spend stones on.";
+
+    return {
+      ...buildPageMetadata({
+        title,
+        description,
+        path: "/equipment",
+        ogTitle: title,
+        keywords: [
+          "evomon equipment",
+          "evomon equipment dungeon",
+          "evomon refine stones",
+          "evomon enhance stones",
+          "evomon silent sands gear",
+          "evomon gear station",
+        ],
+      }),
+      title: { absolute: title },
+    };
+  },
+
   typeChart: () => {
     // Absolute title: keep ≤60 chars. Avoid "Clickable" — GSC showed it hurt CTR vs weakness intent.
     const title = "Evomon Type Chart — Weaknesses & What Beats Each Type (2026)";
@@ -288,17 +336,16 @@ export const PAGE_SEO = {
 
   level30Guide: () =>
     buildPageMetadata({
-      title: "Evomon Equipment Dungeons (Lv40+) — Gear Runs & Refine Guide",
+      title: "Evomon Level 30 Ascension — Ultimate & What Unlocks Next",
       description:
-        "Silent Sands gear dungeons at trainer level 40: daily Equipment Challenge tickets, enhance keeper gear, Refine Stones on Legendary rolls. Level 30 Ultimate recap links to the beginner guide.",
+        "Trainer level 30 Ultimate and Ascension checkpoint, then what opens toward Silent Sands gear. Full Equipment Challenge / Refine loop lives on the equipment guide.",
       path: "/guides/level-30",
       keywords: [
-        "evomon equipment dungeon",
-        "evomon silent sands",
-        "evomon level 40",
-        "evomon gear",
-        "evomon refine stones",
         "evomon level 30",
+        "evomon ascension",
+        "evomon ultimate",
+        "evomon level 40 unlock",
+        "evomon silent sands",
       ],
     }),
 
