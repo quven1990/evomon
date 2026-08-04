@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { StructuredData } from "@/components/StructuredData";
 import { GuideClusterRoutes } from "@/components/GuideClusterRoutes";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
@@ -92,6 +93,8 @@ export default function TierListPage() {
         </div>
 
         <GuideClusterRoutes cluster={tierListCluster} />
+
+        <AdsterraBanner className="mt-8" />
 
         <p className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs leading-6 text-zinc-500">
           Community meta snapshot ({TIER_LIST_UPDATED}) — synthesized from multiple creator tier

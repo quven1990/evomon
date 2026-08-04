@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ExternalLink } from "lucide-react";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { StructuredData } from "@/components/StructuredData";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import { blogPosts, getBlogPost } from "@/data/blog-posts";
@@ -80,6 +81,8 @@ export default async function BlogPostPage({ params }: Props) {
             {renderBlogParagraph(post.quickAnswer)}
           </p>
         </div>
+
+        <AdsterraBanner className="mt-8" />
 
         {post.relatedGuides.length > 0 && (
           <nav

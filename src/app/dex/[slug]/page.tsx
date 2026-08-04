@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { DexSourceBadge } from "@/components/Badges";
 import { DexPetDetailSections } from "@/components/DexPetDetailSections";
 import { pageTitleClass } from "@/components/PageShell";
@@ -114,6 +115,8 @@ export default async function DexDetailPage({ params }: Props) {
             </div>
           </div>
         </div>
+
+        <AdsterraBanner className="mt-8" />
 
         <DexPetDetailSections entry={pet} slug={slug} />
       </main>

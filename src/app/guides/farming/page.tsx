@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { DataFreshness } from "@/components/DataFreshness";
 import { LoginRewardsGrid } from "@/components/LoginRewardsGrid";
 import { PageBack, pageLeadClass, pageTitleClass, wikiLinkClass } from "@/components/PageShell";
@@ -59,6 +60,8 @@ export default function FarmingGuidePage() {
           first for balls and EXP Fruits — separate from login streak rewards below.
         </p>
       </section>
+
+      <AdsterraBanner className="mt-8" />
 
       <div className="prose-wiki mt-10">
         <h2 id="daily-reset">Daily reset</h2>

@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { DexGallery } from "@/components/DexGallery";
 import { StructuredData } from "@/components/StructuredData";
 import { DEX_LAST_CHECKED, DEX_TOTAL_SLOTS, dexStats } from "@/data/dex";
@@ -22,6 +23,10 @@ export default function DexPage() {
       >
         <DexGallery />
       </Suspense>
+
+      <div className="mx-auto max-w-7xl px-4">
+        <AdsterraBanner className="mt-2 mb-2" />
+      </div>
 
       <section className="mx-auto max-w-7xl border-t border-white/10 px-4 py-10 sm:py-12">
         <h2 className="text-xl font-bold tracking-tight text-white sm:text-2xl">

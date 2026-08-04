@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { StructuredData } from "@/components/StructuredData";
 import { GuideTrustFooter } from "@/components/GuideTrustFooter";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
@@ -79,6 +80,8 @@ export default function ShinyVsSparklePage() {
             still have bad Talent or Nature — check all three systems separately.
           </p>
         </div>
+
+        <AdsterraBanner className="mt-8" />
 
         <section className="mt-10 rounded-2xl border border-violet-300/20 bg-violet-500/10 p-5 sm:p-6">
           <h2 className="text-lg font-semibold text-violet-100">

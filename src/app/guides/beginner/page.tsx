@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AdsterraBanner } from "@/components/AdsterraBanner";
 import { BeginnerGuideNav } from "@/components/BeginnerGuideNav";
 import { StructuredData } from "@/components/StructuredData";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
@@ -149,6 +150,8 @@ export default function BeginnerGuidePage() {
             .
           </p>
         </div>
+
+        <AdsterraBanner className="mt-8" />
 
         <section
           aria-label="First three islands"

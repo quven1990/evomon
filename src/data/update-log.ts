@@ -21,6 +21,22 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-08-04",
+        title: "Adsterra — full-width rail + more placements",
+        body: "Banner slots use a full-content-width ad rail (Advertisement label + hairline borders) instead of a floating 300×250 island. Added placements on dex hub/pet pages, tier-list, beginner, farming, shiny-vs-sparkle, and blog posts. Desktop 728×90 ready when Adsterra leaderboard key is set; CN still blocked.",
+        tags: ["Ads", "UX"],
+        pages: [
+          "/dex",
+          "/tier-list",
+          "/guides/beginner",
+          "/guides/farming",
+          "/guides/mutations/shiny-vs-sparkle",
+          "/blog",
+          "/codes",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-08-04",
         title: "Optional Adsterra banner slots (deferred, fixed size)",
         body: "Opt-in Adsterra 300×250 Banner (interaction + scroll gated, iframe-isolated). Live on mutations, shiny-egg, items, codes — not homepage/legal. 320×50 kept unused to protect mobile nav. Adult/popunder not used.",
         tags: ["Ads", "UX"],
