@@ -18,39 +18,14 @@
   </head>
   <body>
     <script>
-      (async function () {
-        var KEY = "5f938011bd8b5bf4f90f4d2e52ea5a1f";
-
-        if (!KEY) {
-          document.body.textContent = "";
-          return;
-        }
-
-        try {
-          var trace = await fetch("/cdn-cgi/trace", { cache: "no-store" }).then(function (r) {
-            return r.text();
-          });
-          var m = /^loc=(.+)$/m.exec(trace);
-          if (m && m[1].trim().toUpperCase() === "CN") {
-            document.body.textContent = "";
-            return;
-          }
-        } catch (e) {
-          /* continue */
-        }
-
-        window.atOptions = {
-          key: KEY,
-          format: "iframe",
-          height: 90,
-          width: 728,
-          params: {},
-        };
-        var s = document.createElement("script");
-        s.type = "text/javascript";
-        s.src = "https://www.highperformanceformat.com/" + KEY + "/invoke.js";
-        document.body.appendChild(s);
-      })();
+      window.atOptions = {
+        key: "5f938011bd8b5bf4f90f4d2e52ea5a1f",
+        format: "iframe",
+        height: 90,
+        width: 728,
+        params: {},
+      };
     </script>
+    <script src="https://www.highperformanceformat.com/5f938011bd8b5bf4f90f4d2e52ea5a1f/invoke.js"></script>
   </body>
 </html>

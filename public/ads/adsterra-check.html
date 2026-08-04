@@ -71,8 +71,7 @@
             const m = /^loc=(.+)$/m.exec(trace);
             if (m) cfLoc = m[1].trim().toUpperCase();
           } catch (_) {}
-          const cnBlocked = cfLoc === "CN";
-          el.className = "box " + (cnBlocked ? "bad" : "ok");
+          el.className = "box ok";
           el.innerHTML =
             "Your egress IP: <code>" +
             ip +
@@ -82,10 +81,7 @@
             (geo.country || "?") +
             "</code><br/>Cloudflare loc: <code>" +
             cfLoc +
-            "</code><br/>" +
-            (cnBlocked
-              ? "<strong>CN blocked on purpose</strong> — site ads will not show for mainland China."
-              : "CF loc is not CN — site banner gating should allow ads.");
+            "</code><br/>Site banner gating allows all countries (including CN). Fill still depends on Adsterra accepting this IP.";
         } catch (e) {
           el.textContent = "Could not detect IP: " + e;
         }

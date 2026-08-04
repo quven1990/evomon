@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-08-04",
+        title: "Adsterra — allow mainland China visitors",
+        body: "Removed the CN geo block on Adsterra banners and static ad iframes. Fill still depends on Adsterra serving the visitor IP; VPN/datacenter 403 unchanged.",
+        tags: ["Ads"],
+        pages: ["/codes", "/privacy", "/update-log"],
+      },
+      {
+        date: "2026-08-04",
         title: "Adsterra — fix sticky CN block + earlier codes slot",
         body: "Country for ad gating is always read fresh from Cloudflare (no sessionStorage stickiness that kept ads off after VPN changes). Dropped invoke.js preflight and click-to-load gates that hid slots. Codes page ad moved up under Official codes.",
         tags: ["Ads", "Bugfix"],

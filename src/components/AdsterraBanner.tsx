@@ -9,7 +9,6 @@ import {
   isAdsterraBannerEnabled,
 } from "@/lib/adsterra";
 import { shouldShowDisplayAds } from "@/lib/display-ads";
-import { getVisitorCountry, isAdsterraBlockedCountry } from "@/lib/visitor-geo";
 
 type Props = {
   className?: string;
@@ -40,37 +39,20 @@ function AdFrame({ slot }: { slot: Slot }) {
 
 /**
  * Full-width ad rail: 300×250 on small screens; 728×90 on md+ when configured.
- * Blocks mainland CN only. Loads when near viewport.
- * Renders one slot via matchMedia (avoids dual iframe loads).
+ * Loads when near viewport. All geos including CN (fill still depends on Adsterra).
  */
 export function AdsterraBanner({ className = "" }: Props) {
   const pathname = usePathname();
   const reactId = useId().replace(/:/g, "");
   const hostRef = useRef<HTMLDivElement>(null);
   const [near, setNear] = useState(false);
-  const [blocked, setBlocked] = useState<boolean | null>(null);
   const [desktop, setDesktop] = useState(false);
 
   const enabled = isAdsterraBannerEnabled() && shouldShowDisplayAds(pathname);
   const leaderboard = hasAdsterraLeaderboard();
-  const show = enabled && near && blocked === false;
+  const show = enabled && near;
   const slot: Slot =
     leaderboard && desktop ? ADSTERRA_LEADERBOARD : ADSTERRA_RECT;
-
-  useEffect(() => {
-    if (!enabled) return;
-
-    let cancelled = false;
-    (async () => {
-      const country = await getVisitorCountry();
-      if (cancelled) return;
-      setBlocked(isAdsterraBlockedCountry(country));
-    })();
-
-    return () => {
-      cancelled = true;
-    };
-  }, [enabled, pathname]);
 
   useEffect(() => {
     if (!leaderboard) {
@@ -103,7 +85,6 @@ export function AdsterraBanner({ className = "" }: Props) {
   }, [enabled, pathname]);
 
   if (!enabled) return null;
-  if (blocked === true) return null;
 
   return (
     <aside
