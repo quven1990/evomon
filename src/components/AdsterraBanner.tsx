@@ -10,20 +10,23 @@ type Props = {
 };
 
 /**
- * Adsterra 300×250 via direct script inject (official atOptions + invoke.js).
- * Avoids srcdoc iframes (empty black box / no clicks on many browsers).
- * Gated: first interaction + near-viewport. Banner only.
+ * Adsterra 300×250 via a real HTML iframe (`/ads/adsterra-300x250.html`).
+ *
+ * Why not inject invoke.js into React?
+ * Adsterra's sync invoke.js relies on document.write during page parse.
+ * Dynamically appending it after hydration leaves an empty box.
+ *
+ * Still gated: first interaction + near-viewport. Banner only.
  */
 export function AdsterraBanner({ className = "" }: Props) {
   const pathname = usePathname();
   const reactId = useId().replace(/:/g, "");
   const hostRef = useRef<HTMLDivElement>(null);
-  const slotRef = useRef<HTMLDivElement>(null);
   const [allowed, setAllowed] = useState(false);
   const [near, setNear] = useState(false);
 
   const enabled = isAdsterraBannerEnabled() && shouldShowDisplayAds(pathname);
-  const { key, width, height, invokeHost } = ADSTERRA_BANNER;
+  const { width, height } = ADSTERRA_BANNER;
   const show = enabled && allowed && near;
 
   useEffect(() => {
@@ -63,38 +66,6 @@ export function AdsterraBanner({ className = "" }: Props) {
     return () => io.disconnect();
   }, [enabled, pathname]);
 
-  useEffect(() => {
-    if (!show || !slotRef.current) return;
-
-    const slot = slotRef.current;
-    slot.innerHTML = "";
-
-    const conf = document.createElement("script");
-    conf.type = "text/javascript";
-    conf.text = `atOptions = ${JSON.stringify({
-      key,
-      format: "iframe",
-      height,
-      width,
-      params: {},
-    })};`;
-
-    const invoke = document.createElement("script");
-    invoke.type = "text/javascript";
-    invoke.src = `https://${invokeHost}/${key}/invoke.js`;
-
-    try {
-      slot.appendChild(conf);
-      slot.appendChild(invoke);
-    } catch {
-      // Ads must never break the page
-    }
-
-    return () => {
-      slot.innerHTML = "";
-    };
-  }, [show, key, width, height, invokeHost]);
-
   if (!enabled) return null;
 
   return (
@@ -108,13 +79,19 @@ export function AdsterraBanner({ className = "" }: Props) {
       <p className="mb-2 text-[10px] font-medium uppercase tracking-wider text-zinc-600">Ad</p>
       <div
         className="flex w-full items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-[#0b1512]"
-        style={{ width: "100%", maxWidth: width, minHeight: height }}
+        style={{ width: "100%", maxWidth: width, height, minHeight: height }}
       >
         {show ? (
-          <div
-            ref={slotRef}
-            className="flex items-center justify-center [&_iframe]:max-w-full"
-            style={{ width, minHeight: height }}
+          <iframe
+            title="Advertisement"
+            src={`/ads/adsterra-300x250.html?v=2`}
+            width={width}
+            height={height}
+            scrolling="no"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="border-0 bg-[#0b1512]"
+            style={{ width, height, maxWidth: "100%" }}
           />
         ) : (
           <span className="px-3 text-center text-xs text-zinc-600">Ad loads after you scroll</span>
