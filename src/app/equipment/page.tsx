@@ -12,6 +12,7 @@ import {
   equipmentSpendRules,
   equipmentSteps,
 } from "@/data/equipment";
+import { guideArticleSchema } from "@/lib/guide-trust";
 import { PAGE_SEO } from "@/lib/seo";
 import { canonical } from "@/lib/site";
 
@@ -31,11 +32,19 @@ const COMPARE_ICONS = {
 
 export default function EquipmentPage() {
   const pageUrl = canonical("/equipment");
+  const article = guideArticleSchema({
+    path: "/equipment",
+    headline: "Evomon Equipment — Silent Sands, Refine & Enhance",
+    description:
+      "Unlock gear at trainer level 40 on Silent Sands: Equipment Challenges, Enhance vs Refine Stones, Carly’s Gear Station, and what to spend stones on.",
+    dateModified: EQUIPMENT_LAST_CHECKED,
+  });
 
   return (
     <>
       <StructuredData
         data={[
+          article,
           {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
@@ -43,6 +52,18 @@ export default function EquipmentPage() {
               { "@type": "ListItem", position: 1, name: "Evomon Wiki", item: canonical("/") },
               { "@type": "ListItem", position: 2, name: "Equipment", item: pageUrl },
             ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How Evomon equipment progression works",
+            description: equipmentQuickAnswer,
+            step: equipmentSteps.map((step, i) => ({
+              "@type": "HowToStep",
+              position: i + 1,
+              name: step.title,
+              text: step.body,
+            })),
           },
           {
             "@context": "https://schema.org",
@@ -58,21 +79,29 @@ export default function EquipmentPage() {
 
       <main className="mx-auto max-w-5xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         <PageBack href="/" />
-        <h1 className={pageTitleClass()}>Evomon Equipment — Dungeons, Refine & Enhance</h1>
+        <h1 className={`${pageTitleClass()} text-[1.65rem] sm:text-4xl`}>
+          Evomon Equipment — Dungeons, Refine & Enhance
+        </h1>
         <p className={pageLeadClass()}>
           Silent Sands gear loop after trainer level 40. Last checked {EQUIPMENT_LAST_CHECKED}.
         </p>
 
         <div className="mt-6 overflow-hidden rounded-2xl border border-emerald-500/30 bg-emerald-500/10">
           <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:p-6">
-            <div className="flex -space-x-3">
+            <div className="flex -space-x-3" aria-hidden>
               {["/items/equipment-set-a.png", "/items/equipment-set-c.png", "/items/equipment-set-b.png"].map(
                 (src) => (
                   <div
                     key={src}
-                    className="relative h-16 w-16 rounded-2xl border border-white/15 bg-black/50 p-1.5 shadow-lg"
+                    className="relative h-14 w-14 rounded-2xl border border-white/15 bg-black/50 p-1.5 shadow-lg sm:h-16 sm:w-16"
                   >
-                    <Image src={src} alt="" width={56} height={56} className="h-full w-full object-contain" />
+                    <Image
+                      src={src}
+                      alt=""
+                      width={56}
+                      height={56}
+                      className="h-full w-full object-contain"
+                    />
                   </div>
                 ),
               )}
@@ -95,19 +124,20 @@ export default function EquipmentPage() {
                 className="rounded-2xl border border-white/10 bg-[#0b1512] p-4 sm:p-5"
               >
                 <div className="flex items-start gap-3">
-                  <div className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-black/40">
+                  <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-black/40 sm:h-14 sm:w-14">
                     <Image
                       src={STEP_ICONS[i] ?? STEP_ICONS[0]}
                       alt=""
                       width={48}
                       height={48}
-                      className="h-10 w-10 object-contain"
+                      className="h-8 w-8 object-contain sm:h-10 sm:w-10"
+                      aria-hidden
                     />
                     <span className="absolute -left-1.5 -top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500 text-xs font-bold text-black">
                       {i + 1}
                     </span>
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="text-base font-semibold text-white">{step.title}</h3>
                     <p className="mt-2 text-sm leading-6 text-zinc-300">{step.body}</p>
                   </div>
@@ -126,13 +156,13 @@ export default function EquipmentPage() {
                 className="rounded-2xl border border-orange-500/20 bg-gradient-to-br from-orange-500/10 to-[#0b1512] p-5"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-black/40">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-black/40 sm:h-16 sm:w-16">
                     <Image
                       src={COMPARE_ICONS[row.name as keyof typeof COMPARE_ICONS]}
-                      alt=""
+                      alt={`${row.name} Stone icon`}
                       width={56}
                       height={56}
-                      className="h-12 w-12 object-contain"
+                      className="h-10 w-10 object-contain sm:h-12 sm:w-12"
                     />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{row.name}</h3>
@@ -165,24 +195,36 @@ export default function EquipmentPage() {
 
         <section className="mt-12 rounded-2xl border border-cyan-500/20 bg-cyan-500/5 p-5 sm:p-6">
           <h2 className="text-lg font-semibold text-white">Related progression</h2>
-          <ul className="mt-3 space-y-2 text-sm leading-7 text-zinc-300">
+          <ul className="mt-3 space-y-1 text-sm leading-7 text-zinc-300">
             <li>
-              <Link href="/guides/level-30" className="text-emerald-300 hover:underline">
+              <Link
+                href="/guides/level-30"
+                className="inline-flex min-h-11 items-center text-emerald-300 hover:underline"
+              >
                 Level 30 Ascension checkpoint
               </Link>
             </li>
             <li>
-              <Link href="/items" className="text-emerald-300 hover:underline">
+              <Link
+                href="/items"
+                className="inline-flex min-h-11 items-center text-emerald-300 hover:underline"
+              >
                 Items — balls, stones, Refine / Enhance in the bag
               </Link>
             </li>
             <li>
-              <Link href="/guides/farming" className="text-emerald-300 hover:underline">
+              <Link
+                href="/guides/farming"
+                className="inline-flex min-h-11 items-center text-emerald-300 hover:underline"
+              >
                 Farming — daily tickets
               </Link>
             </li>
             <li>
-              <Link href="/guides/mutations/shiny-egg" className="text-emerald-300 hover:underline">
+              <Link
+                href="/guides/mutations/shiny-egg"
+                className="inline-flex min-h-11 items-center text-emerald-300 hover:underline"
+              >
                 Catch Master suit
               </Link>{" "}
               — separate from dungeon gear
@@ -210,14 +252,14 @@ export default function EquipmentPage() {
                 {src.url ? (
                   <a
                     href={src.url}
-                    className="text-emerald-300/90 hover:underline"
+                    className="inline-flex min-h-11 items-center text-emerald-300/90 hover:underline"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     {src.label}
                   </a>
                 ) : (
-                  src.label
+                  <span className="inline-flex min-h-11 items-center">{src.label}</span>
                 )}
               </li>
             ))}

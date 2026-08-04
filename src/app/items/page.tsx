@@ -7,8 +7,10 @@ import {
   ITEMS_LAST_CHECKED,
   itemCategories,
   itemFaqs,
+  itemPageSources,
   itemsInCategory,
 } from "@/data/items";
+import { guideArticleSchema } from "@/lib/guide-trust";
 import { PAGE_SEO } from "@/lib/seo";
 import { canonical } from "@/lib/site";
 
@@ -25,11 +27,20 @@ const CATEGORY_ACCENT: Record<string, string> = {
 
 export default function ItemsPage() {
   const pageUrl = canonical("/items");
+  const sources = itemPageSources();
+  const article = guideArticleSchema({
+    path: "/items",
+    headline: "Evomon Items — Balls, Stones & What to Spend First",
+    description:
+      "Evomon item spend guide: King vs Prismatic Ball, Evolution / Element / Omni Stones, reroll potions, Summon tickets, and EXP fruit — with sources, not a scraped catalog.",
+    dateModified: ITEMS_LAST_CHECKED,
+  });
 
   return (
     <>
       <StructuredData
         data={[
+          article,
           {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
@@ -47,12 +58,26 @@ export default function ItemsPage() {
               acceptedAnswer: { "@type": "Answer", text: item.a },
             })),
           },
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Evomon items by spend category",
+            numberOfItems: itemCategories.length,
+            itemListElement: itemCategories.map((cat, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: cat.title,
+              url: `${pageUrl}#${cat.id}`,
+            })),
+          },
         ]}
       />
 
       <main className="mx-auto max-w-5xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         <PageBack href="/" />
-        <h1 className={pageTitleClass()}>Evomon Items — What to Spend First</h1>
+        <h1 className={`${pageTitleClass()} text-[1.65rem] sm:text-4xl`}>
+          Evomon Items — What to Spend First
+        </h1>
         <p className={pageLeadClass()}>
           Balls, stones, potions, and tickets with icons — organized by{" "}
           <strong className="text-white">when to spend</strong>, not a 40-row dump. Last checked{" "}
@@ -69,19 +94,22 @@ export default function ItemsPage() {
             <strong className="text-white">Advanced / King</strong> on boss keepers, save{" "}
             <strong className="text-white">Prismatic Balls</strong> for shiny-egg hatches, and only
             reroll on pets worth building. Gear loop →{" "}
-            <Link href="/equipment" className="font-medium text-emerald-300 hover:underline">
+            <Link
+              href="/equipment"
+              className="inline-flex min-h-11 items-center font-medium text-emerald-300 hover:underline"
+            >
               equipment guide
             </Link>
             .
           </p>
         </div>
 
-        <nav className="mt-8 flex flex-wrap gap-2">
+        <nav aria-label="Item categories" className="mt-8 flex flex-wrap gap-2">
           {itemCategories.map((cat) => (
             <a
               key={cat.id}
               href={`#${cat.id}`}
-              className="rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-sm text-zinc-300 transition hover:border-emerald-400/40 hover:bg-emerald-500/10 hover:text-emerald-100"
+              className="inline-flex min-h-11 items-center rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 text-sm text-zinc-300 transition hover:border-emerald-400/40 hover:bg-emerald-500/10 hover:text-emerald-100"
             >
               {cat.title}
             </a>
@@ -104,14 +132,14 @@ export default function ItemsPage() {
                       key={item.name}
                       className={`group relative overflow-hidden rounded-2xl border bg-gradient-to-br ${accent} bg-[#0b1512]/90 p-4 sm:p-5`}
                     >
-                      <div className="flex gap-4">
-                        <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-black/40 shadow-inner sm:h-24 sm:w-24">
+                      <div className="flex gap-3 sm:gap-4">
+                        <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-black/40 shadow-inner sm:h-24 sm:w-24">
                           <Image
                             src={`/items/${item.icon}.png`}
-                            alt=""
+                            alt={`${item.name} icon`}
                             width={88}
                             height={88}
-                            className="h-[72px] w-[72px] object-contain drop-shadow-lg sm:h-20 sm:w-20"
+                            className="h-12 w-12 object-contain drop-shadow-lg sm:h-20 sm:w-20"
                           />
                         </div>
                         <div className="min-w-0 flex-1">
@@ -138,12 +166,12 @@ export default function ItemsPage() {
                         </p>
                       </div>
                       {item.related && item.related.length > 0 ? (
-                        <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-sm">
+                        <ul className="mt-3 flex flex-wrap gap-x-1 gap-y-1 text-sm">
                           {item.related.map((link) => (
                             <li key={link.href}>
                               <Link
                                 href={link.href}
-                                className="text-emerald-300/90 hover:text-emerald-200 hover:underline"
+                                className="inline-flex min-h-11 items-center px-1 text-emerald-300/90 hover:text-emerald-200 hover:underline"
                               >
                                 {link.label} →
                               </Link>
@@ -164,8 +192,11 @@ export default function ItemsPage() {
           <p className="mt-2 text-sm leading-6 text-zinc-400">
             Seasonal medals, food/hunger snacks, and full skill-cache lists stay out of scope until
             they clear the same multi-source bar. Gear sets →{" "}
-            <Link href="/equipment" className="text-emerald-300 hover:underline">
-              /equipment
+            <Link
+              href="/equipment"
+              className="inline-flex min-h-11 items-center text-emerald-300 hover:underline"
+            >
+              equipment guide
             </Link>
             .
           </p>
@@ -181,6 +212,28 @@ export default function ItemsPage() {
               </div>
             ))}
           </dl>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-lg font-semibold text-white">Sources</h2>
+          <ul className="mt-3 space-y-1 text-sm text-zinc-400">
+            {sources.map((src) => (
+              <li key={`${src.label}|${src.url ?? ""}`}>
+                {src.url ? (
+                  <a
+                    href={src.url}
+                    className="inline-flex min-h-11 items-center text-emerald-300/90 hover:underline"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {src.label}
+                  </a>
+                ) : (
+                  <span className="inline-flex min-h-11 items-center">{src.label}</span>
+                )}
+              </li>
+            ))}
+          </ul>
         </section>
 
         <p className="mt-10 text-xs leading-6 text-zinc-500">

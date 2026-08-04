@@ -230,7 +230,8 @@ export const PAGE_SEO = {
   },
 
   equipment: () => {
-    const title = "Evomon Equipment — Silent Sands Dungeons, Refine & Enhance";
+    // Keep ≤60 chars for SERP truncation.
+    const title = "Evomon Equipment — Silent Sands, Refine & Enhance";
     const description =
       "Unlock gear at trainer level 40 on Silent Sands: Equipment Challenges, Enhance vs Refine Stones, Carly’s Gear Station, and what to spend stones on.";
 

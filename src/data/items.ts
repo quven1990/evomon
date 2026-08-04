@@ -343,3 +343,18 @@ export const itemFaqs: { q: string; a: string }[] = [
 export function itemsInCategory(category: ItemCategory): ItemEntry[] {
   return itemEntries.filter((item) => item.category === category);
 }
+
+/** Deduped page-level sources for GEO / citation footers. */
+export function itemPageSources(): ItemSourceRef[] {
+  const seen = new Set<string>();
+  const out: ItemSourceRef[] = [];
+  for (const entry of itemEntries) {
+    for (const src of entry.sources) {
+      const key = `${src.label}|${src.url ?? ""}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push(src);
+    }
+  }
+  return out;
+}

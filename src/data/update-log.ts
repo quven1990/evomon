@@ -22,7 +22,7 @@ export const updateLogGroups: UpdateLogGroup[] = [
       {
         date: "2026-08-04",
         title: "Items + Equipment hubs (spend-first, multi-source)",
-        body: "New /items decision guide (balls, evolution/Omni stones, rerolls, tickets, EXP fruit) and /equipment Silent Sands Refine/Enhance loop from Sportskeeda/Nerdschalk/AllThings/Bloxodes — not a scraped wiki catalog. Local item sprites + icon card grids on both hubs. Level-30 retargeted to Ascension checkpoint; nav adds both under Wiki & Data (not top bar).",
+        body: "New /items decision guide (balls, evolution/Omni stones, rerolls, tickets, EXP fruit) and /equipment Silent Sands Refine/Enhance loop from Sportskeeda/Nerdschalk/AllThings/Bloxodes — not a scraped wiki catalog. Local item sprites + icon card grids; Article/HowTo/FAQ schema, Sources footers, and mobile tap targets tightened. Level-30 retargeted to Ascension checkpoint; nav adds both under Wiki & Data (not top bar).",
         tags: ["SEO", "Guides", "Items"],
         pages: [
           "/items",
