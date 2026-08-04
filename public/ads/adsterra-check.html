@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adsterra diagnostics</title>
+    <style>
+      body {
+        margin: 16px;
+        font: 14px/1.5 system-ui, sans-serif;
+        background: #0b1512;
+        color: #e4e4e7;
+      }
+      .box {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
+        padding: 12px;
+        margin: 12px 0;
+        background: #10201a;
+      }
+      .ok {
+        color: #6ee7b7;
+      }
+      .bad {
+        color: #fca5a5;
+      }
+      #ad {
+        width: 300px;
+        height: 250px;
+        border: 1px dashed rgba(255, 255, 255, 0.2);
+        background: #000;
+      }
+      code {
+        font-size: 12px;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Adsterra load check</h1>
+    <p>
+      This page tests whether Adsterra will serve
+      <code>invoke.js</code> to <strong>your current IP</strong>. VPN / proxy /
+      datacenter IPs often get HTTP 403 and a blank ad.
+    </p>
+    <div class="box" id="net">Checking network…</div>
+    <div class="box" id="script">Checking invoke.js…</div>
+    <h2>Live 300×250 attempt</h2>
+    <div id="ad"></div>
+
+    <script>
+      const KEY = "6d1af51817130afbe57903ad47282ac0";
+      const INVOKE =
+        "https://www.highperformanceformat.com/" + KEY + "/invoke.js";
+
+      async function checkIp() {
+        const el = document.getElementById("net");
+        try {
+          const ip = await fetch("https://api.ipify.org").then((r) => r.text());
+          let geo = {};
+          try {
+            geo = await fetch("https://ipinfo.io/" + ip + "/json").then((r) =>
+              r.json(),
+            );
+          } catch (_) {}
+          el.innerHTML =
+            "Your egress IP: <code>" +
+            ip +
+            "</code><br/>Org: <code>" +
+            (geo.org || "?") +
+            "</code><br/>Country: <code>" +
+            (geo.country || "?") +
+            "</code>";
+        } catch (e) {
+          el.textContent = "Could not detect IP: " + e;
+        }
+      }
+
+      async function checkInvoke() {
+        const el = document.getElementById("script");
+        try {
+          const res = await fetch(INVOKE, { method: "GET", cache: "no-store" });
+          const text = await res.text();
+          const ok = res.status === 200 && text.length > 50;
+          el.className = "box " + (ok ? "ok" : "bad");
+          el.innerHTML =
+            "invoke.js status: <strong>" +
+            res.status +
+            "</strong><br/>bytes: <strong>" +
+            text.length +
+            "</strong><br/>" +
+            (ok
+              ? "Adsterra is willing to serve this IP — banner below should fill."
+              : "Adsterra refused this IP (common with VPN/proxy). Turn VPN OFF, use normal home/mobile network, hard-refresh. US visitors can still see ads even if you cannot.");
+        } catch (e) {
+          el.className = "box bad";
+          el.textContent = "fetch failed: " + e;
+        }
+      }
+
+      function mountAd() {
+        window.atOptions = {
+          key: KEY,
+          format: "iframe",
+          height: 250,
+          width: 300,
+          params: {},
+        };
+        const s = document.createElement("script");
+        s.src = INVOKE;
+        s.onerror = function () {
+          document.getElementById("ad").innerHTML =
+            '<p class="bad" style="padding:12px">Script tag onerror — invoke.js blocked.</p>';
+        };
+        document.getElementById("ad").appendChild(s);
+      }
+
+      checkIp();
+      checkInvoke();
+      mountAd();
+    </script>
+  </body>
+</html>

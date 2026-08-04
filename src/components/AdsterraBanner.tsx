@@ -10,13 +10,8 @@ type Props = {
 };
 
 /**
- * Adsterra 300×250 via a real HTML iframe (`/ads/adsterra-300x250.html`).
- *
- * Why not inject invoke.js into React?
- * Adsterra's sync invoke.js relies on document.write during page parse.
- * Dynamically appending it after hydration leaves an empty box.
- *
- * Still gated: first interaction + near-viewport. Banner only.
+ * Adsterra 300×250 via static HTML iframe.
+ * Hides itself if invoke.js cannot be fetched (VPN/proxy 403 → no empty black box).
  */
 export function AdsterraBanner({ className = "" }: Props) {
   const pathname = usePathname();
@@ -24,10 +19,32 @@ export function AdsterraBanner({ className = "" }: Props) {
   const hostRef = useRef<HTMLDivElement>(null);
   const [allowed, setAllowed] = useState(false);
   const [near, setNear] = useState(false);
+  const [canServe, setCanServe] = useState<boolean | null>(null);
 
   const enabled = isAdsterraBannerEnabled() && shouldShowDisplayAds(pathname);
-  const { width, height } = ADSTERRA_BANNER;
-  const show = enabled && allowed && near;
+  const { width, height, key, invokeHost } = ADSTERRA_BANNER;
+  const show = enabled && allowed && near && canServe === true;
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    let cancelled = false;
+    const url = `https://${invokeHost}/${key}/invoke.js`;
+
+    fetch(url, { method: "GET", cache: "no-store", mode: "cors" })
+      .then(async (res) => {
+        const text = await res.text();
+        if (!cancelled) setCanServe(res.status === 200 && text.length > 50);
+      })
+      .catch(() => {
+        // Opaque failures (adblock / network) → still try iframe once near viewport.
+        if (!cancelled) setCanServe(true);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [enabled, key, invokeHost, pathname]);
 
   useEffect(() => {
     if (!enabled) return;
@@ -67,6 +84,7 @@ export function AdsterraBanner({ className = "" }: Props) {
   }, [enabled, pathname]);
 
   if (!enabled) return null;
+  if (canServe === false) return null;
 
   return (
     <aside
@@ -76,27 +94,27 @@ export function AdsterraBanner({ className = "" }: Props) {
       aria-label="Advertisement"
       data-ad-slot={reactId}
     >
-      <p className="mb-2 text-[10px] font-medium uppercase tracking-wider text-zinc-600">Ad</p>
-      <div
-        className="flex w-full items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-[#0b1512]"
-        style={{ width: "100%", maxWidth: width, height, minHeight: height }}
-      >
-        {show ? (
-          <iframe
-            title="Advertisement"
-            src={`/ads/adsterra-300x250.html?v=2`}
-            width={width}
-            height={height}
-            scrolling="no"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="border-0 bg-[#0b1512]"
-            style={{ width, height, maxWidth: "100%" }}
-          />
-        ) : (
-          <span className="px-3 text-center text-xs text-zinc-600">Ad loads after you scroll</span>
-        )}
-      </div>
+      {show ? (
+        <>
+          <p className="mb-2 text-[10px] font-medium uppercase tracking-wider text-zinc-600">Ad</p>
+          <div
+            className="flex w-full items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-[#0b1512]"
+            style={{ width: "100%", maxWidth: width, height, minHeight: height }}
+          >
+            <iframe
+              title="Advertisement"
+              src="/ads/adsterra-300x250"
+              width={width}
+              height={height}
+              scrolling="no"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="border-0 bg-[#0b1512]"
+              style={{ width, height, maxWidth: "100%" }}
+            />
+          </div>
+        </>
+      ) : null}
     </aside>
   );
 }
