@@ -114,6 +114,8 @@ export default function CodesPage() {
           </div>
         </section>
 
+        <AdsterraBanner className="mt-8" />
+
         <section className="mt-8">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Popular community codes</h2>
           <p className="mt-1 text-sm text-zinc-400">
@@ -129,8 +131,6 @@ export default function CodesPage() {
         <div className="mt-8">
           <RedeemGuide />
         </div>
-
-        <AdsterraBanner className="mt-10" />
 
         {/* All codes — card layout, works on mobile */}
         <section id="all-codes" className="mt-10 scroll-mt-24">

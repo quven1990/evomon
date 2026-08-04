@@ -39,67 +39,33 @@ function AdFrame({ slot }: { slot: Slot }) {
 }
 
 /**
- * Full-width ad rail: 300×250 on small screens; 728×90 on md+ when configured,
- * otherwise centered 300×250 in the same rail (avoids a tiny floating box).
- * Skips CN and hides when invoke.js is blocked (VPN 403).
+ * Full-width ad rail: 300×250 on small screens; 728×90 on md+ when configured.
+ * Blocks mainland CN only. Loads when near viewport (no click/scroll gate).
+ * Does not preflight invoke.js — that falsely hid ads on VPN sticky-geo / CORS 403.
  */
 export function AdsterraBanner({ className = "" }: Props) {
   const pathname = usePathname();
   const reactId = useId().replace(/:/g, "");
   const hostRef = useRef<HTMLDivElement>(null);
-  const [allowed, setAllowed] = useState(false);
   const [near, setNear] = useState(false);
-  const [canServe, setCanServe] = useState<boolean | null>(null);
+  const [blocked, setBlocked] = useState<boolean | null>(null);
 
   const enabled = isAdsterraBannerEnabled() && shouldShowDisplayAds(pathname);
   const leaderboard = hasAdsterraLeaderboard();
-  const probe = ADSTERRA_RECT;
-  const show = enabled && allowed && near && canServe === true;
+  const show = enabled && near && blocked === false;
 
   useEffect(() => {
     if (!enabled) return;
 
     let cancelled = false;
-
     (async () => {
       const country = await getVisitorCountry();
       if (cancelled) return;
-      if (isAdsterraBlockedCountry(country)) {
-        setCanServe(false);
-        return;
-      }
-
-      const url = `https://${probe.invokeHost}/${probe.key}/invoke.js`;
-      try {
-        const res = await fetch(url, { method: "GET", cache: "no-store", mode: "cors" });
-        const text = await res.text();
-        if (!cancelled) setCanServe(res.status === 200 && text.length > 50);
-      } catch {
-        if (!cancelled) setCanServe(true);
-      }
+      setBlocked(isAdsterraBlockedCountry(country));
     })();
 
     return () => {
       cancelled = true;
-    };
-  }, [enabled, probe.key, probe.invokeHost, pathname]);
-
-  useEffect(() => {
-    if (!enabled) return;
-
-    let started = false;
-    const start = () => {
-      if (started) return;
-      started = true;
-      setAllowed(true);
-    };
-
-    const events = ["pointerdown", "keydown", "scroll", "touchstart"] as const;
-    const opts: AddEventListenerOptions = { capture: true, passive: true, once: true };
-    events.forEach((event) => window.addEventListener(event, start, opts));
-
-    return () => {
-      events.forEach((event) => window.removeEventListener(event, start, opts));
     };
   }, [enabled, pathname]);
 
@@ -115,14 +81,14 @@ export function AdsterraBanner({ className = "" }: Props) {
           io.disconnect();
         }
       },
-      { rootMargin: "240px 0px", threshold: 0 },
+      { rootMargin: "320px 0px", threshold: 0 },
     );
     io.observe(node);
     return () => io.disconnect();
   }, [enabled, pathname]);
 
   if (!enabled) return null;
-  if (canServe === false) return null;
+  if (blocked === true) return null;
 
   return (
     <aside
@@ -153,8 +119,7 @@ export function AdsterraBanner({ className = "" }: Props) {
         </div>
       ) : (
         <div
-          className="w-full"
-          style={{ minHeight: leaderboard ? 90 : ADSTERRA_RECT.height }}
+          className={`w-full ${leaderboard ? "min-h-[250px] md:min-h-[90px]" : "min-h-[250px]"}`}
           aria-hidden
         />
       )}

@@ -63,14 +63,29 @@
               r.json(),
             );
           } catch (_) {}
+          let cfLoc = "?";
+          try {
+            const trace = await fetch("/cdn-cgi/trace", { cache: "no-store" }).then((r) =>
+              r.text(),
+            );
+            const m = /^loc=(.+)$/m.exec(trace);
+            if (m) cfLoc = m[1].trim().toUpperCase();
+          } catch (_) {}
+          const cnBlocked = cfLoc === "CN";
+          el.className = "box " + (cnBlocked ? "bad" : "ok");
           el.innerHTML =
             "Your egress IP: <code>" +
             ip +
             "</code><br/>Org: <code>" +
             (geo.org || "?") +
-            "</code><br/>Country: <code>" +
+            "</code><br/>ipinfo country: <code>" +
             (geo.country || "?") +
-            "</code>";
+            "</code><br/>Cloudflare loc: <code>" +
+            cfLoc +
+            "</code><br/>" +
+            (cnBlocked
+              ? "<strong>CN blocked on purpose</strong> — site ads will not show for mainland China."
+              : "CF loc is not CN — site banner gating should allow ads.");
         } catch (e) {
           el.textContent = "Could not detect IP: " + e;
         }

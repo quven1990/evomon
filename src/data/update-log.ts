@@ -21,6 +21,13 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-08-04",
+        title: "Adsterra — fix sticky CN block + earlier codes slot",
+        body: "Country for ad gating is always read fresh from Cloudflare (no sessionStorage stickiness that kept ads off after VPN changes). Dropped invoke.js preflight and click-to-load gates that hid slots. Codes page ad moved up under Official codes.",
+        tags: ["Ads", "Bugfix"],
+        pages: ["/codes", "/update-log"],
+      },
+      {
+        date: "2026-08-04",
         title: "Adsterra — full-width rail + more placements",
         body: "Banner slots use a full-content-width ad rail (Advertisement label + hairline borders) instead of a floating 300×250 island. Added placements on dex hub/pet pages, tier-list, beginner, farming, shiny-vs-sparkle, and blog posts. Desktop 728×90 ready when Adsterra leaderboard key is set; CN still blocked.",
         tags: ["Ads", "UX"],
