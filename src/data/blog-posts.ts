@@ -99,6 +99,23 @@ export const blogPosts: BlogPost[] = [
         },
       },
       {
+        heading: "How players solo Light King Wispreign (community clears)",
+        paragraphs: [
+          "The most-shared clear on YouTube is a **Tarragon** attrition loop. In yao’s **How to BEAT Clipexor and Wispreign SOLO** walkthrough, the order is: open **10× Seed Bomb** to stack **Growth** (each stack restores ~8% max HP per turn, caps at 10 ≈ 80%/turn), then **Fighting Will** ×6 (or Fighting Will II ×4) to reach roughly **+30 Sp. Atk (≈300%)**, then alternate **Leaf Storm** and **Verdant Beam**. He runs an **SSS** Tarragon around **Lv 150–180** and stacks into **HP / Sp. Def / Sp. Atk** because both Legend Kings hit special.",
+          "HomieRaf’s **FASTEST SOLO METHOD** shows an Ice alternative: a special-attack **Frostella** using **Fighting Will → Giga Drain** to sustain while chipping the Light boss. Either way, the boss is **immune to abnormal status and stat reduction** (you cannot sleep or debuff it), so pure damage + self-heal is the pattern.",
+        ],
+        callout: {
+          title: "Watch the enrage",
+          body: "Community clips (yao) show Wispreign’s ultimate Sacred Baptism scaling Light skill power the longer the fight drags — kill it before the stacks pile up. Each boss ultimate can also chip ~25% max HP, so a weaker Tarragon should skip Leaf Storm and grind safe with Verdant Beam. Verify moves/levels in your own client.",
+          variant: "warn",
+        },
+        bullets: [
+          "**Trait that carries** — Prime Form (−60% damage at full HP) per yao; Tough Skin as the epic fallback.",
+          "**Catch after the clear** — beat the boss, then use your best Catcher on Wispark (community shows shiny **pity on the eggs**, so keep clearing).",
+          "**First-clear reward** — HomieRaf’s run shows ~**18 large fruit** plus a Talent/nature roll; grind special-attack gear from Equipment Dungeon zone 1.",
+        ],
+      },
+      {
         heading: "Evolution: Wispark → Wisflare → Wispreign",
         paragraphs: [
           "The line is three stages. Confirm stone and level gates on the in-game Evolve panel before dumping stock — Season-1 costs can shift.",
@@ -157,16 +174,27 @@ export const blogPosts: BlogPost[] = [
     ],
     sources: [
       {
+        label: "yao — How to BEAT Clipexor and Wispreign SOLO (Tarragon Seed Bomb / Growth loop, boss mechanics)",
+        url: "https://www.youtube.com/watch?v=Ka95SJrYIqI",
+        channel: "yao",
+      },
+      {
+        label: "HomieRaf — FASTEST SOLO METHOD for Light King Wispreign (Frostella build, rewards, egg pity)",
+        url: "https://www.youtube.com/watch?v=58cGeVjNsas",
+        channel: "HomieRaf",
+      },
+      {
+        label: "Rexon — Obtaining the NEW OP SEASONAL EVOMON (Solaris/Lunaria/Floating islands, ~18k boss HP, catch-after-clear)",
+        url: "https://www.youtube.com/watch?v=gNmSrHEruW4",
+        channel: "Rexon",
+      },
+      {
         label: "Gamezebo — Dark and Light Season 1 (Seasonal unlock, catch Wispark after Light King)",
         url: "https://www.gamezebo.com/walkthroughs/evomon-dark-and-light/",
       },
       {
         label: "Sportskeeda — Light King Wispreign guide (Solaris path, Light typing, Tarragon clear)",
         url: "https://www.sportskeeda.com/roblox-news/evomon-light-king-wispreign-guide",
-      },
-      {
-        label: "AllThings.How — Beat Light King Wispreign (Seasonal route, faint-scaling note, counters)",
-        url: "https://allthings.how/how-to-beat-light-king-wispreign-in-evomon-season-1/",
       },
     ],
   },

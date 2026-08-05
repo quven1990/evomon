@@ -22,7 +22,7 @@ export const updateLogGroups: UpdateLogGroup[] = [
       {
         date: "2026-08-05",
         title: "Wispark how-to-get blog (Solaris / Light King)",
-        body: "New /blog/wispark-evomon-guide targeting soft GSC queries (wispark evomon CTR ~1.1%, wrong-landing on /dex/wispreign). Covers Solaris obtain, Normal vs Light typing trap, Wispark → Wisflare → Wispreign, and egg searches — sourced from Gamezebo / Sportskeeda / AllThings.How.",
+        body: "New /blog/wispark-evomon-guide targeting soft GSC queries (wispark evomon CTR ~1.1%, wrong-landing on /dex/wispreign). Covers Solaris obtain, Normal vs Light typing trap, Wispark → Wisflare → Wispreign, and a community boss-clear loop (Tarragon Seed Bomb/Growth, Frostella alt) grounded in YouTube walkthroughs (yao, HomieRaf, Rexon) plus text guides.",
         tags: ["Blog", "SEO"],
         pages: [
           "/blog/wispark-evomon-guide",
