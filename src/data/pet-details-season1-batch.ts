@@ -292,20 +292,37 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
 
   // ── Wispark line (dex #094–096 blocked — item 2) ──────────────────────
   wispark: {
-    metaTitle: "Wispark Evomon — Solaris Boss Reward Seed",
+    metaTitle: "How to Get Wispark Evomon — Solaris Boss Reward",
     metaDescription:
-      "Wispark opens Wisflare → Wispreign after Light King Wispreign on Solaris Isle. Catch route, Normal typing note, and stone plan on evomon.cc.",
+      "Get Wispark by beating Light King Wispreign on Solaris Isle (Seasonal). Opens Wisflare → Wispreign — Normal playable line, boss typing trap, stone plan.",
     location: "Boss reward — Light King Wispreign on Solaris Isle (Seasonal)",
     weather: "Any",
     role: "Seasonal seed / Wispreign line",
+    seoKeywords: [
+      "wispark evomon",
+      "how to get wispark",
+      "how to get wispark evomon",
+      "wispark evolution",
+      "solaris isle wispark",
+      "wispreign boss reward",
+    ],
     blurb:
-      "Wispark is the Solaris Isle boss reward after Light King Wispreign — paired with Lunaria’s Clipdow as the other seasonal legend drop. Community dex lists the playable line as Normal (special-leaning Spe/SpA), even though the boss encounter is Light-framed. Bring Grass/Dragon answers like Tarragon for the boss clear, then evolve Wispark only when you want the Wispreign final, not as an early stone sink.",
+      "How to get Wispark: clear Light King Wispreign on Solaris Isle (Seasonal / World Select) and take the Wispark reward — paired with Lunaria’s Clipdow as the other seasonal legend drop. Community dex lists the playable line as Normal (special-leaning Spe/SpA), even though the boss encounter is Light-framed. Bring Grass/Dragon answers like Tarragon for the boss clear, then evolve Wispark only when you want the Wispreign final, not as an early stone sink.",
     evolutionNote: "Wispark → Wisflare → Wispreign (3-stage). Confirm materials in-game after the boss reward.",
     shinyHuntNote: "Boss-reward shiny odds are volume-poor versus wild islands. Lock a keeper Talent before double-evolving.",
+    relatedLinks: [
+      { href: "/dex/wispreign", label: "Wispreign final form" },
+      { href: "/dex/clipdow", label: "Clipdow (Lunaria twin reward)" },
+      { href: "/guides/mutations/shiny-egg", label: "Shiny egg path for boss lines" },
+    ],
     faqs: [
       {
-        q: "How do you get Wispark?",
-        a: "Clear Light King Wispreign on Solaris Isle (Seasonal / World Select) and take the Wispark reward.",
+        q: "How do you get Wispark in Evomon?",
+        a: "Clear Light King Wispreign on Solaris Isle (Seasonal / World Select) and take the Wispark reward. It is not a standard main-map wild on our chart.",
+      },
+      {
+        q: "Where is Wispark located?",
+        a: "Solaris Isle via World Select → Seasonal. The reward drops after the Light King Wispreign clear — same pattern as Clipdow on Lunaria Isle.",
       },
       {
         q: "Is Wispark Light-type?",
@@ -313,7 +330,7 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
       },
       {
         q: "What does Wispark evolve into?",
-        a: "Wispark → Wisflare → Wispreign.",
+        a: "Wispark → Wisflare → Wispreign. Evolve after you have a keeper Talent copy.",
       },
       {
         q: "What are Wispark’s base stats?",
@@ -351,16 +368,32 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
     ],
   },
   wispreign: {
-    metaTitle: "Wispreign Evomon — Wispark Final Evolution",
+    metaTitle: "How to Get Wispreign Evomon — Evolve Wispark Line",
     metaDescription:
-      "Wispreign is the Wispark-line final (SpA 108 / Spe 114). Solaris boss context, evolution path, and team fit on evomon.cc.",
-    location: "Evolve from Wisflare",
+      "Wispreign is the Wispark-line final (SpA 108 / Spe 114). Get Wispark from Solaris Isle Light King, then Wisflare → Wispreign — typing trap and stone timing.",
+    location: "Evolve from Wisflare (seed: Solaris Isle boss reward)",
     weather: "Any",
     role: "Seasonal special final",
+    seoKeywords: [
+      "wispreign evomon",
+      "how to get wispreign",
+      "wispreign evolution",
+      "wispark evolution",
+      "light king wispreign",
+    ],
     blurb:
-      "Wispreign is the special-leaning final (Sp. Atk 108, Speed 114) after the Solaris reward chain. Evolve-only. Do not confuse the Light King boss fight with the playable final’s Normal typing on our sheet — build and type-chart from the party mon, not the boss card.",
+      "How to get Wispreign: it is evolve-only — claim Wispark from Light King Wispreign on Solaris Isle, then Wisflare → Wispreign. Special-leaning final (Sp. Atk 108, Speed 114). Do not confuse the Light King boss fight with the playable final’s Normal typing on our sheet — build and type-chart from the party mon, not the boss card.",
     evolutionNote: "Wispark → Wisflare → Wispreign.",
+    relatedLinks: [
+      { href: "/dex/wispark", label: "Wispark (how to get seed)" },
+      { href: "/dex/clipexor", label: "Clipexor (Lunaria seasonal final)" },
+      { href: "/type-chart", label: "Type chart" },
+    ],
     faqs: [
+      {
+        q: "How do you get Wispreign in Evomon?",
+        a: "Evolve Wispark → Wisflare → Wispreign. The Solaris Isle clear rewards Wispark; Wispreign is not a direct boss catch on our data.",
+      },
       {
         q: "Is Wispreign catchable from the boss?",
         a: "The clear rewards Wispark. Wispreign is the evolved final on our data.",

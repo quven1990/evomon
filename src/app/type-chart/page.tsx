@@ -42,11 +42,11 @@ export default function TypeChartPage() {
 
       <main className="mx-auto max-w-5xl px-4 py-8 pb-24 sm:py-10 lg:pb-10">
         <PageBack href="/" />
-        <h1 className={pageTitleClass()}>Evomon Type Chart</h1>
+        <h1 className={pageTitleClass()}>Evomon Type Chart & Weakness Chart</h1>
         <p className="mt-2 text-xs text-zinc-500">Last updated {TYPE_CHART_LAST_CHECKED}</p>
         <p className={pageLeadClass()}>
-          Every elemental weakness and strength for Roblox Evomon — Water beats Fire, Electric beats
-          Flying, Ice beats Grass. Use the interactive lookup below, then{" "}
+          Roblox Evomon type chart and weakness chart in one place — what beats Fire, Water, Electric,
+          Flying, and the rest of the 15-type table. Use the interactive lookup, skim island tips, then{" "}
           <Link href="/team-builder" className="text-emerald-300 hover:underline">
             build a 5-pet team
           </Link>{" "}
@@ -56,12 +56,13 @@ export default function TypeChartPage() {
         <section id="quick-answer" className="scroll-mt-32 mt-6 sm:scroll-mt-8">
           <h2 className="text-xl font-bold text-white sm:text-2xl">Quick answer</h2>
           <p className="mt-3 text-sm leading-7 text-zinc-300">
-            Evomon uses standard creature-collector type matchups.{" "}
-            <strong className="text-white">Water</strong> is super-effective vs Fire, Rock, and Ground.{" "}
-            <strong className="text-white">Fire</strong> hits Grass, Bug, and Ice for double damage.{" "}
+            Searching for the Evomon weakness chart? Start here.{" "}
+            <strong className="text-white">Water</strong> beats Fire, Rock, and Ground.{" "}
+            <strong className="text-white">Fire</strong> hits Grass, Bug, and Ice.{" "}
             <strong className="text-white">Electric</strong> beats Water and Flying.{" "}
-            <strong className="text-white">Ground</strong> is the hard counter to Electric. Endgame pets
-            often have two types — treat this chart as the baseline, then verify in duels.
+            <strong className="text-white">Ground</strong> hard-counters Electric.{" "}
+            <strong className="text-white">Ice</strong> beats Grass. Endgame pets often have two types —
+            treat this chart as the baseline, then verify in duels.
           </p>
         </section>
 

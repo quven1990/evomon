@@ -255,10 +255,10 @@ export const PAGE_SEO = {
   },
 
   typeChart: () => {
-    // Absolute title: keep ≤60 chars. Avoid "Clickable" — GSC showed it hurt CTR vs weakness intent.
-    const title = "Evomon Type Chart — Weaknesses & What Beats Each Type (2026)";
+    // Absolute title ≤~60 chars. Lead with chart + weakness (GSC: “evomon type chart” CTR ~2.4% at ~#9).
+    const title = "Evomon Type Chart & Weakness Chart (Roblox 2026)";
     const description =
-      "Water beats Fire; Electric beats Flying; Ice beats Grass. Interactive Evomon type chart — strengths, weaknesses, and resists for all 15 types. Last updated July 2026.";
+      "Evomon type chart: what beats Fire, Water, Electric, Flying — full weakness chart for all 15 types. Interactive lookup + island tips. Updated August 2026.";
 
     return {
       ...buildPageMetadata({
@@ -268,11 +268,13 @@ export const PAGE_SEO = {
         ogTitle: title,
         keywords: [
           "evomon type chart",
-          "evomon weaknesses",
           "evomon weakness chart",
-          "evomon type matchup",
-          "evomon elements",
+          "evomon weaknesses",
+          "roblox evomon type chart",
           "type chart evomon",
+          "evomon type matchup",
+          "what beats fire evomon",
+          "evomon elements",
         ],
       }),
       title: { absolute: title },

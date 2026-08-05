@@ -21,6 +21,18 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-08-05",
+        title: "Type-chart CTR SEO + Wispark/Wispreign obtain thick pages",
+        body: "Type chart title/H1/lead/FAQ retargeted to weakness-chart queries (Roblox 2026). Wispark and Wispreign dex pages thickened with how-to-get meta, Solaris obtain FAQs, and internal links — same Clipdow pattern. No new invented matchups or stats.",
+        tags: ["SEO", "Dex"],
+        pages: [
+          "/type-chart",
+          "/dex/wispark",
+          "/dex/wispreign",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-08-05",
         title: "Clipdow SERP dual-spelling + Glowy/Arcapex obtain SEO",
         body: "Dex and Clipdow blog titles/meta front-load Clipdow (Clipdown) for the misspelling query. Glowy and Arcapex dex pages retitled around how-to-get with obtain FAQs, map links, and SEO keywords — same Clipdow thick-page pattern, no invented game facts.",
         tags: ["SEO", "Dex", "Blog"],
