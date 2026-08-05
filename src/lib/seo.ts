@@ -521,12 +521,36 @@ export const PAGE_SEO = {
 } as const;
 
 export function blogPostMetadata(post: BlogPost): Metadata {
-  return buildPageMetadata({
-    title: post.title,
-    description: post.description,
-    path: `/blog/${post.slug}`,
+  // Absolute title: blog headlines already fill ~50–60 chars; layout template would
+  // append ` | Evomon Wiki` and truncate the how-to-get intent in SERP.
+  const title = post.title;
+  const description = post.description;
+  const path = `/blog/${post.slug}`;
+  const url = canonical(path);
+
+  return {
+    title: { absolute: title },
+    description,
     keywords: post.gscTargets,
-  });
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: SITE.name,
+      type: "article",
+      locale: "en_US",
+      publishedTime: post.published,
+      modifiedTime: post.published,
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [OG_IMAGE.url],
+    },
+  };
 }
 
 export function dexPetMetadata(entry: {

@@ -33,12 +33,13 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "wispark-evomon-guide",
-    title: "Wispark Evomon Guide — How to Get & Evolve (Solaris Isle)",
+    title: "How to Get Wispark Evomon — Solaris Isle Guide",
     description:
-      "Get Wispark by beating Light King Wispreign on Solaris Isle. Wispark → Wisflare → Wispreign, Normal playable typing vs Light boss, and stone timing.",
+      "How to get Wispark: beat Light King Wispreign on Solaris Isle, catch the seed, evolve Wispark → Wisflare → Wispreign. Normal line vs Light boss + community clears.",
     published: "2026-08-05",
     gscTargets: [
       "wispark evomon",
+      "evomon wispark",
       "how to get wispark",
       "how to get wispark evomon",
       "wispark evolution",
@@ -52,6 +53,8 @@ export const blogPosts: BlogPost[] = [
       "/dex/wispark",
       "/dex/wisflare",
       "/dex/wispreign",
+      "/dex/tarragon",
+      "/dex/frostelle",
       "/dex/clipdow",
       "/blog/clipdow-evomon-guide",
       "/type-chart",
@@ -60,7 +63,7 @@ export const blogPosts: BlogPost[] = [
       "/blog/shiny-tarro-evomon-guide",
     ],
     quickAnswer:
-      "**Wispark** is the **Solaris Isle** Seasonal reward after **Light King Wispreign** — not a main-map wild. Claim the seed, then evolve **Wispark → Wisflare → Wispreign**. The boss is **Light**; community dex lists the playable line as **Normal** (special-leaning). Community guides lean **Tarragon** (Grass/Dragon) for the clear. Final form bases peak **SpA 108 / Spe 114**.",
+      "**Wispark** is the **Solaris Isle** Seasonal reward after **Light King Wispreign** — not a main-map wild. Claim the seed, then evolve **Wispark → Wisflare → Wispreign**. The boss is **Light**; community dex lists the playable line as **Normal** (special-leaning). Community clears lean **Tarragon** (Grass/Dragon) or **Frostelle**-class Ice sustain. Final form bases peak **SpA 108 / Spe 114**.",
     sections: [
       {
         heading: "Wispark vs Wispreign — seed vs final",
@@ -90,11 +93,11 @@ export const blogPosts: BlogPost[] = [
         heading: "Boss typing ≠ party typing",
         paragraphs: [
           "Light King Wispreign is a **Light** boss. Playable **Wispark / Wisflare / Wispreign** are listed as **Normal** on community dex sheets (and on ours). Build the party mon from the Normal sheet, not the boss card.",
-          "Community boss guides say Light is weak to **Grass, Ice, and Psychic**. Keep party members alive — several write-ups note the boss’s skill damage scales when your monsters faint. On the [Type Chart](/type-chart), Normal still takes **2× from Fighting** once the playable line is on your team.",
+          "Community boss guides (Sportskeeda / AllThings.How) say Light is weak to **Grass, Ice, and Psychic**. Some text guides also claim skill damage ramps when your monsters faint — treat that as community advice and keep the party standing. On the [Type Chart](/type-chart), Normal still takes **2× from Fighting** once the playable line is on your team.",
         ],
         callout: {
           title: "Community clear pick: Tarragon",
-          body: "Gamezebo and Sportskeeda both lean Tarragon (Grass/Dragon from Murkwood Tarro) for attrition — Seed Bomb sustain + Leaf Storm / Verdant Beam damage. Glacitadel / Chitaladin-class answers appear as backups. Verify levels and moves in-client; older posts spell the pet “Terragon.”",
+          body: "Gamezebo, Sportskeeda, and yao’s YouTube solo all lean [Tarragon](/dex/tarragon) (Grass/Dragon from Murkwood Tarro) for attrition — Seed Bomb sustain + Leaf Storm / Verdant Beam damage. HomieRaf shows an Ice sustain alt with [Frostelle](/dex/frostelle) (auto-captions often say “Frostella”). Verify levels and moves in-client; older posts spell Tarragon as “Terragon.”",
           variant: "tip",
         },
       },
@@ -102,7 +105,7 @@ export const blogPosts: BlogPost[] = [
         heading: "How players solo Light King Wispreign (community clears)",
         paragraphs: [
           "The most-shared clear on YouTube is a **Tarragon** attrition loop. In yao’s **How to BEAT Clipexor and Wispreign SOLO** walkthrough, the order is: open **10× Seed Bomb** to stack **Growth** (each stack restores ~8% max HP per turn, caps at 10 ≈ 80%/turn), then **Fighting Will** ×6 (or Fighting Will II ×4) to reach roughly **+30 Sp. Atk (≈300%)**, then alternate **Leaf Storm** and **Verdant Beam**. He runs an **SSS** Tarragon around **Lv 150–180** and stacks into **HP / Sp. Def / Sp. Atk** because both Legend Kings hit special.",
-          "HomieRaf’s **FASTEST SOLO METHOD** shows an Ice alternative: a special-attack **Frostella** using **Fighting Will → Giga Drain** to sustain while chipping the Light boss. Either way, the boss is **immune to abnormal status and stat reduction** (you cannot sleep or debuff it), so pure damage + self-heal is the pattern.",
+          "HomieRaf’s **FASTEST SOLO METHOD** shows an Ice alternative: a special-attack **Frostelle** (captions: “Frostella”) using **Fighting Will → Giga Drain** to sustain while chipping the Light boss. Either way, creators show the boss as **immune to abnormal status and stat reduction** (you cannot sleep or debuff it), so pure damage + self-heal is the pattern.",
         ],
         callout: {
           title: "Watch the enrage",
@@ -111,7 +114,7 @@ export const blogPosts: BlogPost[] = [
         },
         bullets: [
           "**Trait that carries** — Prime Form (−60% damage at full HP) per yao; Tough Skin as the epic fallback.",
-          "**Catch after the clear** — beat the boss, then use your best Catcher on Wispark (community shows shiny **pity on the eggs**, so keep clearing).",
+          "**Catch after the clear** — beat the boss, then use your best Catcher on Wispark (HomieRaf shows shiny **pity on the eggs**, so keep clearing).",
           "**First-clear reward** — HomieRaf’s run shows ~**18 large fruit** plus a Talent/nature roll; grind special-attack gear from Equipment Dungeon zone 1.",
         ],
       },
@@ -179,7 +182,7 @@ export const blogPosts: BlogPost[] = [
         channel: "yao",
       },
       {
-        label: "HomieRaf — FASTEST SOLO METHOD for Light King Wispreign (Frostella build, rewards, egg pity)",
+        label: "HomieRaf — FASTEST SOLO METHOD for Light King Wispreign (Frostelle build, rewards, egg pity)",
         url: "https://www.youtube.com/watch?v=58cGeVjNsas",
         channel: "HomieRaf",
       },
@@ -195,6 +198,10 @@ export const blogPosts: BlogPost[] = [
       {
         label: "Sportskeeda — Light King Wispreign guide (Solaris path, Light typing, Tarragon clear)",
         url: "https://www.sportskeeda.com/roblox-news/evomon-light-king-wispreign-guide",
+      },
+      {
+        label: "AllThings.How — Beat Light King Wispreign (Seasonal window note, Grass/Ice/Psychic counters)",
+        url: "https://allthings.how/how-to-beat-light-king-wispreign-in-evomon-season-1/",
       },
     ],
   },

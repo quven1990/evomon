@@ -30,6 +30,7 @@ Direct links to the main hub pages on [evomon.cc](https://evomon.cc/):
 | Page | URL |
 |------|-----|
 | Blog index | [https://evomon.cc/blog](https://evomon.cc/blog) |
+| How to Get Wispark Evomon | [https://evomon.cc/blog/wispark-evomon-guide](https://evomon.cc/blog/wispark-evomon-guide) |
 | Shiny Tarro Evomon Guide | [https://evomon.cc/blog/shiny-tarro-evomon-guide](https://evomon.cc/blog/shiny-tarro-evomon-guide) |
 | Sparkit Evolution vs Lavite | [https://evomon.cc/blog/sparkit-evolution-vs-lavite](https://evomon.cc/blog/sparkit-evolution-vs-lavite) |
 | Clipdow Evomon Guide | [https://evomon.cc/blog/clipdow-evomon-guide](https://evomon.cc/blog/clipdow-evomon-guide) |

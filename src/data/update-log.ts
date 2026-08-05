@@ -21,8 +21,21 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-08-05",
+        title: "Wispark blog SEO/GEO pass + blog schema template",
+        body: "SEO/GEO pass on /blog/wispark-evomon-guide: absolute title + article OG, BreadcrumbList, Article datePublished from post date, Frostelle spelling fix, AllThings.How citation restored, entity links to Tarragon/Frostelle. Blog template now applies the same schema/meta improvements sitewide.",
+        tags: ["Blog", "SEO"],
+        pages: [
+          "/blog/wispark-evomon-guide",
+          "/blog",
+          "/dex/wispark",
+          "/dex/wispreign",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-08-05",
         title: "Wispark how-to-get blog (Solaris / Light King)",
-        body: "New /blog/wispark-evomon-guide targeting soft GSC queries (wispark evomon CTR ~1.1%, wrong-landing on /dex/wispreign). Covers Solaris obtain, Normal vs Light typing trap, Wispark → Wisflare → Wispreign, and a community boss-clear loop (Tarragon Seed Bomb/Growth, Frostella alt) grounded in YouTube walkthroughs (yao, HomieRaf, Rexon) plus text guides.",
+        body: "New /blog/wispark-evomon-guide targeting soft GSC queries (wispark evomon CTR ~1.1%, wrong-landing on /dex/wispreign). Covers Solaris obtain, Normal vs Light typing trap, Wispark → Wisflare → Wispreign, and a community boss-clear loop (Tarragon Seed Bomb/Growth, Frostelle alt) grounded in YouTube walkthroughs (yao, HomieRaf, Rexon) plus text guides.",
         tags: ["Blog", "SEO"],
         pages: [
           "/blog/wispark-evomon-guide",

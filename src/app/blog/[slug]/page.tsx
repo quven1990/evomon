@@ -9,6 +9,7 @@ import { blogPosts, getBlogPost } from "@/data/blog-posts";
 import { renderBlogParagraph, stripBlogMarkdown } from "@/lib/blog-render";
 import { guideArticleSchema } from "@/lib/guide-trust";
 import { blogPostMetadata } from "@/lib/seo";
+import { canonical } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -38,14 +39,31 @@ export default async function BlogPostPage({ params }: Props) {
     path: `/blog/${post.slug}`,
     headline: post.title,
     description: post.description,
+    datePublished: post.published,
     dateModified: post.published,
   });
+
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Evomon Wiki", item: canonical("/") },
+      { "@type": "ListItem", position: 2, name: "Blog", item: canonical("/blog") },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: canonical(`/blog/${post.slug}`),
+      },
+    ],
+  };
 
   return (
     <>
       <StructuredData
         data={[
           article,
+          breadcrumb,
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
@@ -162,7 +180,10 @@ export default async function BlogPostPage({ params }: Props) {
         <CitationSources
           className="mt-12"
           sources={post.sources.map((source) => ({
-            label: source.channel ? `${source.label} (${source.channel})` : source.label,
+            label:
+              source.channel && !source.label.toLowerCase().includes(source.channel.toLowerCase())
+                ? `${source.label} (${source.channel})`
+                : source.label,
             url: source.url,
           }))}
         />

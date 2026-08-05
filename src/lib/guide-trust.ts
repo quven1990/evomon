@@ -4,9 +4,11 @@ export function guideArticleSchema(input: {
   path: string;
   headline: string;
   description: string;
+  datePublished?: string;
   dateModified?: string;
 }) {
-  const modified = input.dateModified ?? "2026-07-09";
+  const published = input.datePublished ?? input.dateModified ?? "2026-07-09";
+  const modified = input.dateModified ?? published;
   const url = canonical(input.path);
 
   return {
@@ -14,7 +16,7 @@ export function guideArticleSchema(input: {
     "@type": "Article",
     headline: input.headline,
     description: input.description,
-    datePublished: "2026-07-09",
+    datePublished: published,
     dateModified: modified,
     author: {
       "@type": "Person",
