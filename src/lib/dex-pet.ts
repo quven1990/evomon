@@ -300,6 +300,7 @@ export function buildDexPetSeo(entry: {
         `${slug} evolution`,
         `evomon ${slug} location`,
         `${entry.element.toLowerCase()} evomon`,
+        ...(extra.seoKeywords ?? []),
       ],
     };
   }

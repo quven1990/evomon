@@ -26,6 +26,8 @@ export type PetDetailExtra = {
    * so indexable pets do not all ask “What element is X?”.
    */
   faqs?: PetFaq[];
+  /** Extra SERP keywords (misspellings, how-to-get phrases). Merged into dex metadata. */
+  seoKeywords?: string[];
 };
 
 export const petDetailExtras: Record<string, PetDetailExtra> = {
@@ -622,28 +624,39 @@ export const petDetailExtras: Record<string, PetDetailExtra> = {
     ],
   },
   arcapex: {
-    metaTitle: "Arcapex Evomon — Electric Evolution & AOE Build",
+    metaTitle: "How to Get Arcapex Evomon — Thunder Cliffs & Evolve",
     metaDescription:
-      "Arcapex (#071) is Arcub’s Electric final and Thunder Cliffs Lv 200 boss. AOE clears, stone timing, and shiny-egg route (no field pity).",
+      "Get Arcapex by evolving Arcub or farming the Thunder Cliffs Lv 200 boss. Electric AOE stats, stone timing, and shiny-egg route (no field pity) on evomon.cc.",
     location: "Evolve from Arcub; Thunder Cliffs boss (Lv 200)",
     weather: "Any",
     role: "AOE burst / electric boss",
+    seoKeywords: [
+      "arcapex evomon",
+      "how to get arcapex",
+      "how to get arcapex evomon",
+      "arcapex location",
+      "thunder cliffs arcapex",
+      "arcapex evolution",
+    ],
     blurb:
-      "Arcapex is why Arcub stays on late-game lists: Electric wave-clear with community bases Attack 115 / Speed 108 and Charge in the trait pool. Map data lists Arcapex as the Thunder Cliffs Lv 200 boss — evolve your keeper separately from farming the boss cycle. For combat, evolve a strong normal Arcub when AOE is the bottleneck; for shiny flex, community guides (ImSoaren / 2kane) say this boss has no field shiny pity — repeated successful catches for a Shiny Arcapex Egg are the documented route.",
+      "How to get Arcapex: evolve a keeper Arcub, and/or fight the Thunder Cliffs Lv 200 Arcapex boss — same name, two loops. It is why Arcub stays on late-game lists: Electric wave-clear with community bases Attack 115 / Speed 108 and Charge in the trait pool. Evolve when AOE is the bottleneck; for shiny flex, community guides (ImSoaren / 2kane) say this boss has no field shiny pity — repeated successful catches for a Shiny Arcapex Egg are the documented route.",
     evolutionNote:
       "Arcub → Arcapex. Evolve when this line is a real party slot. Prefer usable Talent before the stone; a strong normal copy still clears content while shiny-egg RNG runs.",
     shinyHuntNote:
       "No field shiny pity on the Thunder Cliffs boss per community guides. Catch the Lv 200 boss successfully until a Shiny Arcapex Egg drops — full loop on the Shiny Arcapex guide.",
     relatedLinks: [
+      { href: "/map-zones#thunder-cliffs", label: "Thunder Cliffs map zone" },
       { href: "/dex/arcub", label: "Arcub (base)" },
       { href: "/blog/shiny-arcapex-evomon-guide", label: "Shiny Arcapex guide" },
-      { href: "/map-zones#thunder-cliffs", label: "Thunder Cliffs" },
-      { href: "/guides/mutations/shiny-egg", label: "Shiny egg guide" },
     ],
     faqs: [
       {
         q: "How do you get Arcapex in Evomon?",
-        a: "Evolve Arcub, and/or fight the Thunder Cliffs Lv 200 Arcapex boss on our map-zones list. Boss cycles and your evolved copy share the name but are different loops.",
+        a: "Two routes: evolve Arcub with Evolution Stones when the line is a party slot, or fight/catch the Thunder Cliffs Lv 200 Arcapex boss on our map-zones list. Boss cycles and your evolved copy share the name but are different loops.",
+      },
+      {
+        q: "Where is Arcapex located?",
+        a: "Wild/boss: Thunder Cliffs Lv 200. Party copy: evolve from Arcub. Confirm the live zone list in-game after map patches.",
       },
       {
         q: "Is Arcapex worth Evolution Stones?",

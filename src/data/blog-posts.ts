@@ -343,17 +343,20 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "clipdow-evomon-guide",
-    title: "Clipdow (Clipdown) Evomon Guide — How to Get & Evolve",
+    title: "Clipdow / Clipdown Evomon Guide — How to Get & Evolve",
     description:
-      "Clipdow (often searched Clipdown) comes from Dark King Clipexor on Lunaria Isle. Evolve Clipdow → Cliphas → Clipexor — Normal line, not the boss’s Dark typing.",
+      "Clipdow (Clipdown) comes from Dark King Clipexor on Lunaria Isle. How to get the seed, Clipdow → Cliphas → Clipexor, and why the playable line is Normal — not the boss’s Dark typing.",
     published: "2026-07-30",
     gscTargets: [
       "clipdow evomon",
       "clipdown evomon",
       "clipdow evolution",
       "clipdow egg evomon",
+      "clipdown egg evomon",
       "how to get clipdow",
       "how to get clipdow evomon",
+      "how to get clipdown",
+      "how to get clipdown evomon",
       "clipexor evomon",
       "cliphas evomon",
       "clipdown evomon roblox",

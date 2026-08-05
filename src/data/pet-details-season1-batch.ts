@@ -51,26 +51,39 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
 
   // ── Glowy line (dex #104–106 empty slots) ─────────────────────────────
   glowy: {
-    metaTitle: "Glowy Evomon — Floating Realm Ground Catch",
+    metaTitle: "How to Get Glowy Evomon — Floating Realm Catch",
     metaDescription:
-      "Glowy (#104) is the Floating Realm Ground catch toward Glowres → Goliath. Seasonal World Select route, level band, and stone plan on evomon.cc.",
+      "Catch Glowy on Floating Realm (Seasonal Island, ~Lv 140–145 past the stone bridge). Route, typing, and Glowy → Glowres → Goliath stone plan on evomon.cc.",
     location: "Floating Realm / Floating Island (Seasonal · World Select), past the stone bridge (~Lv 140–145)",
     weather: "Any",
     role: "Seasonal Ground seed / Goliath line",
+    seoKeywords: [
+      "glowy evomon",
+      "evomon glowy",
+      "how to get glowy",
+      "how to get glowy evomon",
+      "glowy location evomon",
+      "floating realm glowy",
+    ],
     blurb:
-      "Glowy is the seasonal Ground opener for the Goliath line — not a main-map wild. Unlock Seasonal Island from World Select (community guides gate it around account Lv 30), teleport to Floating Realm/Island, cross the stone bridge, and farm the ~Lv 140–145 band. Grass, Flying, or Dragon pressure helps chip it for the catch. Treat Glowy as a project pet: the real ceiling is Glowres → Goliath after you bank Evolution Stones plus Ground stones; do not burn early-route stock here.",
+      "How to get Glowy: unlock Seasonal Island from World Select (community guides gate it around account Lv 30), teleport to Floating Realm/Island, cross the stone bridge, and farm the ~Lv 140–145 band. It is the Ground opener for Glowres → Goliath — not a main-map wild. Grass, Flying, or Dragon pressure helps chip it for the catch. Treat Glowy as a project pet: the real ceiling is Goliath after you bank Evolution Stones plus Ground stones; do not burn early-route stock here. Shiny loop: Shiny Glowy guide.",
     evolutionNote:
       "Glowy → Glowres → Goliath (3-stage). Community material tables often list ~10 Evolution + 6 Ground (+ matching Light stones in some guides) for the first evo, then a heavier second stack — verify live costs in your client.",
     shinyHuntNote:
       "Seasonal island loops are the shiny volume play. Evolve a keeper Glowy rather than hoping for a wild Goliath.",
     relatedLinks: [
-      { href: "/blog/shiny-glowy-evomon-guide", label: "Shiny Glowy hunt guide" },
       { href: "/map-zones#floating-realm", label: "Floating Realm map zone" },
+      { href: "/blog/shiny-glowy-evomon-guide", label: "Shiny Glowy hunt guide" },
+      { href: "/dex/goliath", label: "Goliath final form" },
     ],
     faqs: [
       {
+        q: "How do you get Glowy in Evomon?",
+        a: "Unlock Seasonal Island (community ~account Lv 30), teleport to Floating Realm via World Select, then catch wild Glowy past the stone bridge around Lv 140–145.",
+      },
+      {
         q: "Where do you catch Glowy?",
-        a: "Floating Realm / Floating Island via World Select → Seasonal Island. Community routes put it past the stone bridge around Lv 140–145.",
+        a: "Floating Realm / Floating Island via World Select → Seasonal Island. Community routes put it past the stone bridge around Lv 140–145 — not Verdant or Petal Pond.",
       },
       {
         q: "What does Glowy evolve into?",
@@ -160,31 +173,40 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
 
   // ── Clipdow line (dex #097–099 blocked by third-party names — item 2) ─
   clipdow: {
-    metaTitle: "Clipdow Evomon — Lunaria Boss Reward Normal",
+    metaTitle: "Clipdow (Clipdown) Evomon — How to Get & Evolve",
     metaDescription:
-      "Clipdow (often searched as Clipdown) is the Lunaria Isle boss reward that opens Cliphas → Clipexor. Normal typing, unlock path, and stone timing on evomon.cc.",
+      "Clipdow (searched as Clipdown) is the Lunaria Isle reward after Dark King Clipexor. Normal line Clipdow → Cliphas → Clipexor — unlock, typing trap, and stone timing.",
     location: "Boss reward — Dark King Clipexor on Lunaria Isle (Seasonal)",
     weather: "Any",
     role: "Seasonal Normal seed / Clipexor line",
+    seoKeywords: [
+      "clipdown evomon",
+      "clipdown evomon roblox",
+      "clipdow evomon",
+      "how to get clipdow",
+      "how to get clipdow evomon",
+      "clipdow egg evomon",
+      "clipdown egg evomon",
+    ],
     blurb:
-      "Clipdow is a Seasonal Island boss drop, not a grass-route wild: beat Dark King Clipexor on Lunaria Isle and claim the Normal-type seed for Cliphas → Clipexor. The boss itself is Dark-typed; the playable line on our sheet is Normal — do not build as if your party Clipdow shares the boss’s Dark typing. Speed (57) leads the base spread; Fighting hits the line hard, while Psychic/Dark matchups are where Normal bulk helps. Community searches often spell it “Clipdown” — same pet, correct in-game name is Clipdow.",
+      "Clipdow (often searched as Clipdown) is a Seasonal Island boss drop, not a grass-route wild: beat Dark King Clipexor on Lunaria Isle and claim the Normal-type seed for Cliphas → Clipexor. The boss itself is Dark-typed; the playable line on our sheet is Normal — do not build as if your party Clipdow shares the boss’s Dark typing. Speed (57) leads the base spread; Fighting hits the line hard, while Psychic/Dark matchups are where Normal bulk helps. Full walkthrough on the Clipdow / Clipdown guide.",
     evolutionNote:
       "Clipdow → Cliphas → Clipexor (3-stage). Evolve after you have a keeper Talent copy; the final form is the design goal of the line.",
     shinyHuntNote:
       "Boss-reward loops are slower shiny volume than wild farms. Prioritize a usable Talent Clipdow before spending double evolution stacks.",
     relatedLinks: [
-      { href: "/blog/clipdow-evomon-guide", label: "Clipdow full guide" },
+      { href: "/blog/clipdow-evomon-guide", label: "Clipdow / Clipdown full guide" },
       { href: "/guides/mutations/shiny-egg", label: "Shiny egg path for boss lines" },
       { href: "/dex/clipexor", label: "Clipexor final form" },
     ],
     faqs: [
       {
-        q: "How do you get Clipdow?",
-        a: "Defeat Dark King Clipexor on Lunaria Isle (Seasonal / World Select) and take the Clipdow reward. It is not a standard main-map wild on our chart.",
+        q: "How do you get Clipdow (Clipdown)?",
+        a: "Defeat Dark King Clipexor on Lunaria Isle (Seasonal / World Select) and take the Clipdow reward. It is not a standard main-map wild on our chart. Clipdown is the same pet — community misspelling.",
       },
       {
         q: "Is it Clipdow or Clipdown?",
-        a: "In-game and on our dex the name is Clipdow. Clipdown is a common community misspelling for the same pet.",
+        a: "In-game and on our dex the name is Clipdow. Clipdown is a common community misspelling for the same pet. We 301 /dex/clipdown to /dex/clipdow.",
       },
       {
         q: "Is Clipdow the same typing as Dark King Clipexor?",

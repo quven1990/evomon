@@ -13,12 +13,25 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-08-04";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-08-05";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "August 2026",
     entries: [
+      {
+        date: "2026-08-05",
+        title: "Clipdow SERP dual-spelling + Glowy/Arcapex obtain SEO",
+        body: "Dex and Clipdow blog titles/meta front-load Clipdow (Clipdown) for the misspelling query. Glowy and Arcapex dex pages retitled around how-to-get with obtain FAQs, map links, and SEO keywords — same Clipdow thick-page pattern, no invented game facts.",
+        tags: ["SEO", "Dex", "Blog"],
+        pages: [
+          "/dex/clipdow",
+          "/dex/glowy",
+          "/dex/arcapex",
+          "/blog/clipdow-evomon-guide",
+          "/update-log",
+        ],
+      },
       {
         date: "2026-08-04",
         title: "Citation footers — collapse, nofollow, trim outbound",
