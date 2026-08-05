@@ -311,9 +311,9 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
     evolutionNote: "Wispark → Wisflare → Wispreign (3-stage). Confirm materials in-game after the boss reward.",
     shinyHuntNote: "Boss-reward shiny odds are volume-poor versus wild islands. Lock a keeper Talent before double-evolving.",
     relatedLinks: [
+      { href: "/blog/wispark-evomon-guide", label: "Wispark / Wispreign full guide" },
       { href: "/dex/wispreign", label: "Wispreign final form" },
       { href: "/dex/clipdow", label: "Clipdow (Lunaria twin reward)" },
-      { href: "/guides/mutations/shiny-egg", label: "Shiny egg path for boss lines" },
     ],
     faqs: [
       {
@@ -385,9 +385,9 @@ export const petDetailsSeason1Batch: Record<string, PetDetailExtra> = {
       "How to get Wispreign: it is evolve-only — claim Wispark from Light King Wispreign on Solaris Isle, then Wisflare → Wispreign. Special-leaning final (Sp. Atk 108, Speed 114). Do not confuse the Light King boss fight with the playable final’s Normal typing on our sheet — build and type-chart from the party mon, not the boss card.",
     evolutionNote: "Wispark → Wisflare → Wispreign.",
     relatedLinks: [
+      { href: "/blog/wispark-evomon-guide", label: "Wispark how-to-get guide" },
       { href: "/dex/wispark", label: "Wispark (how to get seed)" },
       { href: "/dex/clipexor", label: "Clipexor (Lunaria seasonal final)" },
-      { href: "/type-chart", label: "Type chart" },
     ],
     faqs: [
       {

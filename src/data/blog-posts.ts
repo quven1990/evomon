@@ -32,6 +32,145 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "wispark-evomon-guide",
+    title: "Wispark Evomon Guide — How to Get & Evolve (Solaris Isle)",
+    description:
+      "Get Wispark by beating Light King Wispreign on Solaris Isle. Wispark → Wisflare → Wispreign, Normal playable typing vs Light boss, and stone timing.",
+    published: "2026-08-05",
+    gscTargets: [
+      "wispark evomon",
+      "how to get wispark",
+      "how to get wispark evomon",
+      "wispark evolution",
+      "wispark egg evomon",
+      "wispreign evomon",
+      "how to get wispreign",
+      "light king wispreign",
+      "solaris isle evomon",
+    ],
+    relatedGuides: [
+      "/dex/wispark",
+      "/dex/wisflare",
+      "/dex/wispreign",
+      "/dex/clipdow",
+      "/blog/clipdow-evomon-guide",
+      "/type-chart",
+      "/guides/mutations/shiny-egg",
+      "/tier-list/evolution-priority",
+      "/blog/shiny-tarro-evomon-guide",
+    ],
+    quickAnswer:
+      "**Wispark** is the **Solaris Isle** Seasonal reward after **Light King Wispreign** — not a main-map wild. Claim the seed, then evolve **Wispark → Wisflare → Wispreign**. The boss is **Light**; community dex lists the playable line as **Normal** (special-leaning). Community guides lean **Tarragon** (Grass/Dragon) for the clear. Final form bases peak **SpA 108 / Spe 114**.",
+    sections: [
+      {
+        heading: "Wispark vs Wispreign — seed vs final",
+        paragraphs: [
+          "Google often lands **wispark evomon** on the [Wispreign](/dex/wispreign) page because the boss shares the final’s name. The clear rewards **Wispark** (lesser evolution). **Wispreign** is what you evolve into afterward — same naming trap as Dark King Clipexor vs playable Clipexor on Lunaria.",
+        ],
+        callout: {
+          title: "Name check",
+          body: "Light King Wispreign = boss fight. Wispark = party seed you keep. Wispreign (playable) = evolved final. Do not skip the seed page when you search “how to get Wispark.”",
+          variant: "note",
+        },
+      },
+      {
+        heading: "How to get Wispark on Solaris Isle",
+        paragraphs: [
+          "Season 1 unlocks **Seasonal Island** from **World Select** once you meet the account gate community guides put around **Lv 30**. Open the map → World Select → Seasonal Island → teleport to **Solaris Isle**, then enter the **Light King Wispreign** fight.",
+          "Gamezebo’s Dark/Light Season-1 walkthrough and Sportskeeda / AllThings.How boss routes agree: after you defeat the Light King, you get a shot at **Wispark** (catch of the lesser evolution). AllThings.How also flags this as limited-time Season-1 content — confirm the live seasonal window in your client before a long grind.",
+        ],
+        bullets: [
+          "**Unlock** — Seasonal Island via World Select (community ~account Lv 30).",
+          "**Island** — Solaris Isle (Light King Wispreign).",
+          "**Reward** — Wispark seed for the Normal special line.",
+          "**Twin** — Lunaria’s Clipdow is the Dark-side counterpart — [Clipdow guide](/blog/clipdow-evomon-guide).",
+        ],
+      },
+      {
+        heading: "Boss typing ≠ party typing",
+        paragraphs: [
+          "Light King Wispreign is a **Light** boss. Playable **Wispark / Wisflare / Wispreign** are listed as **Normal** on community dex sheets (and on ours). Build the party mon from the Normal sheet, not the boss card.",
+          "Community boss guides say Light is weak to **Grass, Ice, and Psychic**. Keep party members alive — several write-ups note the boss’s skill damage scales when your monsters faint. On the [Type Chart](/type-chart), Normal still takes **2× from Fighting** once the playable line is on your team.",
+        ],
+        callout: {
+          title: "Community clear pick: Tarragon",
+          body: "Gamezebo and Sportskeeda both lean Tarragon (Grass/Dragon from Murkwood Tarro) for attrition — Seed Bomb sustain + Leaf Storm / Verdant Beam damage. Glacitadel / Chitaladin-class answers appear as backups. Verify levels and moves in-client; older posts spell the pet “Terragon.”",
+          variant: "tip",
+        },
+      },
+      {
+        heading: "Evolution: Wispark → Wisflare → Wispreign",
+        paragraphs: [
+          "The line is three stages. Confirm stone and level gates on the in-game Evolve panel before dumping stock — Season-1 costs can shift.",
+          "Plan both evolves as one project after Solaris. Stopping forever on Wisflare leaves a Seasonal unlock underleveled. Dex pages: [Wispark](/dex/wispark), [Wisflare](/dex/wisflare), [Wispreign](/dex/wispreign).",
+        ],
+        bullets: [
+          "**Wispark** — base seed (community: HP 41 / SpA 56 / Spe 58).",
+          "**Wisflare** — mid form (HP 57 / SpA 78 / Spe 81).",
+          "**Wispreign** — final (HP 78 / SpA 108 / Spe 114) — special-leaning ceiling.",
+        ],
+      },
+      {
+        heading: "When the line earns a team slot",
+        paragraphs: [
+          "Use Wisflare/Wispreign when you want a **special Normal** seasonal final and you already finished the stone project. It is a poor place to spend your first Evolution Stones while Verdant → Lava Crag still needs Rock/Fire carries — see [Evolution Priority](/tier-list/evolution-priority).",
+          "Compared with Lunaria’s [Clipexor](/dex/clipexor) (physical Normal), Wispreign leans **Sp. Atk / Speed**. Unlock path differs (Solaris vs Lunaria); fund the boss you can actually clear.",
+        ],
+      },
+      {
+        heading: "Shiny and “wispark egg” searches",
+        paragraphs: [
+          "Boss-reward loops are slower shiny volume than wild farms. Prioritize a usable Talent Wispark before double-evolving. Field shiny ID still uses the KO → smoke checklist — [How to Know If an Evomon Is Shiny](/blog/how-to-know-if-evomon-is-shiny).",
+          "Some players search **wispark egg**. We do not invent a Wispark-only egg rate. For boss-adjacent shiny eggs, use the general [Shiny Egg Guide](/guides/mutations/shiny-egg) and [egg chance post](/blog/evomon-shiny-egg-chance), then verify whether your Wispark encounters show a pity panel in-client.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How do you get Wispark in Evomon?",
+        a: "Unlock Seasonal Island (community ~Lv 30), go to Solaris Isle, defeat Light King Wispreign, and claim/catch the Wispark reward. It is not a standard main-map wild.",
+      },
+      {
+        q: "Is Wispreign catchable from the boss?",
+        a: "The clear rewards Wispark. Wispreign is the evolved final on our data — evolve Wispark → Wisflare → Wispreign.",
+      },
+      {
+        q: "Is playable Wispark Light-type like the boss?",
+        a: "No. Light King Wispreign is Light; community dex data lists the playable Wispark line as Normal.",
+      },
+      {
+        q: "What does Wispark evolve into?",
+        a: "Wispark → Wisflare → Wispreign. Confirm stone/level requirements in the Evolve UI before spending materials.",
+      },
+      {
+        q: "What are Wispreign’s base stats?",
+        a: "Community bases for the final form: HP 78, Attack 74, Defense 77, Sp. Atk 108, Sp. Def 70, Speed 114.",
+      },
+      {
+        q: "Wispark vs Clipdow?",
+        a: "Twin Seasonal seeds: Wispark from Solaris (Light King), Clipdow from Lunaria (Dark King). Both playable lines are Normal on our sheet; finals lean special vs physical.",
+      },
+      {
+        q: "What is a Wispark egg in Evomon?",
+        a: "Searches for “wispark egg” usually mean a species egg or shiny-egg drop tied to that line. We do not invent a Wispark-only egg rate — use the Shiny Egg Guide and check pity/odds in-client.",
+      },
+    ],
+    sources: [
+      {
+        label: "Gamezebo — Dark and Light Season 1 (Seasonal unlock, catch Wispark after Light King)",
+        url: "https://www.gamezebo.com/walkthroughs/evomon-dark-and-light/",
+      },
+      {
+        label: "Sportskeeda — Light King Wispreign guide (Solaris path, Light typing, Tarragon clear)",
+        url: "https://www.sportskeeda.com/roblox-news/evomon-light-king-wispreign-guide",
+      },
+      {
+        label: "AllThings.How — Beat Light King Wispreign (Seasonal route, faint-scaling note, counters)",
+        url: "https://allthings.how/how-to-beat-light-king-wispreign-in-evomon-season-1/",
+      },
+    ],
+  },
+  {
     slug: "shiny-tarro-evomon-guide",
     title: "Shiny Tarro Evomon Guide — Murkwood Hunt Toward Tarragon",
     description:

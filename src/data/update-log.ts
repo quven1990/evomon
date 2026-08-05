@@ -21,6 +21,19 @@ export const updateLogGroups: UpdateLogGroup[] = [
     entries: [
       {
         date: "2026-08-05",
+        title: "Wispark how-to-get blog (Solaris / Light King)",
+        body: "New /blog/wispark-evomon-guide targeting soft GSC queries (wispark evomon CTR ~1.1%, wrong-landing on /dex/wispreign). Covers Solaris obtain, Normal vs Light typing trap, Wispark → Wisflare → Wispreign, and egg searches — sourced from Gamezebo / Sportskeeda / AllThings.How.",
+        tags: ["Blog", "SEO"],
+        pages: [
+          "/blog/wispark-evomon-guide",
+          "/blog",
+          "/dex/wispark",
+          "/dex/wispreign",
+          "/update-log",
+        ],
+      },
+      {
+        date: "2026-08-05",
         title: "Type-chart CTR SEO + Wispark/Wispreign obtain thick pages",
         body: "Type chart title/H1/lead/FAQ retargeted to weakness-chart queries (Roblox 2026). Wispark and Wispreign dex pages thickened with how-to-get meta, Solaris obtain FAQs, and internal links — same Clipdow pattern. No new invented matchups or stats.",
         tags: ["SEO", "Dex"],
