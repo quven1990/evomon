@@ -75,6 +75,18 @@ for (const [slug, manifestFile] of Object.entries(manifest)) {
 
 console.log(`\nPets: ${ok} ok, ${fail} missing`);
 
+// Index of bundled local sprites — used so SSR never emits /pets/{slug}.png 404s
+const localSlugs = fs
+  .readdirSync(outDir)
+  .filter((f) => f.endsWith(".png") && !f.startsWith("_"))
+  .map((f) => f.replace(/\.png$/, ""))
+  .sort();
+fs.writeFileSync(
+  path.join(root, "src/data/pet-images-local.json"),
+  `${JSON.stringify(localSlugs, null, 2)}\n`,
+);
+console.log(`Local index: ${localSlugs.length} slugs → src/data/pet-images-local.json`);
+
 // Roblox official game icon
 const iconRes = await fetch(
   "https://thumbnails.roblox.com/v1/games/icons?universeIds=9826885587&size=512x512&format=Png&isCircular=false",

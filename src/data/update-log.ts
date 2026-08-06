@@ -13,12 +13,26 @@ export type UpdateLogGroup = {
 };
 
 /** Public-facing changelog — derived from git history, grouped for readability. */
-export const UPDATE_LOG_LAST_PUBLISHED = "2026-08-05";
+export const UPDATE_LOG_LAST_PUBLISHED = "2026-08-06";
 
 export const updateLogGroups: UpdateLogGroup[] = [
   {
     month: "August 2026",
     entries: [
+      {
+        date: "2026-08-06",
+        title: "Stop emitting missing pet image URLs (crawl 404s)",
+        body: "Dex avatars no longer point at /pets/{slug}.png when the sprite is not bundled. Synced 12 CDN pets that were listed in the manifest but missing locally (Clipdow, Wispark, Glowy lines, etc.). Pets with no public art (e.g. Mushmer) render initials instead of a crawlable 404.",
+        tags: ["Dex", "SEO"],
+        pages: [
+          "/dex",
+          "/dex/mushmer",
+          "/dex/clipdow",
+          "/dex/wispark",
+          "/dex/glowy",
+          "/update-log",
+        ],
+      },
       {
         date: "2026-08-05",
         title: "Wispark blog SEO/GEO pass + blog schema template",

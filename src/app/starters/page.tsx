@@ -3,6 +3,7 @@ import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
 import { PageBack, pageLeadClass, pageTitleClass } from "@/components/PageShell";
 import { GAME } from "@/lib/game";
+import { getBestPetImageSrc } from "@/lib/pet-images";
 import { PAGE_SEO } from "@/lib/seo";
 
 const starterSlugs: Record<string, string> = {
@@ -118,6 +119,7 @@ export default function StartersPage() {
         <div className="mt-8 space-y-4">
           {GAME.starters.map((starter, index) => {
             const slug = starterSlugs[starter.name];
+            const petSrc = getBestPetImageSrc({ number: 0, name: starter.name });
             return (
               <article
                 key={starter.name}
@@ -128,16 +130,22 @@ export default function StartersPage() {
                     href={`/dex/${slug}`}
                     className="shrink-0 transition hover:scale-105"
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={`/pets/${slug}.png`}
-                      alt={`${starter.name} Evomon starter`}
-                      width={96}
-                      height={96}
-                      loading="eager"
-                      decoding="async"
-                      className="h-20 w-20 object-contain drop-shadow-[0_8px_24px_rgba(16,185,129,0.25)] sm:h-24 sm:w-24"
-                    />
+                    {petSrc ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={petSrc}
+                        alt={`${starter.name} Evomon starter`}
+                        width={96}
+                        height={96}
+                        loading="eager"
+                        decoding="async"
+                        className="h-20 w-20 object-contain drop-shadow-[0_8px_24px_rgba(16,185,129,0.25)] sm:h-24 sm:w-24"
+                      />
+                    ) : (
+                      <span className="flex h-20 w-20 items-center justify-center text-xl font-black text-emerald-300/80 sm:h-24 sm:w-24">
+                        {starter.name.slice(0, 2).toUpperCase()}
+                      </span>
+                    )}
                   </Link>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-3">
