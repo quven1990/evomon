@@ -10,9 +10,17 @@
 #   User     → Memberships         → Read
 #   Zone     → Cache Purge          → Purge
 #   Zone     → Zone                 → Read
+#   Zone     → Page Rules           → Edit   (optional; needed to manage HTML cache via API)
 #
 # Account resources: Include → your account
 # Zone resources:    Include → evomon.cc
+#
+# HTML edge cache (Free plan): Pages serves HTML as DYNAMIC unless a rule
+# marks it eligible. Add in Dashboard → Caching → Cache Rules (or Page Rules):
+#   1) evomon.cc/_next/static/*  → Cache Everything, Edge TTL = 1 month
+#   2) evomon.cc/*               → Cache Everything, Edge TTL = 10 minutes,
+#                                  Browser TTL = Respect Existing Headers
+# Rule 1 must be higher priority than rule 2. Deploy purge clears both.
 
 on:
   push:
