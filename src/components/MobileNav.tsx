@@ -23,7 +23,6 @@ import {
 } from "lucide-react";
 import { mobileTabLinks, navSections } from "@/data/navigation";
 import { PlayLink } from "@/components/PlayLink";
-import { GAME } from "@/lib/game";
 import { SITE } from "@/lib/site";
 
 const tabIcons = {
