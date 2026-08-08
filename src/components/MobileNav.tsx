@@ -54,10 +54,14 @@ function NavDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
 
   useEffect(() => {
     if (!open) return;
-    const prev = document.body.style.overflow;
+    const prevOverflow = document.body.style.overflow;
+    const prevPadding = document.body.style.paddingRight;
+    const scrollbar = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = "hidden";
+    if (scrollbar > 0) document.body.style.paddingRight = `${scrollbar}px`;
     return () => {
-      document.body.style.overflow = prev;
+      document.body.style.overflow = prevOverflow;
+      document.body.style.paddingRight = prevPadding;
     };
   }, [open]);
 
@@ -107,7 +111,7 @@ function NavDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
           </button>
         </div>
 
-        <nav className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-4">
+        <nav className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-y-contain px-4 py-4 [-webkit-overflow-scrolling:touch]">
           {navSections.map((section) => (
             <div key={section.title} className="mb-6">
               <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">{section.title}</p>

@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { ChevronDown, Gamepad2 } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { HeaderBrand } from "@/components/HeaderBrand";
+import { HeaderMoreMenu } from "@/components/HeaderMoreMenu";
 import { MobileHeaderMenu } from "@/components/MobileNav";
 import { PlayLink } from "@/components/PlayLink";
-import { getHeaderCluster, headerDropdownSections, headerNavItems } from "@/data/navigation";
+import { getHeaderCluster, headerNavItems } from "@/data/navigation";
 
 export function Header() {
   return (
@@ -40,7 +41,7 @@ export function Header() {
                   <ChevronDown className="h-3.5 w-3.5 opacity-70 transition group-hover:rotate-180" />
                 </Link>
                 <div className="invisible absolute left-0 top-full z-50 pt-1 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                  <div className="w-64 rounded-xl border border-white/10 bg-[#0a1412]/95 p-2 shadow-2xl backdrop-blur-xl">
+                  <div className="max-h-[min(24rem,calc(100dvh-5rem))] w-64 overflow-y-auto overscroll-contain rounded-xl border border-white/10 bg-[#0a1412]/95 p-2 shadow-2xl backdrop-blur-xl">
                     <Link
                       href={cluster.hubHref}
                       className="block rounded-lg px-3 py-2 transition hover:bg-white/5"
@@ -67,41 +68,7 @@ export function Header() {
             );
           })}
 
-          <div className="group relative">
-            <button
-              type="button"
-              className="inline-flex h-10 items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 text-sm font-semibold text-white transition hover:border-emerald-500/40 hover:bg-emerald-500/10"
-            >
-              <Gamepad2 className="h-4 w-4 text-emerald-400" />
-              More
-              <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
-            </button>
-            <div className="invisible absolute right-0 top-11 w-[520px] opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-              <div className="rounded-2xl border border-white/10 bg-[#0a1412]/95 p-4 shadow-2xl backdrop-blur-xl">
-                <div className="grid grid-cols-2 gap-4">
-                  {headerDropdownSections.map((section) => (
-                    <div key={section.title} className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
-                      <h3 className="text-sm font-bold text-white">{section.title}</h3>
-                      <p className="mt-1 text-xs text-zinc-500">{section.description}</p>
-                      <ul className="mt-3 space-y-2">
-                        {section.links.map((link) => (
-                          <li key={link.href}>
-                            <Link
-                              href={link.href}
-                              className="block rounded-lg px-2 py-1.5 transition hover:bg-emerald-500/10"
-                            >
-                              <div className="text-sm font-medium text-emerald-300">{link.label}</div>
-                              <div className="text-xs text-zinc-500">{link.desc}</div>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <HeaderMoreMenu />
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
