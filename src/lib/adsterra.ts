@@ -1,11 +1,15 @@
 /**
  * Adsterra banners — UX-safe fixed sizes only (no popunder / social bar / sticky 320×50).
  *
- * Keys appear in client HTML (not secrets). Env overrides:
+ * Keys appear in client HTML (not secrets). Env overrides (build-time, redeploy to apply):
+ *   NEXT_PUBLIC_ADSTERRA_ENABLED=false|true   → master kill switch
  *   NEXT_PUBLIC_ADSTERRA_BANNER_KEY=          → 300×250 (mobile + fallback)
  *   NEXT_PUBLIC_ADSTERRA_LEADERBOARD_KEY=     → 728×90 (desktop md+)
  *   NEXT_PUBLIC_ADSTERRA_INVOKE_HOST=www.highperformanceformat.com
- *   NEXT_PUBLIC_ADSTERRA_ENABLED=false        → force off
+ *
+ * TEMP (traffic A/B): default is OFF when unset. Set =true (local `.env` or
+ * GitHub Actions variable NEXT_PUBLIC_ADSTERRA_ENABLED) to resume banners.
+ * Production wiring: .github/workflows/deploy.yml
  *
  * 320×50 unit exists in Adsterra but is NOT wired — fights mobile bottom nav.
  */
@@ -28,7 +32,7 @@ const DEFAULT_HOST = "www.highperformanceformat.com";
 const DEFAULT_LEADERBOARD_KEY = "5f938011bd8b5bf4f90f4d2e52ea5a1f";
 
 const envOff =
-  (process.env.NEXT_PUBLIC_ADSTERRA_ENABLED ?? "true").trim().toLowerCase() === "false";
+  (process.env.NEXT_PUBLIC_ADSTERRA_ENABLED ?? "false").trim().toLowerCase() !== "true";
 
 const invokeHost = (process.env.NEXT_PUBLIC_ADSTERRA_INVOKE_HOST ?? DEFAULT_HOST)
   .trim()

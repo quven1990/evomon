@@ -59,3 +59,9 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: a17c720d27e1e3b502bef6b0d57c5472
+          # Adsterra master switch (build-time). Flip in:
+          #   Repo → Settings → Secrets and variables → Actions → Variables
+          #   name: NEXT_PUBLIC_ADSTERRA_ENABLED  value: true | false
+          # Unset / false → ads off (temporary A/B default in src/lib/adsterra.ts).
+          # Set true → resume Adsterra after redeploy.
+          NEXT_PUBLIC_ADSTERRA_ENABLED: ${{ vars.NEXT_PUBLIC_ADSTERRA_ENABLED || 'false' }}
